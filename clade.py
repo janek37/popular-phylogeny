@@ -13,10 +13,11 @@ class Rank(Enum):
     ORDER = 'Order'
     FAMILY = 'Family'
     SUBFAMILY = 'Subfamily'
-    GENUS = 'Genus'
     SUPERTRIBE = 'Supertribe'
     TRIBE = 'Tribe'
     SUBTRIBE = 'Subtribe'
+    GENUS = 'Genus'
+    SUBGENUS = 'Subgenus'
     SPECIES = 'Species'
 
 
@@ -87,6 +88,11 @@ class Subtribe(Clade):
 @dataclass
 class Genus(Clade):
     rank = Rank.GENUS
+
+
+@dataclass
+class Subgenus(Clade):
+    rank = Rank.SUBGENUS
 
 
 @dataclass

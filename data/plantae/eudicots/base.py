@@ -1,4 +1,4 @@
-from clade import Clade, Species, Genus, Family, Order
+from clade import Clade, Species, Genus, Family, Order, Subgenus
 from constants import EN, PL
 from .rosids import ROSIDS
 
@@ -30,7 +30,7 @@ C_OVATA = Species(
     local_names={EN: 'jade tree, money tree', PL: 'drzewko szczęścia, grubosz jajowaty'},
 )
 
-RIBES_SUBGENUS_RIBES = Clade(children=[R_NIGRUM, R_RUBRUM])  # Subgenus
+RIBES_SUBGENUS_RIBES = Subgenus(name='Ribes subg. Ribes', children=[R_NIGRUM, R_RUBRUM])
 
 RANUNCULUS = Genus(name='Ranunculus', children=[R_ACRIS])
 PAPAVER = Genus(name='Papaver', children=[P_RHOEAS, P_SOMNIFERUM])
