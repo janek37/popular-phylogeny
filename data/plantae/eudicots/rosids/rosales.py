@@ -1,6 +1,7 @@
 from clade import Clade, Species, Genus, Family, Order, Tribe
 from constants import EN, PL
 from .amygdaloideae import AMYGDALOIDEAE
+from .rosoideae import ROSOIDEAE
 
 C_SATIVA = Species(
     name='Cannabis sativa',
@@ -55,7 +56,7 @@ ARTOCARPEAE_MOREAE = Clade(children=[ARTOCARPEAE, MOREAE])
 CANNABACEAE = Family(name='Cannabaceae', children=[CANNABIS, HUMULUS])
 MORACEAE = Family(name='Moraceae', children=[FICEAE, ARTOCARPEAE_MOREAE])
 URTICACEAE = Family(name='Urticaceae', children=[URTICA])
-ROSACEAE = Family(name='Rosaceae', children=[AMYGDALOIDEAE])
+ROSACEAE = Family(name='Rosaceae', children=[AMYGDALOIDEAE, ROSOIDEAE])
 
 MORACEAE_URTICACEAE = Clade(children=[MORACEAE, URTICACEAE])
 
