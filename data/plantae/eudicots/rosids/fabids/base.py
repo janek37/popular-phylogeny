@@ -1,5 +1,6 @@
 from clade import Clade, Species, Genus, Family, Order
 from constants import EN, PL
+from .cucurbitales import CUCURBITALES
 from .fabales import FABALES
 from .fagales import FAGALES
 from .malpighiales import MALPIGHIALES
@@ -17,7 +18,8 @@ OXALIDACEAE = Family(name='Oxalidaceae', children=[OXALIS])
 
 OXALIDALES = Order(name='Oxalidales', children=[OXALIDACEAE])
 
-NFC_A = Clade(children=[ROSALES, FAGALES])
+FAGALES_CUCURBITALES = Clade(children=[FAGALES, CUCURBITALES])
+NFC_A = Clade(children=[ROSALES, FAGALES_CUCURBITALES])
 
 COM_CLADE = Clade(name='COM clade', children=[MALPIGHIALES, OXALIDALES])
 NITROGEN_FIXING_CLADE = Clade(name='nitrogen‑fixing clade', children=[FABALES, NFC_A])
