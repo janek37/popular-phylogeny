@@ -38,7 +38,11 @@ H_PERFORATUM = Species(
     local_names={PL: 'dziurawiec zwyczajny', EN: "perforate St John's-wort"},
 )
 E_COCA = Species(name='Erythroxylum coca', local_names={PL: 'Krasnodrzew pospolity', EN: 'coca'})
-M_ESCULENTA = Species(name='Manihot esculenta', local_names={PL: 'maniok jadalny', EN: 'cassava'})
+M_ESCULENTA = Species(
+    name='Manihot esculenta',
+    local_names={PL: 'maniok jadalny', EN: 'cassava'},
+    known_for=[{PL: 'tapioka', EN: 'tapioca'}],
+)
 R_COMMUNIS = Species(
     name='Ricinus communis',
     local_names={PL: 'rącznik pospolity', EN: 'castor bean'},
