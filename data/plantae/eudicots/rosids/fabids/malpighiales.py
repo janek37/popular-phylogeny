@@ -37,7 +37,10 @@ H_PERFORATUM = Species(
     name='Hypericum perforatum',
     local_names={PL: 'dziurawiec zwyczajny', EN: "perforate St John's-wort"},
 )
-E_COCA = Species(name='Erythroxylum coca', local_names={PL: 'Krasnodrzew pospolity', EN: 'coca'})
+E_COCA = Species(
+    name='Erythroxylum coca', local_names={PL: 'Krasnodrzew pospolity', EN: 'coca'},
+    known_for=[{EN: 'cocaine', PL: 'kokaina'}, {EN: 'Coca-Cola'}],
+)
 M_ESCULENTA = Species(
     name='Manihot esculenta',
     local_names={PL: 'maniok jadalny', EN: 'cassava'},
