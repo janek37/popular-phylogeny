@@ -1,5 +1,6 @@
 from clade import Clade, Species, Genus, Family, Order
 from constants import EN, PL
+from .malvales import MALVALES
 from .sapindales import SAPINDALES
 
 P_PELTATUM = Species(
@@ -13,4 +14,5 @@ GERANIACEAE = Family(name='Geraniaceae', children=[PELARGONIUM])
 
 GERANIALES = Order(name='Gerniales', children=[GERANIACEAE])
 
-MALVIDS = Clade(name='Malvids', children=[GERANIALES, SAPINDALES])
+MALVIDS_A = Clade(children=[SAPINDALES, MALVALES])
+MALVIDS = Clade(name='Malvids', children=[GERANIALES, MALVIDS_A])
