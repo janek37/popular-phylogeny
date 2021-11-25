@@ -1,5 +1,6 @@
 from clade import Clade, Species, Genus, Family, Order
 from constants import EN, PL
+from .brassicales import BRASSICALES
 from .malvales import MALVALES
 from .sapindales import SAPINDALES
 
@@ -14,5 +15,6 @@ GERANIACEAE = Family(name='Geraniaceae', children=[PELARGONIUM])
 
 GERANIALES = Order(name='Gerniales', children=[GERANIACEAE])
 
-MALVIDS_A = Clade(children=[SAPINDALES, MALVALES])
+MALVALES_BRASSICALES = Clade(children=[MALVALES, BRASSICALES])
+MALVIDS_A = Clade(children=[SAPINDALES, MALVALES_BRASSICALES])
 MALVIDS = Clade(name='Malvids', children=[GERANIALES, MALVIDS_A])
