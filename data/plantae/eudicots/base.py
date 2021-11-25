@@ -29,6 +29,7 @@ C_OVATA = Species(
     name='Crassula ovata',
     local_names={EN: 'jade tree, money tree', PL: 'drzewko szczęścia, grubosz jajowaty'},
 )
+V_ALBUM = Species(name='Viscum album', local_names={EN: 'European mistletoe', PL: 'jemioła pospolita'})
 
 RIBES_SUBGENUS_RIBES = Subgenus(name='Ribes subg. Ribes', children=[R_NIGRUM, R_RUBRUM])
 
@@ -41,6 +42,7 @@ PLATANUS = Genus(name='Platanus', children=[P_ACERIFOLIA])
 PAEONIA = Genus(name='Paeonia', children=[P_OFFICINALIS])
 RIBES = Genus(name='Ribes', children=[R_UVA_CRISPA, RIBES_SUBGENUS_RIBES])
 CRASSULA = Genus(name='Crassula', children=[C_OVATA])
+VISCUM = Genus(name='Viscum', children=[V_ALBUM])
 
 RANUNCULACEAE = Family(name='Ranunculaceae', children=[RANUNCULUS, ACONITUM])
 PAPAVERACEAE = Family(name='Papaveraceae', children=[PAPAVER])
@@ -50,6 +52,7 @@ CRASSULACEAE = Family(name='Crassulaceae', children=[CRASSULA])
 NELUMBONACEAE = Family(name='Nelumbonaceae', children=[NELUMBO])
 PROTEACEAE = Family(name='Proteaceae', children=[MACADAMIA])
 PLATANACEAE = Family(name='Platanaceae', children=[PLATANUS])
+SANTALACEAE = Family(name='Santalaceae', children=[VISCUM])
 
 GROSSULARIACEAE_CRASSULACEAE = Clade(children=[GROSSULARIACEAE, CRASSULACEAE])
 PLATANACEAE_PROTEACEAE = Clade(children=[PLATANACEAE, PROTEACEAE])
@@ -57,10 +60,12 @@ PLATANACEAE_PROTEACEAE = Clade(children=[PLATANACEAE, PROTEACEAE])
 RANUNCULALES = Order(name='Ranunculales', children=[RANUNCULACEAE, PAPAVERACEAE])
 PROTEALES = Order(name='Proteales', children=[NELUMBONACEAE, PLATANACEAE_PROTEACEAE])
 SAXIFRAGALES = Order(name='Saxifragales', children=[PAEONIACEAE, GROSSULARIACEAE_CRASSULACEAE])
+SANTALALES = Order(name='Santalales', children=[SANTALACEAE])
 
 SUPERROSIDS = Clade(name='superrosids', children=[SAXIFRAGALES, ROSIDS])
+SUPERASTERIDS = Clade(name='superasterids', children=[SANTALALES])
 
-PENTAPETALAE = Clade(name='Pentapetalae', children=[SUPERROSIDS])
+PENTAPETALAE = Clade(name='Pentapetalae', children=[SUPERROSIDS, SUPERASTERIDS])
 
 EUDICOTYLEDONES_A = Clade(children=[PROTEALES, PENTAPETALAE])
 EUDICOTYLEDONES = Clade(
