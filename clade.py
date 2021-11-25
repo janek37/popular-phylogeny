@@ -4,27 +4,27 @@ from typing import ClassVar, Mapping, Sequence
 
 
 class Rank(Enum):
-    UNRANKED = 'unranked'
-    DOMAIN = 'Domain'
-    KINGDOM = 'Kingdom'
-    SUPERPHYLUM = 'Superphylum'
-    PHYLUM = 'Phylum'
-    CLASS = 'Class'
-    ORDER = 'Order'
-    FAMILY = 'Family'
-    SUBFAMILY = 'Subfamily'
-    SUPERTRIBE = 'Supertribe'
-    TRIBE = 'Tribe'
-    SUBTRIBE = 'Subtribe'
-    GENUS = 'Genus'
-    SUBGENUS = 'Subgenus'
-    SPECIES = 'Species'
+    UNRANKED = "unranked"
+    DOMAIN = "Domain"
+    KINGDOM = "Kingdom"
+    SUPERPHYLUM = "Superphylum"
+    PHYLUM = "Phylum"
+    CLASS = "Class"
+    ORDER = "Order"
+    FAMILY = "Family"
+    SUBFAMILY = "Subfamily"
+    SUPERTRIBE = "Supertribe"
+    TRIBE = "Tribe"
+    SUBTRIBE = "Subtribe"
+    GENUS = "Genus"
+    SUBGENUS = "Subgenus"
+    SPECIES = "Species"
 
 
 @dataclass
 class Clade:
-    name: str = ''
-    children: Sequence['Clade'] = field(default_factory=list)
+    name: str = ""
+    children: Sequence["Clade"] = field(default_factory=list)
     local_names: Mapping[str, str] = field(default_factory=dict)
     known_for: Sequence[Mapping[str, str]] = field(default_factory=list)
     rank: ClassVar[Rank] = Rank.UNRANKED
