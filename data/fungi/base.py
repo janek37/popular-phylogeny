@@ -55,6 +55,11 @@ C_ARBUSCULA = Species(
 F_CAPERATA = Species(
     name="Flavoparmelia caperata", local_names={EN: "common greenshield lichen"}
 )
+C_PURPUREA = Species(
+    name="Claviceps purpurea",
+    local_names={PL: "buławinka czerwona"},
+    known_for=[{EN: "ergot", PL: "sporysz"}],
+)
 
 PENICILLIUM_SECTION = Clade(children=[P_DIGITATUM, P_EXPANSUM])
 
@@ -72,6 +77,7 @@ MORCHELLA = Genus(name="Morchella", children=[M_ESCULENTA])
 TUBER = Genus(name="Tuber", children=[T_MAGNATUM])
 CLADONIA = Genus(name="Cladonia", children=[C_ARBUSCULA])
 FLAVOPARMELIA = Genus(name="Flavoparmelia", children=[F_CAPERATA])
+CLAVICEPS = Genus(name="Claviceps", children=[C_PURPUREA])
 
 STACHYBOTRYACEAE = Family(name="Stachybotryaceae", children=[STACHYBOTRYS])
 TRICHOCOMACEAE = Family(name="Trichocomaceae", children=[ASPERGILLUS])
@@ -83,8 +89,12 @@ MORCHELLACEAE = Family(name="Morchellaceae", children=[MORCHELLA])
 TUBERACEAE = Family(name="Tuberaceae", children=[TUBER])
 CLADONIACEAE = Family(name="Cladoniaceae", children=[CLADONIA])
 PARMELIACEAE = Family(name="Parmeliaceae", children=[FLAVOPARMELIA])
+CLAVICIPITACEAE = Family(name="Clavicipitaceae", children=[CLAVICEPS])
 
-HYPOCREALES = Order(name="Hypocreales", children=[STACHYBOTRYACEAE, HYPOCREACEAE])
+# https://www.researchgate.net/publication/325346148_Introgression_and_gene_family_contraction_drive_the_evolution_of_lifestyle_and_host_shifts_of_hypocrealean_fungi
+HYPOCREALES_A = Clade(children=[HYPOCREACEAE, CLAVICIPITACEAE])
+
+HYPOCREALES = Order(name="Hypocreales", children=[STACHYBOTRYACEAE, HYPOCREALES_A])
 EUROTIALES = Order(name="Eurotiales", children=[TRICHOCOMACEAE])
 SACCHAROMYCETALES = Order(name="Saccharomycetales", children=[SACCHAROMYCETACEAE])
 PEZIZALES = Order(name="Pezizales", children=[MORCHELLACEAE, TUBERACEAE])
