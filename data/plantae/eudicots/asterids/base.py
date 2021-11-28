@@ -1,7 +1,9 @@
 from clade import Clade, Family, Genus, Order, Species
 from constants import EN, PL
 
+from .campanulids import CAMPANULIDS
 from .ericales import ERICALES
+from .lamiids import LAMIIDS
 
 H_MACROPHYLLA = Species(
     name="Hydrangea macrophylla",
@@ -14,4 +16,7 @@ HYDRANGEACEAE = Family(name="Hydrangeaceae", children=[HYDRANGEA])
 
 CORNALES = Order(name="Cornales", children=[HYDRANGEACEAE])
 
-ASTERIDS = Clade(name="Asterids", children=[CORNALES, ERICALES])
+EUASTERIDS = Clade(children=[CAMPANULIDS, LAMIIDS])
+
+ASTERIDS_A = Clade(children=[ERICALES, EUASTERIDS])
+ASTERIDS = Clade(name="Asterids", children=[CORNALES, ASTERIDS_A])
