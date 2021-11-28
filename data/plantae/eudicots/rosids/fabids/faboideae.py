@@ -50,6 +50,10 @@ G_GLABRA = Species(
     name="Glycyrrhiza glabra",
     local_names={EN: "liquorice, licorice", PL: "lukrecja gładka"},
 )
+T_FOENUM_GRAECUM = Species(
+    name="Trigonella foenum-graecum",
+    local_names={EN: "fenugreek", PL: "kozieradka pospolita"},
+)
 
 PISUM = Genus(name="Pisum", children=[P_SATIVUM])
 LATHYRUS = Genus(name="Lathyrus", children=[L_ODORATUS])
@@ -64,6 +68,7 @@ TRIFOLIUM = Genus(name="Trifolium", children=[T_PRATENSE])
 VICIA = Genus(name="Vicia", children=[V_FABA])
 LENS = Genus(name="Lens", children=[L_CULINARIS])
 GLYCYRRHIZA = Genus(name="Glycyrrhiza", children=[G_GLABRA])
+TRIGONELLA = Genus(name="Trigonella", children=[T_FOENUM_GRAECUM])
 
 # https://www.researchgate.net/publication/233989057_Systematics_biogeography_and_character_evolution_of_the_legume_tribe_Fabeae_with_special_focus_on_the_middle-Atlantic_island_lineages
 PISUM_LATHYRUS = Clade(children=[PISUM, LATHYRUS])
@@ -75,7 +80,7 @@ CROTALARIEAE = Tribe(name="Crotalarieae", children=[ASPALATHUS])
 GENISTEAE = Tribe(name="Genisteae", children=[LUPINUS])
 CICEREAE = Tribe(name="Cicereae", children=[CICER])
 PHASEOLEAE = Tribe(name="Phaseoleae", children=[GLYCINE, PHASEOLUS])
-TRIFOLIEAE = Tribe(name="Trifolieae", children=[TRIFOLIUM])
+TRIFOLIEAE = Tribe(name="Trifolieae", children=[TRIFOLIUM, TRIGONELLA])
 GLYCYRRHIZEAE = Tribe(name="Glycyrrhizeae", children=[GLYCYRRHIZA])
 
 GENISTOIDS = Clade(name="Genistoids", children=[CROTALARIEAE, GENISTEAE])
