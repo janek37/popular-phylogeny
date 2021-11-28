@@ -12,7 +12,6 @@ U_LACTUCA = Species(
 T_ARBORICOLA = Species(
     name="Trebouxia arboricola", known_for=[{EN: "very common lichen photobiont"}]
 )
-# https://en.wikipedia.org/wiki/Lemna_minor
 
 PALMARIA = Genus(name="Palmaria", children=[P_PALMATA])
 CHONDRUS = Genus(name="Chondrus", children=[C_CRISPUS])
