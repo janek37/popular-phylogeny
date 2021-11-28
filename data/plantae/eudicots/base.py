@@ -1,6 +1,7 @@
 from clade import Clade, Family, Genus, Order, Species, Subgenus
 from constants import EN, PL
 
+from .asterids import ASTERIDS
 from .caryophyllales import CARYOPHYLLALES
 from .rosids import ROSIDS
 
@@ -90,8 +91,10 @@ SAXIFRAGALES = Order(
 )
 SANTALALES = Order(name="Santalales", children=[SANTALACEAE])
 
+SUPERASTERIDS_A = Clade(children=[CARYOPHYLLALES, ASTERIDS])
+
 SUPERROSIDS = Clade(name="superrosids", children=[SAXIFRAGALES, ROSIDS])
-SUPERASTERIDS = Clade(name="superasterids", children=[SANTALALES, CARYOPHYLLALES])
+SUPERASTERIDS = Clade(name="superasterids", children=[SANTALALES, SUPERASTERIDS_A])
 
 PENTAPETALAE = Clade(name="Pentapetalae", children=[SUPERROSIDS, SUPERASTERIDS])
 
