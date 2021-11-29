@@ -1,8 +1,7 @@
 from clade import Clade, Class, Family, Genus, Kingdom, Order, Phylum, Species
-
-# Penicillium
 from constants import EN, PL
-from data.fungi.mushrooms import BASIDIOMYCOTA
+
+from .mushrooms import BASIDIOMYCOTA
 
 S_CHARTARUM = Species(
     name="Stachybotrys chartarum", local_names={EN: "toxic black mold"}
