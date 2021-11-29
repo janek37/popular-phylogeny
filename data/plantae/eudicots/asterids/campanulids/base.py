@@ -1,6 +1,8 @@
 from clade import Clade, Family, Genus, Order, Species
 from constants import EN, PL
 
+from .asterales import ASTERALES
+
 I_AQUIFOLIUM = Species(
     name="Ilex aquifolium", local_names={EN: "common holly", PL: "ostrokrzew kolczasty"}
 )
@@ -15,4 +17,4 @@ AQUIFOLIACEAE = Family(name="Aquifoliaceae", children=[ILEX])
 
 AQUIFOLIALES = Order(name="Aquifoliales", children=[AQUIFOLIACEAE])
 
-CAMPANULIDS = Clade(name="campanulids", children=[AQUIFOLIALES])
+CAMPANULIDS = Clade(name="campanulids", children=[AQUIFOLIALES, ASTERALES])
