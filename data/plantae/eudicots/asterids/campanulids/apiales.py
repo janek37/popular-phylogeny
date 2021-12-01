@@ -135,11 +135,11 @@ APIOIDEAE_A = Clade(
     ]
 )
 APIOIDEAE_B = Clade(children=[APIOIDEAE_A, SCANDICEAE])
-APIOIDEAE_C = Clade(children=[APIOIDEAE_B, OENANTHEAE])
 
-APIOIDEAE = Subfamily(name="Apioideae", children=[APIOIDEAE_C, SANICULEAE])
+APIOIDEAE = Subfamily(name="Apioideae", children=[APIOIDEAE_B, OENANTHEAE])
+SANICULOIDEAE = Subfamily(name="Saniculoideae", children=[SANICULEAE])
 
-APIACEAE = Family(name="Apiaceae", children=[APIOIDEAE])
+APIACEAE = Family(name="Apiaceae", children=[APIOIDEAE, SANICULOIDEAE])
 ARALIACEAE = Family(name="Araliaceae", children=[HEDERA, PANAX])
 
 APIALES = Order(name="Apiales", children=[APIACEAE, ARALIACEAE])
