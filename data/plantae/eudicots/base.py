@@ -1,4 +1,4 @@
-from clade import Clade, Family, Genus, Order, Species, Subgenus
+from clade import Clade, Family, Genus, Order, Species, Subgenus, Tribe
 from constants import EN, PL
 
 from .asterids import ASTERIDS
@@ -57,6 +57,13 @@ C_OVATA = Species(
 V_ALBUM = Species(
     name="Viscum album", local_names={EN: "European mistletoe", PL: "jemioła pospolita"}
 )
+P_VULGARIS = Species(
+    name="Pulsatilla vulgaris",
+    local_names={EN: "European pasqueflower", PL: "sasanka zwyczajna"},
+)
+A_CORONARIA = Species(
+    name="Anemone coronaria", local_names={EN: "poppy anemone", PL: "zawilec wieńcowy"}
+)
 
 RIBES_SUBGENUS_RIBES = Subgenus(name="Ribes subg. Ribes", children=[R_NIGRUM, R_RUBRUM])
 
@@ -70,8 +77,19 @@ PAEONIA = Genus(name="Paeonia", children=[P_OFFICINALIS])
 RIBES = Genus(name="Ribes", children=[R_UVA_CRISPA, RIBES_SUBGENUS_RIBES])
 CRASSULA = Genus(name="Crassula", children=[C_OVATA])
 VISCUM = Genus(name="Viscum", children=[V_ALBUM])
+PULSATILLA = Genus(name="Pulsatilla", children=[P_VULGARIS])
+ANEMONE = Genus(name="Anemone", children=[A_CORONARIA])
 
-RANUNCULACEAE = Family(name="Ranunculaceae", children=[RANUNCULUS, ACONITUM])
+RANUNCULEAE = Tribe(name="Ranunculeae", children=[RANUNCULUS])
+DELPHINIEAE = Genus(name="Delphinieae", children=[ACONITUM])
+ANEMONEAE = Tribe(name="Anemoneae", children=[PULSATILLA, ANEMONE])
+
+# https://www.researchgate.net/publication/339299453_Ranunculaceae_Phylogeny_Poster_RanPP_2020V3a
+RANUNCULEAE_ANEMONEAE = Clade(children=[RANUNCULEAE, ANEMONEAE])
+
+RANUNCULACEAE = Family(
+    name="Ranunculaceae", children=[RANUNCULEAE_ANEMONEAE, DELPHINIEAE]
+)
 PAPAVERACEAE = Family(name="Papaveraceae", children=[PAPAVER])
 PAEONIACEAE = Family(name="Paeoniaceae", children=[PAEONIA])
 GROSSULARIACEAE = Family(name="Grossulariaceae", children=[RIBES])
