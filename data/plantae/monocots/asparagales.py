@@ -62,6 +62,10 @@ A_URSINUM = Species(
 N_POETICUS = Species(
     name="Narcissus poeticus", local_names={PL: "narcyz biały", EN: "poet's daffodil"}
 )
+N_JONQUILLA = Species(
+    name="Narcissus jonquilla",
+    local_names={PL: "narcyz żonkil", EN: "jonquil, rush daffodil"},
+)
 G_NIVALIS = Species(
     name="Galanthus nivalis",
     local_names={PL: "snieżyczka przebiśnieg", EN: "common snowdrop"},
@@ -77,7 +81,7 @@ CONVALLARIA = Genus(name="Convallaria", children=[C_MAJALIS])
 HYACINTHUS = Genus(name="Hyacinthus", children=[H_ORIENTALIS])
 ALOE = Genus(name="Aloe", children=[A_VERA])
 ALLIUM = Genus(name="Allium", children=[A_CEPA])
-NARCISSUS = Genus(name="Narcissus", children=[N_POETICUS])
+NARCISSUS = Genus(name="Narcissus", children=[N_POETICUS, N_JONQUILLA])
 GALANTHUS = Genus(name="Galanthus", children=[G_NIVALIS])
 
 ASPARAGOIDEAE = Subfamily(name="Asparagoideae", children=[ASPARAGUS])
