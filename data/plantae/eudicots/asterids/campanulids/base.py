@@ -1,6 +1,7 @@
 from clade import Clade, Family, Genus, Order, Species
 from constants import EN, PL
 
+from .apiales import APIALES
 from .asterales import ASTERALES
 
 I_AQUIFOLIUM = Species(
@@ -17,4 +18,5 @@ AQUIFOLIACEAE = Family(name="Aquifoliaceae", children=[ILEX])
 
 AQUIFOLIALES = Order(name="Aquifoliales", children=[AQUIFOLIACEAE])
 
+CAMPANULIDS_A = Clade(children=[ASTERALES, APIALES])
 CAMPANULIDS = Clade(name="campanulids", children=[AQUIFOLIALES, ASTERALES])
