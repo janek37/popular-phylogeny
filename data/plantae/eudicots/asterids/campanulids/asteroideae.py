@@ -58,6 +58,10 @@ S_REBAUDIANA = Species(
     local_names={EN: "candyleaf", PL: "stewia"},
     known_for={EN: "sweetener"},
 )
+A_MILLEFOLIUM = Species(
+    name="Achillea millefolium",
+    local_names={EN: "common yarrow", PL: "krwarwnik pospolity"},
+)
 
 MATRICARIA = Genus(name="Matricaria", children=[M_CHAMOMILLA])
 CHAMAEMELUM = Genus(name="Chamaemelum", children=[C_NOBILE])
@@ -70,9 +74,11 @@ ASTER = Genus(name="Aster", children=[A_AMELLUS])
 LEONTOPODIUM = Genus(name="Leontopodium", children=[L_NIVALE])
 TUSSILAGO = Genus(name="Tussilago", children=[T_FARFARA])
 STEVIA = Genus(name="Stevia", children=[S_REBAUDIANA])
+ACHILLEA = Genus(name="Achillea", children=[A_MILLEFOLIUM])
 
 # https://www.semanticscholar.org/paper/Molecular-phylogeny-of-Chrysanthemum,-Ajania-and-as-Zhao-Chen/1557e307fcb57f30f51615b3e3d9aceaa8d21a34
-ANTHEMIDEAE_A = Clade(children=[MATRICARIA, CHAMAEMELUM])
+ANTHEMIDEAE_C = Clade(children=[MATRICARIA, ACHILLEA])
+ANTHEMIDEAE_A = Clade(children=[ANTHEMIDEAE_C, CHAMAEMELUM])
 ANTHEMIDEAE_B = Clade(children=[ARTEMISIA, CHRYSANTHEMUM])
 
 ANTHEMIDEAE = Tribe(name="Anthemideae", children=[ANTHEMIDEAE_A, ANTHEMIDEAE_B])
