@@ -23,15 +23,20 @@ V_OFFICINALIS = Species(
     local_names={EN: "valerian", PL: "kozłek lekarski"},
     known_for=[{PL: "krople walerianowe"}],
 )
+V_LOCUSTA = Species(
+    name="Valerianella locusta",
+    local_names={EN: "lamb's lettuce, corn salad", PL: "roszpunka warzywna"},
+)
 
 ILEX = Genus(name="Ilex", children=[I_AQUIFOLIUM, I_PARAGUARIENSIS])
 SAMBUCUS = Genus(name="Sambucus", children=[S_NIGRA])
 VIBURNUM = Genus(name="Viburnum", children=[V_OPULUS])
 VALERIANA = Genus(name="Valeriana", children=[V_OFFICINALIS])
+VALERIANELLA = Genus(name="Valerianella", children=[V_LOCUSTA])
 
 AQUIFOLIACEAE = Family(name="Aquifoliaceae", children=[ILEX])
 ADOXACEAE = Family(name="Adoxaceae", children=[SAMBUCUS, VIBURNUM])
-CAPRIFOLIACEAE = Family(name="Caprifoliaceae", children=[VALERIANA])
+CAPRIFOLIACEAE = Family(name="Caprifoliaceae", children=[VALERIANA, VALERIANELLA])
 
 AQUIFOLIALES = Order(name="Aquifoliales", children=[AQUIFOLIACEAE])
 DIPSACALES = Order(name="Dipsacales", children=[ADOXACEAE, CAPRIFOLIACEAE])
