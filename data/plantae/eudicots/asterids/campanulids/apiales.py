@@ -69,15 +69,18 @@ P_CRISPUM = Species(
     name="Petroselinum crispum",
     local_names={EN: "common parsley", PL: "pietruszka zwyczajna"},
 )
-C_VIROSA = Genus(
+C_VIROSA = Species(
     name="Cicuta virosa",
     local_names={EN: "cowbane, northern water hemlock", PL: "szalej jadowity"},
 )
-H_HELIX = Genus(
+H_HELIX = Species(
     name="Hedera helix", local_names={EN: "common ivy", PL: "bluszcz pospolity"}
 )
-P_GINSENG = Genus(
+P_GINSENG = Species(
     name="Panax ginseng", local_names={EN: "ginseng", PL: "wszechlek żeń-szeń"}
+)
+C_CYMINUM = Species(
+    name="Cuminum cyminum", local_names={EN: "cumin", PL: "kmin rzymski"}
 )
 
 PIMPINELLA = Genus(name="Pimpinella", children=[P_ANISUM])
@@ -100,6 +103,7 @@ PETROSELINUM = Genus(name="Petroselinum", children=[P_CRISPUM])
 CICUTA = Genus(name="Cicuta", children=[C_VIROSA])
 HEDERA = Genus(name="Hedera", children=[H_HELIX])
 PANAX = Genus(name="Panax", children=[P_GINSENG])
+CUMINUM = Genus(name="Cuminum", children=[C_CYMINUM])
 
 # https://www.researchgate.net/publication/275771656_Taxonomy_of_the_tribe_Apieae_Apiaceae_revisited_as_revealed_by_molecular_phylogenies_and_morphological_characters
 APIEAE_A = Clade(children=[ANETHUM, FOENICULUM])
@@ -116,7 +120,7 @@ SELINEAE = Tribe(name="Selineae", children=[AETHUSA, LEVISTICUM])
 OENANTHEAE = Tribe(name="Oenantheae", children=[OENANTHE, CICUTA])
 SANICULEAE = Tribe(name="Saniculeae", children=[ERYNGIUM])
 APIEAE = Tribe(name="Apieae", children=[APIEAE_A, APIEAE_B])
-SCANDICEAE = Tribe(name="Scandiceae", children=[DAUCUS])
+SCANDICEAE = Tribe(name="Scandiceae", children=[DAUCUS, CUMINUM])
 
 # https://www.semanticscholar.org/paper/Major-clades-within-Apiaceae-subfamily-Apioideae-as-Downie-Spalik/135ee9257c5e624b9ba06523c228a77b2d2c32f5
 # couldn't resolve better using available sources (many conflicts)
