@@ -41,6 +41,9 @@ P_AMYGDALUS = Species(
     name="Prunus amygdalus",
     local_names={EN: "almond", PL: "migdał, migdałowiec pospolity"},
 )
+C_OBLONGA = Species(
+    name="Cydonia oblonga", local_names={EN: "quince", PL: "pigwa pospolita"}
+)
 
 PRUNUS_SUBGENUS_PRUNUS = Subgenus(
     name="Prunus subg. Prunus", children=[P_DOMESTICA, P_ARMENIACA]
@@ -61,14 +64,16 @@ MALUS = Genus(name="Malus", children=[M_DOMESTICA, M_SYLVESTRIS])
 PYRUS = Genus(name="Pyrus", children=[P_COMMUNIS])
 CRATAEGUS = Genus(name="Crataegus", children=[C_MONOGYNA])
 PRUNUS = Genus(name="Prunus", children=[AMYGDALUS_PRUNUS, PRUNUS_SUBGENUS_CERASUS])
+CYDONIA = Genus(name="Cydonia", children=[C_OBLONGA])
 
 # https://www.hindawi.com/journals/bmri/2018/7627191/
 # but could be wrong, to be checked later?
 MALINAE_A = Clade(children=[ARONIA, MALUS])
 MALINAE_B = Clade(children=[SORBUS, PYRUS])
 MALINAE_C = Clade(children=[MALINAE_A, MALINAE_B])
+MALINAE_D = Clade(children=[CRATAEGUS, CYDONIA])
 
-MALINAE = Subtribe(name="Malinae", children=[MALINAE_C, CRATAEGUS])
+MALINAE = Subtribe(name="Malinae", children=[MALINAE_C, MALINAE_D])
 
 MALEAE = Tribe(name="Maleae", children=[MALINAE])
 AMYGDALEAE = Tribe(name="Amygdaleae", children=[PRUNUS])
