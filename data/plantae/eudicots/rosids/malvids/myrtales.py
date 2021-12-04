@@ -2,7 +2,8 @@ from clade import Clade, Family, Genus, Order, Species, Tribe
 from constants import EN, PL
 
 P_DIOICA = Species(
-    name="Pimenta dioica", local_names={EN: "allspice", PL: "ziele angielskie"}
+    name="Pimenta dioica",
+    local_names={EN: "allspice", PL: "ziele angielskie, korzennik lekarski"},
 )
 F_MAGELLANICA = Species(
     name="Fuchsia magellanica",
