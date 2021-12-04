@@ -7,6 +7,11 @@ F_SYLVATICA = Species(
 Q_ROBUR = Species(
     name="Quercus robur", local_names={EN: "common oak", PL: "dąb szypułkowy"}
 )
+Q_SUBER = Species(
+    name="Quercus suber",
+    local_names={EN: "cork oak", PL: "dąb korkowy"},
+    known_for=[{EN: "cork (material)", PL: "korek (surowiec)"}],
+)
 C_SATIVA = Species(
     name="Castanea satica", local_names={EN: "sweet chestnut", PL: "kasztan jadalny"}
 )
@@ -32,7 +37,7 @@ C_BETULUS = Species(
 )
 
 FAGUS = Genus(name="Fagus", children=[F_SYLVATICA])
-QUERCUS = Genus(name="Quercus", children=[Q_ROBUR])
+QUERCUS = Genus(name="Quercus", children=[Q_ROBUR, Q_SUBER])
 CASTANEA = Genus(name="Castanea", children=[C_SATIVA])
 JUGLANS = Genus(name="Juglans", children=[J_REGIA])
 CARYA = Genus(name="Carya", children=[C_ILLINOINENSIS])
