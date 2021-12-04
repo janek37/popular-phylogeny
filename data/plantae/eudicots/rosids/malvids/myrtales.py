@@ -1,4 +1,4 @@
-from clade import Clade, Family, Genus, Order, Species
+from clade import Clade, Family, Genus, Order, Species, Tribe
 from constants import EN, PL
 
 P_DIOICA = Species(
@@ -20,15 +20,22 @@ E_CAMALDULENSIS = Species(
 P_GRANATUM = Species(
     name="Punica granatum", local_names={EN: "pomegranate", PL: "granat właściwy"}
 )
+P_GUAJAVA = Species(
+    name="Psidium guajava", local_names={EN: "common guava", PL: "gujawa pospolita"}
+)
 
 PIMENTA = Genus(name="Pimenta", children=[P_DIOICA])
 FUCHSIA = Genus(name="Fuchsia", children=[F_MAGELLANICA])
 SYZYGIUM = Genus(name="Syzygium", children=[S_AROMATICUM])
 EUCALYPTUS = Genus(name="Eucalyptus", children=[E_CAMALDULENSIS])
 PUNICA = Genus(name="Punica", children=[P_GRANATUM])
+PSIDIUM = Genus(name="Psidium", children=[P_GUAJAVA])
+
+MYRTEAE = Tribe(name="Myrteae", children=[PIMENTA, PSIDIUM])
+SYZYGIEAE = Tribe(name="Syzygieae", children=[SYZYGIUM])
 
 # https://www.researchgate.net/publication/258164894_The_evolution_of_foliar_terpene_diversity_in_Myrtaceae
-MYRTACEAE_A = Clade(children=[PIMENTA, SYZYGIUM])
+MYRTACEAE_A = Clade(children=[MYRTEAE, SYZYGIEAE])
 
 MYRTACEAE = Family(name="Myrtaceae", children=[MYRTACEAE_A, EUCALYPTUS])
 ONAGRACEAE = Family(name="Onagraceae", children=[FUCHSIA])
