@@ -43,4 +43,4 @@ DIPSACALES = Order(name="Dipsacales", children=[ADOXACEAE, CAPRIFOLIACEAE])
 
 CAMPANULIDS_B = Clade(children=[APIALES, DIPSACALES])
 CAMPANULIDS_A = Clade(children=[ASTERALES, CAMPANULIDS_B])
-CAMPANULIDS = Clade(name="campanulids", children=[AQUIFOLIALES, ASTERALES])
+CAMPANULIDS = Clade(name="campanulids", children=[AQUIFOLIALES, CAMPANULIDS_A])

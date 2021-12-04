@@ -27,7 +27,7 @@ R_CAESIUS = Species(
     name="Rubus caesius", local_names={EN: "European dewberry", PL: "jeżyna popielica"}
 )
 
-FRAGARIA = Genus(name="Fragaria", children=[F_VESCA])
+FRAGARIA = Genus(name="Fragaria", children=[F_VESCA, F_ANANASSA])
 ROSA = Genus(name="Rosa", children=[R_CANINA, R_MISTER_LINCOLN])
 RUBUS = Genus(name="Rubus", children=[R_IDAEUS, R_PLICATUS, R_CAESIUS])
 

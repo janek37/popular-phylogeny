@@ -41,9 +41,6 @@ T_OFFICINALE = Species(
         PL: "mlecz, dmuchawiec, mniszek lekarski, mniszek pospolity",
     },
 )
-B_PERENNIS = Species(
-    name="Bellis perennis", local_names={EN: "common daisy", PL: "stokrotka pospolita"}
-)
 
 GERBERA = Genus(name="Gerbera", children=[G_JAMESONII])
 CICHORIUM = Genus(name="Cichorium", children=[C_INTYBUS])

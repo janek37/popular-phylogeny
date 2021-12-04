@@ -89,6 +89,7 @@ NEPENTHES = Genus(name="Nepenthes", children=[N_MIRABILIS])
 SPINACIA = Genus(name="Spinacia", children=[S_OLERACEA])
 RHEUM = Genus(name="Rheum", children=[R_HYBRIDUM])
 CHENOPODIUM = Genus(name="Chenopodium", children=[C_QUINOA])
+KALI = Genus(name="Kali", children=[K_TRAGUS])
 FAGOPYRUM = Genus(name="Fagopyrum", children=[F_ESCULENTUM])
 RUMEX = Genus(name="Rumex", children=[R_ACETOSA])
 SCHLUMBERGERA = Genus(name="Schlumbergera", children=[S_BUCKLEYI])
@@ -106,22 +107,28 @@ CACTINAE = Subtribe(name="Cactinae", children=[MAMMILARIA])
 CACTEAE_A = Clade(children=[CACTINAE, LOPHOMORA])
 CACTEAE_B = Clade(children=[ASTROPHYTUM, ECHINOCACTUS])
 
+BETEAE = Tribe(name="Beta", children=[BETA])
 RUMICEAE = Tribe(name="Rumiceae", children=[RHEUM, RUMEX])
+SALSOLEAE = Tribe(name="Salsoleae", children=[KALI])
 CACTEAE = Tribe(name="Cacteae", children=[CACTEAE_A, CACTEAE_B])
 RHIPSALIDEAE = Tribe(name="Rhipsalideae", children=[SCHLUMBERGERA])
 HYLOCEREEAE = Tribe(name="Hylocereeae", children=[SELENICEREUS])
 ECHINOCEREEAE = Tribe(name="Echinocereeae", children=[CARNEGIEA])
 
+# https://www.semanticscholar.org/paper/Phylogeny-and-evolution-of-the-epiphytic-(-)-Korotkova/4b7d67f2043a8fcd0f2797fa5b76c5a35e92273a
 PHYLLOCACTEAE = Clade(name="Phyllocacteae", children=[HYLOCEREEAE, ECHINOCEREEAE])
 CACTOIDEAE_A = Clade(children=[RHIPSALIDEAE, PHYLLOCACTEAE])
 
 CHENOPODIOIDEAE = Subfamily(name="Chenopodioideae", children=[SPINACIA, CHENOPODIUM])
 CACTOIDEAE = Subfamily(name="Cactoideae", children=[CACTEAE, CACTOIDEAE_A])
 OPUNTIOIDEAE = Subfamily(name="Opuntioideae", children=[OPUNTIA])
+BETOIDEAE = Subfamily(name="Betoideae", children=[BETEAE])
+SALSOLOIDEAE = Subfamily(name="Salsoloideae", children=[SALSOLEAE])
 
-# https://www.semanticscholar.org/paper/Phylogeny-and-evolution-of-the-epiphytic-(-)-Korotkova/4b7d67f2043a8fcd0f2797fa5b76c5a35e92273a
+AMARANTHACEAE_A = Clade(children=[BETOIDEAE, CHENOPODIOIDEAE])
+
 CARYOPHYLLACEAE = Family(name="Caryophyllaceae", children=[DIANTHUS])
-AMARANTHACEAE = Family(name="Amaranthaceae", children=[BETA, CHENOPODIOIDEAE])
+AMARANTHACEAE = Family(name="Amaranthaceae", children=[AMARANTHACEAE_A, SALSOLOIDEAE])
 DROSERACEAE = Family(name="Droseraceae", children=[DROSERA, DIONAEA])
 NEPENTHACEAE = Family(name="Nepenthaceae", children=[NEPENTHES])
 POLYGONACEAE = Family(name="Polygonaceae", children=[RUMICEAE, FAGOPYRUM])

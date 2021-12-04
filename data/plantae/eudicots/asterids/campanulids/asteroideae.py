@@ -62,6 +62,9 @@ A_MILLEFOLIUM = Species(
     name="Achillea millefolium",
     local_names={EN: "common yarrow", PL: "krwarwnik pospolity"},
 )
+B_PERENNIS = Species(
+    name="Bellis perennis", local_names={EN: "common daisy", PL: "stokrotka pospolita"}
+)
 
 MATRICARIA = Genus(name="Matricaria", children=[M_CHAMOMILLA])
 CHAMAEMELUM = Genus(name="Chamaemelum", children=[C_NOBILE])
@@ -75,6 +78,7 @@ LEONTOPODIUM = Genus(name="Leontopodium", children=[L_NIVALE])
 TUSSILAGO = Genus(name="Tussilago", children=[T_FARFARA])
 STEVIA = Genus(name="Stevia", children=[S_REBAUDIANA])
 ACHILLEA = Genus(name="Achillea", children=[A_MILLEFOLIUM])
+BELLIS = Genus(name="Bellis", children=[B_PERENNIS])
 
 # https://www.semanticscholar.org/paper/Molecular-phylogeny-of-Chrysanthemum,-Ajania-and-as-Zhao-Chen/1557e307fcb57f30f51615b3e3d9aceaa8d21a34
 ANTHEMIDEAE_C = Clade(children=[MATRICARIA, ACHILLEA])
@@ -85,7 +89,7 @@ ANTHEMIDEAE = Tribe(name="Anthemideae", children=[ANTHEMIDEAE_A, ANTHEMIDEAE_B])
 COREOPSIDEAE = Tribe(name="Coreopsideae", children=[DAHLIA])
 HELIANTHEAE = Tribe(name="Heliantheae", children=[HELIANTHUS])
 CALENDULEAE = Tribe(name="Calenduleae", children=[CALENDULA])
-ASTEREAE = Tribe(name="Astereae", children=[ASTER])
+ASTEREAE = Tribe(name="Astereae", children=[ASTER, BELLIS])
 GNAPHALIEAE = Tribe(name="Gnaphalieae", children=[LEONTOPODIUM])
 SENECIONEAE = Tribe(name="Senecioneae", children=[TUSSILAGO])
 EUPATORIEAE = Tribe(name="Eupatorieae", children=[STEVIA])

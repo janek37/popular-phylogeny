@@ -79,7 +79,7 @@ FLAVOPARMELIA = Genus(name="Flavoparmelia", children=[F_CAPERATA])
 CLAVICEPS = Genus(name="Claviceps", children=[C_PURPUREA])
 
 STACHYBOTRYACEAE = Family(name="Stachybotryaceae", children=[STACHYBOTRYS])
-TRICHOCOMACEAE = Family(name="Trichocomaceae", children=[ASPERGILLUS])
+TRICHOCOMACEAE = Family(name="Trichocomaceae", children=[ASPERGILLUS, PENICILLIUM])
 SACCHAROMYCETACEAE = Family(
     name="Saccharomycetaceae", children=[SACCHAROMYCES, CANDIDA]
 )

@@ -66,7 +66,7 @@ CUPRESSOIDEAE = Subfamily(name="Cupressoideae", children=[CUPRESSUS_JUNIPERUS, T
 PINACEAE = Family(name="Pinaceae", children=[ABIETOIDEAE, PINACEAE_A])
 CUPRESSACEAE = Family(name="Cupressaceae", children=[CUPRESSOIDEAE, SEQUOIADENDRON])
 TAXACEAE = Family(name="Taxaceae", children=[TAXUS])
-GINKGOACEAE = Family(name="Ginkgoaceae", children=[G_BILOBA])
+GINKGOACEAE = Family(name="Ginkgoaceae", children=[GINKGO])
 
 CUPRESSALES = Clade(
     name="Cupressales", children=[CUPRESSACEAE, TAXACEAE]

@@ -41,4 +41,4 @@ CHLOROPHYTA = Phylum(name="Chlorophyta", children=[ULVOPHYCEAE, TREBOUXIAPHYCEAE
 
 VIRIDIPLANTAE = Clade(name="Viridiplantae", children=[CHLOROPHYTA, EMBRYOPHYTA])
 
-ARCHAEOPLASTIDA = Kingdom(name="Archaeplastida", children=[RODOPHYTA, VIRIDIPLANTAE])
+ARCHAEOPLASTIDA = Kingdom(name="Archaeoplastida", children=[RODOPHYTA, VIRIDIPLANTAE])

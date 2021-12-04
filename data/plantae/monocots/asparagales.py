@@ -71,16 +71,21 @@ G_NIVALIS = Species(
     local_names={PL: "snieżyczka przebiśnieg", EN: "common snowdrop"},
 )
 
+# https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2958792/
+ALLIUM_A = Clade(children=[A_CEPA, A_SCHOENOPRASUM])
+ALLIUM_B = Clade(children=[A_SATIVUM, A_AMPELOPRASUM])
+ALLIUM_C = Clade(children=[ALLIUM_A, ALLIUM_B])
+
 ORCHIS = Genus(name="Orchis", children=[O_MILITARIS])
 VANILLA = Genus(name="Vanilla", children=[V_PLANIFOLIA])
 IRIS = Genus(name="Iris", children=[I_SIBRICA])
-CROCUS = Genus(name="Crocus", children=[C_SATIVUS])
+CROCUS = Genus(name="Crocus", children=[C_SATIVUS, C_VERNUS])
 ASPARAGUS = Genus(name="Asparagus", children=[A_OFFICINALIS])
 AGAVE = Genus(name="Agave", children=[A_AMERICANA, A_TEQUILANA])
 CONVALLARIA = Genus(name="Convallaria", children=[C_MAJALIS])
 HYACINTHUS = Genus(name="Hyacinthus", children=[H_ORIENTALIS])
 ALOE = Genus(name="Aloe", children=[A_VERA])
-ALLIUM = Genus(name="Allium", children=[A_CEPA])
+ALLIUM = Genus(name="Allium", children=[ALLIUM_C, A_URSINUM])
 NARCISSUS = Genus(name="Narcissus", children=[N_POETICUS, N_JONQUILLA])
 GALANTHUS = Genus(name="Galanthus", children=[G_NIVALIS])
 
@@ -88,6 +93,7 @@ ASPARAGOIDEAE = Subfamily(name="Asparagoideae", children=[ASPARAGUS])
 AGAVOIDEAE = Subfamily(name="Agavoideae", children=[AGAVE])
 NOLINOIDEAE = Subfamily(name="Nolinoideae", children=[CONVALLARIA])
 SCILLOIDEAE = Subfamily(name="Scilloideae", children=[HYACINTHUS])
+ALLIOIDEAE = Subfamily(name="Allioideae", children=[ALLIUM])
 AMARYLLIDOIDEAE = Subfamily(name="Amaryllidoideae", children=[NARCISSUS, GALANTHUS])
 
 ASPARAGOIDEAE_NOLINOIDEAE = Clade(children=[ASPARAGOIDEAE, NOLINOIDEAE])
@@ -99,7 +105,7 @@ ASPARAGACEAE = Family(
     name="Asparagaceae", children=[ASPARAGOIDEAE_NOLINOIDEAE, AGAVOIDEAE_SCILLOIDEAE]
 )
 ASPHODELACEAE = Family(name="Asphodelaceae", children=[ALOE])
-AMARYLLIDACEAE = Family(name="Amaryllidaceae", children=[ALLIUM, NARCISSUS])
+AMARYLLIDACEAE = Family(name="Amaryllidaceae", children=[ALLIOIDEAE, AMARYLLIDOIDEAE])
 
 ASPARAGACEAE_AMARYLLIDACEAE = Clade(children=[ASPARAGACEAE, AMARYLLIDACEAE])
 ASPARAGALES_B = Clade(children=[ASPARAGACEAE_AMARYLLIDACEAE, ASPHODELACEAE])

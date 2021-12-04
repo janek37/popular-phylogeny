@@ -94,7 +94,7 @@ VACCINIUM = Genus(
 RHODODENDRON = Genus(name="Rhododendron", children=[R_NOVA_ZEMBLA])
 
 ERICEAE = Tribe(name="Ericeae", children=[CALLUNA])
-VACCINIEAE = Tribe(name="Vaccinieae", children=[V_VITIS_IDAEA])
+VACCINIEAE = Tribe(name="Vaccinieae", children=[VACCINIUM])
 RHODOREAE = Tribe(name="Rhodoreae", children=[RHODODENDRON])
 
 LECYTHIDOIDEAE = Subfamily(name="Lecythidoideae", children=[BERTHOLLETIA])

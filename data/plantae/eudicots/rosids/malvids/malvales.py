@@ -59,8 +59,12 @@ ALCEA = Genus(name="Alcea", children=[A_ROSEA])
 ADANSONIA = Genus(name="Adansonia", children=[A_DIGITATA])
 GOSSYPIUM = Genus(name="Gossypium", children=[G_HIRSUTUM])
 DURIO = Genus(name="Durio", children=[D_ZIBETHINUS])
+ALTHAEA = Genus(name="Althaea", children=[A_OFFICINALIS])
 
-MALVEAE = Tribe(name="Malveae", children=[MALVA])
+# https://www.semanticscholar.org/paper/Systematics-ofLavatera-andMalva-(Malvaceae%2C-new-Ray/798729552b867e7dcbe84471d3161ba731442bfe
+MALVEAE_A = Clade(children=[ALCEA, ALTHAEA])
+
+MALVEAE = Tribe(name="Malveae", children=[MALVA, MALVEAE_A])
 HIBISCEAE = Tribe(name="Hibisceae", children=[HIBISCUS])
 GOSSYPIEAE = Tribe(name="Gossypieae", children=[GOSSYPIUM])
 DURIONEAE = Tribe(name="Durioneae", children=[DURIO])
