@@ -1,4 +1,4 @@
-from clade import Clade, Class, Family, Genus, Order, Phylum, Species
+from clade import Clade, Class, Family, Genus, Order, Phylum, Species, Subclass
 from constants import EN, PL
 
 from .angiospermae import ANGIOSPERMAE
@@ -40,6 +40,16 @@ L_LYCOPODIOIDES = Species(
         }
     ],
 )
+E_ARVENSE = Species(
+    name="Equisetum arvense", local_names={EN: "field horsetail", PL: "skrzyp polny"}
+)
+C_SUCKOWII = Species(
+    name="Calamites suckowii",
+    local_names={PL: "kalamit"},
+    known_for=[
+        {EN: "extinct giant horsetail", PL: "jeden z wymarłych ogromnych skrzypów"}
+    ],
+)
 
 POLYTRICHUM = Genus(name="Polytrichum", children=[P_COMMUNE])
 LEUCOBRYUM = Genus(name="Leucobryum", children=[L_GLAUCUM])
@@ -48,6 +58,8 @@ ALSOPHILA = Genus(name="Alsophila", children=[A_AUSTRALIS])
 MARSILEA = Genus(name="Marsilea", children=[M_QUADRIFOLIA])
 LYCOPODIUM = Genus(name="Lycopodium", children=[L_CLAVATUM])
 LEPIDODENDRON = Genus(name="Lepidodendron", children=[L_LYCOPODIOIDES])
+EQUISETUM = Genus(name="Equisetun", children=[E_ARVENSE])
+CALAMITES = Genus(name="Calamites", children=[C_SUCKOWII])
 
 POLYTRICHACEAE = Family(name="Polytrichaceae", children=[POLYTRICHUM])
 LEUCOBRYACEAE = Family(name="Leucobryaceae", children=[LEUCOBRYUM])
@@ -56,6 +68,8 @@ CYATHEACEAE = Family(name="Cyatheaceae", children=[ALSOPHILA])
 MARSILEACEAE = Family(name="Marsileaceae", children=[MARSILEA])
 LYCOPODIACEAE = Family(name="Lycopodiaceae", children=[LYCOPODIUM])
 LEPIDODENDRACEAE = Family(name="Lepidodendraceae", children=[LEPIDODENDRON])
+EQUISETACEAE = Family(name="Equisetaceae", children=[EQUISETUM])
+CALAMITACEAE = Family(name="Calamitaceae", children=[CALAMITES])
 
 POLYTRICHALES = Order(name="Polytrichales", children=[POLYTRICHACEAE])
 DICRANALES = Order(name="Dicranales", children=[LEUCOBRYACEAE])
@@ -64,14 +78,18 @@ CYATHEALES = Order(name="Cyatheales", children=[CYATHEACEAE])
 SALVINIALES = Order(name="Salviniales", children=[MARSILEACEAE])
 LYCOPODIALES = Order(name="Lycopodiales", children=[LYCOPODIACEAE])
 LEPIDODENDRALES = Order(name="Lepidodendrales", children=[LEPIDODENDRACEAE])
+EQUISETALES = Order(name="Equisetales", children=[EQUISETACEAE, CALAMITACEAE])
 
 POLYPODIALES_CYATHEALES = Clade(children=[POLYPODIALES, CYATHEALES])
 
+POLYPODIIDAE = Subclass(
+    name="Polypodiidae", children=[POLYPODIALES_CYATHEALES, SALVINIALES]
+)
+EQUISETIDAE = Subclass(name="Equisetidae", children=[EQUISETALES])
+
 POLYTRICHOPSIDA = Class(name="Polytrichopsida", children=[POLYTRICHALES])
 BRYOPSIDA = Class(name="Bryopsida", children=[DICRANALES])
-POLYPODIOPSIDA = Class(
-    name="Polypodiopsida", children=[POLYPODIALES_CYATHEALES, SALVINIALES]
-)
+POLYPODIOPSIDA = Class(name="Polypodiopsida", children=[POLYPODIIDAE, EQUISETIDAE])
 LYCOPODIOPSIDA = Class(name="Lycopodiopsida", children=[LYCOPODIALES, LEPIDODENDRALES])
 
 BRYOPHYTA = Phylum(name="Bryophyta", children=[POLYTRICHOPSIDA, BRYOPSIDA])

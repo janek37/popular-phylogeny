@@ -1,4 +1,4 @@
-from clade import Clade, Class, Family, Genus, Order, Phylum, Species
+from clade import Clade, Class, Family, Genus, Order, Phylum, Species, Subclass
 from constants import EN, IT, JP, PL
 
 from .agaricales import AGARICALES
@@ -55,9 +55,7 @@ RUSSULALES = Order(name="Russulales", children=[RUSSULACEAE])
 PHALLALES = Order(name="Phallales", children=[PHALLACEAE])
 THELEPHORALES = Order(name="Thelephorales", children=[BANKERACEAE])
 
-AGARICOMYCETIDAE = Clade(
-    name="Agaricomycetidae", children=[AGARICALES, BOLETALES]
-)  # Subclass
+AGARICOMYCETIDAE = Subclass(name="Agaricomycetidae", children=[AGARICALES, BOLETALES])
 POLYPORALES_THELEPHORALES = Clade(children=[POLYPORALES, THELEPHORALES])
 
 AGARICOMYCETES_A = Clade(children=[AGARICOMYCETIDAE, RUSSULALES])
