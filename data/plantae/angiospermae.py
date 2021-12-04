@@ -25,7 +25,11 @@ M_VIRGINIANA = Species(
     name="Magnolia virginiana", local_names={EN: "sweetbay magnolia"}
 )
 M_FRAGRANS = Species(
-    name="Myristica fragrans", known_for=[{PL: "gałka muszkatołowa"}, {EN: "nutmeg"}]
+    name="Myristica fragrans",
+    known_for=[
+        {PL: "gałka muszkatołowa", EN: "nutmeg"},
+        {PL: "kwiat muszkatołowy, macis", EN: "mace"},
+    ],
 )
 L_NOBILIS = Species(
     name="Laurus nobilis",

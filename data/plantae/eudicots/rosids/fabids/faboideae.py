@@ -34,7 +34,9 @@ C_ARIETINUM = Species(
 )
 G_MAX = Species(name="Glycine max", local_names={EN: "soybean", PL: "soja"})
 P_VULGARIS = Species(
-    name="Phaseolus vulgaris", local_names={EN: "common bean", PL: "fasola zwykła"}
+    name="Phaseolus vulgaris",
+    local_names={EN: "common bean", PL: "fasola zwykła"},
+    known_for=[{EN: "green beans, string beans", PL: "fasolka szparagowa"}],
 )
 T_PRATENSE = Species(
     name="Trifolium pratense", local_names={EN: "red clover", PL: "koniczyna łąkowa"}
