@@ -1,4 +1,4 @@
-from clade import Clade, Family, Genus, Order, Species
+from clade import Clade, Family, Genus, Order, Phylum, Species
 from constants import EN, PL
 
 from .eudicots import EUDICOTYLEDONES
@@ -88,4 +88,4 @@ ANGIOSPERMAE_B = Clade(children=[MAGNOLIIDAE, MONOCOTYLEDONES_EUDICOTYLEDONES])
 
 ANGIOSPERMAE_A = Clade(children=[AUSTROBAILEYALES, ANGIOSPERMAE_B])
 
-ANGIOSPERMAE = Clade(name="Angiospermae", children=[NYMPHAEALES, ANGIOSPERMAE_A])
+ANGIOSPERMAE = Phylum(name="Angiospermae", children=[NYMPHAEALES, ANGIOSPERMAE_A])
