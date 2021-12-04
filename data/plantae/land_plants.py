@@ -24,24 +24,46 @@ M_QUADRIFOLIA = Species(
     name="Marsilea quadrifolia",
     local_names={EN: "four leaf clover", PL: "marsylia czterolistna"},
 )
+L_CLAVATUM = Species(
+    name="Lycopodium clavatum",
+    local_names={EN: "common club moss", PL: "widłak goździsty"},
+    known_for=[
+        {EN: "one of the most common lycophytes", PL: "jeden z najczęstszych widłaków"}
+    ],
+)
+L_LYCOPODIOIDES = Species(
+    name="Lepidodendron lycopodioides",
+    known_for=[
+        {
+            EN: "extinct giant club moss (scale tree)",
+            PL: "jeden z wymarłych ogromnych widłaków",
+        }
+    ],
+)
 
 POLYTRICHUM = Genus(name="Polytrichum", children=[P_COMMUNE])
 LEUCOBRYUM = Genus(name="Leucobryum", children=[L_GLAUCUM])
 PTERIDIUM = Genus(name="Pteridium", children=[P_AQUILINUM])
 ALSOPHILA = Genus(name="Alsophila", children=[A_AUSTRALIS])
 MARSILEA = Genus(name="Marsilea", children=[M_QUADRIFOLIA])
+LYCOPODIUM = Genus(name="Lycopodium", children=[L_CLAVATUM])
+LEPIDODENDRON = Genus(name="Lepidodendron", children=[L_LYCOPODIOIDES])
 
 POLYTRICHACEAE = Family(name="Polytrichaceae", children=[POLYTRICHUM])
 LEUCOBRYACEAE = Family(name="Leucobryaceae", children=[LEUCOBRYUM])
 DENNSTAEDTIACEAE = Family(name="Dennstaedtiaceae", children=[PTERIDIUM])
 CYATHEACEAE = Family(name="Cyatheaceae", children=[ALSOPHILA])
 MARSILEACEAE = Family(name="Marsileaceae", children=[MARSILEA])
+LYCOPODIACEAE = Family(name="Lycopodiaceae", children=[LYCOPODIUM])
+LEPIDODENDRACEAE = Family(name="Lepidodendraceae", children=[LEPIDODENDRON])
 
 POLYTRICHALES = Order(name="Polytrichales", children=[POLYTRICHACEAE])
 DICRANALES = Order(name="Dicranales", children=[LEUCOBRYACEAE])
 POLYPODIALES = Order(name="Polypodiales", children=[DENNSTAEDTIACEAE])
 CYATHEALES = Order(name="Cyatheales", children=[CYATHEACEAE])
 SALVINIALES = Order(name="Salviniales", children=[MARSILEACEAE])
+LYCOPODIALES = Order(name="Lycopodiales", children=[LYCOPODIACEAE])
+LEPIDODENDRALES = Order(name="Lepidodendrales", children=[LEPIDODENDRACEAE])
 
 POLYPODIALES_CYATHEALES = Clade(children=[POLYPODIALES, CYATHEALES])
 
@@ -50,11 +72,14 @@ BRYOPSIDA = Class(name="Bryopsida", children=[DICRANALES])
 POLYPODIOPSIDA = Class(
     name="Polypodiopsida", children=[POLYPODIALES_CYATHEALES, SALVINIALES]
 )
+LYCOPODIOPSIDA = Class(name="Lycopodiopsida", children=[LYCOPODIALES, LEPIDODENDRALES])
 
 BRYOPHYTA = Phylum(name="Bryophyta", children=[POLYTRICHOPSIDA, BRYOPSIDA])
 POLYPODIOPHYTA = Phylum(name="Polypodiophyta", children=[POLYPODIOPSIDA])
+LYCOPHYTES = Phylum(name="Lycophytes", children=[LYCOPODIOPSIDA])
 
 SPERMATOPHYTES = Clade(name="Spermatophyta", children=[GYMNOSPERMAE, ANGIOSPERMAE])
-TRACHEOPHYTES = Clade(name="Tracheophytes", children=[POLYPODIOPHYTA, SPERMATOPHYTES])
+MEGAPHYLLS = Clade(name="Megaphylls", children=[POLYPODIOPHYTA, SPERMATOPHYTES])
+TRACHEOPHYTES = Clade(name="Tracheophytes", children=[MEGAPHYLLS, LYCOPHYTES])
 
 EMBRYOPHYTA = Clade(name="Embryophyta", children=[BRYOPHYTA, TRACHEOPHYTES])
