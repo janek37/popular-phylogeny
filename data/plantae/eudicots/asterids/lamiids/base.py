@@ -1,6 +1,8 @@
 from clade import Clade, Family, Genus, Order, Species
 from constants import EN, PL
 
+from .lamiales import LAMIALES
+
 M_SYLVATICA = Species(
     name="Myosotis sylvatica",
     local_names={EN: "forget-me-not", PL: "niezapominajka leśna"},
@@ -35,4 +37,5 @@ LOGANIACEAE = Family(name="Loganiaceae", children=[STRYCHNOS])
 BORAGINALES = Order(name="Boraginales", children=[BORAGINACEAE])
 GENTIANALES = Order(name="Gentianales", children=[RUBIACEAE, LOGANIACEAE])
 
-LAMIIDS = Clade(name="lamiids", children=[BORAGINALES, GENTIANALES])
+# Boraginales and Lamiales may be sisters, but the evidence is weak so far
+LAMIIDS = Clade(name="lamiids", children=[BORAGINALES, GENTIANALES, LAMIALES])
