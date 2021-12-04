@@ -59,6 +59,9 @@ E_CARDAMOMUM = Species(
     name="Elettaria cardamomum",
     local_names={EN: "green cardamom", PL: "kardamon malabarski"},
 )
+C_LONGA = Species(
+    name="Curcuma longa", local_names={EN: "turmeric", PL: "kurkuma, ostryż długi"}
+)
 
 ACORUS = Genus(name="Acorus", children=[A_CALAMUS])
 ZOSTERA = Genus(name="Zostera", children=[Z_MARINA])
@@ -73,11 +76,14 @@ ADONIDIA = Genus(name="Adonidia", children=[A_MERRILLII])
 MUSA = Genus(name="Genus", children=[M_PARADISIACA])
 ZINGIBER = Genus(name="Zingiber", children=[Z_OFFICINALE])
 ELETTARIA = Genus(name="Elettaria", children=[E_CARDAMOMUM])
+CURCUMA = Genus(name="Curcuma", children=[C_LONGA])
 
 COCOSEAE = Tribe(name="Cocoseae", children=[COCOS, ELAEIS])
 EUTERPEAE = Tribe(name="Euterpeae", children=[EUTERPE])
 PHOENICEAE = Tribe(name="Phoeniceae", children=[PHOENIX])
 ARECAE = Tribe(name="Arecae", children=[ADONIDIA])
+ZINGIBEREAE = Tribe(name="Zingibereae", children=[ZINGIBER, CURCUMA])
+ALPINIEAE = Tribe(name="Alpinieae", children=[ELETTARIA])
 
 # https://www.researchgate.net/publication/44651559_Complete_Generic-Level_Phylogenetic_Analyses_of_Palms_Arecaceae_with_Comparisons_of_Supertree_and_Supermatrix_Approaches/figures
 ARECOIDEAE_A = Clade(children=[EUTERPEAE, ARECAE])
@@ -91,7 +97,7 @@ ARACEAE = Family(name="Araceae", children=[LEMNA])
 LILIACEAE = Family(name="Liliaceae", children=[LILIUM, TULIPA])
 ARECACEAE = Family(name="Arecaceae", children=[ARECOIDEAE, CORYPHOIDEAE])
 MUSACEAE = Family(name="Musaceae", children=[MUSA])
-ZINGIBERACEAE = Family(name="Zingiberaceae", children=[ZINGIBER, ELETTARIA])
+ZINGIBERACEAE = Family(name="Zingiberaceae", children=[ZINGIBEREAE, ALPINIEAE])
 
 ACORALES = Order(name="Acorales", children=[ACORACEAE])
 ALISMATALES = Order(name="Alismatales", children=[ZOSTERACEAE, ARACEAE])
