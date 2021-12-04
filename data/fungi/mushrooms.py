@@ -28,6 +28,10 @@ L_DELICIOSUS = Species(
 )
 P_INDUSIATUS = Species(name="Phallus indusiatus", local_names={EN: "bamboo mushroom"})
 H_PECKII = Species(name="Hydnellum peckii", local_names={EN: "Devil's tooth"})
+R_VESCA = Species(
+    name="Russula vesca",
+    local_names={EN: "bare-toothed Russula", PL: "gołąbek wyborny"},
+)
 
 GRIFOLA = Genus(name="Grifola", children=[G_FRONDOSA])
 HYDNUM = Genus(name="Hydnum", children=[H_REPANDUM])
@@ -38,13 +42,14 @@ RUBROBOLETUS = Genus(name="Rubroboletus", children=[R_SATANAS])
 LACTORIUS = Genus(name="Lactorius", children=[L_DELICIOSUS])
 PHALLUS = Genus(name="Phallus", children=[P_INDUSIATUS])
 HYDNELLUM = Genus(name="Hydnellum", children=[H_PECKII])
+RUSSULA = Genus(name="Russula", children=[R_VESCA])
 
 MERIPILACEAE = Family(name="Meripilaceae", children=[GRIFOLA])
 HYDNACEAE = Family(name="Hydnaceae", children=[HYDNUM])
 BOLETACEAE = Family(name="Boletaceae", children=[BOLETUS, RUBROBOLETUS])
 CANTHARELLACEAE = Family(name="Cantharellaceae", children=[CANTHARELLUS])
 POLYPORACEAE = Family(name="Polyporaceae", children=[LAETIPORUS])
-RUSSULACEAE = Family(name="Russulaceae", children=[LACTORIUS])
+RUSSULACEAE = Family(name="Russulaceae", children=[LACTORIUS, RUSSULA])
 PHALLACEAE = Family(name="Phallaceae", children=[PHALLUS])
 BANKERACEAE = Family(name="Bankeraceae", children=[HYDNELLUM])
 
