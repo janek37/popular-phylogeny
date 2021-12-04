@@ -72,6 +72,14 @@ C_CLEMENTINA = Species(
     name="Citrus × clementina", local_names={EN: "clementine", PL: "klementynka"}
 )
 C_JAPONICA = Species(name="Citrus japonica", local_names={EN: "kumquat", PL: "kumkwat"})
+Z_BUNGEANUM = Species(
+    name="Zanthoxylum bungeanum",
+    local_names={
+        EN: "Sichuan/Szechuan pepper",
+        PL: "pieprz syczuanski, żółtodrzew Bungego",
+    },
+    known_for=[{EN: "Szechuan sauce"}],
+)
 
 ACER_SECTION_ACER = Clade(
     name="Acer sect. Acer", children=[A_PSEUDOPLATANUS, A_SACCHARUM]
@@ -102,6 +110,7 @@ ACER = Genus(name="Acer", children=[ACER_SECTION_ACER, A_PLATANOIDES])
 LITCHI = Genus(name="Litchi", children=[L_CHINENSIS])
 PAULINIA = Genus(name="Paulinia", children=[P_CUPANA])
 CITRUS = Genus(name="Citrus", children=[CORE_CITRUSES, C_JAPONICA])
+ZANTHOXYLUM = Genus(name="Zanthoxylum", children=[Z_BUNGEANUM])
 
 # https://www.researchgate.net/publication/323561612_Anacardiaceae_Phylogeny_Poster_2018
 ANACORDIOIDEAE_A = Clade(children=[ANACARDIUM, MANGIFERA])
@@ -114,11 +123,12 @@ ANACARDIOIDEAE = Subfamily(
 HIPPOCASTANOIDEAE = Subfamily(name="Hippocastanoideae", children=[AESCULUS, ACER])
 SAPINDOIDEAE = Subfamily(name="Sapindoideae", children=[LITCHI, PAULINIA])
 AURANTIOIDEAE = Subfamily(name="Aurantioideae", children=[CITRUS])
+ZANTHOXYLOIDEAE = Subfamily(name="Zanthoxyloideae", children=[ZANTHOXYLUM])
 
 BURSERACEAE = Family(name="Burseraceae", children=[COMMIPHORA])
 ANACARDIACEAE = Family(name="Anacardiaceae", children=[ANACARDIOIDEAE])
 SAPINDACEAE = Family(name="Sapindaceae", children=[HIPPOCASTANOIDEAE, SAPINDOIDEAE])
-RUTACEAE = Family(name="Rutaceae", children=[AURANTIOIDEAE])
+RUTACEAE = Family(name="Rutaceae", children=[AURANTIOIDEAE, ZANTHOXYLOIDEAE])
 
 # https://www.researchgate.net/publication/311503129_An_Expanded_Nuclear_Phylogenomic_PCR_Toolkit_for_Sapindales
 SAPINDALES_A = Clade(children=[BURSERACEAE, ANACARDIACEAE])
