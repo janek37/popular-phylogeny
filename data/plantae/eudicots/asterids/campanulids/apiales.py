@@ -82,6 +82,10 @@ P_GINSENG = Species(
 C_CYMINUM = Species(
     name="Cuminum cyminum", local_names={EN: "cumin", PL: "kmin rzymski"}
 )
+A_ARCHANGELICA = Species(
+    name="Angelica archangelica",
+    local_names={EN: "garden angelica", PL: "arcydzięgiel lekarski, dzięgiel litwor"},
+)
 
 PIMPINELLA = Genus(name="Pimpinella", children=[P_ANISUM])
 TRACHYSPERMUM = Genus(name="Trachyspermum", children=[T_AMMI])
@@ -92,7 +96,6 @@ CARUM = Genus(name="Carum", children=[C_CARVI])
 AEGOPODIUM = Genus(name="Aegopodium", children=[A_PODAGRARIA])
 AETHUSA = Genus(name="Aethusa", children=[A_CYNAPIUM])
 OENANTHE = Genus(name="Oenanthe", children=[O_CROCATA])
-LEVISTICUM = Genus(name="Levisticum", children=[L_OFFICINALE])  # incertia sedis
 ANETHUM = Genus(name="Anethum", children=[ANETHUM_GRAVEOLENS])
 FOENICULUM = Genus(name="Foeniculum", children=[F_VULGARE])
 APIUM = Genus(name="Apium", children=[APIUM_GRAVEOLENS])
@@ -104,6 +107,8 @@ CICUTA = Genus(name="Cicuta", children=[C_VIROSA])
 HEDERA = Genus(name="Hedera", children=[H_HELIX])
 PANAX = Genus(name="Panax", children=[P_GINSENG])
 CUMINUM = Genus(name="Cuminum", children=[C_CYMINUM])
+# https://www.researchgate.net/publication/263393806_Identification_of_species_and_materia_medica_within_Angelica_L_Umbelliferae_based_on_phylogeny_inferred_from_DNA_barcodes
+ANGELICA = Genus(name="Angelica", children=[A_ARCHANGELICA, L_OFFICINALE])
 
 # https://www.researchgate.net/publication/275771656_Taxonomy_of_the_tribe_Apieae_Apiaceae_revisited_as_revealed_by_molecular_phylogenies_and_morphological_characters
 APIEAE_A = Clade(children=[ANETHUM, FOENICULUM])
@@ -114,9 +119,7 @@ PYRAMIDOPTEREAE = Tribe(name="Pyramidoptereae", children=[TRACHYSPERMUM])
 CORIANDREAE = Tribe(name="Coriandreae", children=[CORIANDRUM])
 TORDYLIEAE = Tribe(name="Tordylieae", children=[PASTINACA, HERACLEUM])
 CAREAE = Tribe(name="Careae", children=[CARUM, AEGOPODIUM])
-# https://www.researchgate.net/publication/263393806_Identification_of_species_and_materia_medica_within_Angelica_L_Umbelliferae_based_on_phylogeny_inferred_from_DNA_barcodes
-# evidence for Levisticum in Selineae
-SELINEAE = Tribe(name="Selineae", children=[AETHUSA, LEVISTICUM])
+SELINEAE = Tribe(name="Selineae", children=[AETHUSA, ANGELICA])
 OENANTHEAE = Tribe(name="Oenantheae", children=[OENANTHE, CICUTA])
 SANICULEAE = Tribe(name="Saniculeae", children=[ERYNGIUM])
 APIEAE = Tribe(name="Apieae", children=[APIEAE_A, APIEAE_B])
