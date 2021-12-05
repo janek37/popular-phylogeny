@@ -24,6 +24,9 @@ P_GRANATUM = Species(
 P_GUAJAVA = Species(
     name="Psidium guajava", local_names={EN: "common guava", PL: "gujawa pospolita"}
 )
+M_COMMUNIS = Species(
+    name="Myrtus communis", local_names={EN: "common myrtle", PL: "mirt zwyczajny"}
+)
 
 PIMENTA = Genus(name="Pimenta", children=[P_DIOICA])
 FUCHSIA = Genus(name="Fuchsia", children=[F_MAGELLANICA])
@@ -31,8 +34,12 @@ SYZYGIUM = Genus(name="Syzygium", children=[S_AROMATICUM])
 EUCALYPTUS = Genus(name="Eucalyptus", children=[E_CAMALDULENSIS])
 PUNICA = Genus(name="Punica", children=[P_GRANATUM])
 PSIDIUM = Genus(name="Psidium", children=[P_GUAJAVA])
+MYRTUS = Genus(name="Myrtus", children=[M_COMMUNIS])
 
-MYRTEAE = Tribe(name="Myrteae", children=[PIMENTA, PSIDIUM])
+# https://www.researchgate.net/publication/312317456_Myrteae_phylogeny_calibration_biogeography_and_diversification_patterns_Increased_understanding_in_the_most_species_rich_tribe_of_Myrtaceae
+MYRTEAE_A = Clade(children=[PIMENTA, PSIDIUM])
+
+MYRTEAE = Tribe(name="Myrteae", children=[MYRTEAE_A, MYRTUS])
 SYZYGIEAE = Tribe(name="Syzygieae", children=[SYZYGIUM])
 
 # https://www.researchgate.net/publication/258164894_The_evolution_of_foliar_terpene_diversity_in_Myrtaceae
