@@ -41,12 +41,21 @@ P_AMYGDALUS = Species(
     name="Prunus amygdalus",
     local_names={EN: "almond", PL: "migdał, migdałowiec pospolity"},
 )
+P_SPINOSA = Species(
+    name="Prunus spinosa", local_names={EN: "blackthorn", PL: "śliwa tarnina"}
+)
 C_OBLONGA = Species(
     name="Cydonia oblonga", local_names={EN: "quince", PL: "pigwa pospolita"}
 )
 
+PRUNUS_SECTION_PRUNUS = Clade(
+    name="Prunus sect. Prunus", children=[P_DOMESTICA, P_SPINOSA]
+)
+PRUNUS_SECTION_ARMENIACA = Clade(name="Prunus sect. Armeniaca", children=[P_ARMENIACA])
+
 PRUNUS_SUBGENUS_PRUNUS = Subgenus(
-    name="Prunus subg. Prunus", children=[P_DOMESTICA, P_ARMENIACA]
+    name="Prunus subg. Prunus",
+    children=[PRUNUS_SECTION_PRUNUS, PRUNUS_SECTION_ARMENIACA],
 )
 PRUNUS_SUBGENUS_CERASUS = Subgenus(
     name="Prunus subg. Cerasus", children=[P_AVIUM, P_CERASUS]
