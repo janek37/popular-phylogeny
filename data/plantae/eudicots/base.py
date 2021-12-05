@@ -64,6 +64,9 @@ P_VULGARIS = Species(
 A_CORONARIA = Species(
     name="Anemone coronaria", local_names={EN: "poppy anemone", PL: "zawilec wieńcowy"}
 )
+B_SEMPERVIRENS = Species(
+    name="Buxus sempervirens", local_names={EN: "common box", PL: "bukszpan zwyczajny"}
+)
 
 RIBES_SUBGENUS_RIBES = Subgenus(name="Ribes subg. Ribes", children=[R_NIGRUM, R_RUBRUM])
 
@@ -79,9 +82,10 @@ CRASSULA = Genus(name="Crassula", children=[C_OVATA])
 VISCUM = Genus(name="Viscum", children=[V_ALBUM])
 PULSATILLA = Genus(name="Pulsatilla", children=[P_VULGARIS])
 ANEMONE = Genus(name="Anemone", children=[A_CORONARIA])
+BUXUS = Genus(name="Buxus", children=[B_SEMPERVIRENS])
 
 RANUNCULEAE = Tribe(name="Ranunculeae", children=[RANUNCULUS])
-DELPHINIEAE = Genus(name="Delphinieae", children=[ACONITUM])
+DELPHINIEAE = Tribe(name="Delphinieae", children=[ACONITUM])
 ANEMONEAE = Tribe(name="Anemoneae", children=[PULSATILLA, ANEMONE])
 
 # https://www.researchgate.net/publication/339299453_Ranunculaceae_Phylogeny_Poster_RanPP_2020V3a
@@ -98,6 +102,7 @@ NELUMBONACEAE = Family(name="Nelumbonaceae", children=[NELUMBO])
 PROTEACEAE = Family(name="Proteaceae", children=[MACADAMIA])
 PLATANACEAE = Family(name="Platanaceae", children=[PLATANUS])
 SANTALACEAE = Family(name="Santalaceae", children=[VISCUM])
+BUXACEAE = Family(name="Buxaceae", children=[BUXUS])
 
 GROSSULARIACEAE_CRASSULACEAE = Clade(children=[GROSSULARIACEAE, CRASSULACEAE])
 PLATANACEAE_PROTEACEAE = Clade(children=[PLATANACEAE, PROTEACEAE])
@@ -108,6 +113,7 @@ SAXIFRAGALES = Order(
     name="Saxifragales", children=[PAEONIACEAE, GROSSULARIACEAE_CRASSULACEAE]
 )
 SANTALALES = Order(name="Santalales", children=[SANTALACEAE])
+BUXALES = Order(name="Buxales", children=[BUXACEAE])
 
 SUPERASTERIDS_A = Clade(children=[CARYOPHYLLALES, ASTERIDS])
 
@@ -116,7 +122,8 @@ SUPERASTERIDS = Clade(name="superasterids", children=[SANTALALES, SUPERASTERIDS_
 
 PENTAPETALAE = Clade(name="Pentapetalae", children=[SUPERROSIDS, SUPERASTERIDS])
 
-EUDICOTYLEDONES_A = Clade(children=[PROTEALES, PENTAPETALAE])
+EUDICOTYLEDONES_B = Clade(children=[BUXALES, PENTAPETALAE])
+EUDICOTYLEDONES_A = Clade(children=[PROTEALES, EUDICOTYLEDONES_B])
 EUDICOTYLEDONES = Clade(
     name="Eudicotyledones",
     local_names={EN: "eudicots", PL: "dwuliścienne"},
