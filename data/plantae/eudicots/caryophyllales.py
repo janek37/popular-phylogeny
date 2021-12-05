@@ -80,6 +80,10 @@ E_GRUSONII = Species(
 C_GIGANTEA = Species(
     name="Carnegiea gigantea", local_names={EN: "saguaro", PL: "karnegia olbrzymia"}
 )
+P_AVICULARE = Species(
+    name="Polygonum aviculare",
+    local_names={EN: "common knotgrass", PL: "rdest zwyczajny"},
+)
 
 DIANTHUS = Genus(name="Dianthus", children=[D_CARYOPHYLLUS])
 BETA = Genus(name="Beta", children=[B_VULGARIS])
@@ -100,6 +104,7 @@ LOPHOMORA = Genus(name="Lophomora", children=[L_WILLIAMSII])
 ASTROPHYTUM = Genus(name="Astrophytum", children=[A_ASTERIAS])
 ECHINOCACTUS = Genus(name="Echinocactus", children=[E_GRUSONII])
 CARNEGIEA = Genus(name="Carnegiea", children=[C_GIGANTEA])
+POLYGONUM = Genus(name="Polygonum", children=[P_AVICULARE])
 
 CACTINAE = Subtribe(name="Cactinae", children=[MAMMILARIA])
 
@@ -108,22 +113,28 @@ CACTEAE_A = Clade(children=[CACTINAE, LOPHOMORA])
 CACTEAE_B = Clade(children=[ASTROPHYTUM, ECHINOCACTUS])
 
 BETEAE = Tribe(name="Beta", children=[BETA])
+FAGOPYREAE = Tribe(name="Fagopyreae", children=[FAGOPYRUM])
 RUMICEAE = Tribe(name="Rumiceae", children=[RHEUM, RUMEX])
 SALSOLEAE = Tribe(name="Salsoleae", children=[KALI])
 CACTEAE = Tribe(name="Cacteae", children=[CACTEAE_A, CACTEAE_B])
 RHIPSALIDEAE = Tribe(name="Rhipsalideae", children=[SCHLUMBERGERA])
 HYLOCEREEAE = Tribe(name="Hylocereeae", children=[SELENICEREUS])
 ECHINOCEREEAE = Tribe(name="Echinocereeae", children=[CARNEGIEA])
+POLYGONEAE = Tribe(name="Polygoneae", children=[POLYGONUM])
 
 # https://www.semanticscholar.org/paper/Phylogeny-and-evolution-of-the-epiphytic-(-)-Korotkova/4b7d67f2043a8fcd0f2797fa5b76c5a35e92273a
 PHYLLOCACTEAE = Clade(name="Phyllocacteae", children=[HYLOCEREEAE, ECHINOCEREEAE])
 CACTOIDEAE_A = Clade(children=[RHIPSALIDEAE, PHYLLOCACTEAE])
+
+# https://www.researchgate.net/publication/351448060_The_complete_chloroplast_genome_of_the_medicinal_plant_Polygonum_cuspidatum_Polygonaceae_and_its_phylogenetic_implications_within_the_subfamily_Polygonoideae
+POLYGONOIDEAE_A = Clade(children=[RUMICEAE, POLYGONEAE])
 
 CHENOPODIOIDEAE = Subfamily(name="Chenopodioideae", children=[SPINACIA, CHENOPODIUM])
 CACTOIDEAE = Subfamily(name="Cactoideae", children=[CACTEAE, CACTOIDEAE_A])
 OPUNTIOIDEAE = Subfamily(name="Opuntioideae", children=[OPUNTIA])
 BETOIDEAE = Subfamily(name="Betoideae", children=[BETEAE])
 SALSOLOIDEAE = Subfamily(name="Salsoloideae", children=[SALSOLEAE])
+POLYGONOIDEAE = Subfamily(name="Polygonoideae", children=[POLYGONOIDEAE_A, FAGOPYREAE])
 
 AMARANTHACEAE_A = Clade(children=[BETOIDEAE, CHENOPODIOIDEAE])
 
@@ -131,7 +142,7 @@ CARYOPHYLLACEAE = Family(name="Caryophyllaceae", children=[DIANTHUS])
 AMARANTHACEAE = Family(name="Amaranthaceae", children=[AMARANTHACEAE_A, SALSOLOIDEAE])
 DROSERACEAE = Family(name="Droseraceae", children=[DROSERA, DIONAEA])
 NEPENTHACEAE = Family(name="Nepenthaceae", children=[NEPENTHES])
-POLYGONACEAE = Family(name="Polygonaceae", children=[RUMICEAE, FAGOPYRUM])
+POLYGONACEAE = Family(name="Polygonaceae", children=[POLYGONOIDEAE])
 CACTACEAE = Family(name="Cactaceae", children=[CACTOIDEAE, OPUNTIOIDEAE])
 
 # https://www.researchgate.net/publication/225486253_The_distribution_of_ester-linked_ferulic_acid_in_the_cell_walls_of_angiosperms
