@@ -48,6 +48,9 @@ A_OFFICINALIS = Species(
     local_names={EN: "marsh mallow", PL: "prawoślaz lekarski"},
     known_for=[{EN: "archetype of modern marshmallows"}],
 )
+C_OLITORIUS = Species(
+    name="Corchorus olitorius", local_names={EN: "jute mallow", PL: "juta warzywna"}
+)
 
 OCHROMA = Genus(name="Ochroma", children=[O_PYRAMIDALE])
 TILIA = Genus(name="Tilia", children=[T_EUROPAEA])
@@ -60,6 +63,7 @@ ADANSONIA = Genus(name="Adansonia", children=[A_DIGITATA])
 GOSSYPIUM = Genus(name="Gossypium", children=[G_HIRSUTUM])
 DURIO = Genus(name="Durio", children=[D_ZIBETHINUS])
 ALTHAEA = Genus(name="Althaea", children=[A_OFFICINALIS])
+CORCHORUS = Genus(name="Corchorus", children=[C_OLITORIUS])
 
 # https://www.semanticscholar.org/paper/Systematics-ofLavatera-andMalva-(Malvaceae%2C-new-Ray/798729552b867e7dcbe84471d3161ba731442bfe
 MALVEAE_A = Clade(children=[ALCEA, ALTHAEA])
@@ -75,12 +79,14 @@ BYTTNERIOIDEAE = Subfamily(name="Byttnerioideae", children=[THEOBROMA])
 STERCULIOIDEAE = Subfamily(name="Sterculioideae", children=[COLA])
 MALVOIDEAE = Subfamily(name="Malvoideae", children=[MALVEAE, HIBISCEAE, GOSSYPIEAE])
 HELICTEROIDEAE = Subfamily(name="Helicteroideae", children=[DURIONEAE])
+GREWIOIDEAE = Subfamily(name="Grewioideae", children=[CORCHORUS])
 
 MALVOIDEAE_BOMBACOIDEAE = Clade(children=[MALVOIDEAE, BOMBACOIDEAE])
 MALVACEAE_A = Clade(
     children=[MALVOIDEAE_BOMBACOIDEAE, TILIOIDEAE, STERCULIOIDEAE, HELICTEROIDEAE]
 )
+BYTTNERIOIDEAE_GREWIOIDEAE = Clade(children=[BYTTNERIOIDEAE, GREWIOIDEAE])
 
-MALVACEAE = Family(name="Malvaceae", children=[MALVACEAE_A, BYTTNERIOIDEAE])
+MALVACEAE = Family(name="Malvaceae", children=[MALVACEAE_A, BYTTNERIOIDEAE_GREWIOIDEAE])
 
 MALVALES = Order(name="Malvales", children=[MALVACEAE])
