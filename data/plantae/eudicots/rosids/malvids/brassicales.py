@@ -66,6 +66,10 @@ T_MAJUS = Species(
 C_SPINOSA = Species(
     name="Capparis spinosa", local_names={EN: "caper", PL: "kapary cierniste"}
 )
+M_LONGIPETALA = Species(
+    name="Matthiola longipetala",
+    local_names={EN: "evening stock", PL: "maciejka, lewkonia długopłatkowa"},
+)
 
 SINAPIS = Genus(name="Sinapis", children=[S_ALBA])
 ERUCA = Genus(name="Eruca", children=[E_VESICARIA])
@@ -79,6 +83,7 @@ CARICA = Genus(name="Carica", children=[C_PAPAYA])
 RESEDA = Genus(name="Reseda", children=[R_ODORATA])
 TROPAEOLUM = Genus(name="Tropaeolum", children=[T_MAJUS])
 CAPPARIS = Genus(name="Capparis", children=[C_SPINOSA])
+MATTHIOLA = Genus(name="Matthiola", children=[M_LONGIPETALA])
 
 # https://www.researchgate.net/publication/283890506_Genetic_Differentiation_Molecular_Phylogenetic_Analysis_and_Ethnobotanical_Study_of_Eutrema_japonicum_and_E_tenue_in_Japan_and_E_yunnanense_in_China
 BRASSICEAE_A = Clade(children=[BRASSICA, RAPHANUS])
@@ -88,11 +93,13 @@ BRASSICEAE = Tribe(name="Brassiceae", children=[SINAPIS, BRASSICEAE_B])
 LEPIDIEAE = Tribe(name="Lepidieae", children=[LEPIDIUM])
 CARDAMINEAE = Tribe(name="Cardamineae", children=[ARMORACIA])
 EUTREMEAE = Tribe(name="Eutremeae", children=[EUTREMA])
+ANCHONIEAE = Tribe(name="Anchonieae", children=[MATTHIOLA])
 
 BRASSICACEAE_A = Clade(children=[BRASSICEAE, EUTREMEAE])
 BRASSICACEAE_B = Clade(children=[LEPIDIEAE, CARDAMINEAE])
+BRASSICACEAE_C = Clade(children=[BRASSICACEAE_A, ANCHONIEAE])
 
-BRASSICACEAE = Family(name="Brassicaceae", children=[BRASSICACEAE_A, BRASSICACEAE_B])
+BRASSICACEAE = Family(name="Brassicaceae", children=[BRASSICACEAE_C, BRASSICACEAE_B])
 CARICACEAE = Family(name="Caricaceae", children=[CARICA])
 RESEDACEAE = Family(name="Resedaceae", children=[RESEDA])
 TROPAEOLACEAE = Family(name="Tropaeolaceae", children=[TROPAEOLUM])
