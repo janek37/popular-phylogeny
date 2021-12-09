@@ -1,4 +1,14 @@
-from clade import Clade, Class, Family, Genus, Kingdom, Order, Phylum, Species
+from clade import (
+    Clade,
+    Class,
+    Family,
+    Genus,
+    Kingdom,
+    Order,
+    Phylum,
+    Species,
+    Subphylum,
+)
 from constants import EN, PL
 
 from .mushrooms import BASIDIOMYCOTA
@@ -109,9 +119,9 @@ DOTHIDEOMYCETA = Clade(
     name="Dothideomyceta", children=[EUROTIOMYCETES, LECANOROMYCETES]
 )
 LEOTIOMYCETA = Clade(name="Leotiomyceta", children=[SORDARIOMYCETES, DOTHIDEOMYCETA])
-PEZIZOMYCOTINA = Clade(
+PEZIZOMYCOTINA = Subphylum(
     name="Pezizomycotina", children=[LEOTIOMYCETA, PEZIZOMYCETES]
-)  # Subdivision/Subphylum
+)
 
 ASCOMYCOTA = Phylum(name="Ascomycota", children=[PEZIZOMYCOTINA, SACCHAROMYCETES])
 

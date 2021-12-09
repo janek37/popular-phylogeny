@@ -9,6 +9,7 @@ class Rank(Enum):
     KINGDOM = "Kingdom"
     SUPERPHYLUM = "Superphylum"
     PHYLUM = "Phylum"
+    SUBPHYLUM = "Subphylum"
     CLASS = "Class"
     SUBCLASS = "Subclass"
     ORDER = "Order"
@@ -49,6 +50,11 @@ class Superphylum(Clade):
 @dataclass
 class Phylum(Clade):
     rank = Rank.PHYLUM
+
+
+@dataclass
+class Subphylum(Clade):
+    rank = Rank.SUBPHYLUM
 
 
 @dataclass
