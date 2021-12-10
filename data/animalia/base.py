@@ -1,7 +1,19 @@
-from clade import Clade, Class, Family, Genus, Kingdom, Order, Phylum, Species, Subclass
+from clade import (
+    Clade,
+    Class,
+    Family,
+    Genus,
+    Kingdom,
+    Order,
+    Phylum,
+    Species,
+    Subclass,
+    Superphylum,
+)
 from constants import EN, PL
 
 from .cnidaria import CNIDARIA
+from .mollusca import MOLLUSCA
 
 A_FISTULARIS = Species(
     name="Aplysina fistularis",
@@ -57,7 +69,11 @@ PORIFERA = Phylum(name="Porifera", children=[DEMOSPONGIAE])
 PLATYHELMINTHES = Phylum(name="Platyhelminthes", children=[TREMATODA, CESTODA])
 ANNELIDA = Phylum(name="Annelida", children=[CITELLATA])
 
-LOPHOTROCHOZOA = Clade(name="Lophotrochozoa", children=[PLATYHELMINTHES, ANNELIDA])
-PARAHOXOZOA = Clade(name="ParaHoxozoa", children=[CNIDARIA, LOPHOTROCHOZOA])
+LOPHOTROCHOZOA = Superphylum(name="Lophotrochozoa", children=[ANNELIDA, MOLLUSCA])
+
+PLATYTROCHOZOA = Clade(
+    name="Platytrochozoa", children=[PLATYHELMINTHES, LOPHOTROCHOZOA]
+)
+PARAHOXOZOA = Clade(name="ParaHoxozoa", children=[CNIDARIA, PLATYTROCHOZOA])
 
 ANIMALIA = Kingdom(name="Animalia", children=[PORIFERA, PARAHOXOZOA])
