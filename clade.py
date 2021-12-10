@@ -10,9 +10,13 @@ class Rank(Enum):
     SUPERPHYLUM = "Superphylum"
     PHYLUM = "Phylum"
     SUBPHYLUM = "Subphylum"
+    SUPERCLASS = "Superclass"
     CLASS = "Class"
     SUBCLASS = "Subclass"
+    SUPERORDER = "Superorder"
     ORDER = "Order"
+    SUBORDER = "Suborder"
+    SUPERFAMILY = "Superfamily"
     FAMILY = "Family"
     SUBFAMILY = "Subfamily"
     SUPERTRIBE = "Supertribe"
@@ -20,6 +24,7 @@ class Rank(Enum):
     SUBTRIBE = "Subtribe"
     GENUS = "Genus"
     SUBGENUS = "Subgenus"
+    SUPERSPECIES = "Superspecies"
     SPECIES = "Species"
 
 
@@ -58,6 +63,11 @@ class Subphylum(Clade):
 
 
 @dataclass
+class Superclass(Clade):
+    rank = Rank.SUPERCLASS
+
+
+@dataclass
 class Class(Clade):
     rank = Rank.CLASS
 
@@ -68,8 +78,23 @@ class Subclass(Clade):
 
 
 @dataclass
+class Superorder(Clade):
+    rank = Rank.SUPERORDER
+
+
+@dataclass
 class Order(Clade):
     rank = Rank.ORDER
+
+
+@dataclass
+class Suborder(Clade):
+    rank = Rank.SUBORDER
+
+
+@dataclass
+class Superfamily(Clade):
+    rank = Rank.SUPERFAMILY
 
 
 @dataclass
@@ -105,6 +130,11 @@ class Genus(Clade):
 @dataclass
 class Subgenus(Clade):
     rank = Rank.SUBGENUS
+
+
+@dataclass
+class Superspecies(Clade):
+    rank = Rank.SUPERSPECIES
 
 
 @dataclass
