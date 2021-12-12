@@ -123,4 +123,16 @@ LITTORINIMORPHA = Order(name="Littorinimorpha", children=[CYPRAEOIDEA, STROMBOID
 CAENOGASTROPODA = Subclass(name="Caenogastropoda", children=[LITTORINIMORPHA])
 # endregion
 
-GASTROPODA = Class(name="Gastropoda", children=[HETEROBRANCHIA, CAENOGASTROPODA])
+P_VULGATA = Species(
+    name="Patella vulgata", local_names={EN: "common limpet", PL: "czaszołka pospolita"}
+)
+
+PATELLA = Genus(name="Patella", children=[P_VULGATA])
+
+PATELLIDAE = Family(name="Patellidae", children=[PATELLA])
+
+PATELLOGASTROPODA = Subclass(name="Patellogastropoda", children=[PATELLIDAE])
+
+GASTROPODA_A = Clade(children=[HETEROBRANCHIA, CAENOGASTROPODA])
+
+GASTROPODA = Class(name="Gastropoda", children=[GASTROPODA_A, PATELLOGASTROPODA])
