@@ -83,11 +83,41 @@ CITELLATA = Class(name="Citellata", children=[OPISTHOPORA, ARHYNCHOBDELLIDA])
 ANNELIDA = Phylum(name="Annelida", children=[CITELLATA])
 # endregion ANNELIDA
 
+# region NEMATODA
+A_LUMBRICOIDES = Species(
+    name="Ascaris lumbricoides",
+    local_names={EN: "large roundworm", PL: "glista ludzka"},
+)
+E_VERMICULARIS = Species(
+    name="Enterobius vermicularis",
+    local_names={EN: "pinworm, threadworm", PL: "owsik ludzki"},
+)
+
+ASCARIS = Genus(name="Ascaris", children=[A_LUMBRICOIDES])
+ENTEROBIUS = Genus(name="Enterobius", children=[E_VERMICULARIS])
+
+ASCARIDIDAE = Family(name="Ascarididae", children=[ASCARIS])
+OXYURIDAE = Family(name="Oxyuridae", children=[ENTEROBIUS])
+
+ASCARIDIDA = Order(name="Ascaridida", children=[ASCARIDIDAE])
+RHABDITIDA = Order(name="Rhabditida", children=[OXYURIDAE])
+
+CHROMADOREA = Class(name="Chromadorea", children=[ASCARIDIDA, RHABDITIDA])
+
+NEMATODA = Phylum(name="Nematoda", children=[CHROMADOREA])
+# endregion NEMATODA
+
 LOPHOTROCHOZOA = Superphylum(name="Lophotrochozoa", children=[ANNELIDA, MOLLUSCA])
+ECDYSOZOA = Superphylum(name="Ecdysozoa", children=[NEMATODA])
 
 PLATYTROCHOZOA = Clade(
     name="Platytrochozoa", children=[PLATYHELMINTHES, LOPHOTROCHOZOA]
 )
-PARAHOXOZOA = Clade(name="ParaHoxozoa", children=[CNIDARIA, PLATYTROCHOZOA])
+PROTOSTOMIA = Class(
+    name="Protostomia",
+    children=[PLATYTROCHOZOA, ECDYSOZOA],
+    local_names={PL: "pierwouste"},
+)
+PARAHOXOZOA = Clade(name="ParaHoxozoa", children=[CNIDARIA, PROTOSTOMIA])
 
 ANIMALIA = Kingdom(name="Animalia", children=[PORIFERA, PARAHOXOZOA])
