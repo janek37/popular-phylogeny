@@ -12,6 +12,7 @@ from clade import (
 )
 from constants import EN, PL
 
+from .arthropoda import ARTHROPODA
 from .cnidaria import CNIDARIA
 from .mollusca import MOLLUSCA
 
@@ -107,8 +108,22 @@ CHROMADOREA = Class(name="Chromadorea", children=[ASCARIDIDA, RHABDITIDA])
 NEMATODA = Phylum(name="Nematoda", children=[CHROMADOREA])
 # endregion NEMATODA
 
+# region TARDIGRADA
+M_TARDIGRADUM = Species(
+    name="Milnesium tardigradum",
+    known_for=[{EN: "cosmopolitan tardigrade", PL: "kosmpolityczny niesporczak"}],
+)
+MILNESIUM = Genus(name="Milnesium", children=[M_TARDIGRADUM])
+MILNESIIDAE = Family(name="Milnesiidae", children=[MILNESIUM])
+APOCHELA = Order(name="Apochela", children=[MILNESIIDAE])
+EUTARDIGRADA = Class(name="Eutardigrada", children=[APOCHELA])
+TARDIGRADA = Phylum(name="Tardigrada", children=[EUTARDIGRADA])
+# endregion TARDIGRADA
+
+PANARTHROPODA = Clade(name="Panarthropoda", children=[TARDIGRADA, ARTHROPODA])
+
 LOPHOTROCHOZOA = Superphylum(name="Lophotrochozoa", children=[ANNELIDA, MOLLUSCA])
-ECDYSOZOA = Superphylum(name="Ecdysozoa", children=[NEMATODA])
+ECDYSOZOA = Superphylum(name="Ecdysozoa", children=[NEMATODA, PANARTHROPODA])
 
 PLATYTROCHOZOA = Clade(
     name="Platytrochozoa", children=[PLATYHELMINTHES, LOPHOTROCHOZOA]
