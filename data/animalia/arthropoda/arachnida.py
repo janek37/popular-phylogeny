@@ -1,6 +1,8 @@
 from clade import Clade, Class, Family, Genus, Order, Species, Superorder
 from constants import EN, PL
 
+from .araneae import ARANEAE
+
 D_PTERONYSSINUS = Species(
     name="Dermatophagoides pteronyssinus",
     local_names={
@@ -48,7 +50,7 @@ SCORPIONES = Order(name="Scorpiones", children=[BUTHIDAE, SCORPIONIDAE])
 ACARIFORMES = Superorder(name="Acariformes", children=[SARCOPTIFORMES])
 PARASITIFORMES = Superorder(name="Parasitiformes", children=[IXODIDA])
 
-ARACHNOPULMONATA = Clade(name="Arachnopulmonata", children=[SCORPIONES])
+ARACHNOPULMONATA = Clade(name="Arachnopulmonata", children=[SCORPIONES, ARANEAE])
 
 # https://www.researchgate.net/publication/260336374_Spiders_Arachnida_Araneae_of_the_Canadian_Prairies
 ARACHNIDA_A = Clade(children=[ACARIFORMES, PARASITIFORMES])

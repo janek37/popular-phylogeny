@@ -16,6 +16,7 @@ class Rank(Enum):
     SUPERORDER = "Superorder"
     ORDER = "Order"
     SUBORDER = "Suborder"
+    INDRAORDER = "Infraorder"
     SUPERFAMILY = "Superfamily"
     FAMILY = "Family"
     SUBFAMILY = "Subfamily"
@@ -90,6 +91,11 @@ class Order(Clade):
 @dataclass
 class Suborder(Clade):
     rank = Rank.SUBORDER
+
+
+@dataclass
+class Infraorder(Clade):
+    rank = Rank.INDRAORDER
 
 
 @dataclass
