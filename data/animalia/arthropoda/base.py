@@ -2,6 +2,7 @@ from clade import Clade, Class, Family, Genus, Order, Phylum, Species, Subphylum
 from constants import EN, PL
 
 from .arachnida import ARACHNIDA
+from .myriapoda import MYRIAPODA
 
 P_DAVIDIS = Species(
     name="Paradoxides davidis", known_for=[{EN: "one of the largest trilobites"}]
@@ -25,7 +26,10 @@ TRILOBITA = Class(name="Trilobita", children=[REDLICHIIDA])
 CHELICERATA = Subphylum(name="Chelicerata", children=[XIPHOSURA, ARACHNIDA])
 
 ARACHNOMORPHA = Clade(name="Arachnomorpha", children=[TRILOBITA, CHELICERATA])
+MANDIBULATA = Clade(name="Mandibulata", children=[MYRIAPODA])
 
 ARTHROPODA = Phylum(
-    name="Arthropoda", children=[ARACHNOMORPHA], local_names={PL: "stawonogi"}
+    name="Arthropoda",
+    children=[ARACHNOMORPHA, MANDIBULATA],
+    local_names={PL: "stawonogi"},
 )
