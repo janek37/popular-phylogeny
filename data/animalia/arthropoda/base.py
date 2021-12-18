@@ -2,6 +2,7 @@ from clade import Clade, Class, Family, Genus, Order, Phylum, Species, Subphylum
 from constants import EN, PL
 
 from .arachnida import ARACHNIDA
+from .crustacea import CRUSTACEA
 from .myriapoda import MYRIAPODA
 
 P_DAVIDIS = Species(
@@ -26,7 +27,7 @@ TRILOBITA = Class(name="Trilobita", children=[REDLICHIIDA])
 CHELICERATA = Subphylum(name="Chelicerata", children=[XIPHOSURA, ARACHNIDA])
 
 ARACHNOMORPHA = Clade(name="Arachnomorpha", children=[TRILOBITA, CHELICERATA])
-MANDIBULATA = Clade(name="Mandibulata", children=[MYRIAPODA])
+MANDIBULATA = Clade(name="Mandibulata", children=[MYRIAPODA, CRUSTACEA])
 
 ARTHROPODA = Phylum(
     name="Arthropoda",
