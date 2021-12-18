@@ -54,6 +54,10 @@ S_AUREUS = Species(
     local_names={PL: "gronkowiec złocisty"},
     known_for=[{EN: "MRSA (methicillin-resistant Staphylococcus aureus)"}],
 )
+T_NAMIBIENSIS = Species(
+    name="Thiomargarita namibiensis",
+    known_for=[{EN: "the largest known bacteria, visible to the naked eye"}],
+)
 
 ESCHERICHIA = Genus(name="Escherichia", children=[E_COLI])
 SALMONELLA = Genus(name="Salmonella", children=[S_ENTERICA])
@@ -69,6 +73,7 @@ CHLAMYDIA = Genus(name="Chlamydia", children=[C_TRACHOMATIS])
 RICKETTSIA = Genus(name="Rickettsia", children=[R_PROWAZEKII])
 GLOEOMARGARITA = Genus(name="Gloeomargarita", children=[G_LITHOPHORA])
 STAPHYLOCOCCUS = Genus(name="Staphylococcus", children=[S_AUREUS])
+THIOMARGARITA = Genus(name="Thiomargarita", children=[T_NAMIBIENSIS])
 
 ENTEROBACTERIACEAE = Family(
     name="Enterobacteriaceae", children=[ESCHERICHIA, SALMONELLA]
@@ -84,6 +89,7 @@ RICKETTSIACEAE = Family(name="Rickettsiaceae", children=[RICKETTSIA])
 CHLAMYDIACEAE = Family(name="Chlamydiaceae", children=[CHLAMYDIA])
 GLOEOMARGARITACEAE = Family(name="Gloeomargaritaceae", children=[GLOEOMARGARITA])
 STAPHYLOCOCCACEAE = Family(name="Staphylococcaceae", children=[STAPHYLOCOCCUS])
+THIOTRICHACEAE = Family(name="Thiotrichaceae", children=[THIOMARGARITA])
 
 ENTEROBACTERALES = Order(
     name="Enterobacterales", children=[ENTEROBACTERIACEAE, YERSINIACEAE]
@@ -97,9 +103,13 @@ NEISSERIALES = Order(name="Neisseriales", children=[NEISSERIACEAE])
 CHLAMYDIALES = Order(name="Chlamydiales", children=[CHLAMYDIACEAE])
 RICKETTSIALES = Order(name="Rickettsiales", children=[RICKETTSIACEAE])
 GLOEOMARGARITALES = Order(name="Gleomargaritales", children=[GLOEOMARGARITACEAE])
+THIOTRICHALES = Order(name="Thiotrichales", children=[THIOTRICHACEAE])
+
+# https://www.researchgate.net/publication/23983123_Phylogenomics_and_protein_signatures_elucidating_the_evolutionary_relationships_among_the_Gammaproteobacteria
+GAMMAPROTEOBACTERIA_A = Clade(children=[ENTEROBACTERALES, VIBRIONALES])
 
 GAMMAPROTEOBACTERIA = Class(
-    name="Gammaproteobacteria", children=[ENTEROBACTERALES, VIBRIONALES]
+    name="Gammaproteobacteria", children=[GAMMAPROTEOBACTERIA_A, THIOTRICHALES]
 )
 BETAPROTEOBACTERIA = Class(name="Betaproteobacteria", children=[NEISSERIALES])
 BACILLI = Class(name="Bacilli", children=[BACILLALES])
