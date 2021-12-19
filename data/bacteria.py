@@ -58,6 +58,13 @@ T_NAMIBIENSIS = Species(
     name="Thiomargarita namibiensis",
     known_for=[{EN: "the largest known bacteria, visible to the naked eye"}],
 )
+L_ACIDOPHILUS = Species(
+    name="Lactobacillus acidophilus",
+    known_for=[
+        {EN: "one of the most common probiotic bacteria in dairy products"},
+        {EN: "part of vaginal microbiota"},
+    ],
+)
 
 ESCHERICHIA = Genus(name="Escherichia", children=[E_COLI])
 SALMONELLA = Genus(name="Salmonella", children=[S_ENTERICA])
@@ -74,6 +81,11 @@ RICKETTSIA = Genus(name="Rickettsia", children=[R_PROWAZEKII])
 GLOEOMARGARITA = Genus(name="Gloeomargarita", children=[G_LITHOPHORA])
 STAPHYLOCOCCUS = Genus(name="Staphylococcus", children=[S_AUREUS])
 THIOMARGARITA = Genus(name="Thiomargarita", children=[T_NAMIBIENSIS])
+LACTOBACILLUS = Genus(
+    name="Lactobacillus",
+    children=[L_ACIDOPHILUS],
+    local_names={PL: "pałeczki kwasu mlekowego"},
+)
 
 ENTEROBACTERIACEAE = Family(
     name="Enterobacteriaceae", children=[ESCHERICHIA, SALMONELLA]
@@ -90,6 +102,7 @@ CHLAMYDIACEAE = Family(name="Chlamydiaceae", children=[CHLAMYDIA])
 GLOEOMARGARITACEAE = Family(name="Gloeomargaritaceae", children=[GLOEOMARGARITA])
 STAPHYLOCOCCACEAE = Family(name="Staphylococcaceae", children=[STAPHYLOCOCCUS])
 THIOTRICHACEAE = Family(name="Thiotrichaceae", children=[THIOMARGARITA])
+LACTOBACILLACEAE = Family(name="Lactobacillaceae", children=[LACTOBACILLUS])
 
 ENTEROBACTERALES = Order(
     name="Enterobacterales", children=[ENTEROBACTERIACEAE, YERSINIACEAE]
@@ -104,6 +117,11 @@ CHLAMYDIALES = Order(name="Chlamydiales", children=[CHLAMYDIACEAE])
 RICKETTSIALES = Order(name="Rickettsiales", children=[RICKETTSIACEAE])
 GLOEOMARGARITALES = Order(name="Gleomargaritales", children=[GLOEOMARGARITACEAE])
 THIOTRICHALES = Order(name="Thiotrichales", children=[THIOTRICHACEAE])
+LACTOBACILLALES = Order(
+    name="Lactobacillales",
+    children=[LACTOBACILLACEAE],
+    local_names={EN: "lactic acid bacteria", PL: "bakterie kwasu mlekowego"},
+)
 
 # https://www.researchgate.net/publication/23983123_Phylogenomics_and_protein_signatures_elucidating_the_evolutionary_relationships_among_the_Gammaproteobacteria
 GAMMAPROTEOBACTERIA_A = Clade(children=[ENTEROBACTERALES, VIBRIONALES])
@@ -112,7 +130,7 @@ GAMMAPROTEOBACTERIA = Class(
     name="Gammaproteobacteria", children=[GAMMAPROTEOBACTERIA_A, THIOTRICHALES]
 )
 BETAPROTEOBACTERIA = Class(name="Betaproteobacteria", children=[NEISSERIALES])
-BACILLI = Class(name="Bacilli", children=[BACILLALES])
+BACILLI = Class(name="Bacilli", children=[BACILLALES, LACTOBACILLALES])
 ACTINOMYCETIA = Class(name="Actinomycetia", children=[MYCOBACTERIALES])
 CLOSTRIDIA = Class(name="Clostridia", children=[CLOSTRIDIALES])
 ALPHAPROTEOBACTERIA = Class(name="Alphaproteobacteria", children=[RICKETTSIALES])
