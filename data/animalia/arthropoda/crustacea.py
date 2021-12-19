@@ -11,6 +11,8 @@ from clade import (
 )
 from constants import EN, PL
 
+from .malacostraca import MALACOSTRACA
+
 P_POLLICIPES = Species(
     name="Pollicipes pollicipes",
     local_names={EN: "goose neck barnacle"},
@@ -47,7 +49,7 @@ CIRRIPEDIA = Subclass(name="Cirripedia", children=[THORACICALCAREA])
 THECOSTRACA = Class(name="Thecostraca", children=[CIRRIPEDIA])
 BRANCHIOPODA = Class(name="Branchiopoda", children=[ANOMOPODA])
 
-MULTICRUSTACEA = Clade(name="Multicrustacea", children=[THECOSTRACA])
+MULTICRUSTACEA = Clade(name="Multicrustacea", children=[THECOSTRACA, MALACOSTRACA])
 ALLOTRIOCARIDA = Clade(name="Allotriocarida", children=[BRANCHIOPODA])
 
 CRUSTACEA = Subphylum(name="Crustacea", children=[MULTICRUSTACEA, ALLOTRIOCARIDA])
