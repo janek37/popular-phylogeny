@@ -25,7 +25,7 @@ P_ERYNGII = Species(
 )
 P_SEMILANCEATA = Species(
     name="Psilocybe semilanceata",
-    local_names={EN: "liberty cap"},
+    local_names={EN: "liberty cap", PL: "czapka wolności, łysiczka lancetowata"},
     known_for=[{EN: "psychoactive psylocybin"}],
 )
 A_MUSCARIA = Species(
