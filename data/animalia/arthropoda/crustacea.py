@@ -11,6 +11,7 @@ from clade import (
 )
 from constants import EN, PL
 
+from .insecta import INSECTA
 from .malacostraca import MALACOSTRACA
 
 P_POLLICIPES = Species(
@@ -49,7 +50,9 @@ CIRRIPEDIA = Subclass(name="Cirripedia", children=[THORACICALCAREA])
 THECOSTRACA = Class(name="Thecostraca", children=[CIRRIPEDIA])
 BRANCHIOPODA = Class(name="Branchiopoda", children=[ANOMOPODA])
 
+HEXAPODA = Clade(name="Hexapoda", children=[INSECTA])
+
 MULTICRUSTACEA = Clade(name="Multicrustacea", children=[THECOSTRACA, MALACOSTRACA])
-ALLOTRIOCARIDA = Clade(name="Allotriocarida", children=[BRANCHIOPODA])
+ALLOTRIOCARIDA = Clade(name="Allotriocarida", children=[BRANCHIOPODA, HEXAPODA])
 
 CRUSTACEA = Subphylum(name="Crustacea", children=[MULTICRUSTACEA, ALLOTRIOCARIDA])
