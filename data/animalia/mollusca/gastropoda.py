@@ -6,6 +6,7 @@ from clade import (
     Order,
     Species,
     Subclass,
+    Subcohort,
     Subfamily,
     Suborder,
     Superfamily,
@@ -94,9 +95,7 @@ EUPULMONATA = Superorder(name="Eupulmonata", children=[STYLOMMATOPHORA])
 SACOGLOSSA = Superorder(name="Sacoglossa", children=[PLAKOBRANCHOIDEA, LIMAPONTIOIDEA])
 NUDIPLEURA = Superorder(name="Nudipleura", children=[NUDIBRANCHIA])
 
-PANPULMONATA = Clade(
-    name="Panpulmonata", children=[EUPULMONATA, SACOGLOSSA]
-)  # Subcohort
+PANPULMONATA = Subcohort(name="Panpulmonata", children=[EUPULMONATA, SACOGLOSSA])
 
 HETEROBRANCHIA = Subclass(name="Heterobranchia", children=[PANPULMONATA, NUDIPLEURA])
 # endregion HETEROBRANCHIA
