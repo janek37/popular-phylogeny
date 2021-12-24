@@ -1,6 +1,8 @@
 from clade import Cohort, Family, Genus, Order, Species
 from constants import EN, PL
 
+from .orthoptera import ORTHOPTERA
+
 F_AURICULARIA = Species(
     name="Forficula auricularia",
     local_names={EN: "common earwig", PL: "skorek pospolity"},
@@ -12,4 +14,6 @@ FORFICULIDAE = Family(name="Forficulidae", children=[FORFICULA])
 
 DERMAPTERA = Order(name="Dermaptera", children=[FORFICULIDAE])
 
-POLYNEOPTERA = Cohort(name="Polyneoptera", children=[DERMAPTERA])  # or Subdivision?
+POLYNEOPTERA = Cohort(
+    name="Polyneoptera", children=[DERMAPTERA, ORTHOPTERA]
+)  # or Subdivision?
