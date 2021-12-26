@@ -19,25 +19,31 @@ S_CINGULATA = Species(
         {EN: "the most common scolopendromorph species in the Mediterranean area"}
     ],
 )
+A_ARMATA = Species(
+    name="Arthropleura armata", known_for=[{EN: "largest known arthropod (extinct)"}]
+)
 
 OMMATOIULUS = Genus(name="Ommatoiulus", children=[O_SABULOSUS])
 SCUTIGERA = Genus(name="Scutigera", children=[S_COLEOPTRATA])
 LITHOBIUS = Genus(name="Lithobius", children=[L_FORFICATUS])
 SCOLOPENDRA = Genus(name="Scolopendra", children=[S_CINGULATA])
+ARTHROPLEURA = Genus(name="Arthropleura", children=[A_ARMATA])
 
 JULIDAE = Family(name="Julidae", children=[OMMATOIULUS])
 SCUTIGERIDAE = Family(name="Scutigeridae", children=[SCUTIGERA])
 LITHOBIIDAE = Family(name="Lithobiidae", children=[LITHOBIUS])
 SCOLOPENDRIDAE = Family(name="Scolopendridae", children=[SCOLOPENDRA])
+ARTHROPLEURIDAE = Family(name="Arthropleuridae", children=[ARTHROPLEURA])
 
 JULIDA = Order(name="Julida", children=[JULIDAE])
 SCUTIGEROMORPHA = Order(name="Scutigeromorpha", children=[SCUTIGERIDAE])
 LITHOBIOMORPHA = Order(name="Lithobiomorpha", children=[LITHOBIIDAE])
 SCOLOPENDROMORPHA = Order(name="Scolopendromorpha", children=[SCOLOPENDRIDAE])
+ARTHROPLEURIDA = Order(name="Arthropleurida", children=[ARTHROPLEURIDAE])
 
 CHILOPODA_A = Clade(children=[LITHOBIOMORPHA, SCOLOPENDROMORPHA])
 
-DIPLOPODA = Class(name="Diplopoda", children=[JULIDA])
+DIPLOPODA = Class(name="Diplopoda", children=[JULIDA, ARTHROPLEURIDA])
 CHILOPODA = Class(name="Chilopoda", children=[SCUTIGEROMORPHA, CHILOPODA_A])
 
 MYRIAPODA = Subphylum(
