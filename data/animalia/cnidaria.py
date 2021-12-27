@@ -12,6 +12,9 @@ H_VULGARIS = Species(
 C_FUSCESCENS = Species(
     name="Chrysaora fuscescens", local_names={EN: "Pacific sea nettle"}
 )
+A_AURITA = Species(
+    name="Aurelia aurita", local_names={EN: "common jellyfish", PL: "chełbia modra"}
+)
 
 ACTINIA = Genus(name="Actinia", children=[A_EQUINA])
 ACROPORA = Genus(name="Acropora", children=[A_CERVICORNIS])
@@ -21,16 +24,18 @@ CHRYSAORA = Genus(
     children=[C_FUSCESCENS],
     local_names={EN: "sea nettle", PL: "meduza kompasowa"},
 )
+AURELIA = Genus(name="Aurelia", children=[A_AURITA])
 
 ACTINIIDAE = Family(name="Actiniidae", children=[ACTINIA])
 ACROPORIDAE = Family(name="Acroporidae", children=[ACROPORA])
 HYDRIDAE = Family(name="Hydridae", children=[HYDRA])
 PELAGIIDAE = Family(name="Pelagiidae", children=[CHRYSAORA])
+ULMARIDAE = Family(name="Ulmaridae", children=[AURELIA])
 
 ACTINIARIA = Order(name="Actiniaria", children=[ACTINIIDAE])
 SCLERACTINIA = Order(name="Scleractinia", children=[ACROPORIDAE])
 ANTHOATHECATA = Order(name="Anthoathecata", children=[HYDRIDAE])
-SEMAEOSTOMEAE = Order(name="Semaeostomeae", children=[PELAGIIDAE])
+SEMAEOSTOMEAE = Order(name="Semaeostomeae", children=[PELAGIIDAE, ULMARIDAE])
 
 ANTHOZOA = Class(name="Anthozoa", children=[ACTINIARIA, SCLERACTINIA])
 HYDROZOA = Class(name="Hydrozoa", children=[ANTHOATHECATA])
