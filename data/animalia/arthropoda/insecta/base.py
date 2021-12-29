@@ -2,6 +2,7 @@ from clade import Clade, Class, Family, Genus, Infraclass, Order, Species, Subcl
 from constants import EN, PL
 
 from .hydropalaeoptera import HYDROPALAEOPTERA
+from .hymenoptera import HYMENOPTERA
 from .paraneoptera import PARANEOPTERA
 from .polyneoptera import POLYNEOPTERA
 
@@ -18,7 +19,9 @@ ZYGENTOMA = Order(name="Zygentoma", children=[LEPISMATIDAE])
 # insect phylogeny is not stable, I'm using the current tree at
 # https://en.wikipedia.org/wiki/Insect
 # but there are many contradictions in Wikipedia alone
-EUMETABOLA = Clade(name="Eumetabola", children=[PARANEOPTERA])
+ENDOPTERYGOTA = Clade(name="Endopterygota", children=[HYMENOPTERA])  # = Holometabola
+
+EUMETABOLA = Clade(name="Eumetabola", children=[PARANEOPTERA, ENDOPTERYGOTA])
 
 NEOPTERA = Infraclass(
     name="Neoptera", children=[POLYNEOPTERA, EUMETABOLA]
