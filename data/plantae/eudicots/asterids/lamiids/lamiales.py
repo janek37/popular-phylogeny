@@ -22,12 +22,23 @@ V_OFFICINALIS = Species(
     name="Verbena officinalis",
     local_names={EN: "common vervain", PL: "werbena pospolita"},
 )
+A_CITRODORA = Species(
+    name="Aloysia citrodora",
+    local_names={
+        EN: "lemon verbena",
+        PL: (
+            "werbena cytrynowa, miłowonka trójlistna, "
+            "cukrownica trójlistna, lippia trójlistna"
+        ),
+    },
+)
 
 ANTIRRHINUM = Genus(name="Antirrhinum", children=[A_MAJUS])
 SESAMUM = Genus(name="Sesamum", children=[S_INDICUM])
 PLANTAGO = Genus(name="Plantago", children=[P_MAJOR])
 VERBASCUM = Genus(name="Verbascum", children=[V_THAPSUS])
 VERBENA = Genus(name="Verbena", children=[V_OFFICINALIS])
+ALOYSIA = Genus(name="Aloysia", children=[A_CITRODORA])
 
 ANTIRRHINEAE = Tribe(name="Antirrhineae", children=[ANTIRRHINUM])
 PLANTAGINEAE = Tribe(name="Plantagineae", children=[PLANTAGO])
@@ -35,7 +46,7 @@ PLANTAGINEAE = Tribe(name="Plantagineae", children=[PLANTAGO])
 PLANTAGINACEAE = Family(name="Plantaginaceae", children=[ANTIRRHINEAE, PLANTAGINEAE])
 PEDALIACEAE = Family(name="Pedaliaceae", children=[SESAMUM])
 SCROPHULARIACEAE = Family(name="Scrophulariaceae", children=[VERBASCUM])
-VERBENACEAE = Family(name="Verbenaceae", children=[VERBENA])
+VERBENACEAE = Family(name="Verbenaceae", children=[VERBENA, ALOYSIA])
 
 LAMIALES = Order(
     name="Lamiales",
