@@ -1,4 +1,4 @@
-from clade import Clade, Family, Genus, Order, Species
+from clade import Clade, Family, Genus, Order, Species, Tribe
 from constants import EN, PL
 
 from .lamiales import LAMIALES
@@ -7,6 +7,14 @@ from .solanales import SOLANALES
 M_SYLVATICA = Species(
     name="Myosotis sylvatica",
     local_names={EN: "forget-me-not", PL: "niezapominajka leśna"},
+)
+S_OFFICINALE = Species(
+    name="Symphytum officinale",
+    local_names={EN: "common comfrey", PL: "żywokost lekarski"},
+)
+B_OFFICINALIS = Species(
+    name="Borago officinalis",
+    local_names={EN: "borage, starflower", PL: "ogórecznik lekarski"},
 )
 C_ARABICA = Species(
     name="Coffea arabica", local_names={EN: "Arabian coffee", PL: "kawa arabska"}
@@ -27,11 +35,16 @@ S_NUX_VOMICA = Species(
 )
 
 MYOSOTIS = Genus(name="Myosotis", children=[M_SYLVATICA])
+SYMPHYTUM = Genus(name="Symphytum", children=[S_OFFICINALE])
+BORAGO = Genus(name="Borago", children=[B_OFFICINALIS])
 COFFEA = Genus(name="Coffea", children=[C_ARABICA, C_CANEPHORA])
 CINCHONA = Genus(name="Cinchona", children=[C_OFFICINALIS])
 STRYCHNOS = Genus(name="Strychnos", children=[S_NUX_VOMICA])
 
-BORAGINACEAE = Family(name="Boraginaceae", children=[MYOSOTIS])
+ERITRICHIEAE = Tribe(name="Eritrichieae", children=[MYOSOTIS])
+BORAGINEAE = Tribe(name="Boragineae", children=[SYMPHYTUM, BORAGO])
+
+BORAGINACEAE = Family(name="Boraginaceae", children=[ERITRICHIEAE, BORAGINEAE])
 RUBIACEAE = Family(name="Rubiaceae", children=[COFFEA, CINCHONA])
 LOGANIACEAE = Family(name="Loganiaceae", children=[STRYCHNOS])
 
