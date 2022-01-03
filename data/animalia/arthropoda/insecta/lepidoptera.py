@@ -1,6 +1,8 @@
 from clade import Clade, Family, Genus, Order, Species, Superfamily
 from constants import EN, PL
 
+from .papilionoidea import PAPILIONOIDEA
+
 T_BISSELLIELLA = Species(
     name="Tineola bisselliella",
     local_names={EN: "common clothes moth", PL: "mól odzieżowy, mól włosienniczek"},
@@ -55,9 +57,10 @@ NOCTUOIDEA = Superfamily(name="Noctuoidea", children=[NOCTUIDAE])
 BOMBYCOIDEA = Superfamily(name="Bombycoidea", children=[SPHINGIDAE, BOMBYCIDAE])
 
 MACROHETEROCERA = Clade(name="Macroheterocera", children=[NOCTUOIDEA, BOMBYCOIDEA])
+# unresolved, conflicting data
 OBTECTOMERA = Clade(
-    name="Obtectomera", children=[PYRALOIDEA, MACROHETEROCERA]
-)  # TODO add butterflies
+    name="Obtectomera", children=[PYRALOIDEA, MACROHETEROCERA, PAPILIONOIDEA]
+)
 APODITRYSIA = Clade(name="Apoditrysia", children=[OECOPHORIDAE, OBTECTOMERA])
 
 LEPIDOPTERA = Order(name="Lepidoptera", children=[TINEIDAE, APODITRYSIA])
