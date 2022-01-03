@@ -1,9 +1,20 @@
-from clade import Clade, Class, Family, Genus, Infraclass, Order, Species, Subclass
+from clade import (
+    Clade,
+    Class,
+    Family,
+    Genus,
+    Infraclass,
+    Order,
+    Species,
+    Subclass,
+    Superorder,
+)
 from constants import EN, PL
 
 from .coleoptera import COLEOPTERA
 from .hydropalaeoptera import HYDROPALAEOPTERA
 from .hymenoptera import HYMENOPTERA
+from .lepidoptera import LEPIDOPTERA
 from .paraneoptera import PARANEOPTERA
 from .polyneoptera import POLYNEOPTERA
 
@@ -17,10 +28,12 @@ LEPISMATIDAE = Family(name="Lepismatidae", children=[LEPISMA])
 
 ZYGENTOMA = Order(name="Zygentoma", children=[LEPISMATIDAE])
 
+PANORPIDA = Superorder(name="Panorpida", children=[LEPIDOPTERA])
+
 # insect phylogeny is not stable, I'm using the current tree at
 # https://en.wikipedia.org/wiki/Insect
 # but there are many contradictions in Wikipedia alone
-APARAGLOSSATA = Clade(name="Aparaglossata", children=[COLEOPTERA])
+APARAGLOSSATA = Clade(name="Aparaglossata", children=[COLEOPTERA, PANORPIDA])
 
 ENDOPTERYGOTA = Clade(
     name="Endopterygota", children=[HYMENOPTERA, APARAGLOSSATA]
