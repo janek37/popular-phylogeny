@@ -26,6 +26,11 @@ B_PAXILLIFER = Species(
     name="Bacillaria paxillifer",
     known_for=[{EN: "one of the thousands of diatom species"}],
 )
+T_BRUCEI = Species(
+    name="Trypanosoma brucei",
+    local_names={PL: "świdrowiec nagany"},
+    known_for=[{EN: "African sleeping sickness", PL: "śpiączka afrykańska"}],
+)
 
 PLASMODIUM = Genus(name="Plasmodium", children=[P_MALARIAE])
 PARAMECIUM = Genus(name="Paramecium", children=[P_CAUDATUM])
@@ -37,6 +42,7 @@ PAULINELLA = Genus(name="Paulinella", children=[P_CHROMATOPHORA])
 FUCUS = Genus(name="Fucus", children=[F_VESICULOSUS])
 UNDARIA = Genus(name="Undaria", children=[U_PINNATIFIDA])
 BACILLARIA = Genus(name="Bacillaria", children=[B_PAXILLIFER])
+TRYPANOSOMA = Genus(name="Trypanosoma", children=[T_BRUCEI])
 
 PLASMODIIDAE = Family(name="Plasmodiidae", children=[PLASMODIUM])
 PARAMECIIDAE = Family(name="Parameciidae", children=[PARAMECIUM])
@@ -47,6 +53,7 @@ PAULINELLIDAE = Family(name="Paulinellidae", children=[PAULINELLA])
 FUCACEAE = Family(name="Fucaceae", children=[FUCUS])
 ALARIACEAE = Family(name="Alariaceae", children=[UNDARIA])
 BACILLARIACEAE = Family(name="Bacillariaceae", children=[BACILLARIA])
+TRYPANOSOMATIDAE = Family(name="Trypanosomatidae", children=[TRYPANOSOMA])
 
 HAEMOSPORORIDA = Order(name="Haemospororida", children=[PLASMODIIDAE])
 PENICULIDA = Order(name="Peniculida", children=[PARAMECIIDAE])
@@ -57,6 +64,7 @@ EUGLYPHIDA = Order(name="Euglyphida", children=[PAULINELLIDAE])
 FUCALES = Order(name="Fucales", children=[FUCACEAE])
 LAMINARIALES = Order(name="Laminariales", children=[ALARIACEAE])
 BACILLARIALES = Order(name="Bacillariales", children=[BACILLARIACEAE])
+TRYPANOSOMATIDA = Order(name="Trypanosomatida", children=[TRYPANOSOMATIDAE])
 
 ACONOIDASIDA = Class(name="Aconoidasida", children=[HAEMOSPORORIDA])
 OLIGOHYMENOPHOREA = Class(name="Oligohymenophorea", children=[PENICULIDA])
@@ -65,6 +73,7 @@ MYXOGASTRIA = Class(name="Myxogastria", children=[PHYSARALES])
 IMBRICATEA = Class(name="Imbricatea", children=[EUGLYPHIDA])
 PHAEOPHYCEAE = Class(name="Phaeophyceae", children=[FUCALES, LAMINARIALES])
 BACILLARIAPHYCEAE = Class(name="Bacillariaphyceae", children=[BACILLARIALES])
+KINETOPLASTEA = Class(name="Kinetoplastea", children=[TRYPANOSOMATIDA])
 
 CILIOPHORA = Phylum(name="Ciliphora", children=[OLIGOHYMENOPHOREA])
 APICOMPLEXA = Phylum(name="Apicomplexa", children=[ACONOIDASIDA])
@@ -72,8 +81,10 @@ METAMONADA = Phylum(name="Metamonada", children=[TRICHOMONADIDA])
 AMOEBOZOA = Phylum(name="Amoebozoa", children=[TUBULINEA, MYXOGASTRIA])
 CERCOZOA = Phylum(name="Cercozoa", children=[IMBRICATEA])
 OCHROPHYTA = Phylum(name="Ochrophyta", children=[PHAEOPHYCEAE, BACILLARIAPHYCEAE])
+EUGLENOZOA = Phylum(name="Euglenozoa", children=[KINETOPLASTEA])
 
 ALVEOLATA = Superphylum(name="Alveolata", children=[CILIOPHORA, APICOMPLEXA])
+DISCICRISTATA = Superphylum(name="Discicristata", children=[EUGLENOZOA])
 
 SAR_A = Clade(children=[ALVEOLATA, OCHROPHYTA])
 SAR = Clade(name="SAR", children=[SAR_A, CERCOZOA])
