@@ -78,15 +78,21 @@ E_VERMICULARIS = Species(
     name="Enterobius vermicularis",
     local_names={EN: "pinworm, threadworm", PL: "owsik ludzki"},
 )
+O_VOLVULUS = Species(
+    name="Onchocerca volvulus",
+    known_for=[{EN: "river blindness", PL: "ślepota rzeczna"}],
+)
 
 ASCARIS = Genus(name="Ascaris", children=[A_LUMBRICOIDES])
 ENTEROBIUS = Genus(name="Enterobius", children=[E_VERMICULARIS])
+ONCHOCERCA = Genus(name="Onchocerca", children=[O_VOLVULUS])
 
 ASCARIDIDAE = Family(name="Ascarididae", children=[ASCARIS])
 OXYURIDAE = Family(name="Oxyuridae", children=[ENTEROBIUS])
+ONCHOCERCIDAE = Family(name="Onchocercidae", children=[ONCHOCERCA])
 
 ASCARIDIDA = Order(name="Ascaridida", children=[ASCARIDIDAE])
-RHABDITIDA = Order(name="Rhabditida", children=[OXYURIDAE])
+RHABDITIDA = Order(name="Rhabditida", children=[OXYURIDAE, ONCHOCERCIDAE])
 
 CHROMADOREA = Class(name="Chromadorea", children=[ASCARIDIDA, RHABDITIDA])
 
