@@ -12,6 +12,7 @@ from clade import (
 from constants import EN, PL
 
 from .coleoptera import COLEOPTERA
+from .diptera import DIPTERA
 from .hydropalaeoptera import HYDROPALAEOPTERA
 from .hymenoptera import HYMENOPTERA
 from .lepidoptera import LEPIDOPTERA
@@ -28,7 +29,9 @@ LEPISMATIDAE = Family(name="Lepismatidae", children=[LEPISMA])
 
 ZYGENTOMA = Order(name="Zygentoma", children=[LEPISMATIDAE])
 
-PANORPIDA = Superorder(name="Panorpida", children=[LEPIDOPTERA])
+ANTLIOPHORA = Clade(name="Antliophora", children=[DIPTERA])
+
+PANORPIDA = Superorder(name="Panorpida", children=[LEPIDOPTERA, ANTLIOPHORA])
 
 # insect phylogeny is not stable, I'm using the current tree at
 # https://en.wikipedia.org/wiki/Insect
