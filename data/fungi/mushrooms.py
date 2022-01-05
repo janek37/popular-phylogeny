@@ -27,6 +27,13 @@ L_DELICIOSUS = Species(
     local_names={PL: "mleczaj rydz", EN: "saffron milk cap"},
 )
 P_INDUSIATUS = Species(name="Phallus indusiatus", local_names={EN: "bamboo mushroom"})
+P_IMPUDICUS = Species(
+    name="Phallus impudicus",
+    local_names={
+        EN: "common stinkhorn",
+        PL: "sromotnik bezwstydny, sromotnik smrodliwy",
+    },
+)
 H_PECKII = Species(name="Hydnellum peckii", local_names={EN: "Devil's tooth"})
 R_VESCA = Species(
     name="Russula vesca",
@@ -40,7 +47,7 @@ CANTHARELLUS = Genus(name="Cantharellus", children=[C_CIBARIUS])
 LAETIPORUS = Genus(name="Laetiporus", children=[L_SULPHUREUS])
 RUBROBOLETUS = Genus(name="Rubroboletus", children=[R_SATANAS])
 LACTORIUS = Genus(name="Lactorius", children=[L_DELICIOSUS])
-PHALLUS = Genus(name="Phallus", children=[P_INDUSIATUS])
+PHALLUS = Genus(name="Phallus", children=[P_INDUSIATUS, P_IMPUDICUS])
 HYDNELLUM = Genus(name="Hydnellum", children=[H_PECKII])
 RUSSULA = Genus(name="Russula", children=[R_VESCA])
 
