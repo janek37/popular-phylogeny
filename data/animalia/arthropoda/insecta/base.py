@@ -18,6 +18,7 @@ from .hymenoptera import HYMENOPTERA
 from .lepidoptera import LEPIDOPTERA
 from .paraneoptera import PARANEOPTERA
 from .polyneoptera import POLYNEOPTERA
+from .siphonaptera import SIPHONAPTERA
 
 L_SACCHARINUM = Species(
     name="Lepisma saccharinum", local_names={EN: "silverfish", PL: "rybik cukrowy"}
@@ -29,7 +30,7 @@ LEPISMATIDAE = Family(name="Lepismatidae", children=[LEPISMA])
 
 ZYGENTOMA = Order(name="Zygentoma", children=[LEPISMATIDAE])
 
-ANTLIOPHORA = Clade(name="Antliophora", children=[DIPTERA])
+ANTLIOPHORA = Clade(name="Antliophora", children=[DIPTERA, SIPHONAPTERA])
 
 PANORPIDA = Superorder(name="Panorpida", children=[LEPIDOPTERA, ANTLIOPHORA])
 
