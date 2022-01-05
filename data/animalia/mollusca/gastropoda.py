@@ -50,7 +50,7 @@ G_ATLANTICUS = Species(
 )
 C_ELISABETHINA = Species(
     name="Chromodoris elisabethina",
-    known_for={EN: "one of more recognisable nudibranchs"},
+    known_for=[{EN: "one of more recognisable nudibranchs"}],
 )
 
 HELIX = Genus(name="Helix", children=[H_POMATIA])

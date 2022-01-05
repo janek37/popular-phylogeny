@@ -26,7 +26,7 @@ A_IMPROVISUS = Species(
 D_PULEX = Species(
     name="Daphnia pulex",
     local_names={PL: "rozwielitka pchłowata"},
-    known_for={EN: "the most common species of water flea"},
+    known_for=[{EN: "the most common species of water flea"}],
 )
 
 POLLICIPES = Genus(name="Pollicipes", children=[P_POLLICIPES])

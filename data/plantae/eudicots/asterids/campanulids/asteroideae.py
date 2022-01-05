@@ -56,7 +56,7 @@ T_FARFARA = Species(
 S_REBAUDIANA = Species(
     name="Stevia rebaudiana",
     local_names={EN: "candyleaf", PL: "stewia"},
-    known_for={EN: "sweetener"},
+    known_for=[{EN: "sweetener"}],
 )
 A_MILLEFOLIUM = Species(
     name="Achillea millefolium",

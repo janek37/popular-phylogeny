@@ -36,7 +36,7 @@ E_ESULA = Species(
 H_BRASILIENSIS = Species(
     name="Hevea brasiliensis",
     local_names={EN: "rubber tree", PL: "kauczukowiec brazylijski"},
-    known_for={EN: "rubber", PL: "kauczuk"},
+    known_for=[{EN: "rubber", PL: "kauczuk"}],
 )
 V_ODORATA = Species(
     name="Viola odorata", local_names={PL: "fiołek wonny", EN: "wood violet"}

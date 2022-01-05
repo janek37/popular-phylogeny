@@ -14,7 +14,7 @@ R_PSEUDOACACIA = Species(
 A_LINEARIS = Species(
     name="Aspalathus linearis",
     local_names={EN: "rooibos", PL: "aspalat prosty"},
-    known_for={EN: "rooibos herbal tea"},
+    known_for=[{EN: "rooibos herbal tea"}],
 )
 L_ALBUS = Species(
     name="Lupinus albus", local_names={EN: "white lupin", PL: "łubin biały"}
@@ -25,7 +25,7 @@ A_HYPOGAEA = Species(
         EN: "peanut",
         PL: "orzech ziemny, orzech arachidowy, orzacha podziemna",
     },
-    known_for={EN: "peanuts", PL: "orzeszki ziemne, fistaszki"},
+    known_for=[{EN: "peanuts", PL: "orzeszki ziemne, fistaszki"}],
 )
 C_ARIETINUM = Species(
     name="Cicer arietinum",

@@ -4,7 +4,7 @@ from constants import EN, PL
 C_HABESSINICA = Species(
     name="Commiphora habessinica",
     local_names={EN: "Abyssinian myrrh", PL: "balsamowiec mirra"},
-    known_for={EN: "myrrh", PL: "mirra"},
+    known_for=[{EN: "myrrh", PL: "mirra"}],
 )
 A_OCCIDENTALE = Species(
     name="Anacardium occidentale",

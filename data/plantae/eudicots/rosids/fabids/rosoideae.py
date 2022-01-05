@@ -14,7 +14,7 @@ R_CANINA = Species(
     known_for=[{EN: "jams", PL: "dżemy"}, {EN: "tea", PL: "herbata"}],
 )
 R_MISTER_LINCOLN = Species(
-    name="Rosa 'Mister Lincoln'", known_for={EN: "one of the most popular red roses"}
+    name="Rosa 'Mister Lincoln'", known_for=[{EN: "one of the most popular red roses"}]
 )
 R_IDAEUS = Species(
     name="Rubus idaeus", local_names={EN: "red raspberry", PL: "malina właściwa"}

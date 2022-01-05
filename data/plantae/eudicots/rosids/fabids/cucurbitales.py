@@ -31,7 +31,7 @@ C_PEPO = Species(
 C_MOSCHATA = Species(
     name="Cucurbita moschata",
     local_names={PL: "dynia piżmowa"},
-    known_for={EN: "butternut squash"},
+    known_for=[{EN: "butternut squash"}],
 )
 B_OBLIQUA = Species(
     name="Begonia × tuberhybrida",

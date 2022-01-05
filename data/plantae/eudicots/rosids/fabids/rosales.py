@@ -26,7 +26,7 @@ C_INDICA = Species(
 H_LUPULUS = Species(
     name="Humulus lupulus",
     local_names={PL: "chmiel zwyczajny", EN: "common hop, hops"},
-    known_for={EN: "beer", PL: "piwo"},
+    known_for=[{EN: "beer", PL: "piwo"}],
 )
 F_CARICA = Species(
     name="Ficus carica",

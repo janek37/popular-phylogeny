@@ -10,7 +10,7 @@ from .rosales import ROSALES
 O_ACETOSELLA = Species(
     name="Oxalis acetosella",
     local_names={EN: "wood sorrel", PL: "szczawik zajęczy"},
-    known_for={EN: "edible leaves tasting similar to unrelated common sorrel"},
+    known_for=[{EN: "edible leaves tasting similar to unrelated common sorrel"}],
 )
 
 OXALIS = Genus(name="Oxalis", children=[O_ACETOSELLA])

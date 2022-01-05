@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import ClassVar, Mapping, Sequence
+from typing import ClassVar, List, Mapping, Sequence
 
 
 class Rank(Enum):
@@ -39,7 +39,7 @@ class Clade:
     name: str = ""
     children: Sequence["Clade"] = field(default_factory=list)
     local_names: Mapping[str, str] = field(default_factory=dict)
-    known_for: Sequence[Mapping[str, str]] = field(default_factory=list)
+    known_for: List[Mapping[str, str]] = field(default_factory=list)
     rank: ClassVar[Rank] = Rank.UNRANKED
 
 

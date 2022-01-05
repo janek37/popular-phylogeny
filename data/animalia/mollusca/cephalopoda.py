@@ -8,7 +8,7 @@ O_VULGARIS = Species(
 G_UMBELLATA = Species(
     name="Grimpoteuthis umbellata",
     local_names={EN: "dumbo octopus"},
-    known_for={EN: "swims using ear-like fins"},
+    known_for=[{EN: "swims using ear-like fins"}],
 )
 V_INFERNALIS = Species(
     name="Vampyroteuthis infernalis",

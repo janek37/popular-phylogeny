@@ -8,7 +8,7 @@ from .protostomia import PROTOSTOMIA
 A_FISTULARIS = Species(
     name="Aplysina fistularis",
     local_names={EN: "yellow sponge"},
-    known_for={EN: "SpongeBob SquarePants"},
+    known_for=[{EN: "SpongeBob SquarePants"}],
 )
 APLYSINA = Genus(name="Aplysina", children=[A_FISTULARIS])
 APLYSINIDAE = Family(name="Aplysinidae", children=[APLYSINA])
