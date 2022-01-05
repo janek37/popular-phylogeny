@@ -16,7 +16,11 @@ S_ENTERICA = Species(
     name="Salmonella enterica", known_for=[{PL: "dur brzuszny", EN: "typhoid fever"}]
 )
 
-Y_PESTIS = Species(name="Yersinia pestis", local_names={PL: "Pałeczka dżumy"})
+Y_PESTIS = Species(
+    name="Yersinia pestis",
+    local_names={PL: "Pałeczka dżumy"},
+    known_for=[{EN: "bubonic plague", PL: "dżuma"}],
+)
 V_CHOLERAE = Species(name="Vibrio cholerae")
 B_ANTHRACIS = Species(name="Bacillus anthracis", local_names={PL: "Laseczka wąglika"})
 M_TUBERCULOSIS = Species(
