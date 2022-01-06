@@ -1,5 +1,7 @@
-from clade import Clade, Class, Family, Genus, Order, Species, Subphylum
+from clade import Class, Family, Genus, Infraphylum, Order, Species, Subphylum
 from constants import EN, PL
+
+from .chondrichthyes import CHONDRICHTHYES
 
 # region AGNATHA
 M_GLUTINOSA = Species(
@@ -22,7 +24,9 @@ PETROMYZONTIFORMES = Order(name="Petromyzontiformes", children=[PETROMYZONTIDAE]
 MYXINI = Class(name="Myxini", children=[MYXINIFORMES])
 HYPEROARTIA = Class(name="Hyperoartia", children=[PETROMYZONTIFORMES])
 
-AGNATHA = Clade(name="Agnatha", children=[MYXINI, HYPEROARTIA])  # Infraphylum
+AGNATHA = Infraphylum(name="Agnatha", children=[MYXINI, HYPEROARTIA])
 # endregion AGNATHA
 
-VERTEBRATA = Subphylum(name="Vertebrata", children=[AGNATHA])
+GNATHOSTOMATA = Infraphylum(name="Gnathostomata", children=[CHONDRICHTHYES])
+
+VERTEBRATA = Subphylum(name="Vertebrata", children=[AGNATHA, GNATHOSTOMATA])
