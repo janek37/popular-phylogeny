@@ -49,6 +49,11 @@ C_SAPIDUS = Species(
     name="Callinectes sapidus",
     local_names={EN: "Atlantic blue crab", PL: "krab błękitny, kalinek błękitny"},
 )
+B_LATRO = Species(
+    name="Birgus latro",
+    local_names={EN: "coconut crab, robber crab, palm thief", PL: "krab palmowy"},
+    known_for=[{EN: "the largest terrestrial arthropod"}, {EN: "Tamatoa from Moana"}],
+)
 
 PENAEUS = Genus(name="Penaeus", children=[P_MONODON])
 LITOPENAEUS = Genus(name="Litopenaeus", children=[L_VANNAMEI])
@@ -62,6 +67,7 @@ PAGURUS = Genus(name="Pagurus", children=[P_BERNHARDUS])
 CANCER = Genus(name="Cancer", children=[C_PAGURUS])
 MENIPPE = Genus(name="Menippe", children=[M_MERCENARIA])
 CALLINECTES = Genus(name="Callinectes", children=[C_SAPIDUS])
+BIRGUS = Genus(name="Birgus", children=[B_LATRO])
 
 PENAEIDAE = Family(name="Penaeidae", children=[PENAEUS, LITOPENAEUS])
 STENOPODIDAE = Family(name="Stenopodidae", children=[STENOPUS])
@@ -72,6 +78,7 @@ ASTACIDAE = Family(name="Astacidae", children=[ASTACUS])
 PAGURIDAE = Family(name="Paguridae", children=[PAGURUS])
 CANCRIDAE = Family(name="Cancridae", children=[CANCER])
 PORTUNIDAE = Family(name="Portunidae", children=[CALLINECTES])
+COENOBITIDAE = Family(name="Coenobitidae", children=[BIRGUS])
 
 HETEROTREMATA_A = Clade(
     children=[MENIPPE, PORTUNIDAE]
@@ -86,7 +93,7 @@ STENOPODIDEA = Infraorder(name="Stenopodidea", children=[STENOPODIDAE])
 CARIDEA = Infraorder(name="Caridea", children=[PANDALIDAE])
 ASTACIDEA = Infraorder(name="Astacidea", children=[NEPHROPIDAE, ASTACIDAE])
 ACHELATA = Infraorder(name="Achelata", children=[PALINURIDAE])
-ANOMURA = Infraorder(name="Anomura", children=[PAGURIDAE])
+ANOMURA = Infraorder(name="Anomura", children=[PAGURIDAE, COENOBITIDAE])
 BRACHYURA = Infraorder(name="Brachyura", children=[EUBRACHYURA])
 
 PLEOCYEMATA_A = Clade(children=[STENOPODIDEA, CARIDEA])
