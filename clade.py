@@ -15,6 +15,7 @@ class Rank(Enum):
     CLASS = "Class"
     SUBCLASS = "Subclass"
     INFRACLASS = "Infraclass"
+    MEGACOHORT = "Megacohort"
     SUPERCOHORT = "Supercohort"
     COHORT = "Cohort"
     SUBCOHORT = "Subcohort"
@@ -92,6 +93,11 @@ class Subclass(Clade):
 @dataclass
 class Infraclass(Clade):
     rank = Rank.INFRACLASS
+
+
+@dataclass
+class Megacohort(Clade):
+    rank = Rank.MEGACOHORT
 
 
 @dataclass

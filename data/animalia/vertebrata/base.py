@@ -1,6 +1,7 @@
-from clade import Class, Family, Genus, Infraphylum, Order, Species, Subphylum
+from clade import Clade, Class, Family, Genus, Infraphylum, Order, Species, Subphylum
 from constants import EN, PL
 
+from .actinopterygii import ACTINOPTERYGII
 from .chondrichthyes import CHONDRICHTHYES
 
 # region AGNATHA
@@ -27,6 +28,10 @@ HYPEROARTIA = Class(name="Hyperoartia", children=[PETROMYZONTIFORMES])
 AGNATHA = Infraphylum(name="Agnatha", children=[MYXINI, HYPEROARTIA])
 # endregion AGNATHA
 
-GNATHOSTOMATA = Infraphylum(name="Gnathostomata", children=[CHONDRICHTHYES])
+EUTELEOSTOMI = Clade(name="Euteleostomi", children=[ACTINOPTERYGII])
+
+GNATHOSTOMATA = Infraphylum(
+    name="Gnathostomata", children=[CHONDRICHTHYES, EUTELEOSTOMI]
+)
 
 VERTEBRATA = Subphylum(name="Vertebrata", children=[AGNATHA, GNATHOSTOMATA])
