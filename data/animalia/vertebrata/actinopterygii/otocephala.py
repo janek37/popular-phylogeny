@@ -1,5 +1,7 @@
-from clade import Cohort, Family, Genus, Order, Species, Subfamily
+from clade import Cohort, Family, Genus, Order, Species, Subfamily, Superorder
 from constants import EN, PL
+
+from .cypriniformes import CYPRINIFORMES
 
 # region CLUPEIFORMES
 C_HARENGUS = Species(
@@ -38,4 +40,6 @@ ENGRAULIDAE = Family(name="Engraulidae", children=[ENGRAULIS])
 CLUPEIFORMES = Order(name="Clupeiformes", children=[CLUPEIDAE, ENGRAULIDAE])
 # endregion CLUPEIFORMES
 
-OTOCEPHALA = Cohort(name="Otocephala", children=[CLUPEIFORMES])
+OSTARIOPHYSI = Superorder(name="Ostariophysi", children=[CYPRINIFORMES])
+
+OTOCEPHALA = Cohort(name="Otocephala", children=[CLUPEIFORMES, OSTARIOPHYSI])
