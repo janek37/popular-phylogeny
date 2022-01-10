@@ -40,6 +40,28 @@ ENGRAULIDAE = Family(name="Engraulidae", children=[ENGRAULIS])
 CLUPEIFORMES = Order(name="Clupeiformes", children=[CLUPEIDAE, ENGRAULIDAE])
 # endregion CLUPEIFORMES
 
-OSTARIOPHYSI = Superorder(name="Ostariophysi", children=[CYPRINIFORMES])
+# region CHARACIFORMES
+P_INNESI = Species(
+    name="Paracheirodon innesi",
+    local_names={EN: "neon tetra", PL: "bystrzyk neonowy, neon Innesa"},
+)
+P_NATTERERI = Species(
+    name="Pygocentrus nattereri",
+    local_names={
+        EN: "red-bellied piranha, red piranha",
+        PL: "pirania czarnoogonowa, pirania czerwona, pirania Natterera",
+    },
+)
+
+PARACHEIRODON = Genus(name="Paracheirodon", children=[P_INNESI])
+PYGOCENTRUS = Genus(name="Pygocentrus", children=[P_NATTERERI])
+
+CHARACIDAE = Family(name="Characidae", children=[PARACHEIRODON])
+SERRASALMIDAE = Family(name="Serrasalmidae", children=[PYGOCENTRUS])
+
+CHARACIFORMES = Order(name="Characiformes", children=[CHARACIDAE, SERRASALMIDAE])
+# endregion CHARACIFORMES
+
+OSTARIOPHYSI = Superorder(name="Ostariophysi", children=[CYPRINIFORMES, CHARACIFORMES])
 
 OTOCEPHALA = Cohort(name="Otocephala", children=[CLUPEIFORMES, OSTARIOPHYSI])
