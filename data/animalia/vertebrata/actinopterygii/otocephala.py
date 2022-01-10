@@ -1,4 +1,14 @@
-from clade import Cohort, Family, Genus, Order, Species, Subfamily, Superorder
+from clade import (
+    Clade,
+    Cohort,
+    Family,
+    Genus,
+    Order,
+    Species,
+    Subcohort,
+    Subfamily,
+    Superorder,
+)
 from constants import EN, PL
 
 from .cypriniformes import CYPRINIFORMES
@@ -62,6 +72,40 @@ SERRASALMIDAE = Family(name="Serrasalmidae", children=[PYGOCENTRUS])
 CHARACIFORMES = Order(name="Characiformes", children=[CHARACIDAE, SERRASALMIDAE])
 # endregion CHARACIFORMES
 
-OSTARIOPHYSI = Superorder(name="Ostariophysi", children=[CYPRINIFORMES, CHARACIFORMES])
+# region SILURIPHYSAE
+A_ALBIFRONS = Species(
+    name="Apteronotus albifrons",
+    local_names={EN: "black ghost knifefish", PL: "duch brazylijski"},
+)
+E_ELECTRICUS = Species(
+    name="Electrophorus electricus",
+    local_names={EN: "electric eel", PL: "węgorz elektryczny, strętwa"},
+)
+P_BOCOURTI = Species(
+    name="Pangasius bocourti", local_names={EN: "basa, river cobbler", PL: "panga"}
+)
+S_GLANIS = Species(
+    name="Silurus glanis",
+    local_names={EN: "wels catfish, sheatfish", PL: "sum pospolity"},
+)
+
+APTERONOTUS = Genus(name="Apteronotus", children=[A_ALBIFRONS])
+ELECTROPHORUS = Genus(name="Electrophorus", children=[E_ELECTRICUS])
+PANGASIUS = Genus(name="Pangasius", children=[P_BOCOURTI])
+SILURUS = Genus(name="Silurus", children=[S_GLANIS])
+
+APTERONOTIDAE = Family(name="Apteronotidae", children=[APTERONOTUS])
+GYMNOTIDAE = Family(name="Gymnotidae", children=[ELECTROPHORUS])
+PANGASIIDAE = Family(name="Pangasiidae", children=[PANGASIUS])
+SILURIDAE = Family(name="Siluridae", children=[SILURUS])
+
+GYMNOTIFORMES = Order(name="Gymnotiformes", children=[APTERONOTIDAE, GYMNOTIDAE])
+SILURIFORMES = Order(name="Siluriformes", children=[PANGASIIDAE, SILURIDAE])
+
+SILURIPHYSAE = Superorder(name="Siluriphysae", children=[GYMNOTIFORMES, SILURIFORMES])
+# endregion SILURIPHYSAE
+
+OSTARIOPHYSI_A = Clade(children=[CHARACIFORMES, SILURIPHYSAE])
+OSTARIOPHYSI = Subcohort(name="Ostariophysi", children=[CYPRINIFORMES, OSTARIOPHYSI_A])
 
 OTOCEPHALA = Cohort(name="Otocephala", children=[CLUPEIFORMES, OSTARIOPHYSI])
