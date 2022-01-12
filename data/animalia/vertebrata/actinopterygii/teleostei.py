@@ -13,6 +13,7 @@ from constants import EN, PL
 
 from .otocephala import OTOCEPHALA
 from .protacanthopterygii import PROTACANTHOPTERYGII
+from .stomiati import STOMIATI
 
 A_ANGUILLA = Species(
     name="Anguilla anguilla", local_names={EN: "European eel", PL: "węgorz europejski"}
@@ -55,7 +56,8 @@ OSTEOGLOSSOMORPHA = Superorder(
     name="Osteoglossomorpha", children=[HIODONTIFORMES, OSTEOGLOSSIFORMES]
 )
 
-EUTELEOSTEI = Clade(name="Euteleostei", children=[PROTACANTHOPTERYGII])
+EUTELEOSTEI_A = Clade(children=[STOMIATI])
+EUTELEOSTEI = Clade(name="Euteleostei", children=[PROTACANTHOPTERYGII, EUTELEOSTEI_A])
 
 CLUPEOCEPHALA = Supercohort(name="Clupeocephala", children=[OTOCEPHALA, EUTELEOSTEI])
 
