@@ -1,4 +1,5 @@
 from clade import (
+    Clade,
     Family,
     Genus,
     Infraclass,
@@ -11,6 +12,7 @@ from clade import (
 from constants import EN, PL
 
 from .otocephala import OTOCEPHALA
+from .protacanthopterygii import PROTACANTHOPTERYGII
 
 A_ANGUILLA = Species(
     name="Anguilla anguilla", local_names={EN: "European eel", PL: "węgorz europejski"}
@@ -53,7 +55,9 @@ OSTEOGLOSSOMORPHA = Superorder(
     name="Osteoglossomorpha", children=[HIODONTIFORMES, OSTEOGLOSSIFORMES]
 )
 
-CLUPEOCEPHALA = Supercohort(name="Clupeocephala", children=[OTOCEPHALA])
+EUTELEOSTEI = Clade(name="Euteleostei", children=[PROTACANTHOPTERYGII])
+
+CLUPEOCEPHALA = Supercohort(name="Clupeocephala", children=[OTOCEPHALA, EUTELEOSTEI])
 
 OSTEOGLOSSOCEPHALAI = Megacohort(
     name="Osteoglossocephalai", children=[OSTEOGLOSSOMORPHA, CLUPEOCEPHALA]
