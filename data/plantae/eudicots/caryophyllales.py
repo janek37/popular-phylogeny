@@ -5,6 +5,9 @@ D_CARYOPHYLLUS = Species(
     name="Dianthus caryophyllus",
     local_names={EN: "carnation, clove pink", PL: "goździk ogrodowy"},
 )
+A_GITHAGO = Species(
+    name="Agrostemma githago", local_names={EN: "common corn-cockle", PL: "kąkol polny"}
+)
 B_VULGARIS = Species(
     name="Beta vulgaris",
     local_names={EN: "beet", PL: "burak zwyczajny"},
@@ -86,6 +89,7 @@ P_AVICULARE = Species(
 )
 
 DIANTHUS = Genus(name="Dianthus", children=[D_CARYOPHYLLUS])
+AGROSTEMMA = Genus(name="Agrostemma", children=[A_GITHAGO])
 BETA = Genus(name="Beta", children=[B_VULGARIS])
 DROSERA = Genus(name="Drosera", children=[D_ROTUNDIFOLIA])
 DIONAEA = Genus(name="Dionaea", children=[D_MUSCIPULA])
@@ -138,7 +142,7 @@ POLYGONOIDEAE = Subfamily(name="Polygonoideae", children=[POLYGONOIDEAE_A, FAGOP
 
 AMARANTHACEAE_A = Clade(children=[BETOIDEAE, CHENOPODIOIDEAE])
 
-CARYOPHYLLACEAE = Family(name="Caryophyllaceae", children=[DIANTHUS])
+CARYOPHYLLACEAE = Family(name="Caryophyllaceae", children=[DIANTHUS, AGROSTEMMA])
 AMARANTHACEAE = Family(name="Amaranthaceae", children=[AMARANTHACEAE_A, SALSOLOIDEAE])
 DROSERACEAE = Family(name="Droseraceae", children=[DROSERA, DIONAEA])
 NEPENTHACEAE = Family(name="Nepenthaceae", children=[NEPENTHES])
