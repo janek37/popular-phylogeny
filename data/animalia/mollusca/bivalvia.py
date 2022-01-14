@@ -34,7 +34,7 @@ P_MARGARITIFERA = Species(
 )
 M_EDULIS = Species(
     name="Mytilus edulis",
-    local_names={EN: "blue mussel, common mussel", PL: "omułek jadalny"},
+    local_names={EN: "blue mussel, common mussel", PL: "mul, omułek jadalny"},
 )
 
 MERCENARIA = Genus(name="Mercenaria", children=[M_MERCENARIA])
