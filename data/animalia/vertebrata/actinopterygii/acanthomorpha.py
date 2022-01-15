@@ -1,6 +1,8 @@
 from clade import Clade, Family, Genus, Order, Species, Superorder
 from constants import EN, PL
 
+from .percomorpha import PERCOMORPHA
+
 L_GUTTATUS = Species(
     name="Lampris guttatus",
     local_names={
@@ -58,6 +60,6 @@ PARACANTHOPTERYGII = Superorder(
     name="Paracanthopterygii", children=[ZEIFORMES, GADIFORMES]
 )
 
-ACANTHOMORPHA = Clade(
-    name="Acanthomorpha", children=[LAMPRIPTERYGII, PARACANTHOPTERYGII]
-)
+ACANTHOMORPHA_A = Clade(children=[LAMPRIPTERYGII, PARACANTHOPTERYGII])
+
+ACANTHOMORPHA = Clade(name="Acanthomorpha", children=[ACANTHOMORPHA_A, PERCOMORPHA])
