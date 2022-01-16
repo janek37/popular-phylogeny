@@ -2,6 +2,7 @@ from clade import Clade, Family, Genus, Order, Species, Tribe
 from constants import EN, PL
 
 from .anabantiformes import ANABANTIFORMES
+from .carangaria import CARANGARIA
 
 S_SCOMBRUS = Species(
     name="Scomber scombrus",
@@ -53,6 +54,7 @@ SYNGNATHIFORMES = Order(name="Syngnathiformes", children=[SYNGNATHIDAE])
 GOBIIFORMES = Order(name="Gobiiformes", children=[OXUDERCIDAE, GOBIIDAE])
 
 PERCOMORPHA_A = Clade(children=[SCOMBRIFORMES, SYNGNATHIFORMES])
-PERCOMORPHA_C = Clade(children=[GOBIIFORMES, ANABANTIFORMES])
+PERCOMORPHA_D = Clade(children=[ANABANTIFORMES, CARANGARIA])
+PERCOMORPHA_C = Clade(children=[GOBIIFORMES, PERCOMORPHA_D])
 PERCOMORPHA_B = Clade(children=[PERCOMORPHA_A, PERCOMORPHA_C])
 PERCOMORPHA = Clade(name="Percomorpha", children=[PERCOMORPHA_B])
