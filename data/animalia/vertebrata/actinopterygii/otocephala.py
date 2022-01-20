@@ -88,19 +88,27 @@ S_GLANIS = Species(
     name="Silurus glanis",
     local_names={EN: "wels catfish, sheatfish", PL: "sum pospolity"},
 )
+A_NEBULOSUS = Species(
+    name="Ameiurus nebulosus",
+    local_names={EN: "brown bullhead", PL: "byczek, amerykański sumik karłowaty"},
+)
 
 APTERONOTUS = Genus(name="Apteronotus", children=[A_ALBIFRONS])
 ELECTROPHORUS = Genus(name="Electrophorus", children=[E_ELECTRICUS])
 PANGASIUS = Genus(name="Pangasius", children=[P_BOCOURTI])
 SILURUS = Genus(name="Silurus", children=[S_GLANIS])
+AMEIURUS = Genus(name="Ameiurus", children=[A_NEBULOSUS])
 
 APTERONOTIDAE = Family(name="Apteronotidae", children=[APTERONOTUS])
 GYMNOTIDAE = Family(name="Gymnotidae", children=[ELECTROPHORUS])
 PANGASIIDAE = Family(name="Pangasiidae", children=[PANGASIUS])
 SILURIDAE = Family(name="Siluridae", children=[SILURUS])
+ICTALURIDAE = Family(name="Ictaluridae", children=[AMEIURUS])
+
+SILURIFORMES_A = Clade(children=[PANGASIIDAE, ICTALURIDAE])
 
 GYMNOTIFORMES = Order(name="Gymnotiformes", children=[APTERONOTIDAE, GYMNOTIDAE])
-SILURIFORMES = Order(name="Siluriformes", children=[PANGASIIDAE, SILURIDAE])
+SILURIFORMES = Order(name="Siluriformes", children=[SILURIFORMES_A, SILURIDAE])
 
 SILURIPHYSAE = Superorder(name="Siluriphysae", children=[GYMNOTIFORMES, SILURIFORMES])
 # endregion SILURIPHYSAE
