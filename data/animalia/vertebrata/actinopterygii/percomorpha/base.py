@@ -3,6 +3,7 @@ from constants import EN, PL
 
 from .anabantiformes import ANABANTIFORMES
 from .carangaria import CARANGARIA
+from .eupercaria import EUPERCARIA
 from .ovalentaria import OVALENTARIA
 
 S_SCOMBRUS = Species(
@@ -55,8 +56,8 @@ SYNGNATHIFORMES = Order(name="Syngnathiformes", children=[SYNGNATHIDAE])
 GOBIIFORMES = Order(name="Gobiiformes", children=[OXUDERCIDAE, GOBIIDAE])
 
 PERCOMORPHA_A = Clade(children=[SCOMBRIFORMES, SYNGNATHIFORMES])
-PERCOMORPHA_D = Clade(children=[ANABANTIFORMES, CARANGARIA])
-PERCOMORPHA_E = Clade(children=[PERCOMORPHA_D, OVALENTARIA])
-PERCOMORPHA_C = Clade(children=[GOBIIFORMES, PERCOMORPHA_E])
-PERCOMORPHA_B = Clade(children=[PERCOMORPHA_A, PERCOMORPHA_C])
-PERCOMORPHA = Clade(name="Percomorpha", children=[PERCOMORPHA_B])
+PERCOMORPHA_B = Clade(children=[ANABANTIFORMES, CARANGARIA])
+PERCOMORPHA_C = Clade(children=[PERCOMORPHA_B, OVALENTARIA])
+PERCOMORPHA_D = Clade(children=[PERCOMORPHA_C, EUPERCARIA])
+PERCOMORPHA_E = Clade(children=[GOBIIFORMES, PERCOMORPHA_D])
+PERCOMORPHA = Clade(name="Percomorpha", children=[PERCOMORPHA_A, PERCOMORPHA_E])
