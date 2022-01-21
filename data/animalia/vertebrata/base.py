@@ -1,4 +1,14 @@
-from clade import Clade, Class, Family, Genus, Infraphylum, Order, Species, Subphylum
+from clade import (
+    Clade,
+    Class,
+    Family,
+    Genus,
+    Infraphylum,
+    Order,
+    Species,
+    Subclass,
+    Subphylum,
+)
 from constants import EN, PL
 
 from .actinopterygii import ACTINOPTERYGII
@@ -28,7 +38,36 @@ HYPEROARTIA = Class(name="Hyperoartia", children=[PETROMYZONTIFORMES])
 AGNATHA = Infraphylum(name="Agnatha", children=[MYXINI, HYPEROARTIA])
 # endregion AGNATHA
 
-EUTELEOSTOMI = Clade(name="Euteleostomi", children=[ACTINOPTERYGII])
+# region SARCOPTERYGII
+L_CHALUMNAE = Species(
+    name="Latimeria chalumnae",
+    local_names={EN: "West Indian Ocean coelacanth, gombessa", PL: "latimeria"},
+)
+N_FORSTERI = Species(
+    name="Neoceratodus forsteri",
+    local_names={
+        EN: "Australian lungfish, Queensland lungfish, Burnett salmon, barramunda",
+        PL: "barramunda, rogoząb australijski",
+    },
+)
+
+LATIMERIA = Genus(name="Latimeria", children=[L_CHALUMNAE])
+NEOCERATODUS = Genus(name="Neoceratodus", children=[N_FORSTERI])
+
+LATIMERIIDAE = Family(name="Latimeriidae", children=[LATIMERIA])
+NEOCERATODONTIDAE = Family(name="Neoceratodontidae", children=[NEOCERATODUS])
+
+COELACANTHIFORMES = Order(name="Coelacanthiformes", children=[LATIMERIIDAE])
+DIPNOI = Order(name="Dipnoi", children=[NEOCERATODONTIDAE])
+
+ACTINISTIA = Subclass(name="Actinistia", children=[COELACANTHIFORMES])
+
+RHIPIDISTIA = Clade(name="Rhipidistia", children=[DIPNOI])
+
+SARCOPTERYGII = Clade(name="Sarcopterygii", children=[ACTINISTIA, RHIPIDISTIA])
+# endregion SARCOPTERYGII
+
+EUTELEOSTOMI = Clade(name="Euteleostomi", children=[ACTINOPTERYGII, SARCOPTERYGII])
 
 GNATHOSTOMATA = Infraphylum(
     name="Gnathostomata", children=[CHONDRICHTHYES, EUTELEOSTOMI]
