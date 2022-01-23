@@ -8,10 +8,12 @@ from clade import (
     Species,
     Subclass,
     Subphylum,
+    Superclass,
 )
 from constants import EN, PL
 
 from .actinopterygii import ACTINOPTERYGII
+from .amphibia import AMPHIBIA
 from .chondrichthyes import CHONDRICHTHYES
 
 # region AGNATHA
@@ -62,7 +64,9 @@ DIPNOI = Order(name="Dipnoi", children=[NEOCERATODONTIDAE])
 
 ACTINISTIA = Subclass(name="Actinistia", children=[COELACANTHIFORMES])
 
-RHIPIDISTIA = Clade(name="Rhipidistia", children=[DIPNOI])
+TETRAPODA = Superclass(name="Tetrapoda", children=[AMPHIBIA])
+
+RHIPIDISTIA = Clade(name="Rhipidistia", children=[DIPNOI, TETRAPODA])
 
 SARCOPTERYGII = Clade(name="Sarcopterygii", children=[ACTINISTIA, RHIPIDISTIA])
 # endregion SARCOPTERYGII
