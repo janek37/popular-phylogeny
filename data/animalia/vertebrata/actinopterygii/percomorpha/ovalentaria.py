@@ -7,6 +7,7 @@ O_NILOTICUS = Species(
 P_SCALARE = Species(
     name="Pterophyllum scalare",
     local_names={EN: "freshwater angelfish", PL: "ryba księżycowa, żaglowiec skalar"},
+    known_for=[{EN: "A Fish Called Wanda"}],
 )
 E_VOLITANS = Species(
     name="Exocoetus volitans",
