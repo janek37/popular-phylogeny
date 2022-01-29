@@ -15,6 +15,7 @@ from constants import EN, PL
 from .actinopterygii import ACTINOPTERYGII
 from .amphibia import AMPHIBIA
 from .chondrichthyes import CHONDRICHTHYES
+from .reptilia import REPTILIA
 
 # region AGNATHA
 M_GLUTINOSA = Species(
@@ -64,7 +65,11 @@ DIPNOI = Order(name="Dipnoi", children=[NEOCERATODONTIDAE])
 
 ACTINISTIA = Subclass(name="Actinistia", children=[COELACANTHIFORMES])
 
-TETRAPODA = Superclass(name="Tetrapoda", children=[AMPHIBIA])
+SAUROPSIDA = Clade(name="Sauropsida", children=[REPTILIA])
+
+AMNIOTA = Clade(name="Amniota", children=[SAUROPSIDA])
+
+TETRAPODA = Superclass(name="Tetrapoda", children=[AMPHIBIA, AMNIOTA])
 
 RHIPIDISTIA = Clade(name="Rhipidistia", children=[DIPNOI, TETRAPODA])
 
