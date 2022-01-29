@@ -2,6 +2,7 @@ from clade import Clade, Family, Genus, Infraorder, Order, Species, Suborder
 from constants import EN, PL
 
 from .iguania import IGUANIA
+from .serpentes import SERPENTES
 
 P_LATICAUDA = Species(
     name="Phelsuma laticauda",
@@ -57,7 +58,8 @@ GEKKOTA = Infraorder(name="Gekkota", children=[GEKKONIDAE])
 
 ANGUIMORPHA = Suborder(name="Anguimorpha", children=[VARANIDAE, ANGUIDAE])
 
-TOXICOFERA = Clade(name="Toxicofera", children=[ANGUIMORPHA, IGUANIA])
+TOXICOFERA_A = Clade(children=[ANGUIMORPHA, IGUANIA])
+TOXICOFERA = Clade(name="Toxicofera", children=[TOXICOFERA_A, SERPENTES])
 
 SQUAMATA_A = Clade(children=[LACERTIDAE, TOXICOFERA])
 SQUAMATA_B = Clade(children=[SCINCIDAE, SQUAMATA_A])
