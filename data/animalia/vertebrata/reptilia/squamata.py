@@ -1,4 +1,13 @@
-from clade import Clade, Family, Genus, Infraorder, Order, Species, Suborder
+from clade import (
+    Clade,
+    Family,
+    Genus,
+    Infraorder,
+    Order,
+    Species,
+    Suborder,
+    Superfamily,
+)
 from constants import EN, PL
 
 from .iguania import IGUANIA
@@ -41,25 +50,32 @@ A_FRAGILIS = Species(
     name="Anguis fragilis",
     local_names={EN: "slow worm, deaf adder", PL: "padalec zwyczajny"},
 )
+M_HOFFMANNII = Species(name="Mosasaurus hoffmannii")
 
 PHELSUMA = Genus(name="Phelsuma", children=[P_LATICAUDA])
 SCINCUS = Genus(name="Scincus", children=[S_SCINCUS])
 LACERTA = Genus(name="Lacerta", children=[L_AGILIS])
 VARANUS = Genus(name="Varanus", children=[V_KOMODOENSIS, V_GOULDII])
 ANGUIS = Genus(name="Anguis", children=[A_FRAGILIS])
+MOSASAURUS = Genus(name="Mosasaurus", children=[M_HOFFMANNII])
 
 GEKKONIDAE = Family(name="Gekkonidae", children=[PHELSUMA])
 SCINCIDAE = Family(name="Scincidae", children=[SCINCUS])
 LACERTIDAE = Family(name="Lacertidae", children=[LACERTA])
 VARANIDAE = Family(name="Varanidae", children=[VARANUS])
 ANGUIDAE = Family(name="Anguidae", children=[ANGUIS])
+MOSASAURIDAE = Family(name="Mosasauridae", children=[MOSASAURUS])
+
+MOSASAUROIDEA = Superfamily(name="Mosasauroidea", children=[MOSASAURIDAE])
 
 GEKKOTA = Infraorder(name="Gekkota", children=[GEKKONIDAE])
 
 ANGUIMORPHA = Suborder(name="Anguimorpha", children=[VARANIDAE, ANGUIDAE])
 
+PYTHONOMORPHA = Clade(name="Pythonomorpha", children=[SERPENTES, MOSASAUROIDEA])
+
 TOXICOFERA_A = Clade(children=[ANGUIMORPHA, IGUANIA])
-TOXICOFERA = Clade(name="Toxicofera", children=[TOXICOFERA_A, SERPENTES])
+TOXICOFERA = Clade(name="Toxicofera", children=[TOXICOFERA_A, PYTHONOMORPHA])
 
 SQUAMATA_A = Clade(children=[LACERTIDAE, TOXICOFERA])
 SQUAMATA_B = Clade(children=[SCINCIDAE, SQUAMATA_A])
