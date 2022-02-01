@@ -2,6 +2,7 @@ from clade import Clade, Class, Family, Genus, Order, Species, Superorder
 from constants import EN, PL
 
 from .squamata import SQUAMATA
+from .testudines import TESTUDINES
 
 S_PUNCTATUS = Species(
     name="Sphenodon punctatus",
@@ -25,7 +26,7 @@ PLESIOSAURIA = Order(name="Plesiosauria", children=[PLESIOSAURIDAE])
 LEPIDOSAURIA = Superorder(name="Lepidosauria", children=[RHYNCHOCEPHALIA, SQUAMATA])
 ICHTHYOPTERYGIA = Superorder(name="Ichthyopterygia", children=[ICHTHYOSAURIA])
 
-PANTESTUDINES = Clade(name="Pantestudines", children=[PLESIOSAURIA])
+PANTESTUDINES = Clade(name="Pantestudines", children=[PLESIOSAURIA, TESTUDINES])
 
 ARCHELOSAURIA = Clade(name="Archelosauria", children=[PANTESTUDINES])
 
