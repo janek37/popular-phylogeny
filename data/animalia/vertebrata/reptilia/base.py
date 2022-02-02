@@ -1,6 +1,7 @@
 from clade import Clade, Class, Family, Genus, Order, Species, Superorder
 from constants import EN, PL
 
+from .crocodilia import CROCODILIA
 from .squamata import SQUAMATA
 from .testudines import TESTUDINES
 
@@ -27,8 +28,9 @@ LEPIDOSAURIA = Superorder(name="Lepidosauria", children=[RHYNCHOCEPHALIA, SQUAMA
 ICHTHYOPTERYGIA = Superorder(name="Ichthyopterygia", children=[ICHTHYOSAURIA])
 
 PANTESTUDINES = Clade(name="Pantestudines", children=[PLESIOSAURIA, TESTUDINES])
+ARCHOSAURIFORMES = Clade(name="Archosauriformes", children=[CROCODILIA])
 
-ARCHELOSAURIA = Clade(name="Archelosauria", children=[PANTESTUDINES])
+ARCHELOSAURIA = Clade(name="Archelosauria", children=[PANTESTUDINES, ARCHOSAURIFORMES])
 
 REPTILIA_A = Clade(children=[LEPIDOSAURIA, ARCHELOSAURIA])
 # not sure about ichthyo-
