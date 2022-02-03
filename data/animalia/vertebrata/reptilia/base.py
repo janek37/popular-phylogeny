@@ -2,7 +2,7 @@ from clade import Clade, Class, Family, Genus, Order, Species, Superorder
 from constants import EN, PL
 
 from .crocodilia import CROCODILIA
-from .ornithischia import ORNITHISCHIA
+from .dinosauria import DINOSAURIA
 from .pterosauria import PTEROSAURIA
 from .squamata import SQUAMATA
 from .testudines import TESTUDINES
@@ -28,8 +28,6 @@ PLESIOSAURIA = Order(name="Plesiosauria", children=[PLESIOSAURIDAE])
 
 LEPIDOSAURIA = Superorder(name="Lepidosauria", children=[RHYNCHOCEPHALIA, SQUAMATA])
 ICHTHYOPTERYGIA = Superorder(name="Ichthyopterygia", children=[ICHTHYOSAURIA])
-
-DINOSAURIA = Clade(name="Dinosauria", children=[ORNITHISCHIA])
 
 AVEMETATARSALIA = Clade(name="Avemetatarsalia", children=[PTEROSAURIA, DINOSAURIA])
 
