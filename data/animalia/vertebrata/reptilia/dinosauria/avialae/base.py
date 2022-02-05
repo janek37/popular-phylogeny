@@ -1,8 +1,7 @@
 from clade import Clade, Class, Family, Genus, Species
 from constants import EN
-from data.animalia.vertebrata.reptilia.dinosauria.avialae.palaeognathe import (
-    PALAEOGNATHAE,
-)
+
+from .palaeognathe import PALAEOGNATHAE
 
 A_SIEMENSII = Species(
     name="Archaeopteryx siemensii",
