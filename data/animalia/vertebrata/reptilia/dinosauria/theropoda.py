@@ -1,6 +1,8 @@
 from clade import Clade, Family, Genus, Species, Superfamily
 from constants import EN, PL
 
+from .avialae import AVIALAE
+
 C_BAURI = Species(name="Coelophysis bauri")
 C_SASTREI = Species(
     name="Carnotaurus sastrei", known_for=[{EN: "villains from the film Dinosaur"}]
@@ -59,7 +61,7 @@ TYRANNOSAUROIDEA = Superfamily(name="Tyrannosauroidea", children=[TYRANNOSAURIDA
 CERATOSAURIA = Clade(name="Ceratosauria", children=[ABELISAURIDAE])
 ORNITHOMIMOSAURIA = Clade(name="Ornithomimosauria", children=[ORNITHOMIMIDAE])
 
-MANIRAPTORA = Clade(name="Maniraptora", children=[DROMAEOSAURIDAE])
+MANIRAPTORA = Clade(name="Maniraptora", children=[DROMAEOSAURIDAE, AVIALAE])
 MANIRAPTORIFORMES = Clade(
     name="Maniraptoriformes", children=[ORNITHOMIMOSAURIA, MANIRAPTORA]
 )
