@@ -1,6 +1,7 @@
 from clade import Clade, Class, Family, Genus, Infraclass, Species, Superorder
 from constants import EN
 
+from .anseriformes import ANSERIFORMES
 from .galliformes import GALLIFORMES
 from .palaeognathe import PALAEOGNATHAE
 
@@ -13,7 +14,7 @@ ARCHAEOPTERYX = Genus(name="Archaeopteryx", children=[A_SIEMENSII])
 
 ARCHAEOPTERYGIDAE = Family(name="Archaeopterygidae", children=[ARCHAEOPTERYX])
 
-GALLOANSERAE = Superorder(name="Galloanserae", children=[GALLIFORMES])
+GALLOANSERAE = Superorder(name="Galloanserae", children=[GALLIFORMES, ANSERIFORMES])
 
 NEOGNATHAE = Infraclass(name="Neognathae", children=[GALLOANSERAE])
 
