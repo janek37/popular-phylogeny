@@ -3,6 +3,7 @@ from constants import EN
 
 from .anseriformes import ANSERIFORMES
 from .galliformes import GALLIFORMES
+from .neoaves import NEOAVES
 from .palaeognathe import PALAEOGNATHAE
 
 A_SIEMENSII = Species(
@@ -16,7 +17,7 @@ ARCHAEOPTERYGIDAE = Family(name="Archaeopterygidae", children=[ARCHAEOPTERYX])
 
 GALLOANSERAE = Superorder(name="Galloanserae", children=[GALLIFORMES, ANSERIFORMES])
 
-NEOGNATHAE = Infraclass(name="Neognathae", children=[GALLOANSERAE])
+NEOGNATHAE = Infraclass(name="Neognathae", children=[GALLOANSERAE, NEOAVES])
 
 AVES = Class(name="Aves", children=[PALAEOGNATHAE, NEOGNATHAE])
 
