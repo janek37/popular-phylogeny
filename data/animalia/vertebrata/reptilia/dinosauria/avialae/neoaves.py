@@ -2,6 +2,7 @@ from clade import Clade, Family, Genus, Order, Species
 from constants import EN, PL
 
 from .columbiformes import COLUMBIFORMES
+from .passerea import PASSEREA
 
 P_RUBER = Species(
     name="Phoenicopterus ruber",
@@ -25,4 +26,4 @@ MIRANDORNITHES = Clade(
     name="Mirandornithes", children=[PHOENICOPTERIFORMES, PODICIPEDIFORMES]
 )
 
-NEOAVES = Clade(name="Neoaves", children=[MIRANDORNITHES, COLUMBIFORMES])
+NEOAVES = Clade(name="Neoaves", children=[MIRANDORNITHES, COLUMBIFORMES, PASSEREA])
