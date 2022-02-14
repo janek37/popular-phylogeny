@@ -4,6 +4,8 @@ from data.animalia.vertebrata.reptilia.dinosauria.avialae.aequornithes import (
     AEQUORNITHES,
 )
 
+from .telluraves import TELLURAVES
+
 C_CANORUS = Species(
     name="Cuculus canorus", local_names={EN: "common cuckoo", PL: "kukułka zwyczajna"}
 )
@@ -88,5 +90,12 @@ STISORES = Clade(name="Stisores", children=[APODIFORMES, CAPRIMULGIFORMES])
 # currently unresolved
 PASSEREA = Clade(
     name="Passerea",
-    children=[CUCULIFORMES, GRUIFORMES, CHARADRIIFORMES, STISORES, AEQUORNITHES],
+    children=[
+        CUCULIFORMES,
+        GRUIFORMES,
+        CHARADRIIFORMES,
+        STISORES,
+        AEQUORNITHES,
+        TELLURAVES,
+    ],
 )
