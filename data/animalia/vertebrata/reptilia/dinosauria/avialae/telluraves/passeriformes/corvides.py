@@ -1,6 +1,8 @@
 from clade import Clade, Family, Genus, Infraorder, Species, Subfamily, Superfamily
 from constants import EN, PL
 
+from .paradisaeidae import PARADISAEIDAE
+
 C_CORAX = Species(
     name="Corvus corax",
     local_names={
@@ -59,7 +61,7 @@ CYANOCORACINAE = Subfamily(name="Cyanocoracinae", children=[CYANOCITTA])
 CORVIDAE = Family(name="Corvidae", children=[CORVINAE, CYANOCORACINAE])
 ORIOLIDAE = Family(name="Oriolidae", children=[ORIOLUS])
 
-CORVOIDEA = Superfamily(name="Corvoidea", children=[CORVIDAE])
+CORVOIDEA = Superfamily(name="Corvoidea", children=[CORVIDAE, PARADISAEIDAE])
 ORIOLOIDEA = Subfamily(name="Orioloidea", children=[ORIOLIDAE])
 
 CORVIDES = Infraorder(name="Corvides", children=[CORVOIDEA, ORIOLOIDEA])
