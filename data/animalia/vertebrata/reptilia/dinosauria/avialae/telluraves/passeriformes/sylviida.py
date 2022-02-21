@@ -1,4 +1,4 @@
-from clade import Clade, Family, Genus, Species
+from clade import Clade, Family, Genus, Parvorder, Species
 from constants import EN, PL
 
 P_MAJOR = Species(
@@ -86,4 +86,5 @@ AEGITHALIDAE = Family(name="Aegithalidae", children=[AEGITHALOS])
 SYLVIIDA_A = Clade(children=[PARIDAE, REMIZIDAE])
 SYLVIIDA_B = Clade(children=[HIRUNDINIDAE, AEGITHALIDAE])
 SYLVIIDA_C = Clade(children=[ALAUDIDAE, SYLVIIDA_B])
-SYLVIIDA = Clade(name="Sylviida", children=[SYLVIIDA_A, SYLVIIDA_C])  # Parvorder
+
+SYLVIIDA = Parvorder(name="Sylviida", children=[SYLVIIDA_A, SYLVIIDA_C])
