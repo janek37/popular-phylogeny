@@ -1,5 +1,7 @@
-from clade import Family, Genus, Parvorder, Species
+from clade import Clade, Family, Genus, Parvorder, Species
 from constants import EN, PL
+
+from .fringillidae import FRINGILLIDAE
 
 P_DOMESTICUS = Species(
     name="Passer domesticus", local_names={EN: "house sparrow", PL: "wróbel zwyczajny"}
@@ -18,4 +20,6 @@ MOTACILLA = Genus(name="Motacilla", children=[M_ALBA, M_CINEREA])
 PASSERIDAE = Family(name="Passeridae", children=[PASSER])
 MOTACILLIDAE = Family(name="Motacillidae", children=[MOTACILLA])
 
-PASSERIDA = Parvorder(name="Passerida", children=[PASSERIDAE, MOTACILLIDAE])
+PASSERIDA_A = Clade(children=[MOTACILLIDAE, FRINGILLIDAE])
+
+PASSERIDA = Parvorder(name="Passerida", children=[PASSERIDAE, PASSERIDA_A])
