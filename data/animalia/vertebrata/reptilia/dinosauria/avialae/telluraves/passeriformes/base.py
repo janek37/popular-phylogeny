@@ -1,10 +1,13 @@
-from clade import Infraorder, Order, Suborder
+from clade import Clade, Infraorder, Order, Suborder
 
 from .corvides import CORVIDES
 from .muscicapida import MUSCICAPIDA
+from .passerida import PASSERIDA
 from .sylviida import SYLVIIDA
 
-PASSERIDES = Infraorder(name="Passerides", children=[SYLVIIDA, MUSCICAPIDA])
+PASSERIDES_A = Clade(children=[MUSCICAPIDA, PASSERIDA])
+
+PASSERIDES = Infraorder(name="Passerides", children=[SYLVIIDA, PASSERIDES_A])
 
 PASSERI = Suborder(name="Passeri", children=[CORVIDES, PASSERIDES])
 
