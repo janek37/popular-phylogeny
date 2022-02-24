@@ -15,6 +15,7 @@ from constants import EN, PL
 from .actinopterygii import ACTINOPTERYGII
 from .amphibia import AMPHIBIA
 from .chondrichthyes import CHONDRICHTHYES
+from .mammalia import MAMMALIA
 from .reptilia import REPTILIA
 
 # region AGNATHA
@@ -53,12 +54,15 @@ N_FORSTERI = Species(
         PL: "barramunda, rogoząb australijski",
     },
 )
+D_LIMBATUS = Species(name="Dimetrodon limbatus")
 
 LATIMERIA = Genus(name="Latimeria", children=[L_CHALUMNAE])
 NEOCERATODUS = Genus(name="Neoceratodus", children=[N_FORSTERI])
+DIMETRODON = Genus(name="Dimetrodon", children=[D_LIMBATUS])
 
 LATIMERIIDAE = Family(name="Latimeriidae", children=[LATIMERIA])
 NEOCERATODONTIDAE = Family(name="Neoceratodontidae", children=[NEOCERATODUS])
+SPHENACODONTIDAE = Family(name="Sphenacodontidae", children=[DIMETRODON])
 
 COELACANTHIFORMES = Order(name="Coelacanthiformes", children=[LATIMERIIDAE])
 DIPNOI = Order(name="Dipnoi", children=[NEOCERATODONTIDAE])
@@ -66,8 +70,9 @@ DIPNOI = Order(name="Dipnoi", children=[NEOCERATODONTIDAE])
 ACTINISTIA = Subclass(name="Actinistia", children=[COELACANTHIFORMES])
 
 SAUROPSIDA = Clade(name="Sauropsida", children=[REPTILIA])
+SYNAPSIDA = Clade(name="Synapsida", children=[SPHENACODONTIDAE, MAMMALIA])
 
-AMNIOTA = Clade(name="Amniota", children=[SAUROPSIDA])
+AMNIOTA = Clade(name="Amniota", children=[SAUROPSIDA, SYNAPSIDA])
 
 TETRAPODA = Superclass(name="Tetrapoda", children=[AMPHIBIA, AMNIOTA])
 
