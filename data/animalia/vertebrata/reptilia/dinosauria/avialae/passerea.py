@@ -1,9 +1,7 @@
 from clade import Clade, Family, Genus, Order, Species
 from constants import EN, PL
-from data.animalia.vertebrata.reptilia.dinosauria.avialae.aequornithes import (
-    AEQUORNITHES,
-)
 
+from .aequornithes import AEQUORNITHES
 from .telluraves import TELLURAVES
 
 C_CANORUS = Species(

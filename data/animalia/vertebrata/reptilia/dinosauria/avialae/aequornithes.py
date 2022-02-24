@@ -1,8 +1,7 @@
 from clade import Clade, Family, Genus, Order, Species
 from constants import EN, PL
-from data.animalia.vertebrata.reptilia.dinosauria.avialae.pelecaniformes import (
-    PELECANIFORMES,
-)
+
+from .pelecaniformes import PELECANIFORMES
 
 G_IMMER = Species(
     name="Gavia immer", local_names={EN: "common loon", PL: "nur lodowiec"}
