@@ -4,6 +4,7 @@ from queue import Queue
 import pytest
 
 import clade
+from clade import Species
 from data.base import LIFE
 
 
@@ -26,8 +27,9 @@ def life_clades():
     while not queue.empty():
         current_clade = queue.get()
         clades.append(current_clade)
-        for child in current_clade.children:
-            queue.put(child)
+        if not isinstance(current_clade, Species):
+            for child in current_clade.children:
+                queue.put(child)
     return clades
 
 

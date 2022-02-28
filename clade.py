@@ -1,3 +1,4 @@
+import abc
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import ClassVar, List, Mapping, Sequence
@@ -38,12 +39,28 @@ class Rank(Enum):
 
 
 @dataclass
-class Clade:
+class BaseClade(abc.ABC):
     name: str = ""
-    children: Sequence["Clade"] = field(default_factory=list)
     local_names: Mapping[str, str] = field(default_factory=dict)
     known_for: List[Mapping[str, str]] = field(default_factory=list)
     rank: ClassVar[Rank] = Rank.UNRANKED
+
+    @property
+    @abc.abstractmethod
+    def is_extinct(self) -> bool:
+        pass
+
+
+@dataclass
+class Clade(BaseClade):
+    children: Sequence[BaseClade] = field(default_factory=list)
+    _is_extinct: bool = None
+
+    @property
+    def is_extinct(self) -> bool:
+        if self._is_extinct is None:
+            self._is_extinct = all(child.is_extinct for child in self.children)
+        return self._is_extinct
 
 
 @dataclass
@@ -192,5 +209,10 @@ class Superspecies(Clade):
 
 
 @dataclass
-class Species(Clade):
+class Species(BaseClade):
     rank = Rank.SPECIES
+    extinct: bool = False
+
+    @property
+    def is_extinct(self) -> bool:
+        return self.extinct
