@@ -1,6 +1,7 @@
-from clade import Class, Family, Genus, Order, Species
+from clade import Clade, Class, Family, Genus, Infraclass, Order, Species, Subclass
 from constants import EN, PL
 
+from .afrotheria import AFROTHERIA
 from .marsupialia import MARSUPIALIA
 
 O_ANATINUS = Species(
@@ -20,4 +21,12 @@ TACHYGLOSSIDAE = Family(name="Tachyglossidae", children=[TACHYGLOSSUS])
 
 MONOTREMATA = Order(name="Monotremata", children=[ORNITHORHYNCHIDAE, TACHYGLOSSIDAE])
 
-MAMMALIA = Class(name="Mammalia", children=[MONOTREMATA, MARSUPIALIA])
+# not certain; it's possible that Afrotheria, Xenarthra and Boreoeutheria
+# diverged three ways nearly the same time (trifurcation)
+ATLANTOGENATA = Clade(name="Atlantogenata", children=[AFROTHERIA])
+
+PLACENTALIA = Infraclass(name="Placentalia", children=[ATLANTOGENATA])
+
+THERIA = Subclass(name="Theria", children=[MARSUPIALIA, PLACENTALIA])
+
+MAMMALIA = Class(name="Mammalia", children=[MONOTREMATA, THERIA])
