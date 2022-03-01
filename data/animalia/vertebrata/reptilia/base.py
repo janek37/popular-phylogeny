@@ -11,8 +11,8 @@ S_PUNCTATUS = Species(
     name="Sphenodon punctatus",
     local_names={EN: "tuatara", PL: "hatteria, tuatara, łupkoząb"},
 )
-I_COMMUNIS = Species(name="Ichthyosaurus communis")
-P_DOLICHODEIRUS = Species(name="Plesiosaurus dolichodeirus")
+I_COMMUNIS = Species(name="Ichthyosaurus communis", extinct=True)
+P_DOLICHODEIRUS = Species(name="Plesiosaurus dolichodeirus", extinct=True)
 
 SPHENODON = Genus(name="Sphenodon", children=[S_PUNCTATUS])
 ICHTHYOSAURUS = Genus(name="Ichthyosaurus", children=[I_COMMUNIS])

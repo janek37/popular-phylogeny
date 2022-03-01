@@ -39,6 +39,7 @@ L_LYCOPODIOIDES = Species(
             PL: "jeden z wymarłych ogromnych widłaków",
         }
     ],
+    extinct=True,
 )
 E_ARVENSE = Species(
     name="Equisetum arvense", local_names={EN: "field horsetail", PL: "skrzyp polny"}
@@ -49,6 +50,7 @@ C_SUCKOWII = Species(
     known_for=[
         {EN: "extinct giant horsetail", PL: "jeden z wymarłych ogromnych skrzypów"}
     ],
+    extinct=True,
 )
 
 POLYTRICHUM = Genus(name="Polytrichum", children=[P_COMMUNE])

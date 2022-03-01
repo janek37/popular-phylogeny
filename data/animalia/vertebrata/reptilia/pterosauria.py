@@ -1,10 +1,14 @@
 from clade import Family, Genus, Infraorder, Order, Species, Suborder
 from constants import EN, PL
 
-P_LONGICEPS = Species(name="Pteranodon longiceps")
-P_ANTIQUUS = Species(name="Pterodactylus antiquus", local_names={PL: "pterodaktyl"})
+P_LONGICEPS = Species(name="Pteranodon longiceps", extinct=True)
+P_ANTIQUUS = Species(
+    name="Pterodactylus antiquus", local_names={PL: "pterodaktyl"}, extinct=True
+)
 Q_NORTHROPI = Species(
-    name="Quetzalcoatlus northropi", known_for=[{EN: "the largest known flying animal"}]
+    name="Quetzalcoatlus northropi",
+    known_for=[{EN: "the largest known flying animal"}],
+    extinct=True,
 )
 
 PTERANODON = Genus(name="Pteranodon", children=[P_LONGICEPS])

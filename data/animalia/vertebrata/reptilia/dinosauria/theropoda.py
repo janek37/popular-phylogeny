@@ -3,27 +3,36 @@ from constants import EN, PL
 
 from .avialae import AVIALAE
 
-C_BAURI = Species(name="Coelophysis bauri")
+C_BAURI = Species(name="Coelophysis bauri", extinct=True)
 C_SASTREI = Species(
-    name="Carnotaurus sastrei", known_for=[{EN: "villains from the film Dinosaur"}]
+    name="Carnotaurus sastrei",
+    known_for=[{EN: "villains from the film Dinosaur"}],
+    extinct=True,
 )
-S_AEGYPTIACUS = Species(name="Spinosaurus aegyptiacus")
-M_BUCKLANDII = Species(name="Megalosaurus bucklandii")
-A_FRAGILIS = Species(name="Allosaurus fragilis")
+S_AEGYPTIACUS = Species(name="Spinosaurus aegyptiacus", extinct=True)
+M_BUCKLANDII = Species(name="Megalosaurus bucklandii", extinct=True)
+A_FRAGILIS = Species(name="Allosaurus fragilis", extinct=True)
 T_REX = Species(
-    name="Tyrannosaurus rex", local_names={EN: "T-Rex", PL: "tyranozaur rex"}
+    name="Tyrannosaurus rex",
+    local_names={EN: "T-Rex", PL: "tyranozaur rex"},
+    extinct=True,
 )
 C_LONGIPES = Species(
     name="Compsognathus longipes",
     known_for=[{EN: "one of the smallest known (non-avialan) dinosaurs"}],
+    extinct=True,
 )
 D_BREVITERTIUS = Species(
-    name="Dromiceiomimus brevitertius", known_for=[{EN: "Ryan North's Dinosaur Comics"}]
+    name="Dromiceiomimus brevitertius",
+    known_for=[{EN: "Ryan North's Dinosaur Comics"}],
+    extinct=True,
 )
-D_ANTIRRHOPUS = Species(name="Deinonychus antirrhopus")
-V_MONGOLIENSIS = Species(name="Velociraptor mongoliensis")
+D_ANTIRRHOPUS = Species(name="Deinonychus antirrhopus", extinct=True)
+V_MONGOLIENSIS = Species(name="Velociraptor mongoliensis", extinct=True)
 U_OSTROMMAYSI = Species(
-    name="Utahraptor ostrommaysi", known_for=[{EN: "Ryan North's Dinosaur Comics"}]
+    name="Utahraptor ostrommaysi",
+    known_for=[{EN: "Ryan North's Dinosaur Comics"}],
+    extinct=True,
 )
 
 COELOPHYSIS = Genus(name="Coelophysis", children=[C_BAURI])

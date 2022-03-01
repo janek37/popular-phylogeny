@@ -50,7 +50,7 @@ A_FRAGILIS = Species(
     name="Anguis fragilis",
     local_names={EN: "slow worm, deaf adder", PL: "padalec zwyczajny"},
 )
-M_HOFFMANNII = Species(name="Mosasaurus hoffmannii")
+M_HOFFMANNII = Species(name="Mosasaurus hoffmannii", extinct=True)
 
 PHELSUMA = Genus(name="Phelsuma", children=[P_LATICAUDA])
 SCINCUS = Genus(name="Scincus", children=[S_SCINCUS])

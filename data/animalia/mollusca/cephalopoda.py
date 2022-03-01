@@ -39,7 +39,9 @@ N_POMPILIUS = Species(
     local_names={EN: "chambered nautilus, pearly nautilus", PL: "łodzik piękny"},
 )
 P_SEPPENRADENSIS = Species(
-    name="Parapuzosia seppenradensis", known_for=[{EN: "the largest known ammonite"}]
+    name="Parapuzosia seppenradensis",
+    known_for=[{EN: "the largest known ammonite"}],
+    extinct=True,
 )
 
 OCTOPUS = Genus(name="Octopus", children=[O_VULGARIS])

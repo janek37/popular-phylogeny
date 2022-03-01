@@ -1,13 +1,14 @@
 from clade import Clade, Family, Genus, Species, Subfamily, Superfamily
 from constants import EN
 
-B_EXCELSUS = Species(name="Brontosaurus excelsus")
-A_AJAX = Species(name="Apatosaurus ajax")
-D_LONGUS = Species(name="Diplodocus longus")
-B_ALTITHORAX = Species(name="Brachiosaurus altithorax")
+B_EXCELSUS = Species(name="Brontosaurus excelsus", extinct=True)
+A_AJAX = Species(name="Apatosaurus ajax", extinct=True)
+D_LONGUS = Species(name="Diplodocus longus", extinct=True)
+B_ALTITHORAX = Species(name="Brachiosaurus altithorax", extinct=True)
 A_HUINCULENSIS = Species(
     name="Argentinosaurus huinculensis",
     known_for=[{EN: "probably the largest known land animal"}],
+    extinct=True,
 )
 
 BRONTOSAURUS = Genus(name="Brontosaurus", children=[B_EXCELSUS])

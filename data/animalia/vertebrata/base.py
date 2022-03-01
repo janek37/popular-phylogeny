@@ -54,7 +54,7 @@ N_FORSTERI = Species(
         PL: "barramunda, rogoząb australijski",
     },
 )
-D_LIMBATUS = Species(name="Dimetrodon limbatus")
+D_LIMBATUS = Species(name="Dimetrodon limbatus", extinct=True)
 
 LATIMERIA = Genus(name="Latimeria", children=[L_CHALUMNAE])
 NEOCERATODUS = Genus(name="Neoceratodus", children=[N_FORSTERI])

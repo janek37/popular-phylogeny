@@ -9,6 +9,7 @@ from .palaeognathe import PALAEOGNATHAE
 A_SIEMENSII = Species(
     name="Archaeopteryx siemensii",
     known_for=[{EN: "famous fossil of the Berlin specimen"}],
+    extinct=True,
 )
 
 ARCHAEOPTERYX = Genus(name="Archaeopteryx", children=[A_SIEMENSII])

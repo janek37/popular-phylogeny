@@ -20,7 +20,9 @@ S_CINGULATA = Species(
     ],
 )
 A_ARMATA = Species(
-    name="Arthropleura armata", known_for=[{EN: "largest known arthropod (extinct)"}]
+    name="Arthropleura armata",
+    known_for=[{EN: "largest known arthropod (extinct)"}],
+    extinct=True,
 )
 
 OMMATOIULUS = Genus(name="Ommatoiulus", children=[O_SABULOSUS])

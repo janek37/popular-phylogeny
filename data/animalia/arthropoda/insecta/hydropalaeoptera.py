@@ -9,6 +9,7 @@ M_PERMIANA = Species(
     name="Meganeuropsis permiana",
     local_names={EN: "griffinfly"},
     known_for=[{EN: "the largest prehistoric insect"}],
+    extinct=True,
 )
 P_FLAVESCENS = Species(
     name="Pantala flavescens",

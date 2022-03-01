@@ -22,6 +22,7 @@ O_MEGALODON = Species(
     name="Otodus megalodon",
     local_names={EN: "megalodon"},
     known_for=[{EN: "giant extinct shark"}],
+    extinct=True,
 )
 S_ACANTHIAS = Species(
     name="Squalus acanthias", local_names={EN: "spiny dogfish", PL: "koleń pospolity"}
