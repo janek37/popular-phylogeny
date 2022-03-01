@@ -29,19 +29,30 @@ A_OCELLARIS = Species(
     },
     known_for=[{EN: "main characters in Finding Nemo"}],
 )
+P_RETICULATA = Species(
+    name="Poecilia reticulata",
+    local_names={EN: "guppy, millionfish, rainbowfish", PL: "pawie oczko, gupik"},
+)
 
 OREOCHROMIS = Genus(name="Oreochromis", children=[O_NILOTICUS])
 PTEROPHYLLUM = Genus(name="Pterophyllum", children=[P_SCALARE])
 EXOCOETUS = Genus(name="Exocoetus", children=[E_VOLITANS])
 CHEILOPOGON = Genus(name="Cheilopogon", children=[C_PINNATIBARBATUS])
 AMPHIPRION = Genus(name="Amphiprion", children=[A_OCELLARIS])
+POECILIA = Genus(name="Poecilia", children=[P_RETICULATA])
 
 CICHLIDAE = Family(name="Cichlidae", children=[OREOCHROMIS, PTEROPHYLLUM])
 EXOCOETIDAE = Family(name="Exocoetidae", children=[EXOCOETUS, CHEILOPOGON])
 POMACENTRIDAE = Family(name="Pomacentridae", children=[AMPHIPRION])
+POECILIIDAE = Family(name="Poeciliidae", children=[POECILIA])
 
 CICHLIFORMES = Order(name="Cichliformes", children=[CICHLIDAE])
 BELONIFORMES = Order(name="Beloniformes", children=[EXOCOETIDAE])
+CYPRINODONTIFORMES = Order(name="Cyprinodontiformes", children=[POECILIIDAE])
 
-OVALENTARIA_A = Clade(children=[CICHLIFORMES, BELONIFORMES])
+ATHERINOMORPHAE = Clade(
+    name="Atherinomorphae", children=[BELONIFORMES, CYPRINODONTIFORMES]
+)
+
+OVALENTARIA_A = Clade(children=[CICHLIFORMES, ATHERINOMORPHAE])
 OVALENTARIA = Clade(name="Ovalentaria", children=[OVALENTARIA_A, POMACENTRIDAE])
