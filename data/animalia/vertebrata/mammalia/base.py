@@ -3,6 +3,7 @@ from constants import EN, PL
 
 from .afrotheria import AFROTHERIA
 from .marsupialia import MARSUPIALIA
+from .xenarthra import XENARTHRA
 
 O_ANATINUS = Species(
     name="Ornithorhynchus anatinus",
@@ -23,7 +24,7 @@ MONOTREMATA = Order(name="Monotremata", children=[ORNITHORHYNCHIDAE, TACHYGLOSSI
 
 # not certain; it's possible that Afrotheria, Xenarthra and Boreoeutheria
 # diverged three ways nearly the same time (trifurcation)
-ATLANTOGENATA = Clade(name="Atlantogenata", children=[AFROTHERIA])
+ATLANTOGENATA = Clade(name="Atlantogenata", children=[AFROTHERIA, XENARTHRA])
 
 PLACENTALIA = Infraclass(name="Placentalia", children=[ATLANTOGENATA])
 
