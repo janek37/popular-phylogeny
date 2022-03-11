@@ -1,4 +1,4 @@
-from clade import Clade, Family, Genus, Order, Species, Subfamily
+from clade import Clade, Family, Genus, Order, Species, Subfamily, Tribe
 from constants import EN, PL
 
 V_VULGARIS = Species(
@@ -20,6 +20,9 @@ M_RUBRA = Species(
     name="Myrmica rubra",
     local_names={EN: "European fire ant, common red ant", PL: "wścieklica zwyczajna"},
 )
+M_PHARAONIS = Species(
+    name="Monomorium pharaonis", local_names={EN: "pharaoh ant", PL: "mrówka faraona"}
+)
 A_MELLIFERA = Species(
     name="Apis mellifera",
     local_names={EN: "western honey bee, European honey bee", PL: "pszczoła miodna"},
@@ -37,10 +40,14 @@ VESPA = Genus(name="Vespa", children=[V_CRABRO])
 SOLENOPSIS = Genus(name="Solenopsis", children=[S_INVICTA])
 LASIUS = Genus(name="Lasius", children=[L_NIGER])
 MYRMICA = Genus(name="Myrmica", children=[M_RUBRA])
+MONOMORIUM = Genus(name="Monomorium", children=[M_PHARAONIS])
 APIS = Genus(name="Apis", children=[A_MELLIFERA])
 BOMBUS = Genus(name="Bombus", children=[B_TERRESTRIS])
 
-MYRMICINAE = Subfamily(name="Myrmicinae", children=[SOLENOPSIS, MYRMICA])
+SOLENOPSIDINI = Tribe(name="Solenopsidini", children=[SOLENOPSIS, MONOMORIUM])
+MYRMICINI = Tribe(name="Myrmicini", children=[MYRMICA])
+
+MYRMICINAE = Subfamily(name="Myrmicinae", children=[SOLENOPSIDINI, MYRMICINI])
 FORMICINAE = Subfamily(name="Formicinae", children=[LASIUS])
 
 VESPIDAE = Family(name="Vespidae", children=[VESPULA, VESPA])
