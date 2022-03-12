@@ -1,7 +1,18 @@
-from clade import Clade, Class, Family, Genus, Infraclass, Order, Species, Subclass
+from clade import (
+    Clade,
+    Class,
+    Family,
+    Genus,
+    Infraclass,
+    Order,
+    Species,
+    Subclass,
+    Superorder,
+)
 from constants import EN, PL
 
 from .afrotheria import AFROTHERIA
+from .glires import GLIRES
 from .marsupialia import MARSUPIALIA
 from .xenarthra import XENARTHRA
 
@@ -22,11 +33,15 @@ TACHYGLOSSIDAE = Family(name="Tachyglossidae", children=[TACHYGLOSSUS])
 
 MONOTREMATA = Order(name="Monotremata", children=[ORNITHORHYNCHIDAE, TACHYGLOSSIDAE])
 
+EUARCHONTOGLIRES = Superorder(name="Euarchontoglires", children=[GLIRES])
+
+BOREOEUTHERIA = Clade(name="Boreoeutheria", children=[EUARCHONTOGLIRES])  # Magnorder
+
 # not certain; it's possible that Afrotheria, Xenarthra and Boreoeutheria
 # diverged three ways nearly the same time (trifurcation)
 ATLANTOGENATA = Clade(name="Atlantogenata", children=[AFROTHERIA, XENARTHRA])
 
-PLACENTALIA = Infraclass(name="Placentalia", children=[ATLANTOGENATA])
+PLACENTALIA = Infraclass(name="Placentalia", children=[ATLANTOGENATA, BOREOEUTHERIA])
 
 THERIA = Subclass(name="Theria", children=[MARSUPIALIA, PLACENTALIA])
 
