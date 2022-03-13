@@ -1,5 +1,6 @@
 from clade import Clade, Family, Genus, Order, Species
 from constants import EN, PL
+from data.animalia.vertebrata.mammalia.euarchonta.strepsirrhini import STREPSIRRHINI
 
 T_GLIS = Species(
     name="Tupaia glis",
@@ -24,8 +25,9 @@ CYNOCEPHALIDAE = Family(name="Cynocephalidae", children=[CYNOCEPHALUS])
 
 SCANDENTIA = Order(name="Scandentia", children=[TUPAIIDAE])
 DERMOPTERA = Order(name="Dermoptera", children=[CYNOCEPHALIDAE])
+PRIMATES = Order(name="Primates", children=[STREPSIRRHINI])
 
-PRIMATOMORPHA = Clade(name="Primatomorpha", children=[DERMOPTERA])  # Mirorder
+PRIMATOMORPHA = Clade(name="Primatomorpha", children=[DERMOPTERA, PRIMATES])  # Mirorder
 
 EUARCHONTA = Clade(
     name="Euarchonta", children=[SCANDENTIA, PRIMATOMORPHA]
