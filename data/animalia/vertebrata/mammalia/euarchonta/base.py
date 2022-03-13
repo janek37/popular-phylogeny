@@ -1,6 +1,8 @@
-from clade import Clade, Family, Genus, Order, Species
+from clade import Clade, Family, Genus, Infraorder, Order, Species, Suborder
 from constants import EN, PL
-from data.animalia.vertebrata.mammalia.euarchonta.strepsirrhini import STREPSIRRHINI
+
+from .platyrrhini import PLATYRRHINI
+from .strepsirrhini import STREPSIRRHINI
 
 T_GLIS = Species(
     name="Tupaia glis",
@@ -23,9 +25,13 @@ CYNOCEPHALUS = Genus(name="Cynocephalus", children=[C_VOLANS])
 TUPAIIDAE = Family(name="Tupaiidae", children=[TUPAIA])
 CYNOCEPHALIDAE = Family(name="Cynocephalidae", children=[CYNOCEPHALUS])
 
+SIMIIFORMES = Infraorder(name="Simiiformes", children=[PLATYRRHINI])
+
+HAPLORHINI = Suborder(name="Haplorhini", children=[SIMIIFORMES])
+
 SCANDENTIA = Order(name="Scandentia", children=[TUPAIIDAE])
 DERMOPTERA = Order(name="Dermoptera", children=[CYNOCEPHALIDAE])
-PRIMATES = Order(name="Primates", children=[STREPSIRRHINI])
+PRIMATES = Order(name="Primates", children=[STREPSIRRHINI, HAPLORHINI])
 
 PRIMATOMORPHA = Clade(name="Primatomorpha", children=[DERMOPTERA, PRIMATES])  # Mirorder
 
