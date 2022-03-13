@@ -12,6 +12,7 @@ from clade import (
 from constants import EN, PL
 
 from .afrotheria import AFROTHERIA
+from .euarchonta import EUARCHONTA
 from .glires import GLIRES
 from .marsupialia import MARSUPIALIA
 from .xenarthra import XENARTHRA
@@ -33,7 +34,7 @@ TACHYGLOSSIDAE = Family(name="Tachyglossidae", children=[TACHYGLOSSUS])
 
 MONOTREMATA = Order(name="Monotremata", children=[ORNITHORHYNCHIDAE, TACHYGLOSSIDAE])
 
-EUARCHONTOGLIRES = Superorder(name="Euarchontoglires", children=[GLIRES])
+EUARCHONTOGLIRES = Superorder(name="Euarchontoglires", children=[GLIRES, EUARCHONTA])
 
 BOREOEUTHERIA = Clade(name="Boreoeutheria", children=[EUARCHONTOGLIRES])  # Magnorder
 
