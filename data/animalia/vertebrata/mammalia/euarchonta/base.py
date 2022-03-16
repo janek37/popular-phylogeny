@@ -2,6 +2,7 @@ from clade import Clade, Family, Genus, Infraorder, Order, Parvorder, Species, S
 from constants import EN, PL
 
 from .cercopithecoidea import CERCOPITHECOIDEA
+from .hominoidea import HOMINOIDEA
 from .platyrrhini import PLATYRRHINI
 from .strepsirrhini import STREPSIRRHINI
 
@@ -26,7 +27,7 @@ CYNOCEPHALUS = Genus(name="Cynocephalus", children=[C_VOLANS])
 TUPAIIDAE = Family(name="Tupaiidae", children=[TUPAIA])
 CYNOCEPHALIDAE = Family(name="Cynocephalidae", children=[CYNOCEPHALUS])
 
-CATARRHINI = Parvorder(name="Catarrhini", children=[CERCOPITHECOIDEA])
+CATARRHINI = Parvorder(name="Catarrhini", children=[CERCOPITHECOIDEA, HOMINOIDEA])
 
 SIMIIFORMES = Infraorder(name="Simiiformes", children=[PLATYRRHINI, CATARRHINI])
 
