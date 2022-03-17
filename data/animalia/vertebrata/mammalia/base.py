@@ -12,6 +12,7 @@ from clade import (
 from constants import EN, PL
 
 from .afrotheria import AFROTHERIA
+from .chiroptera import CHIROPTERA
 from .euarchonta import EUARCHONTA
 from .eulipotyphla import EULIPOTYPHLA
 from .glires import GLIRES
@@ -35,8 +36,10 @@ TACHYGLOSSIDAE = Family(name="Tachyglossidae", children=[TACHYGLOSSUS])
 
 MONOTREMATA = Order(name="Monotremata", children=[ORNITHORHYNCHIDAE, TACHYGLOSSIDAE])
 
+SCROTIPHERA = Clade(name="Scrotiphera", children=[CHIROPTERA])
+
 EUARCHONTOGLIRES = Superorder(name="Euarchontoglires", children=[GLIRES, EUARCHONTA])
-LAURASIATHERIA = Superorder(name="Laurasiatheria", children=[EULIPOTYPHLA])
+LAURASIATHERIA = Superorder(name="Laurasiatheria", children=[EULIPOTYPHLA, SCROTIPHERA])
 
 BOREOEUTHERIA = Clade(
     name="Boreoeutheria", children=[EUARCHONTOGLIRES, LAURASIATHERIA]
