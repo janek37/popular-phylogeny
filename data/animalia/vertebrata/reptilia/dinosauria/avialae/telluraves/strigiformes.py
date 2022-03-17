@@ -30,6 +30,7 @@ T_ALBA = Species(
 )
 
 # https://www.sciencedirect.com/science/article/abs/pii/S1055790312004642
+# https://ars.els-cdn.com/content/image/1-s2.0-S1055790312004642-gr2.jpg
 BUBO_A = Clade(children=[B_VIRGINIANUS, B_SCANDIACUS])
 
 BUBO = Genus(name="Bubo", children=[B_BUBO, BUBO_A])

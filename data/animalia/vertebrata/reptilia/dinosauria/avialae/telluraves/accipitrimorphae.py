@@ -58,6 +58,7 @@ MILVUS = Genus(name="Milvus", children=[M_MILVUS])
 BUTEO = Genus(name="Buteo", children=[B_JAMAICENSIS, B_BUTEO])
 
 # https://www.sciencedirect.com/science/article/abs/pii/S105579031630224X
+# https://ars.els-cdn.com/content/image/1-s2.0-S105579031630224X-gr1.jpg
 CATHARTIDAE_A = Clade(children=[VULTUR, GYMNOGYPS])
 
 # https://www.researchgate.net/publication/7815523_Phylogeny_of_eagles_Old_World_vultures_and_other_Accipitridae_based_on_nuclear_and_mitochondrial_DNA
