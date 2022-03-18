@@ -1,4 +1,14 @@
-from clade import Clade, Family, Genus, Infraorder, Order, Parvorder, Species, Suborder
+from clade import (
+    Family,
+    Genus,
+    Grandorder,
+    Infraorder,
+    Mirorder,
+    Order,
+    Parvorder,
+    Species,
+    Suborder,
+)
 from constants import EN, PL
 
 from .cercopithecoidea import CERCOPITHECOIDEA
@@ -37,8 +47,6 @@ SCANDENTIA = Order(name="Scandentia", children=[TUPAIIDAE])
 DERMOPTERA = Order(name="Dermoptera", children=[CYNOCEPHALIDAE])
 PRIMATES = Order(name="Primates", children=[STREPSIRRHINI, HAPLORHINI])
 
-PRIMATOMORPHA = Clade(name="Primatomorpha", children=[DERMOPTERA, PRIMATES])  # Mirorder
+PRIMATOMORPHA = Mirorder(name="Primatomorpha", children=[DERMOPTERA, PRIMATES])
 
-EUARCHONTA = Clade(
-    name="Euarchonta", children=[SCANDENTIA, PRIMATOMORPHA]
-)  # Grandorder
+EUARCHONTA = Grandorder(name="Euarchonta", children=[SCANDENTIA, PRIMATOMORPHA])

@@ -3,7 +3,9 @@ from clade import (
     Class,
     Family,
     Genus,
+    Grandorder,
     Infraclass,
+    Magnorder,
     Order,
     Species,
     Subclass,
@@ -17,6 +19,7 @@ from .euarchonta import EUARCHONTA
 from .eulipotyphla import EULIPOTYPHLA
 from .glires import GLIRES
 from .marsupialia import MARSUPIALIA
+from .ungulata import UNGULATA
 from .xenarthra import XENARTHRA
 
 O_ANATINUS = Species(
@@ -36,14 +39,17 @@ TACHYGLOSSIDAE = Family(name="Tachyglossidae", children=[TACHYGLOSSUS])
 
 MONOTREMATA = Order(name="Monotremata", children=[ORNITHORHYNCHIDAE, TACHYGLOSSIDAE])
 
-SCROTIPHERA = Clade(name="Scrotiphera", children=[CHIROPTERA])
+# Grandorder inside Superorder, but what can I do
+FERUNGULATA = Grandorder(name="Ferungulata", children=[UNGULATA])
+
+SCROTIPHERA = Clade(name="Scrotiphera", children=[CHIROPTERA, FERUNGULATA])
 
 EUARCHONTOGLIRES = Superorder(name="Euarchontoglires", children=[GLIRES, EUARCHONTA])
 LAURASIATHERIA = Superorder(name="Laurasiatheria", children=[EULIPOTYPHLA, SCROTIPHERA])
 
-BOREOEUTHERIA = Clade(
+BOREOEUTHERIA = Magnorder(
     name="Boreoeutheria", children=[EUARCHONTOGLIRES, LAURASIATHERIA]
-)  # Magnorder
+)
 
 # not certain; it's possible that Afrotheria, Xenarthra and Boreoeutheria
 # diverged three ways nearly the same time (trifurcation)

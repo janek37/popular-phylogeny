@@ -20,7 +20,10 @@ class Rank(Enum):
     SUPERCOHORT = "Supercohort"
     COHORT = "Cohort"
     SUBCOHORT = "Subcohort"
+    MAGNORDER = "Magnorder"
     SUPERORDER = "Superorder"
+    GRANDORDER = "Grandorder"
+    MIRORDER = "Mirorder"
     ORDER = "Order"
     SUBORDER = "Suborder"
     INFRAORDER = "Infraorder"
@@ -134,8 +137,23 @@ class Subcohort(Clade):
 
 
 @dataclass
+class Magnorder(Clade):
+    rank = Rank.MAGNORDER
+
+
+@dataclass
 class Superorder(Clade):
     rank = Rank.SUPERORDER
+
+
+@dataclass
+class Grandorder(Clade):
+    rank = Rank.GRANDORDER
+
+
+@dataclass
+class Mirorder(Clade):
+    rank = Rank.MIRORDER
 
 
 @dataclass
