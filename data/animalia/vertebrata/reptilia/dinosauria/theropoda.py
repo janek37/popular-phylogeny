@@ -9,6 +9,7 @@ C_SASTREI = Species(
     known_for=[{EN: "villains from the film Dinosaur"}],
     extinct=True,
 )
+C_NASICORNIS = Species(name="Ceratosaurus nasicornis", extinct=True)
 S_AEGYPTIACUS = Species(name="Spinosaurus aegyptiacus", extinct=True)
 B_WALKERI = Species(name="Baryonyx walkeri", extinct=True)
 M_BUCKLANDII = Species(name="Megalosaurus bucklandii", extinct=True)
@@ -38,6 +39,7 @@ U_OSTROMMAYSI = Species(
 
 COELOPHYSIS = Genus(name="Coelophysis", children=[C_BAURI])
 CARNOTAURUS = Genus(name="Carnotaurus", children=[C_SASTREI])
+CERATOSAURUS = Genus(name="Ceratosaurus", children=[C_NASICORNIS])
 SPINOSAURUS = Genus(name="Spinosaurus", children=[S_AEGYPTIACUS])
 BARYONYX = Genus(name="Baryonyx", children=[B_WALKERI])
 MEGALOSAURUS = Genus(name="Megalosaurus", children=[M_BUCKLANDII])
@@ -51,6 +53,7 @@ UTAHRAPTOR = Genus(name="Utahraptor", children=[U_OSTROMMAYSI])
 
 COELOPHYSIDAE = Family(name="Coelophysidae", children=[COELOPHYSIS])
 ABELISAURIDAE = Family(name="Abelisauridae", children=[CARNOTAURUS])
+CERATOSAURIDAE = Family(name="Ceratosauridae", children=[CERATOSAURUS])
 SPINOSAURIDAE = Family(name="Spinosauridae", children=[SPINOSAURUS, BARYONYX])
 MEGALOSAURIDAE = Family(name="Megalosauridae", children=[MEGALOSAURUS])
 ALLOSAURIDAE = Family(name="Allosauridae", children=[ALLOSAURUS])
@@ -69,7 +72,7 @@ MEGALOSAUROIDEA = Superfamily(
 ALLOSAUROIDEA = Superfamily(name="Allosauroidea", children=[ALLOSAURIDAE])
 TYRANNOSAUROIDEA = Superfamily(name="Tyrannosauroidea", children=[TYRANNOSAURIDAE])
 
-CERATOSAURIA = Clade(name="Ceratosauria", children=[ABELISAURIDAE])
+CERATOSAURIA = Clade(name="Ceratosauria", children=[ABELISAURIDAE, CERATOSAURIDAE])
 ORNITHOMIMOSAURIA = Clade(name="Ornithomimosauria", children=[ORNITHOMIMIDAE])
 
 MANIRAPTORA = Clade(name="Maniraptora", children=[DROMAEOSAURIDAE, AVIALAE])
