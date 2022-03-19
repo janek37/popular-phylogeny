@@ -1,5 +1,8 @@
-from clade import Clade
+from clade import Clade, Order
 
 from .perissodactyla import PERISSODACTYLA
+from .tylopoda import TYLOPODA
 
-UNGULATA = Clade(name="Ungulata", children=[PERISSODACTYLA])
+ARTIODACTYLA = Order(name="Artiodactyla", children=[TYLOPODA])
+
+UNGULATA = Clade(name="Ungulata", children=[PERISSODACTYLA, ARTIODACTYLA])
