@@ -10,6 +10,7 @@ C_SASTREI = Species(
     extinct=True,
 )
 S_AEGYPTIACUS = Species(name="Spinosaurus aegyptiacus", extinct=True)
+B_WALKERI = Species(name="Baryonyx walkeri", extinct=True)
 M_BUCKLANDII = Species(name="Megalosaurus bucklandii", extinct=True)
 A_FRAGILIS = Species(name="Allosaurus fragilis", extinct=True)
 T_REX = Species(
@@ -38,6 +39,7 @@ U_OSTROMMAYSI = Species(
 COELOPHYSIS = Genus(name="Coelophysis", children=[C_BAURI])
 CARNOTAURUS = Genus(name="Carnotaurus", children=[C_SASTREI])
 SPINOSAURUS = Genus(name="Spinosaurus", children=[S_AEGYPTIACUS])
+BARYONYX = Genus(name="Baryonyx", children=[B_WALKERI])
 MEGALOSAURUS = Genus(name="Megalosaurus", children=[M_BUCKLANDII])
 ALLOSAURUS = Genus(name="Allosaurus", children=[A_FRAGILIS])
 TYRANNOSAURUS = Genus(name="Tyrannosaurus", children=[T_REX])
@@ -49,7 +51,7 @@ UTAHRAPTOR = Genus(name="Utahraptor", children=[U_OSTROMMAYSI])
 
 COELOPHYSIDAE = Family(name="Coelophysidae", children=[COELOPHYSIS])
 ABELISAURIDAE = Family(name="Abelisauridae", children=[CARNOTAURUS])
-SPINOSAURIDAE = Family(name="Spinosauridae", children=[SPINOSAURUS])
+SPINOSAURIDAE = Family(name="Spinosauridae", children=[SPINOSAURUS, BARYONYX])
 MEGALOSAURIDAE = Family(name="Megalosauridae", children=[MEGALOSAURUS])
 ALLOSAURIDAE = Family(name="Allosauridae", children=[ALLOSAURUS])
 TYRANNOSAURIDAE = Family(name="Tyrannosauridae", children=[TYRANNOSAURUS])
