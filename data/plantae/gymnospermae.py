@@ -4,7 +4,7 @@ from constants import EN, PL
 A_ALBA = Species(
     name="Abies alba", local_names={EN: "silver fir", PL: "jodła pospolita"}
 )
-P_SILVESTRIS = Species(
+P_SYLVESTRIS = Species(
     name="Pinus sylvestris",
     local_names={EN: "European red pine", PL: "sosna zwyczajna"},
 )
@@ -42,7 +42,7 @@ G_BILOBA = Species(
 )
 
 ABIES = Genus(name="Abies", children=[A_ALBA])
-PINUS = Genus(name="Pinus", children=[P_SILVESTRIS])
+PINUS = Genus(name="Pinus", children=[P_SYLVESTRIS])
 PICEA = Genus(name="Picea", children=[P_ABIES])
 LARIX = Genus(name="Larix", children=[L_DECIDUA])
 CEDRUS = Genus(name="Cedrus", children=[C_LIBANI])

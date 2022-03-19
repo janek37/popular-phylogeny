@@ -107,13 +107,13 @@ HYPOCREALES = Order(name="Hypocreales", children=[STACHYBOTRYACEAE, HYPOCREALES_
 EUROTIALES = Order(name="Eurotiales", children=[TRICHOCOMACEAE])
 SACCHAROMYCETALES = Order(name="Saccharomycetales", children=[SACCHAROMYCETACEAE])
 PEZIZALES = Order(name="Pezizales", children=[MORCHELLACEAE, TUBERACEAE])
-LENOCORALES = Order(name="Lecanorales", children=[CLADONIACEAE, PARMELIACEAE])
+LECANORALES = Order(name="Lecanorales", children=[CLADONIACEAE, PARMELIACEAE])
 
 SORDARIOMYCETES = Class(name="Sordariomycetes", children=[HYPOCREALES])
 EUROTIOMYCETES = Class(name="Eurotiomycetes", children=[EUROTIALES])
 SACCHAROMYCETES = Class(name="Saccharomycetes", children=[SACCHAROMYCETALES])
 PEZIZOMYCETES = Class(name="Pezizomycetes", children=[PEZIZALES])
-LECANOROMYCETES = Class(name="Lecanoromycetes", children=[LENOCORALES])
+LECANOROMYCETES = Class(name="Lecanoromycetes", children=[LECANORALES])
 
 DOTHIDEOMYCETA = Clade(
     name="Dothideomyceta", children=[EUROTIOMYCETES, LECANOROMYCETES]

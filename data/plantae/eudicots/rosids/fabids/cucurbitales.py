@@ -33,7 +33,7 @@ C_MOSCHATA = Species(
     local_names={PL: "dynia piżmowa"},
     known_for=[{EN: "butternut squash"}],
 )
-B_OBLIQUA = Species(
+B_TUBERHYBRIDA = Species(
     name="Begonia × tuberhybrida",
     local_names={PL: "begonia bulwiasta", EN: "tuberous begonia"},
 )
@@ -42,7 +42,7 @@ LAGENARIA = Genus(name="Lagenaria", children=[L_SICERARIA])
 CITRULLUS = Genus(name="Citrullus", children=[C_LANATUS])
 CUCUMIS = Genus(name="Cucumis", children=[C_SATIVUS, C_MELO])
 CUCURBITA = Genus(name="Cucurbita", children=[C_PEPO, C_MOSCHATA])
-BEGONIA = Genus(name="Begonia", children=[B_OBLIQUA])
+BEGONIA = Genus(name="Begonia", children=[B_TUBERHYBRIDA])
 
 BENINCASINAE = Subtribe(name="Benincasinae", children=[LAGENARIA, CITRULLUS])
 

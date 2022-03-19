@@ -18,7 +18,7 @@ P_GRANGERI = Species(name="Platybelodon grangeri", extinct=True)
 D_GIGANTEUM = Species(name="Deinotherium giganteum", extinct=True)
 P_BEADNELLI = Species(name="Palaeomastodon beadnelli", extinct=True)
 M_AMERICANUM = Species(
-    name="Mammut americaonum",
+    name="Mammut americanum",
     local_names={EN: "American mastodon", PL: "mastodont amerykański"},
     extinct=True,
 )

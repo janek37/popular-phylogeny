@@ -18,7 +18,7 @@ PELARGONIUM = Genus(name="Pelargonium", children=[P_PELTATUM])
 
 GERANIACEAE = Family(name="Geraniaceae", children=[PELARGONIUM])
 
-GERANIALES = Order(name="Gerniales", children=[GERANIACEAE])
+GERANIALES = Order(name="Geraniales", children=[GERANIACEAE])
 
 GERANIALES_MYRTALES = Clade(children=[GERANIALES, MYRTALES])
 MALVALES_BRASSICALES = Clade(children=[MALVALES, BRASSICALES])

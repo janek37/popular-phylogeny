@@ -56,7 +56,7 @@ P_METHYSTICUM = Species(
 )
 # Schinus molle (rosids)
 
-NYMPAHEA = Genus(name="Nymphea", children=[N_ALBA])
+NYMPHAEA = Genus(name="Nymphaea", children=[N_ALBA])
 ILLICIUM = Genus(name="Illicium", children=[I_VERUM])
 MAGNOLIA = Genus(name="Magnolia", children=[M_VIRGINIANA])
 MYRISTICA = Genus(name="Myristica", children=[M_FRAGRANS])
@@ -69,7 +69,7 @@ PIPER = Genus(name="Piper", children=[P_NIGRUM, P_METHYSTICUM])
 # https://www.researchgate.net/publication/340412028_The_Litsea_genome_and_the_evolution_of_the_laurel_family
 LAURUS_CINNAMOMUM = Clade(children=[LAURUS, CINNAMOMUM])
 
-NYMPHAEACEAE = Family(name="Nymphaeaceae", children=[NYMPAHEA])
+NYMPHAEACEAE = Family(name="Nymphaeaceae", children=[NYMPHAEA])
 SCHISANDRACEAE = Family(name="Schisandraceae", children=[ILLICIUM])
 MAGNOLIACEAE = Family(name="Magnoliaceae", children=[MAGNOLIA])
 MYRISTICACEAE = Family(name="Myristicaceae", children=[MYRISTICA])

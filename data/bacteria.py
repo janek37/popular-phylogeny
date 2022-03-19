@@ -119,7 +119,7 @@ SPIROCHAETALES = Order(name="Spirochaetales", children=[SPIROCHAETACEAE])
 NEISSERIALES = Order(name="Neisseriales", children=[NEISSERIACEAE])
 CHLAMYDIALES = Order(name="Chlamydiales", children=[CHLAMYDIACEAE])
 RICKETTSIALES = Order(name="Rickettsiales", children=[RICKETTSIACEAE])
-GLOEOMARGARITALES = Order(name="Gleomargaritales", children=[GLOEOMARGARITACEAE])
+GLOEOMARGARITALES = Order(name="Gloeomargaritales", children=[GLOEOMARGARITACEAE])
 THIOTRICHALES = Order(name="Thiotrichales", children=[THIOTRICHACEAE])
 LACTOBACILLALES = Order(
     name="Lactobacillales",

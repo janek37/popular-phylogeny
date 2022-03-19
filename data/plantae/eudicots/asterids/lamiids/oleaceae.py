@@ -29,7 +29,7 @@ SYRINGA = Genus(name="Syringa", children=[S_VULGARIS])
 LIGUSTRUM = Genus(name="Ligustrum", children=[L_VULGARE])
 OLEA = Genus(name="Olea", children=[O_EUROPAEA])
 JASMINUM = Genus(name="Jasminum", children=[J_OFFICINALE])
-FRAXINUS = Genus(name="Graxinus", children=[F_EXCELSIOR])
+FRAXINUS = Genus(name="Fraxinus", children=[F_EXCELSIOR])
 FORSYTHIA = Genus(name="Forsythia", children=[F_INTERMEDIA])
 
 LIGUSTRINAE = Subtribe(name="Ligustrinae", children=[SYRINGA, LIGUSTRUM])

@@ -32,13 +32,13 @@ COENAGRIONIDAE = Family(name="Coenagrionidae", children=[ENALLAGMA])
 
 ANISOPTERA = Infraorder(name="Anisoptera", children=[LIBELLULIDAE])
 
-ZYGOPTERA = Suborder(name="Suborder", children=[COENAGRIONIDAE])
+ZYGOPTERA = Suborder(name="Zygoptera", children=[COENAGRIONIDAE])
 
 EPHEMEROPTERA = Order(name="Ephemeroptera", children=[EPHEMERIDAE])
 MEGANISOPTERA = Order(name="Meganisoptera", children=[MEGANEURIDAE])
 ODONATA = Order(name="Odonata", children=[ANISOPTERA, ZYGOPTERA])
 
-ODONATOPTERA = Superorder(name="Euodonatoptera", children=[MEGANISOPTERA, ODONATA])
+ODONATOPTERA = Superorder(name="Odonatoptera", children=[MEGANISOPTERA, ODONATA])
 
 HYDROPALAEOPTERA = Clade(
     name="Hydropalaeoptera", children=[EPHEMEROPTERA, ODONATOPTERA]

@@ -75,7 +75,7 @@ PHAEOPHYCEAE = Class(name="Phaeophyceae", children=[FUCALES, LAMINARIALES])
 BACILLARIAPHYCEAE = Class(name="Bacillariaphyceae", children=[BACILLARIALES])
 KINETOPLASTEA = Class(name="Kinetoplastea", children=[TRYPANOSOMATIDA])
 
-CILIOPHORA = Phylum(name="Ciliphora", children=[OLIGOHYMENOPHOREA])
+CILIOPHORA = Phylum(name="Ciliophora", children=[OLIGOHYMENOPHOREA])
 APICOMPLEXA = Phylum(name="Apicomplexa", children=[ACONOIDASIDA])
 METAMONADA = Phylum(name="Metamonada", children=[TRICHOMONADIDA])
 AMOEBOZOA = Phylum(name="Amoebozoa", children=[TUBULINEA, MYXOGASTRIA])

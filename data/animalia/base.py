@@ -31,7 +31,7 @@ PORIFERA = Phylum(name="Porifera", children=[DEMOSPONGIAE])
 # endregion PORIFERA
 
 # region TUNICATA
-C_INTESTINALIS = Genus(
+C_INTESTINALIS = Species(
     name="Ciona intestinalis", local_names={EN: "vase tunicate", PL: "przejrzystka"}
 )
 CIONA = Genus(name="Ciona", children=[C_INTESTINALIS])

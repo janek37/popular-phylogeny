@@ -71,7 +71,7 @@ CATHARTIDAE = Family(name="Cathartidae", children=[CATHARTES, CATHARTIDAE_A])
 SAGITTARIIDAE = Family(name="Sagittariidae", children=[SAGITTARIUS])
 ACCIPITRIDAE = Family(name="Accipitridae", children=[GYPS, ACCIPITRIDAE_D])
 
-CATHARTIFORMES = Order(name="Accipitriformes", children=[CATHARTIDAE])
+CATHARTIFORMES = Order(name="Cathartiformes", children=[CATHARTIDAE])
 ACCIPITRIFORMES = Order(name="Accipitriformes", children=[SAGITTARIIDAE, ACCIPITRIDAE])
 
 ACCIPITRIMORPHAE = Clade(

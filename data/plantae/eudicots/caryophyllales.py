@@ -116,7 +116,7 @@ CACTINAE = Subtribe(name="Cactinae", children=[MAMMILARIA])
 CACTEAE_A = Clade(children=[CACTINAE, LOPHOMORA])
 CACTEAE_B = Clade(children=[ASTROPHYTUM, ECHINOCACTUS])
 
-BETEAE = Tribe(name="Beta", children=[BETA])
+BETEAE = Tribe(name="Beteae", children=[BETA])
 FAGOPYREAE = Tribe(name="Fagopyreae", children=[FAGOPYRUM])
 RUMICEAE = Tribe(name="Rumiceae", children=[RHEUM, RUMEX])
 SALSOLEAE = Tribe(name="Salsoleae", children=[KALI])

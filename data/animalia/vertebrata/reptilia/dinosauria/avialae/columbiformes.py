@@ -27,7 +27,7 @@ RAPHUS = Genus(name="Raphus", children=[R_CUCULLATUS])
 STREPTOPELIA = Genus(name="Streptopelia", children=[S_DECAOCTO, S_TURTUR])
 
 COLUMBINAE = Subfamily(name="Columbinae", children=[COLUMBA, STREPTOPELIA])
-RAPHINAE = Subfamily(name="Raphus", children=[RAPHUS])
+RAPHINAE = Subfamily(name="Raphinae", children=[RAPHUS])
 
 COLUMBIDAE = Family(name="Columbidae", children=[COLUMBINAE, RAPHINAE])
 

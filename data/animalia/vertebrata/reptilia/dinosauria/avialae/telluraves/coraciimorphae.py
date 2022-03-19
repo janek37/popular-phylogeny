@@ -10,7 +10,7 @@ B_BICORNIS = Species(
     name="Buceros bicornis",
     local_names={EN: "great hornbill", PL: "dzioborożec wielki"},
 )
-T_ERYTHRORHYNCHUS = Species(
+T_RUFIROSTRIS = Species(
     name="Tockus rufirostris",
     local_names={EN: "southern red-billed hornbill", PL: "toko białogrzbiety"},
     known_for=[{EN: "Zazu from The Lion King"}],
@@ -26,7 +26,7 @@ C_GARRULUS = Species(
 
 UPUPA = Genus(name="Upupa", children=[U_EPOPS])
 BUCEROS = Genus(name="Buceros", children=[B_BICORNIS])
-TOCKUS = Genus(name="Tockus", children=[T_ERYTHRORHYNCHUS])
+TOCKUS = Genus(name="Tockus", children=[T_RUFIROSTRIS])
 ALCEDO = Genus(name="Alcedo", children=[A_ATTHIS])
 CORACIAS = Genus(name="Coracias", children=[C_GARRULUS])
 

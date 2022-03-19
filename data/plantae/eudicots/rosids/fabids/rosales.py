@@ -59,7 +59,7 @@ U_DIOICA = Species(
     name="Urtica dioica", local_names={EN: "common nettle", PL: "pokrzywa zwyczajna"}
 )
 
-CANNABIS = Genus(name="Cannabbis", children=[C_SATIVA, C_INDICA])
+CANNABIS = Genus(name="Cannabis", children=[C_SATIVA, C_INDICA])
 HUMULUS = Genus(name="Humulus", children=[H_LUPULUS])
 FICUS = Genus(name="Ficus", children=[F_CARICA, F_BENJAMINA, F_RELIGIOSA])
 ARTOCARPUS = Genus(name="Artocarpus", children=[A_ALTILIS, A_HETEROPHYLLUS])

@@ -13,7 +13,7 @@ Q_SUBER = Species(
     known_for=[{EN: "cork (material)", PL: "korek (surowiec)"}],
 )
 C_SATIVA = Species(
-    name="Castanea satica", local_names={EN: "sweet chestnut", PL: "kasztan jadalny"}
+    name="Castanea sativa", local_names={EN: "sweet chestnut", PL: "kasztan jadalny"}
 )
 J_REGIA = Species(
     name="Juglans regia",

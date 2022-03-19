@@ -33,7 +33,7 @@ TREBOUXIALES = Order(name="Trebouxiales", children=[TREBOUXIACEAE])
 
 FLORIDEOPHYCEAE = Class(name="Florideophyceae", children=[PALMARIALES, GIGARTINALES])
 BANGIOPHYCEAE = Class(name="Bangiophyceae", children=[BANGIALES])
-ULVOPHYCEAE = Class(name="Ulvophycae", children=[ULVALES])
+ULVOPHYCEAE = Class(name="Ulvophyceae", children=[ULVALES])
 TREBOUXIAPHYCEAE = Class(name="Trebouxiaphyceae", children=[TREBOUXIALES])
 
 RODOPHYTA = Phylum(name="Rodophyta", children=[FLORIDEOPHYCEAE, BANGIOPHYCEAE])

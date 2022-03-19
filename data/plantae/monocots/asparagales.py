@@ -9,7 +9,7 @@ V_PLANIFOLIA = Species(
     local_names={EN: "flat-leaved vanilla", PL: "wanilia płaskolistna"},
     known_for=[{EN: "vanilla flavouring"}],
 )
-I_SIBRICA = Species(
+I_SIBIRICA = Species(
     name="Iris sibirica", local_names={EN: "Siberian iris", PL: "kosaciec syberyjski"}
 )
 C_SATIVUS = Species(
@@ -78,7 +78,7 @@ ALLIUM_C = Clade(children=[ALLIUM_A, ALLIUM_B])
 
 ORCHIS = Genus(name="Orchis", children=[O_MILITARIS])
 VANILLA = Genus(name="Vanilla", children=[V_PLANIFOLIA])
-IRIS = Genus(name="Iris", children=[I_SIBRICA])
+IRIS = Genus(name="Iris", children=[I_SIBIRICA])
 CROCUS = Genus(name="Crocus", children=[C_SATIVUS, C_VERNUS])
 ASPARAGUS = Genus(name="Asparagus", children=[A_OFFICINALIS])
 AGAVE = Genus(name="Agave", children=[A_AMERICANA, A_TEQUILANA])
@@ -99,7 +99,7 @@ AMARYLLIDOIDEAE = Subfamily(name="Amaryllidoideae", children=[NARCISSUS, GALANTH
 ASPARAGOIDEAE_NOLINOIDEAE = Clade(children=[ASPARAGOIDEAE, NOLINOIDEAE])
 AGAVOIDEAE_SCILLOIDEAE = Clade(children=[AGAVOIDEAE, SCILLOIDEAE])
 
-ORCHIDEACEAE = Family(name="Orchidaceae", children=[ORCHIS, VANILLA])
+ORCHIDEACEAE = Family(name="Orchideaceae", children=[ORCHIS, VANILLA])
 IRIDACEAE = Family(name="Iridaceae", children=[IRIS, CROCUS])
 ASPARAGACEAE = Family(
     name="Asparagaceae", children=[ASPARAGOIDEAE_NOLINOIDEAE, AGAVOIDEAE_SCILLOIDEAE]

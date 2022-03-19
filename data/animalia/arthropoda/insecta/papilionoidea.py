@@ -47,13 +47,13 @@ AGLAIS = Genus(name="Aglais", children=[A_IO])
 VANESSA = Genus(name="Vanessa", children=[V_ATALANTA, V_CARDUI])
 DANAUS = Genus(name="Danaus", children=[D_PLEXIPPUS])
 
-NYMPHAINE = Subfamily(name="Nymphalinae", children=[AGLAIS, VANESSA])
+NYMPHALINAE = Subfamily(name="Nymphalinae", children=[AGLAIS, VANESSA])
 DANAINAE = Subfamily(name="Danainae", children=[DANAUS])
 
 LYCAENIDAE = Family(name="Lycaenidae", children=[POLYOMMATUS])
 PAPILIONIDAE = Family(name="Papilionidae", children=[PAPILIO])
 PIERIDAE = Family(name="Pieridae", children=[PIERIS, GONEPTERYX])
-NYMPHALIDAE = Family(name="Nymphalidae", children=[NYMPHAINE, DANAINAE])
+NYMPHALIDAE = Family(name="Nymphalidae", children=[NYMPHALINAE, DANAINAE])
 
 # https://zookeys.pensoft.net/article/13097/zoom/fig/18/
 PAPILIONOIDEA_A = Clade(children=[LYCAENIDAE, NYMPHALIDAE])

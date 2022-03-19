@@ -83,7 +83,7 @@ VACCINIUM_SUBGENUS_VACCINIUM = Subgenus(
 BERTHOLLETIA = Genus(name="Bertholletia", children=[B_EXCELSA])
 DIOSPYROS = Genus(name="Diospyros", children=[D_EBENUM, D_KAKI])
 PRIMULA = Genus(name="Primula", children=[P_VULGARIS])
-CAMELLIA = Genus(name="Camelia", children=[C_SINENSIS, C_JAPONICA])
+CAMELLIA = Genus(name="Camellia", children=[C_SINENSIS, C_JAPONICA])
 SARRACENIA = Genus(name="Sarracenia", children=[S_RUBRA])
 ACTINIDIA = Genus(name="Actinidia", children=[A_DELICIOSA])
 CALLUNA = Genus(name="Calluna", children=[C_VULGARIS])
