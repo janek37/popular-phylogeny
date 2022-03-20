@@ -17,6 +17,7 @@ from .afrotheria import AFROTHERIA
 from .chiroptera import CHIROPTERA
 from .euarchonta import EUARCHONTA
 from .eulipotyphla import EULIPOTYPHLA
+from .ferae import FERAE
 from .glires import GLIRES
 from .marsupialia import MARSUPIALIA
 from .ungulata import UNGULATA
@@ -40,7 +41,7 @@ TACHYGLOSSIDAE = Family(name="Tachyglossidae", children=[TACHYGLOSSUS])
 MONOTREMATA = Order(name="Monotremata", children=[ORNITHORHYNCHIDAE, TACHYGLOSSIDAE])
 
 # Grandorder inside Superorder, but what can I do
-FERUNGULATA = Grandorder(name="Ferungulata", children=[UNGULATA])
+FERUNGULATA = Grandorder(name="Ferungulata", children=[UNGULATA, FERAE])
 
 SCROTIPHERA = Clade(name="Scrotiphera", children=[CHIROPTERA, FERUNGULATA])
 
