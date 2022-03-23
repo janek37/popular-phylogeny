@@ -1,11 +1,14 @@
-from clade import Infraorder, Suborder, Superfamily
+from clade import Clade, Infraorder, Suborder, Superfamily
 
 from .canidae import CANIDAE
+from .musteloidea import MUSTELOIDEA
 from .pinnipedia import PINNIPEDIA
 from .ursidae import URSIDAE
 
 CYNOIDEA = Superfamily(name="Cynoidea", children=[CANIDAE])
 
-ARCTOIDEA = Infraorder(name="Arctoidea", children=[URSIDAE, PINNIPEDIA])
+MUSTELIDA = Clade(name="Mustelida", children=[PINNIPEDIA, MUSTELOIDEA])
+
+ARCTOIDEA = Infraorder(name="Arctoidea", children=[URSIDAE, MUSTELIDA])
 
 CANIFORMIA = Suborder(name="Caniformia", children=[CYNOIDEA, ARCTOIDEA])
