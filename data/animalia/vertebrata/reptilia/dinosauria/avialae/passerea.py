@@ -17,6 +17,9 @@ G_JAPONENSIS = Species(
     local_names={EN: "red-crowned crane, Japanese crane", PL: "żuraw mandżurski"},
     known_for=[{EN: "a symbol of longevity in East Asia"}],
 )
+G_VIRGO = Species(
+    name="Grus virgo", local_names={EN: "demoiselle crane", PL: "żuraw stepowy"}
+)
 L_CANUS = Species(name="Larus canus", local_names={EN: "common gull", PL: "mewa siwa"})
 S_HIRUNDO = Species(
     name="Sterna hirundo",
@@ -31,6 +34,10 @@ V_VANELLUS = Species(
         EN: "peewit, tuit, green plover, northern lapwing",
         PL: "czajka zwyczajna",
     },
+)
+F_ARCTICA = Species(
+    name="Fratercula arctica",
+    local_names={EN: "Atlantic puffin, common puffin", PL: "maskonur zwyczajny"},
 )
 A_COLUBRIS = Species(
     name="Archilochus colubris",
@@ -54,11 +61,12 @@ C_EUROPAEUS = Species(
 
 CUCULUS = Genus(name="Cuculus", children=[C_CANORUS])
 GEOCOCCYX = Genus(name="Geococcyx", children=[G_CALIFORNIANUS])
-GRUS = Genus(name="Grus", children=[G_JAPONENSIS])
+GRUS = Genus(name="Grus", children=[G_JAPONENSIS, G_VIRGO])
 LARUS = Genus(name="Larus", children=[L_CANUS])
 STERNA = Genus(name="Sterna", children=[S_HIRUNDO])
 GALLINAGO = Genus(name="Gallinago", children=[G_GALLINAGO])
 VANELLUS = Genus(name="Vanellus", children=[V_VANELLUS])
+FRATERCULA = Genus(name="Fratercula", children=[F_ARCTICA])
 ARCHILOCHUS = Genus(name="Archilochus", children=[A_COLUBRIS])
 MELLISUGA = Genus(name="Mellisuga", children=[M_HELENAE])
 APUS = Genus(name="Apus", children=[A_APUS])
@@ -69,16 +77,18 @@ GRUIDAE = Family(name="Gruidae", children=[GRUS])
 LARIDAE = Family(name="Laridae", children=[LARUS, STERNA])
 SCOLOPACIDAE = Family(name="Scolopacidae", children=[GALLINAGO])
 CHARADRIIDAE = Family(name="Charadriidae", children=[VANELLUS])
+ALCIDAE = Family(name="Alcidae", children=[FRATERCULA])
 TROCHILIDAE = Family(name="Trochilidae", children=[ARCHILOCHUS, MELLISUGA])
 APODIDAE = Family(name="Apodidae", children=[APUS])
 CAPRIMULGIDAE = Family(name="Caprimulgidae", children=[CAPRIMULGUS])
 
-CHARADRIFORMES_A = Clade(children=[LARIDAE, SCOLOPACIDAE])
+CHARADRIIFORMES_B = Clade(children=[LARIDAE, ALCIDAE])
+CHARADRIIFORMES_A = Clade(children=[CHARADRIIFORMES_B, SCOLOPACIDAE])
 
 CUCULIFORMES = Order(name="Cuculiformes", children=[CUCULIDAE])
 GRUIFORMES = Order(name="Gruiformes", children=[GRUIDAE])
 CHARADRIIFORMES = Order(
-    name="Charadriiformes", children=[CHARADRIFORMES_A, CHARADRIIDAE]
+    name="Charadriiformes", children=[CHARADRIIFORMES_A, CHARADRIIDAE]
 )
 APODIFORMES = Order(name="Apodiformes", children=[TROCHILIDAE, APODIDAE])
 CAPRIMULGIFORMES = Order(name="Caprimulgiformes", children=[CAPRIMULGIDAE])

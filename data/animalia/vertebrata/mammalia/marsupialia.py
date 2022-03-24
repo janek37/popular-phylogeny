@@ -27,6 +27,7 @@ T_CYNOCEPHALUS = Species(
         EN: "Tasmanian tiger, Tasmanian wolf, thylacine",
         PL: "wilk workowaty, wilkowór tasmański",
     },
+    extinct=True,
 )
 P_GUNNII = Species(
     name="Perameles gunnii",

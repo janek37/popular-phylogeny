@@ -27,6 +27,10 @@ T_INDICUS = Species(
         PL: "tapir malajski, tapir czaprakowy",
     },
 )
+T_TERRESTRIS = Species(
+    name="Tapirus terrestris",
+    local_names={EN: "South American tapir", PL: "tapir anta, tapir amerykański"},
+)
 C_SIMUM = Species(
     name="Ceratotherium simum",
     local_names={EN: "white rhinoceros", PL: "nosorożec biały"},
@@ -45,7 +49,7 @@ P_TRANSOURALICUM = Species(
 EQUUS_A = Clade(children=[E_AFRICANUS, E_QUAGGA])
 
 EQUUS = Genus(name="Equus", children=[E_FERUS, EQUUS_A])
-TAPIRUS = Genus(name="Tapirus", children=[T_INDICUS])
+TAPIRUS = Genus(name="Tapirus", children=[T_INDICUS, T_TERRESTRIS])
 CERATOTHERIUM = Genus(name="Ceratotherium", children=[C_SIMUM])
 COELODONTA = Genus(name="Coelodonta", children=[C_ANTIQUITATIS])
 PARACERATHERIUM = Genus(name="Paraceratherium", children=[P_TRANSOURALICUM])

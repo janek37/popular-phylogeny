@@ -14,7 +14,10 @@ M_ANGUSTIROSTRIS = Species(
 )
 Z_CALIFORNIANUS = Species(
     name="Zalophus californianus",
-    local_names={EN: "California sea lion", PL: "uszanka kalifornijska"},
+    local_names={
+        EN: "California sea lion",
+        PL: "uchatka kalifornijska, uszanka kalifornijska",
+    },
 )
 A_PUSILLUS = Species(
     name="Arctocephalus pusillus",

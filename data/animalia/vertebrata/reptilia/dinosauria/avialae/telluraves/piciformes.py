@@ -1,9 +1,9 @@
 from clade import Clade, Family, Genus, Order, Species, Subfamily, Tribe
 from constants import EN, PL
 
-D_MAJOR = Species(
-    name="Dendrocopos major",
-    local_names={EN: "great spotted woodpecker", PL: "dzięcioł duży"},
+D_LEUCOTOS = Species(
+    name="Dendrocopos leucotos",
+    local_names={EN: "white-backed woodpecker", PL: "dzięcioł białogrzbiety"},
 )
 D_MARTIUS = Species(
     name="Dryocopus martius",
@@ -38,7 +38,7 @@ R_TOCO = Species(
     },
 )
 
-DENDROCOPOS = Genus(name="Dendrocopos", children=[D_MAJOR])
+DENDROCOPOS = Genus(name="Dendrocopos", children=[D_LEUCOTOS])
 DRYOCOPUS = Genus(name="Dryocopus", children=[D_MARTIUS, D_PILEATUS])
 MELANERPES = Genus(name="Melanerpes", children=[M_FORMICIVORUS])
 DRYOBATES = Genus(name="Dryobates", children=[D_PUBESCENS])
