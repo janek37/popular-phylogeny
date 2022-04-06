@@ -72,6 +72,10 @@ L_SERICATA = Species(
     name="Lucilia sericata",
     local_names={EN: "common green bottle fly", PL: "mucha zielona"},
 )
+C_VOMITORIA = Species(
+    name="Calliphora vomitoria",
+    local_names={EN: "blue bottle fly", PL: "mucha plujka, plujka burczało"},
+)
 S_AFRICA = Species(
     name="Sarcophaga africa",
     known_for=[{EN: "the best known common flesh fly species"}],
@@ -93,6 +97,7 @@ DROSOPHILA = Genus(name="Drosophila", children=[D_MELANOGASTER])
 GLOSSINA = Genus(name="Glossina", children=[G_MORSITANS])
 MUSCA = Genus(name="Musca", children=[M_DOMESTICA])
 LUCILLA = Genus(name="Lucilla", children=[L_SERICATA])
+CALLIPHORA = Genus(name="Calliphora", children=[C_VOMITORIA])
 SARCOPHAGA = Genus(name="Sarcophaga", children=[S_AFRICA])
 HYPODERMA = Genus(name="Hypoderma", children=[H_BOVIS])
 
@@ -108,7 +113,7 @@ SYRPHIDAE = Family(name="Syrphidae", children=[SYRPHUS])
 DROSOPHILIDAE = Family(name="Drosophilidae", children=[DROSOPHILA])
 GLOSSINIDAE = Family(name="Glossinidae", children=[GLOSSINA])
 MUSCIDAE = Family(name="Muscidae", children=[MUSCA])
-CALLIPHORIDAE = Family(name="Calliphoridae", children=[LUCILLA])
+CALLIPHORIDAE = Family(name="Calliphoridae", children=[LUCILLA, CALLIPHORA])
 SARCOPHAGIDAE = Family(name="Sarcophagidae", children=[SARCOPHAGA])
 OESTRIDAE = Family(name="Oestridae", children=[HYPODERMA])
 

@@ -30,6 +30,7 @@ O_ANATINUS = Species(
 T_ACULEATUS = Species(
     name="Tachyglossus aculeatus",
     local_names={EN: "short-beaked echidna", PL: "kolczatka australijska"},
+    known_for=[{EN: "Knuckles from Sonic franchise"}],
 )
 
 ORNITHORHYNCHUS = Genus(name="Ornithorhynchus", children=[O_ANATINUS])

@@ -39,6 +39,10 @@ P_PRASINA = Species(
     name="Palomena prasina",
     local_names={EN: "green shield bug", PL: "odorek zieleniak"},
 )
+P_RUFIPES = Species(
+    name="Pentatoma rufipes",
+    local_names={EN: "forest bug, red-legged shieldbug", PL: "tarczówka rudonoga"},
+)
 C_VIRIDIS = Species(name="Cicadella viridis", local_names={EN: "green leafhopper"})
 M_SEPTENDECIM = Species(
     name="Magicicada septendecim",
@@ -53,6 +57,7 @@ GERRIS = Genus(name="Gerris", children=[G_LACUSTRIS])
 CIMEX = Genus(name="Cimex", children=[C_LECTULARIUS])
 PYRRHOCORIS = Genus(name="Pyrrhocoris", children=[P_APTERUS])
 PALOMENA = Genus(name="Palomena", children=[P_PRASINA])
+PENTATOMA = Genus(name="Pentatoma", children=[P_RUFIPES])
 CICADELLA = Genus(name="Cicadella", children=[C_VIRIDIS])
 MAGICICADA = Genus(name="Magicicada", children=[M_SEPTENDECIM])
 
@@ -63,7 +68,7 @@ MARGARODIDAE = Family(name="Margarodidae", children=[PORPHYROPHORA])
 GERRIDAE = Family(name="Gerridae", children=[GERRIS])
 CIMICIDAE = Family(name="Cimicidae", children=[CIMEX])
 PYRRHOCORIDAE = Family(name="Pyrrhocoridae", children=[PYRRHOCORIS])
-PENTATOMIDAE = Family(name="Pentatomidae", children=[PALOMENA])
+PENTATOMIDAE = Family(name="Pentatomidae", children=[PALOMENA, PENTATOMA])
 CICADELLIDAE = Family(name="Cicadellidae", children=[CICADELLA])
 CICADIDAE = Family(name="Cicadidae", children=[MAGICICADA])
 

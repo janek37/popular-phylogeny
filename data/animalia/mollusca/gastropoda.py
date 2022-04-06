@@ -112,21 +112,35 @@ A_HELENA = Species(
     local_names={EN: "assassin snail, bumblebee snail", PL: "ślimak Helenka"},
     known_for=[{EN: "used to control populations of unwanted small snail species"}],
 )
+C_PALMAROSAE = Species(
+    name="Chicoreus palmarosae", local_names={EN: "rose-branch murex"}
+)
+M_PECTEN = Species(
+    name="Murex pecten", local_names={EN: "Venus comb murex", PL: "grzebień Wenery"}
+)
+M_MITRA = Species(name="Mitra mitra", local_names={EN: "episcopal miter"})
 
 CYPRAEA = Genus(name="Cypraea", children=[C_TIGRIS])
 ALIGER = Genus(name="Aliger", children=[A_GIGAS])
 ANENTOME = Genus(name="Anentome", children=[A_HELENA])
+CHICOREUS = Genus(name="Chicoreus", children=[C_PALMAROSAE])
+MUREX = Genus(name="Murex", children=[M_PECTEN])
+MITRA = Genus(name="Mitra", children=[M_MITRA])
 
 CYPRAEIDAE = Family(name="Cypraeidae", children=[CYPRAEA])
 STROMBIDAE = Family(name="Strombidae", children=[ALIGER])
 NASSARIIDAE = Family(name="Nassariidae", children=[ANENTOME])
+MURICIDAE = Family(name="Muricidae", children=[CHICOREUS, MUREX])
+MITRIDAE = Family(name="Mitridae", children=[MITRA])
 
 CYPRAEOIDEA = Superfamily(name="Cypraeoidea", children=[CYPRAEIDAE])
 STROMBOIDEA = Superfamily(name="Stromboidea", children=[STROMBIDAE])
 BUCCINOIDEA = Superfamily(name="Buccinoidea", children=[NASSARIIDAE])
+MURICOIDEA = Superfamily(name="Muricoidea", children=[MURICIDAE, MITRIDAE])
 
+# possibly wrong, Cypraeoidea may be closer to Buccinoidea
 LITTORINIMORPHA = Order(name="Littorinimorpha", children=[CYPRAEOIDEA, STROMBOIDEA])
-NEOGASTROPODA = Order(name="Neogastropoda", children=[BUCCINOIDEA])
+NEOGASTROPODA = Order(name="Neogastropoda", children=[BUCCINOIDEA, MURICOIDEA])
 
 CAENOGASTROPODA = Subclass(
     name="Caenogastropoda", children=[LITTORINIMORPHA, NEOGASTROPODA]

@@ -111,6 +111,15 @@ EUTARDIGRADA = Class(name="Eutardigrada", children=[APOCHELA])
 TARDIGRADA = Phylum(name="Tardigrada", children=[EUTARDIGRADA])
 # endregion TARDIGRADA
 
+# region ROTIFERA
+H_ROSA = Species(name="Habrotrocha rosa")
+HABROTROCHA = Genus(name="Habrotrocha", children=[H_ROSA])
+HABROTROCHIDAE = Family(name="Habrotrochidae", children=[HABROTROCHA])
+BDELLOIDA = Order(name="Bdelloida", children=[HABROTROCHIDAE])
+BDELLOIDEA = Class(name="Bdelloidea", children=[BDELLOIDA])
+ROTIFERA = Phylum(name="Rotifera", children=[BDELLOIDEA])
+# endregion ROTIFERA
+
 PANARTHROPODA = Clade(name="Panarthropoda", children=[TARDIGRADA, ARTHROPODA])
 
 LOPHOTROCHOZOA = Superphylum(name="Lophotrochozoa", children=[ANNELIDA, MOLLUSCA])
@@ -120,6 +129,8 @@ ECDYSOZOA = Superphylum(name="Ecdysozoa", children=[NEMATODA, PANARTHROPODA])
 PLATYTROCHOZOA = Clade(
     name="Platytrochozoa", children=[PLATYHELMINTHES, LOPHOTROCHOZOA]
 )
+
+SPIRALIA = Clade(name="Spiralia", children=[PLATYTROCHOZOA, ROTIFERA])
 
 PROTOSTOMIA = Class(
     name="Protostomia",

@@ -51,7 +51,10 @@ C_SAPIDUS = Species(
 )
 B_LATRO = Species(
     name="Birgus latro",
-    local_names={EN: "coconut crab, robber crab, palm thief", PL: "krab palmowy"},
+    local_names={
+        EN: "coconut crab, robber crab, palm thief",
+        PL: "krab kokosowy, krab palmowy",
+    },
     known_for=[{EN: "the largest terrestrial arthropod"}, {EN: "Tamatoa from Moana"}],
 )
 
