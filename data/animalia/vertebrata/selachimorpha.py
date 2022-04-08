@@ -18,6 +18,9 @@ R_TYPUS = Species(
 G_CUVIER = Species(
     name="Galeocerdo cuvier", local_names={EN: "tiger shark", PL: "żarłacz tygrysi"}
 )
+P_GLAUCA = Species(
+    name="Prionace glauca", local_names={EN: "blue shark", PL: "żarłacz błękitny"}
+)
 O_MEGALODON = Species(
     name="Otodus megalodon",
     local_names={EN: "megalodon"},
@@ -36,6 +39,7 @@ CARCHARODON = Genus(name="Carcharodon", children=[C_CARCHARIAS])
 SPHYRNA = Genus(name="Sphyrna", children=[S_ZYGAENA])
 RHINCODON = Genus(name="Rhincodon", children=[R_TYPUS])
 GALEOCERDO = Genus(name="Galeocerdo", children=[G_CUVIER])
+PRIONACE = Genus(name="Prionace", children=[P_GLAUCA])
 OTODUS = Genus(name="Otodus", children=[O_MEGALODON])
 SQUALUS = Genus(name="Squalus", children=[S_ACANTHIAS])
 SQUATINA = Genus(name="Squatina", children=[S_SQUATINA])
@@ -43,7 +47,7 @@ SQUATINA = Genus(name="Squatina", children=[S_SQUATINA])
 LAMNIDAE = Family(name="Lamnidae", children=[CARCHARODON])
 SPHYRNIDAE = Family(name="Sphyrnidae", children=[SPHYRNA])
 RHINCODONTIDAE = Family(name="Rhincodontidae", children=[RHINCODON])
-CARCHARHINIDAE = Family(name="Carcharhinidae", children=[GALEOCERDO])
+CARCHARHINIDAE = Family(name="Carcharhinidae", children=[GALEOCERDO, PRIONACE])
 OTODONTIDAE = Family(name="Otodontidae", children=[OTODUS])
 SQUALIDAE = Family(name="Squalidae", children=[SQUALUS])
 SQUATINIDAE = Family(name="Squatinidae", children=[SQUATINA])

@@ -33,6 +33,9 @@ P_PHOXINUS = Species(
 B_BARBUS = Species(
     name="Barbus barbus", local_names={EN: "common barbel", PL: "brzana pospolita"}
 )
+P_TITTEYA = Species(
+    name="Puntius titteya", local_names={EN: "cherry barb", PL: "brzanka wysmukła"}
+)
 T_TINCA = Species(name="Tinca tinca", local_names={EN: "tench, doctor fish", PL: "lin"})
 G_GOBIO = Species(
     name="Gobio gobio", local_names={EN: "gudgeon", PL: "kiełb pospolity"}
@@ -53,6 +56,7 @@ SQUALIUS = Genus(name="Squalius", children=[S_CEPHALUS])
 ABRAMIS = Genus(name="Abramis", children=[A_BRAMA])
 PHOXINUS = Genus(name="Phoxinus", children=[P_PHOXINUS])
 BARBUS = Genus(name="Barbus", children=[B_BARBUS])
+PUNTIUS = Genus(name="Puntius", children=[P_TITTEYA])
 TINCA = Genus(name="Tinca", children=[T_TINCA])
 GOBIO = Genus(name="Gobio", children=[G_GOBIO])
 CHROMOBOTIA = Genus(name="Chromobotia", children=[C_MACRACANTHUS])
@@ -63,7 +67,7 @@ CYPRININAE = Subfamily(name="Cyprininae", children=[CYPRINUS, CARASSIUS])
 LEUCISCINAE = Subfamily(
     name="Leuciscinae", children=[RUTILUS, ALBURNUS, SQUALIUS, ABRAMIS, PHOXINUS]
 )
-BARBINAE = Subfamily(name="Barbinae", children=[BARBUS])
+BARBINAE = Subfamily(name="Barbinae", children=[BARBUS, PUNTIUS])
 TINCINAE = Subfamily(name="Tincinae", children=[TINCA])
 GOBIONINAE = Subfamily(name="Gobioninae", children=[GOBIO])
 COBITIDAE = Subfamily(name="Cobitidae", children=[MISGURNUS])

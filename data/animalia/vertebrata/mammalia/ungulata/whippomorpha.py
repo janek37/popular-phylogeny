@@ -19,6 +19,10 @@ B_MYSTICETUS = Species(
         PL: "wieloryb grenlandzki, wal grenlandzki",
     },
 )
+E_GLACIALIS = Species(
+    name="Eubalaena glacialis",
+    local_names={EN: "North Atlantic right whale", PL: "waleń biskajski"},
+)
 B_MUSCULUS = Species(
     name="Balaenoptera musculus",
     local_names={EN: "blue whale", PL: "płetwal błękitny"},
@@ -36,6 +40,7 @@ RODHOCETUS = Genus(name="Rodhocetus", children=[R_KASRANI])
 DORUDON = Genus(name="Dorudon", children=[D_ATROX])
 BASILOSAURUS = Genus(name="Basilosaurus", children=[B_CETOIDES])
 BALAENA = Genus(name="Balaena", children=[B_MYSTICETUS])
+EUBALAENA = Genus(name="Eubalaena", children=[E_GLACIALIS])
 BALAENOPTERA = Genus(
     name="Balaenoptera", children=[B_MUSCULUS]
 )  # currently polyphiletic :(
@@ -46,7 +51,7 @@ PAKICETIDAE = Family(name="Pakicetidae", children=[PAKICETUS])
 REMINGTONOCETIDAE = Family(name="Remingtonocetidae", children=[REMINGTONOCETUS])
 PROTOCETIDAE = Family(name="Protocetidae", children=[RODHOCETUS])
 BASILOSAURIDAE = Family(name="Basilosauridae", children=[DORUDON, BASILOSAURUS])
-BALAENIDAE = Family(name="Balaenidae", children=[BALAENA])
+BALAENIDAE = Family(name="Balaenidae", children=[BALAENA, EUBALAENA])
 BALAENOPTERIDAE = Family(name="Balaenopteridae", children=[BALAENOPTERA, MEGAPTERA])
 
 MYSTICETI = Parvorder(name="Mysticeti", children=[BALAENIDAE, BALAENOPTERIDAE])

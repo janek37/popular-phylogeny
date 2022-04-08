@@ -24,6 +24,13 @@ H_HIPPOGLOSSUS = Species(
 S_SOLEA = Species(
     name="Solea solea", local_names={EN: "common sole", PL: "sola zwyczajna"}
 )
+C_HIPPURUS = Species(
+    name="Coryphaena hippurus",
+    local_names={
+        EN: "mahi-mahi, common dolphinfish",
+        PL: "złota makrela, smagla, koryfena",
+    },
+)
 
 SPHYRAENA = Genus(name="Sphyraena", children=[S_BARRACUDA])
 XIPHIAS = Genus(name="Xiphias", children=[X_GLADIUS])
@@ -31,12 +38,14 @@ ISTIOPHORUS = Genus(name="Istiophorus", children=[I_PLATYPTERUS])
 PLATICHTHYS = Genus(name="Platichthys", children=[P_FLESUS])
 HIPPOGLOSSUS = Genus(name="Hippoglossus", children=[H_HIPPOGLOSSUS])
 SOLEA = Genus(name="Solea", children=[S_SOLEA])
+CORYPHAENA = Genus(name="Coryphaena", children=[C_HIPPURUS])
 
 SPHYRAENIDAE = Family(name="Sphyraenidae", children=[SPHYRAENA])
 XIPHIIDAE = Family(name="Xiphiidae", children=[XIPHIAS])
 ISTIOPHORIDAE = Family(name="Istiophoridae", children=[ISTIOPHORUS])
 PLEURONECTIDAE = Family(name="Pleuronectidae", children=[PLATICHTHYS, HIPPOGLOSSUS])
 SOLEIDAE = Family(name="Soleidae", children=[SOLEA])
+CORYPHAENIDAE = Family(name="Coryphaenidae", children=[CORYPHAENA])
 
 # no source, but rather obvious
 ISTIOPHORIFORMES_A = Clade(children=[XIPHIIDAE, ISTIOPHORIDAE])
@@ -46,5 +55,7 @@ ISTIOPHORIFORMES = Order(
     name="Istiophoriformes", children=[SPHYRAENIDAE, ISTIOPHORIFORMES_A]
 )
 PLEURONECTIFORMES = Order(name="Pleuronectiformes", children=[PLEURONECTIDAE, SOLEIDAE])
+# Carangiformes is not a clade
 
-CARANGARIA = Clade(name="Carangaria", children=[ISTIOPHORIFORMES, PLEURONECTIFORMES])
+CARANGARIA_A = Clade(children=[ISTIOPHORIFORMES, PLEURONECTIFORMES])
+CARANGARIA = Clade(name="Carangaria", children=[CARANGARIA_A, CORYPHAENIDAE])

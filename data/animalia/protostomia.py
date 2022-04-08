@@ -134,6 +134,6 @@ SPIRALIA = Clade(name="Spiralia", children=[PLATYTROCHOZOA, ROTIFERA])
 
 PROTOSTOMIA = Class(
     name="Protostomia",
-    children=[PLATYTROCHOZOA, ECDYSOZOA],
+    children=[SPIRALIA, ECDYSOZOA],
     local_names={PL: "pierwouste"},
 )

@@ -4,6 +4,7 @@ from constants import EN, PL
 from .avialae import AVIALAE
 
 C_BAURI = Species(name="Coelophysis bauri", extinct=True)
+D_WETHERILLI = Species(name="Dilophosaurus wetherilli", extinct=True)
 C_SASTREI = Species(
     name="Carnotaurus sastrei",
     known_for=[{EN: "villains from the film Dinosaur"}],
@@ -38,6 +39,7 @@ U_OSTROMMAYSI = Species(
 )
 
 COELOPHYSIS = Genus(name="Coelophysis", children=[C_BAURI])
+DILOPHOSAURUS = Genus(name="Dilophosaurus", children=[D_WETHERILLI])
 CARNOTAURUS = Genus(name="Carnotaurus", children=[C_SASTREI])
 CERATOSAURUS = Genus(name="Ceratosaurus", children=[C_NASICORNIS])
 SPINOSAURUS = Genus(name="Spinosaurus", children=[S_AEGYPTIACUS])
@@ -52,6 +54,7 @@ VELOCIRAPTOR = Genus(name="Velociraptor", children=[V_MONGOLIENSIS])
 UTAHRAPTOR = Genus(name="Utahraptor", children=[U_OSTROMMAYSI])
 
 COELOPHYSIDAE = Family(name="Coelophysidae", children=[COELOPHYSIS])
+DILOPHOSAURIDAE = Family(name="Dilophosauridae", children=[DILOPHOSAURUS])
 ABELISAURIDAE = Family(name="Abelisauridae", children=[CARNOTAURUS])
 CERATOSAURIDAE = Family(name="Ceratosauridae", children=[CERATOSAURUS])
 SPINOSAURIDAE = Family(name="Spinosauridae", children=[SPINOSAURUS, BARYONYX])
@@ -89,4 +92,6 @@ AVETHEROPODA = Clade(name="Avetheropoda", children=[ALLOSAUROIDEA, COELUROSAURIA
 TETANURAE = Clade(name="Tetanurae", children=[MEGALOSAUROIDEA, AVETHEROPODA])
 AVEROSTRA = Clade(name="Averostra", children=[CERATOSAURIA, TETANURAE])
 
-THEROPODA = Clade(name="Theropoda", children=[COELOPHYSOIDEA, AVEROSTRA])
+THEROPODA_A = Clade(children=[DILOPHOSAURIDAE, AVEROSTRA])
+
+THEROPODA = Clade(name="Theropoda", children=[COELOPHYSOIDEA, THEROPODA_A])

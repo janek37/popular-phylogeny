@@ -16,13 +16,16 @@ A_RUBRIPES = Species(
 A_GALERICULATA = Species(
     name="Aix galericulata", local_names={EN: "mandarin duck", PL: "kaczka mandarynka"}
 )
+A_SPONSA = Species(
+    name="Aix sponsa", local_names={EN: "wood duck, Carolina duck", PL: "karolinka"}
+)
 A_ANSER = Species(
     name="Anser anser", local_names={EN: "greylag goose", PL: "gęś gęgawa"}
 )
 C_OLOR = Species(name="Cygnus olor", local_names={EN: "mute swan", PL: "łabędź niemy"})
 
 ANAS = Genus(name="Anas", children=[A_PLATYRHYNCHOS, A_RUBRIPES])
-AIX = Genus(name="Aix", children=[A_GALERICULATA])
+AIX = Genus(name="Aix", children=[A_GALERICULATA, A_SPONSA])
 ANSER = Genus(name="Anser", children=[A_ANSER])
 CYGNUS = Genus(name="Cygnus", children=[C_OLOR])
 

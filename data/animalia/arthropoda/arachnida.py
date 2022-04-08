@@ -10,6 +10,11 @@ D_PTERONYSSINUS = Species(
         PL: "roztocze kurzu domowego, skórożarłoczek skryty",
     },
 )
+S_SCABIEI = Species(
+    name="Sarcoptes scabiei",
+    local_names={EN: "itch mite", PL: "świerzbowiec ludzki"},
+    known_for=[{EN: "scabies", PL: "świerzb"}],
+)
 I_RICINUS = Species(
     name="Ixodes ricinus", local_names={EN: "castor bean tick", PL: "kleszcz pospolity"}
 )
@@ -33,17 +38,19 @@ P_IMPERATOR = Species(
 )
 
 DERMATOPHAGOIDES = Genus(name="Dermatophagoides", children=[D_PTERONYSSINUS])
+SARCOPTES = Genus(name="Sarcoptes", children=[S_SCABIEI])
 IXODES = Genus(name="Ixodes", children=[I_RICINUS])
 CENTRUROIDES = Genus(name="Centruroides", children=[C_VITTATUS])
 LEIRUS = Genus(name="Leirus", children=[L_QUINQUESTRIATUS])
 PANDINUS = Genus(name="Pandinus", children=[P_IMPERATOR])
 
 PYROGLYPHIDAE = Family(name="Pyroglyphidae", children=[DERMATOPHAGOIDES])
+SARCOPTIDAE = Family(name="Sarcoptidae", children=[SARCOPTES])
 IXODIDAE = Family(name="Ixodidae", children=[IXODES])
 BUTHIDAE = Family(name="Buthidae", children=[CENTRUROIDES, LEIRUS])
 SCORPIONIDAE = Family(name="Scorpionidae", children=[PANDINUS])
 
-SARCOPTIFORMES = Order(name="Sarcoptiformes", children=[PYROGLYPHIDAE])
+SARCOPTIFORMES = Order(name="Sarcoptiformes", children=[PYROGLYPHIDAE, SARCOPTIDAE])
 IXODIDA = Order(name="Ixodida", children=[IXODIDAE])
 SCORPIONES = Order(name="Scorpiones", children=[BUTHIDAE, SCORPIONIDAE])
 

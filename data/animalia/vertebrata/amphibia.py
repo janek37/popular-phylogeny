@@ -1,4 +1,4 @@
-from clade import Clade, Class, Family, Genus, Order, Species
+from clade import Clade, Class, Family, Genus, Order, Species, Suborder
 from constants import EN, PL
 
 L_VULGARIS = Species(
@@ -15,6 +15,14 @@ S_SALAMANDRA = Species(
 A_MEXICANUM = Species(
     name="Ambystoma mexicanum",
     local_names={EN: "axolotl", PL: "aksolotl meksykański, ambystoma meksykańska"},
+)
+P_ANGUINUS = Species(
+    name="Proteus anguinus", local_names={EN: "olm", PL: "odmieniec jaskiniowy"}
+)
+A_SLIGOI = Species(
+    name="Andrias sligoi",
+    local_names={EN: "South China giant salamander"},
+    known_for=[{EN: "the largest living amphibian"}],
 )
 B_BUFO = Species(
     name="Bufo bufo",
@@ -57,6 +65,8 @@ R_NIGROPALMATUS = Species(
 LISSOTRITON = Genus(name="Lissotriton", children=[L_VULGARIS])
 SALAMANDRA = Genus(name="Salamandra", children=[S_SALAMANDRA])
 AMBYSTOMA = Genus(name="Ambystoma", children=[A_MEXICANUM])
+PROTEUS = Genus(name="Proteus", children=[P_ANGUINUS])
+ANDRIAS = Genus(name="Andrias", children=[A_SLIGOI])
 BUFO = Genus(name="Bufo", children=[B_BUFO])
 LITHOBATES = Genus(name="Lithobates", children=[L_CATESBEIANUS])
 RANA = Genus(name="Rana", children=[R_TEMPORARIA])
@@ -68,6 +78,8 @@ RHACOPHORUS = Genus(name="Rhacophorus", children=[R_NIGROPALMATUS])
 
 SALAMANDRIDAE = Family(name="Salamandridae", children=[LISSOTRITON, SALAMANDRA])
 AMBYSTOMATIDAE = Family(name="Ambystomatidae", children=[AMBYSTOMA])
+PROTEIDAE = Family(name="Proteidae", children=[PROTEUS])
+CRYPTOBRANCHIDAE = Family(name="Cryptobranchidae", children=[ANDRIAS])
 BUFONIDAE = Family(name="Bufonidae", children=[BUFO])
 RANIDAE = Family(name="Ranidae", children=[LITHOBATES, RANA, PELOPHYLAX])
 HYLIDAE = Family(name="Hylidae", children=[HYLA])
@@ -85,7 +97,13 @@ ATHESPHATANURA = Clade(
 )
 RANOIDEA = Clade(name="Ranoidea", children=[RANIDAE, RHACOPHORIDAE])
 
-URODELA = Order(name="Urodela", children=[SALAMANDRIDAE, AMBYSTOMATIDAE])
+# https://www.researchgate.net/publication/324584163_Restudy_of_Regalerpeton_weichangensis_Amphibia_Urodela_from_the_Lower_Cretaceous_of_Hebei_China
+SALAMANDROIDEA_A = Clade(children=[SALAMANDRIDAE, AMBYSTOMATIDAE])
+
+SALAMANDROIDEA = Suborder(name="Salamandroidea", children=[SALAMANDROIDEA_A, PROTEIDAE])
+CRYPTOBRANCHOIDEA = Suborder(name="Cryptobranchoidea", children=[CRYPTOBRANCHIDAE])
+
+URODELA = Order(name="Urodela", children=[SALAMANDROIDEA, CRYPTOBRANCHOIDEA])
 ANURA = Order(name="Anura", children=[ATHESPHATANURA, RANOIDEA])
 
 AMPHIBIA = Class(name="Amphibia", children=[URODELA, ANURA])

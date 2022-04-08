@@ -22,6 +22,10 @@ O_EDULIS = Species(
 M_GIGAS = Species(
     name="Magallana gigas", local_names={EN: "Pacific oyster", PL: "ostryżyca japońska"}
 )
+C_VIRGINICA = Species(
+    name="Crassostrea virginica",
+    local_names={EN: "eastern oyster", PL: "ostryżyca amerykańska"},
+)
 P_MAXIMUS = Species(
     name="Pecten maximus",
     local_names={EN: "great scallop, king scallop", PL: "przegrzebek zwyczajny"},
@@ -46,15 +50,19 @@ TRIDACNA = Genus(name="Tridacna", children=[T_GIGAS])
 CERASTODERMA = Genus(name="Cerastoderma", children=[C_EDULE])
 OSTREA = Genus(name="Ostrea", children=[O_EDULIS])
 MAGALLANA = Genus(name="Magallana", children=[M_GIGAS])
+CRASSOSTREA = Genus(name="Crassostrea", children=[C_VIRGINICA])
 PECTEN = Genus(name="Pecten", children=[P_MAXIMUS])
 PINCTADA = Genus(name="Pinctada", children=[P_MARGARITIFERA])
 MYTILUS = Genus(name="Mytilus", children=[M_EDULIS])
 ANODONTA = Genus(name="Anodonta", children=[A_ANATINA])
 
+# https://link.springer.com/article/10.1007/s12526-021-01203-x
+OSTREIDAE_A = Clade(children=[MAGALLANA, CRASSOSTREA])
+
 VENERIDAE = Family(name="Veneridae", children=[MERCENARIA])
 MACTRIDAE = Family(name="Mactridae", children=[SPISULA])
 CARDIIDAE = Family(name="Cardiidae", children=[TRIDACNA, CERASTODERMA])
-OSTREIDAE = Family(name="Ostreidae", children=[OSTREA, MAGALLANA])
+OSTREIDAE = Family(name="Ostreidae", children=[OSTREA, OSTREIDAE_A])
 PECTINIDAE = Family(name="Pectinidae", children=[PECTEN])
 PTERIIDAE = Family(name="Pteriidae", children=[PINCTADA])
 MYTILIDAE = Family(name="Mytilidae", children=[MYTILUS])

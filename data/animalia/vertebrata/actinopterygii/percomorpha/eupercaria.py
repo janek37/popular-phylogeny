@@ -40,6 +40,13 @@ P_HEPATUS = Species(
     },
     known_for=[{EN: "Dory from Finding Nemo"}],
 )
+S_OCELLATUS = Species(
+    name="Sciaenops ocellatus",
+    local_names={
+        EN: "red drum, redfish, channel/spottail bass, puppy drum",
+        PL: "korwin czerwony, kulbak czerwony",
+    },
+)
 P_DIACANTHUS = Species(
     name="Pygoplites diacanthus",
     local_names={EN: "royal angelfish", PL: "ustnik słoneczny"},
@@ -78,6 +85,7 @@ PTEROIS = Genus(name="Pterois", children=[P_VOLITANS])
 PSYCHROLUTES = Genus(name="Psychrolutes", children=[P_MARCIDUS])
 SPARUS = Genus(name="Sparus", children=[S_AURATA])
 PARACANTHURUS = Genus(name="Paracanthurus", children=[P_HEPATUS])
+SCIAENOPS = Genus(name="Sciaenops", children=[S_OCELLATUS])
 PYGOPLITES = Genus(name="Pygoplites", children=[P_DIACANTHUS])
 LOPHIUS = Genus(name="Lophius", children=[L_PISCATORIUS])
 CERATIAS = Genus(name="Ceratias", children=[C_HOLBOELLI])
@@ -91,6 +99,7 @@ SCORPAENIDAE = Family(name="Scorpaenidae", children=[PTEROIS])
 PSYCHROLUTIDAE = Family(name="Psychrolutidae", children=[PSYCHROLUTES])
 SPARIDAE = Family(name="Sparidae", children=[SPARUS])
 ACANTHURIDAE = Family(name="Acanthuridae", children=[PARACANTHURUS])
+SCIAENIDAE = Family(name="Sciaenidae", children=[SCIAENOPS])
 POMACANTHIDAE = Family(name="Pomacanthidae", children=[PYGOPLITES])
 LOPHIIDAE = Family(name="Lophiidae", children=[LOPHIUS])
 CERATIIDAE = Family(name="Ceratiidae", children=[CERATIAS])
@@ -106,7 +115,7 @@ TETRAODONTIFORMES_A = Clade(children=[TETRAODONTIDAE, DIODONTIDAE])
 LABRIFORMES = Order(name="Labriformes", children=[LABRIDAE])
 PERCIFORMES = Order(name="Perciformes", children=[PERCIDAE, PERCIFORMES_A])
 SPARIFORMES = Order(name="Spariformes", children=[SPARIDAE])
-ACANTHURIFORMES = Order(name="Acanthuriformes", children=[ACANTHURIDAE])
+ACANTHURIFORMES = Order(name="Acanthuriformes", children=[ACANTHURIDAE, SCIAENIDAE])
 LOPHIIFORMES = Order(name="Lophiiformes", children=[LOPHIIDAE, CERATIIDAE])
 TETRAODONTIFORMES = Order(
     name="Tetraodontiformes", children=[MOLIDAE, TETRAODONTIFORMES_A]

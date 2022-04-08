@@ -31,6 +31,10 @@ S_SCINCUS = Species(
 L_AGILIS = Species(
     name="Lacerta agilis", local_names={EN: "sand lizard", PL: "jaszczurka zwinka"}
 )
+L_VIRIDIS = Species(
+    name="Lacerta viridis",
+    local_names={EN: "European green lizard", PL: "jaszczurka zielona"},
+)
 V_KOMODOENSIS = Species(
     name="Varanus komodoensis",
     local_names={
@@ -54,7 +58,7 @@ M_HOFFMANNII = Species(name="Mosasaurus hoffmannii", extinct=True)
 
 PHELSUMA = Genus(name="Phelsuma", children=[P_LATICAUDA])
 SCINCUS = Genus(name="Scincus", children=[S_SCINCUS])
-LACERTA = Genus(name="Lacerta", children=[L_AGILIS])
+LACERTA = Genus(name="Lacerta", children=[L_AGILIS, L_VIRIDIS])
 VARANUS = Genus(name="Varanus", children=[V_KOMODOENSIS, V_GOULDII])
 ANGUIS = Genus(name="Anguis", children=[A_FRAGILIS])
 MOSASAURUS = Genus(name="Mosasaurus", children=[M_HOFFMANNII])
