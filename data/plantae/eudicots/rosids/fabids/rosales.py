@@ -58,6 +58,12 @@ M_ALBA = Species(
 U_DIOICA = Species(
     name="Urtica dioica", local_names={EN: "common nettle", PL: "pokrzywa zwyczajna"}
 )
+U_MINOR = Species(
+    name="Ulmus minor", local_names={EN: "field elm", PL: "wiąz pospolity"}
+)
+U_AMERICANA = Species(
+    name="Ulmus americana", local_names={EN: "American elm", PL: "wiąz amerykański"}
+)
 
 CANNABIS = Genus(name="Cannabis", children=[C_SATIVA, C_INDICA])
 HUMULUS = Genus(name="Humulus", children=[H_LUPULUS])
@@ -65,6 +71,7 @@ FICUS = Genus(name="Ficus", children=[F_CARICA, F_BENJAMINA, F_RELIGIOSA])
 ARTOCARPUS = Genus(name="Artocarpus", children=[A_ALTILIS, A_HETEROPHYLLUS])
 MORUS = Genus(name="Morus", children=[M_ALBA])
 URTICA = Genus(name="Urtica", children=[U_DIOICA])
+ULMUS = Genus(name="Ulmus", children=[U_MINOR, U_AMERICANA])
 
 FICEAE = Tribe(name="Ficeae", children=[FICUS])
 ARTOCARPEAE = Tribe(name="Artocarpeae", children=[ARTOCARPUS])
@@ -76,11 +83,14 @@ CANNABACEAE = Family(name="Cannabaceae", children=[CANNABIS, HUMULUS])
 MORACEAE = Family(name="Moraceae", children=[FICEAE, ARTOCARPEAE_MOREAE])
 URTICACEAE = Family(name="Urticaceae", children=[URTICA])
 ROSACEAE = Family(name="Rosaceae", children=[AMYGDALOIDEAE, ROSOIDEAE])
+ULMACEAE = Family(name="Ulmaceae", children=[ULMUS])
 
 MORACEAE_URTICACEAE = Clade(children=[MORACEAE, URTICACEAE])
 
+URTICALEAN_ROSIDS_A = Clade(children=[CANNABACEAE, MORACEAE_URTICACEAE])
+
 URTICALEAN_ROSIDS = Clade(
-    name="urticalean rosids", children=[CANNABACEAE, MORACEAE_URTICACEAE]
+    name="urticalean rosids", children=[ULMACEAE, URTICALEAN_ROSIDS_A]
 )
 
 ROSALES = Order(name="Rosales", children=[URTICALEAN_ROSIDS, ROSACEAE])

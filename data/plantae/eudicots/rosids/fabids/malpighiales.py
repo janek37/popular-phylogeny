@@ -12,6 +12,10 @@ P_TREMULA = Species(name="Populus tremula", local_names={PL: "osika", EN: "aspen
 P_ALBA = Species(
     name="Populus alba", local_names={PL: "topola biała", EN: "silver poplar"}
 )
+P_DELTOIDES = Species(
+    name="Populus deltoides",
+    local_names={EN: "eastern cottonwood, necklace poplar", PL: "topola deltoidalna"},
+)
 P_EDULIS = Species(
     name="Passiflora edulis",
     local_names={EN: "passion fruit", PL: "marakuja, męczennica jadalna"},
@@ -51,7 +55,7 @@ H_PERFORATUM = Species(
 )
 E_COCA = Species(
     name="Erythroxylum coca",
-    local_names={PL: "Krasnodrzew pospolity", EN: "coca"},
+    local_names={PL: "krasnodrzew pospolity", EN: "coca"},
     known_for=[{EN: "cocaine", PL: "kokaina"}, {EN: "Coca-Cola"}],
 )
 M_ESCULENTA = Species(
@@ -70,8 +74,17 @@ L_USITATISSIMUM = Species(
     known_for=[{EN: "linen"}, {EN: "linseed oil", PL: "olej lniany"}],
 )
 
+POPULUS_SECTION_POPULUS = Genus(
+    name="Populus sect. Populus", children=[P_TREMULA, P_ALBA]
+)  # Section
+POPULUS_SECTION_AIGEIROS = Genus(
+    name="Populus sect. Aigeiros", children=[P_DELTOIDES]
+)  # Section
+
 SALIX = Genus(name="Salix", children=[S_ALBA, S_BABYLONICA])
-POPULUS = Genus(name="Populus", children=[P_TREMULA, P_ALBA])
+POPULUS = Genus(
+    name="Populus", children=[POPULUS_SECTION_POPULUS, POPULUS_SECTION_AIGEIROS]
+)
 PASSIFLORA = Genus(name="Passiflora", children=[P_EDULIS, P_INCARNATA])
 RAFFLESIA = Genus(name="Rafflesia", children=[R_ARNOLDII])
 EUPHORBIA = Genus(name="Euphorbia", children=[E_PULCHERRIMA, E_ESULA])

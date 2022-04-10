@@ -33,6 +33,10 @@ S_NUX_VOMICA = Species(
     local_names={PL: "kulczyba wronie oko", EN: "strychnine tree"},
     known_for=[{EN: "strychnine", PL: "strychnina"}],
 )
+N_OLEANDER = Species(
+    name="Nerium oleander",
+    local_names={EN: "oleander, nerium", PL: "oleander pospolity"},
+)
 
 MYOSOTIS = Genus(name="Myosotis", children=[M_SYLVATICA])
 SYMPHYTUM = Genus(name="Symphytum", children=[S_OFFICINALE])
@@ -40,6 +44,7 @@ BORAGO = Genus(name="Borago", children=[B_OFFICINALIS])
 COFFEA = Genus(name="Coffea", children=[C_ARABICA, C_CANEPHORA])
 CINCHONA = Genus(name="Cinchona", children=[C_OFFICINALIS])
 STRYCHNOS = Genus(name="Strychnos", children=[S_NUX_VOMICA])
+NERIUM = Genus(name="Nerium", children=[N_OLEANDER])
 
 ERITRICHIEAE = Tribe(name="Eritrichieae", children=[MYOSOTIS])
 BORAGINEAE = Tribe(name="Boragineae", children=[SYMPHYTUM, BORAGO])
@@ -47,9 +52,12 @@ BORAGINEAE = Tribe(name="Boragineae", children=[SYMPHYTUM, BORAGO])
 BORAGINACEAE = Family(name="Boraginaceae", children=[ERITRICHIEAE, BORAGINEAE])
 RUBIACEAE = Family(name="Rubiaceae", children=[COFFEA, CINCHONA])
 LOGANIACEAE = Family(name="Loganiaceae", children=[STRYCHNOS])
+APOCYNACEAE = Family(name="Apocynaceae", children=[NERIUM])
+
+GENTIANALES_A = Clade(children=[LOGANIACEAE, APOCYNACEAE])
 
 BORAGINALES = Order(name="Boraginales", children=[BORAGINACEAE])
-GENTIANALES = Order(name="Gentianales", children=[RUBIACEAE, LOGANIACEAE])
+GENTIANALES = Order(name="Gentianales", children=[RUBIACEAE, GENTIANALES_A])
 
 # Boraginales and Lamiales may be sisters, but the evidence is weak so far
 LAMIIDS = Clade(

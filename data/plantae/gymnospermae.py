@@ -8,6 +8,11 @@ P_SYLVESTRIS = Species(
     name="Pinus sylvestris",
     local_names={EN: "European red pine", PL: "sosna zwyczajna"},
 )
+P_PINEA = Species(
+    name="Pinus pinea",
+    local_names={EN: "stone pine, umbrella pine", PL: "sosna pinia"},
+    known_for=[{EN: "pine nuts", PL: "orzeszki piniowe"}],
+)
 P_ABIES = Species(
     name="Picea abies", local_names={EN: "European spruce", PL: "świerk pospolity"}
 )
@@ -40,9 +45,13 @@ T_BACCATA = Species(
 G_BILOBA = Species(
     name="Ginkgo biloba", local_names={PL: "miłorząb dwuklapowy", EN: "ginkgo"}
 )
+T_HETEROPHYLLA = Species(
+    name="Tsuga heterophylla",
+    local_names={EN: "western hemlock", PL: "choina zachodnia"},
+)
 
 ABIES = Genus(name="Abies", children=[A_ALBA])
-PINUS = Genus(name="Pinus", children=[P_SYLVESTRIS])
+PINUS = Genus(name="Pinus", children=[P_SYLVESTRIS, P_PINEA])
 PICEA = Genus(name="Picea", children=[P_ABIES])
 LARIX = Genus(name="Larix", children=[L_DECIDUA])
 CEDRUS = Genus(name="Cedrus", children=[C_LIBANI])
@@ -52,16 +61,16 @@ JUNIPERUS = Genus(name="Juniperus", children=[J_COMMUNIS])
 SEQUOIADENDRON = Genus(name="Sequoiadendron", children=[S_GIGANTEUM])
 TAXUS = Genus(name="Taxus", children=[T_BACCATA])
 GINKGO = Genus(name="Ginkgo", children=[G_BILOBA])
-
-PINUS_PICEA = Clade(children=[PINUS, PICEA])
-
-PINACEAE_A = Clade(children=[PINUS_PICEA, LARIX])
-
-ABIETOIDEAE = Clade(name="Abietoideae", children=[ABIES, CEDRUS])
+TSUGA = Genus(name="Tsuga", children=[T_HETEROPHYLLA])
 
 CUPRESSUS_JUNIPERUS = Clade(children=[CUPRESSUS, JUNIPERUS])
+ABIETOIDEAE_A = Clade(children=[ABIES, TSUGA])
 
+ABIETOIDEAE = Subfamily(name="Abietoideae", children=[ABIETOIDEAE_A, CEDRUS])
 CUPRESSOIDEAE = Subfamily(name="Cupressoideae", children=[CUPRESSUS_JUNIPERUS, THUJA])
+
+PINUS_PICEA = Clade(children=[PINUS, PICEA])
+PINACEAE_A = Clade(children=[PINUS_PICEA, LARIX])
 
 PINACEAE = Family(name="Pinaceae", children=[ABIETOIDEAE, PINACEAE_A])
 CUPRESSACEAE = Family(name="Cupressaceae", children=[CUPRESSOIDEAE, SEQUOIADENDRON])

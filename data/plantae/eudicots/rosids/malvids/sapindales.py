@@ -25,6 +25,9 @@ T_RADICANS = Species(
     name="Toxicodendron radicans",
     local_names={EN: "(eastern) poison ivy", PL: "trujący bluszcz, sumak pnący"},
 )
+R_TYPHINA = Species(
+    name="Rhus typhina", local_names={EN: "staghorn sumac", PL: "sumak octowiec"}
+)
 A_HIPPOCASTANUM = Species(
     name="Aesculus hippocastanum",
     local_names={EN: "horse chestnut", PL: "kasztanowiec pospolity"},
@@ -80,6 +83,10 @@ Z_BUNGEANUM = Species(
     },
     known_for=[{EN: "Szechuan sauce"}],
 )
+R_GRAVEOLENS = Species(
+    name="Ruta graveolens",
+    local_names={EN: "common rue, herb-of-grace", PL: "ruta zwyczajna"},
+)
 
 ACER_SECTION_ACER = Clade(
     name="Acer sect. Acer", children=[A_PSEUDOPLATANUS, A_SACCHARUM]
@@ -105,16 +112,19 @@ MANGIFERA = Genus(name="Mangifera", children=[M_INDICA])
 SCHINUS = Genus(name="Schinus", children=[S_MOLLE])
 PISTACIA = Genus(name="Pistacia", children=[P_VERA])
 TOXICODENDRON = Genus(name="Toxicodendron", children=[T_RADICANS])
+RHUS = Genus(name="Rhus", children=[R_TYPHINA])
 AESCULUS = Genus(name="Aesculus", children=[A_HIPPOCASTANUM])
 ACER = Genus(name="Acer", children=[ACER_SECTION_ACER, A_PLATANOIDES])
 LITCHI = Genus(name="Litchi", children=[L_CHINENSIS])
 PAULINIA = Genus(name="Paulinia", children=[P_CUPANA])
 CITRUS = Genus(name="Citrus", children=[CORE_CITRUSES, C_JAPONICA])
 ZANTHOXYLUM = Genus(name="Zanthoxylum", children=[Z_BUNGEANUM])
+RUTA = Genus(name="Ruta", children=[R_GRAVEOLENS])
 
 # https://www.researchgate.net/publication/323561612_Anacardiaceae_Phylogeny_Poster_2018
 ANACORDIOIDEAE_A = Clade(children=[ANACARDIUM, MANGIFERA])
-ANACORDIOIDEAE_B = Clade(children=[TOXICODENDRON, PISTACIA])
+ANACORDIOIDEAE_D = Clade(children=[PISTACIA, RHUS])
+ANACORDIOIDEAE_B = Clade(children=[TOXICODENDRON, ANACORDIOIDEAE_D])
 ANACORDIOIDEAE_C = Clade(children=[ANACORDIOIDEAE_B, SCHINUS])
 
 ANACARDIOIDEAE = Subfamily(
@@ -124,11 +134,14 @@ HIPPOCASTANOIDEAE = Subfamily(name="Hippocastanoideae", children=[AESCULUS, ACER
 SAPINDOIDEAE = Subfamily(name="Sapindoideae", children=[LITCHI, PAULINIA])
 AURANTIOIDEAE = Subfamily(name="Aurantioideae", children=[CITRUS])
 ZANTHOXYLOIDEAE = Subfamily(name="Zanthoxyloideae", children=[ZANTHOXYLUM])
+RUTOIDEAE = Subfamily(name="Rutoideae", children=[RUTA])
+
+RUTACEAE_A = Clade(children=[AURANTIOIDEAE, RUTOIDEAE])
 
 BURSERACEAE = Family(name="Burseraceae", children=[COMMIPHORA])
 ANACARDIACEAE = Family(name="Anacardiaceae", children=[ANACARDIOIDEAE])
 SAPINDACEAE = Family(name="Sapindaceae", children=[HIPPOCASTANOIDEAE, SAPINDOIDEAE])
-RUTACEAE = Family(name="Rutaceae", children=[AURANTIOIDEAE, ZANTHOXYLOIDEAE])
+RUTACEAE = Family(name="Rutaceae", children=[RUTACEAE_A, ZANTHOXYLOIDEAE])
 
 # https://www.researchgate.net/publication/311503129_An_Expanded_Nuclear_Phylogenomic_PCR_Toolkit_for_Sapindales
 SAPINDALES_A = Clade(children=[BURSERACEAE, ANACARDIACEAE])

@@ -66,6 +66,13 @@ P_AUSTRALIS = Species(
     name="Phragmites australis",
     local_names={PL: "trzcina pospolita", EN: "common reed"},
 )
+C_PAPYRUS = Species(
+    name="Cyperus papyrus",
+    local_names={
+        EN: "papyrus, papyrus sedge, paper reed, Indian matting plant, or Nile grass",
+        PL: "trzcina papirusowa, cibora papirusowa",
+    },
+)
 
 TYPHA = Genus(name="Typha", children=[T_LATIFOLIA])
 ANANAS = Genus(name="Ananas", children=[A_COMOSUS])
@@ -83,6 +90,7 @@ CYMBOPOGON = Genus(name="Cymbopogon", children=[C_CITRATUS])
 SORGHUM = Genus(name="Sorghum", children=[S_BICOLOR])
 SACCHARUM = Genus(name="Saccharum", children=[S_OFFICINARUM])
 PHRAGMITES = Genus(name="Phragmites", children=[P_AUSTRALIS])
+CYPERUS = Genus(name="Cyperus", children=[C_PAPYRUS])
 
 POINAE = Subtribe(name="Poinae", children=[POA])
 LOLIINAE = Subtribe(name="Loliinae", children=[FESTUCA])
@@ -133,7 +141,10 @@ PACMAD_CLADE = Clade(name="PACMAD clade", children=[PANICOIDEAE, ARUNDINOIDEAE])
 TYPHACEAE = Family(name="Typhaceae", children=[TYPHA])
 BROMELIACEAE = Family(name="Bromeliaceae", children=[ANANAS])
 POACEAE = Family(name="Poaceae", children=[BOP_CLADE, PACMAD_CLADE])
+CYPERACEAE = Family(name="Cyperaceae", children=[CYPERUS])
 
 BROMELIAD_CLADE = Clade(name="Bromeliad clade", children=[TYPHACEAE, BROMELIACEAE])
 
-POALES = Order(name="Poales", children=[BROMELIAD_CLADE, POACEAE])
+POALES_A = Clade(children=[CYPERACEAE, POACEAE])
+
+POALES = Order(name="Poales", children=[BROMELIAD_CLADE, POALES_A])

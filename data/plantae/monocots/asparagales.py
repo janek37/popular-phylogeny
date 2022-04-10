@@ -9,6 +9,13 @@ V_PLANIFOLIA = Species(
     local_names={EN: "flat-leaved vanilla", PL: "wanilia płaskolistna"},
     known_for=[{EN: "vanilla flavouring"}],
 )
+O_APIFERA = Species(
+    name="Ophrys apifera", local_names={EN: "bee orchid", PL: "dwulistnik pszczeli"}
+)
+C_CALCEOLUS = Species(
+    name="Cypripedium calceolus",
+    local_names={EN: "lady's-slipper orchid", PL: "obuwik pospolity"},
+)
 I_SIBIRICA = Species(
     name="Iris sibirica", local_names={EN: "Siberian iris", PL: "kosaciec syberyjski"}
 )
@@ -78,6 +85,8 @@ ALLIUM_C = Clade(children=[ALLIUM_A, ALLIUM_B])
 
 ORCHIS = Genus(name="Orchis", children=[O_MILITARIS])
 VANILLA = Genus(name="Vanilla", children=[V_PLANIFOLIA])
+OPHRYS = Genus(name="Ophrys", children=[O_APIFERA])
+CYPRIPEDIUM = Genus(name="Cypripedium", children=[C_CALCEOLUS])
 IRIS = Genus(name="Iris", children=[I_SIBIRICA])
 CROCUS = Genus(name="Crocus", children=[C_SATIVUS, C_VERNUS])
 ASPARAGUS = Genus(name="Asparagus", children=[A_OFFICINALIS])
@@ -89,6 +98,9 @@ ALLIUM = Genus(name="Allium", children=[ALLIUM_C, A_URSINUM])
 NARCISSUS = Genus(name="Narcissus", children=[N_POETICUS, N_JONQUILLA])
 GALANTHUS = Genus(name="Galanthus", children=[G_NIVALIS])
 
+ORCHIDOIDEAE = Subfamily(name="Orchidoideae", children=[ORCHIS, OPHRYS])
+VANILLOIDEAE = Subfamily(name="Vanilloideae", children=[VANILLA])
+CYPRIPEDIOIDEAE = Subfamily(name="Cypripedioideae", children=[CYPRIPEDIUM])
 ASPARAGOIDEAE = Subfamily(name="Asparagoideae", children=[ASPARAGUS])
 AGAVOIDEAE = Subfamily(name="Agavoideae", children=[AGAVE])
 NOLINOIDEAE = Subfamily(name="Nolinoideae", children=[CONVALLARIA])
@@ -98,8 +110,9 @@ AMARYLLIDOIDEAE = Subfamily(name="Amaryllidoideae", children=[NARCISSUS, GALANTH
 
 ASPARAGOIDEAE_NOLINOIDEAE = Clade(children=[ASPARAGOIDEAE, NOLINOIDEAE])
 AGAVOIDEAE_SCILLOIDEAE = Clade(children=[AGAVOIDEAE, SCILLOIDEAE])
+ORCHIDEACEAE_A = Clade(children=[ORCHIDOIDEAE, CYPRIPEDIOIDEAE])
 
-ORCHIDEACEAE = Family(name="Orchideaceae", children=[ORCHIS, VANILLA])
+ORCHIDEACEAE = Family(name="Orchideaceae", children=[ORCHIDEACEAE_A, VANILLOIDEAE])
 IRIDACEAE = Family(name="Iridaceae", children=[IRIS, CROCUS])
 ASPARAGACEAE = Family(
     name="Asparagaceae", children=[ASPARAGOIDEAE_NOLINOIDEAE, AGAVOIDEAE_SCILLOIDEAE]

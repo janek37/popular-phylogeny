@@ -57,6 +57,10 @@ C_OVATA = Species(
 V_ALBUM = Species(
     name="Viscum album", local_names={EN: "European mistletoe", PL: "jemioła pospolita"}
 )
+S_ALBUM = Species(
+    name="Santalum album",
+    local_names={EN: "Indian sandalwood", PL: "sandałowiec biały"},
+)
 P_VULGARIS = Species(
     name="Pulsatilla vulgaris",
     local_names={EN: "European pasqueflower", PL: "sasanka zwyczajna"},
@@ -80,6 +84,7 @@ PAEONIA = Genus(name="Paeonia", children=[P_OFFICINALIS])
 RIBES = Genus(name="Ribes", children=[R_UVA_CRISPA, RIBES_SUBGENUS_RIBES])
 CRASSULA = Genus(name="Crassula", children=[C_OVATA])
 VISCUM = Genus(name="Viscum", children=[V_ALBUM])
+SANTALUM = Genus(name="Santalum", children=[S_ALBUM])
 PULSATILLA = Genus(name="Pulsatilla", children=[P_VULGARIS])
 ANEMONE = Genus(name="Anemone", children=[A_CORONARIA])
 BUXUS = Genus(name="Buxus", children=[B_SEMPERVIRENS])
@@ -101,7 +106,7 @@ CRASSULACEAE = Family(name="Crassulaceae", children=[CRASSULA])
 NELUMBONACEAE = Family(name="Nelumbonaceae", children=[NELUMBO])
 PROTEACEAE = Family(name="Proteaceae", children=[MACADAMIA])
 PLATANACEAE = Family(name="Platanaceae", children=[PLATANUS])
-SANTALACEAE = Family(name="Santalaceae", children=[VISCUM])
+SANTALACEAE = Family(name="Santalaceae", children=[VISCUM, SANTALUM])
 BUXACEAE = Family(name="Buxaceae", children=[BUXUS])
 
 GROSSULARIACEAE_CRASSULACEAE = Clade(children=[GROSSULARIACEAE, CRASSULACEAE])

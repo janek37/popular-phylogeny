@@ -24,6 +24,10 @@ I_VERUM = Species(
 M_VIRGINIANA = Species(
     name="Magnolia virginiana", local_names={EN: "sweetbay magnolia"}
 )
+L_TULIPIFERA = Species(
+    name="Liriodendron tulipifera",
+    local_names={EN: "American tulip tree", PL: "tulipanowiec amerykański"},
+)
 M_FRAGRANS = Species(
     name="Myristica fragrans",
     known_for=[
@@ -59,6 +63,7 @@ P_METHYSTICUM = Species(
 NYMPHAEA = Genus(name="Nymphaea", children=[N_ALBA])
 ILLICIUM = Genus(name="Illicium", children=[I_VERUM])
 MAGNOLIA = Genus(name="Magnolia", children=[M_VIRGINIANA])
+LIRIODENDRON = Genus(name="Liriodendron", children=[L_TULIPIFERA])
 MYRISTICA = Genus(name="Myristica", children=[M_FRAGRANS])
 LAURUS = Genus(name="Laurus", children=[L_NOBILIS])
 CINNAMOMUM = Genus(name="Cinnamomum", children=[C_VERUM, C_CAMPHORA])
@@ -71,7 +76,7 @@ LAURUS_CINNAMOMUM = Clade(children=[LAURUS, CINNAMOMUM])
 
 NYMPHAEACEAE = Family(name="Nymphaeaceae", children=[NYMPHAEA])
 SCHISANDRACEAE = Family(name="Schisandraceae", children=[ILLICIUM])
-MAGNOLIACEAE = Family(name="Magnoliaceae", children=[MAGNOLIA])
+MAGNOLIACEAE = Family(name="Magnoliaceae", children=[MAGNOLIA, LIRIODENDRON])
 MYRISTICACEAE = Family(name="Myristicaceae", children=[MYRISTICA])
 LAURACEAE = Family(name="Lauraceae", children=[LAURUS_CINNAMOMUM, PERSEA])
 PIPERACEAE = Family(name="Piperaceae", children=[PIPER])
