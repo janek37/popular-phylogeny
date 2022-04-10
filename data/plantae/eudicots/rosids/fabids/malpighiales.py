@@ -1,4 +1,4 @@
-from clade import Clade, Family, Genus, Order, Species, Subfamily
+from clade import Clade, Family, Genus, Order, Species, Subfamily, Subgenus
 from constants import EN, PL
 
 S_ALBA = Species(
@@ -36,6 +36,25 @@ E_PULCHERRIMA = Species(
 E_ESULA = Species(
     name="Euphorbia esula",
     local_names={PL: "wilczomlecz lancetowaty", EN: "leafy spurge"},
+)
+E_MILII = Species(
+    name="Euphorbia milii",
+    local_names={
+        EN: "crown of thorns, Christ plant",
+        PL: "korona cierniowa, wilczomlecz lśniący, wilczomlecz okazały",
+    },
+)
+E_EPITHYMOIDES = Species(
+    name="Euphorbia epithymoides",
+    local_names={EN: "cushion spurge", PL: "wilczomlecz złocisty, wilczomlecz pstry"},
+)
+E_TRIGONA = Species(
+    name="Euphorbia trigona",
+    local_names={
+        EN: "African milk tree, cathedral cactus, Abyssinian euphorbia, high chaparall",
+        PL: "wilczomlecz trójżebrowy",
+    },
+    known_for=[{EN: "one of the cactus-like euphorbias"}],
 )
 H_BRASILIENSIS = Species(
     name="Hevea brasiliensis",
@@ -81,13 +100,28 @@ POPULUS_SECTION_AIGEIROS = Genus(
     name="Populus sect. Aigeiros", children=[P_DELTOIDES]
 )  # Section
 
+EUPHORBIA_SUBGENUS_CHAMAESYCE = Subgenus(
+    name="Euphorbia subg. Chamaesyce", children=[E_PULCHERRIMA]
+)
+EUPHORBIA_SUBGENUS_ESULA = Subgenus(
+    name="Euphorbia subg. Esula", children=[E_ESULA, E_EPITHYMOIDES]
+)
+EUPHORBIA_SUBGENUS_EUPHORBIA = Subgenus(
+    name="Euphorbia subg. Euphorbia", children=[E_MILII, E_TRIGONA]
+)
+
+# https://www.semanticscholar.org/paper/Molecular-phylogeny-of-Euphorbia-subg.-Esula-sect.-Barres-Vilatersana/9b11a4173a044abfe1303714a82106d511e1dcd1
+EUPHORBIA_A = Clade(
+    children=[EUPHORBIA_SUBGENUS_CHAMAESYCE, EUPHORBIA_SUBGENUS_EUPHORBIA]
+)
+
 SALIX = Genus(name="Salix", children=[S_ALBA, S_BABYLONICA])
 POPULUS = Genus(
     name="Populus", children=[POPULUS_SECTION_POPULUS, POPULUS_SECTION_AIGEIROS]
 )
 PASSIFLORA = Genus(name="Passiflora", children=[P_EDULIS, P_INCARNATA])
 RAFFLESIA = Genus(name="Rafflesia", children=[R_ARNOLDII])
-EUPHORBIA = Genus(name="Euphorbia", children=[E_PULCHERRIMA, E_ESULA])
+EUPHORBIA = Genus(name="Euphorbia", children=[EUPHORBIA_A, EUPHORBIA_SUBGENUS_ESULA])
 HEVEA = Genus(name="Hevea", children=[H_BRASILIENSIS])
 VIOLA = Genus(name="Viola", children=[V_ODORATA, V_WITTROCKIANA])
 HYPERICUM = Genus(name="Hypericum", children=[H_PERFORATUM])
