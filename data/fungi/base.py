@@ -69,6 +69,10 @@ C_PURPUREA = Species(
     local_names={PL: "buławinka czerwona"},
     known_for=[{EN: "ergot", PL: "sporysz"}],
 )
+O_UNILATERALIS = Species(
+    name="Ophiocordyceps unilateralis",
+    known_for=[{EN: "controlling the behavior of infected ants"}],
+)
 
 PENICILLIUM_SECTION = Clade(children=[P_DIGITATUM, P_EXPANSUM])
 
@@ -87,6 +91,7 @@ TUBER = Genus(name="Tuber", children=[T_MAGNATUM])
 CLADONIA = Genus(name="Cladonia", children=[C_ARBUSCULA])
 FLAVOPARMELIA = Genus(name="Flavoparmelia", children=[F_CAPERATA])
 CLAVICEPS = Genus(name="Claviceps", children=[C_PURPUREA])
+OPHIOCORDYCEPS = Genus(name="Ophiocordyceps", children=[O_UNILATERALIS])
 
 STACHYBOTRYACEAE = Family(name="Stachybotryaceae", children=[STACHYBOTRYS])
 TRICHOCOMACEAE = Family(name="Trichocomaceae", children=[ASPERGILLUS, PENICILLIUM])
@@ -99,9 +104,11 @@ TUBERACEAE = Family(name="Tuberaceae", children=[TUBER])
 CLADONIACEAE = Family(name="Cladoniaceae", children=[CLADONIA])
 PARMELIACEAE = Family(name="Parmeliaceae", children=[FLAVOPARMELIA])
 CLAVICIPITACEAE = Family(name="Clavicipitaceae", children=[CLAVICEPS])
+OPHIOCORDYCIPITACEAE = Family(name="Ophiocordycipitaceae", children=[OPHIOCORDYCEPS])
 
 # https://www.researchgate.net/publication/325346148_Introgression_and_gene_family_contraction_drive_the_evolution_of_lifestyle_and_host_shifts_of_hypocrealean_fungi
-HYPOCREALES_A = Clade(children=[HYPOCREACEAE, CLAVICIPITACEAE])
+HYPOCREALES_B = Clade(children=[CLAVICIPITACEAE, OPHIOCORDYCIPITACEAE])
+HYPOCREALES_A = Clade(children=[HYPOCREACEAE, HYPOCREALES_B])
 
 HYPOCREALES = Order(name="Hypocreales", children=[STACHYBOTRYACEAE, HYPOCREALES_A])
 EUROTIALES = Order(name="Eurotiales", children=[TRICHOCOMACEAE])

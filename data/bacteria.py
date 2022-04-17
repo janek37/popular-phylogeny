@@ -53,6 +53,10 @@ G_LITHOPHORA = Species(
     name="Gloeomargarita lithophora",
     known_for=[{EN: "possibly the closest relative of chloroplasts"}],
 )
+P_MARINUS = Species(
+    name="Prochlorococcus marinus",
+    known_for=[{EN: "probably the most common photosyntetic organism"}],
+)
 S_AUREUS = Species(
     name="Staphylococcus aureus",
     local_names={PL: "gronkowiec złocisty"},
@@ -83,6 +87,7 @@ NEISSERIA = Genus(name="Neisseria", children=[N_GONORRHOEAE])
 CHLAMYDIA = Genus(name="Chlamydia", children=[C_TRACHOMATIS])
 RICKETTSIA = Genus(name="Rickettsia", children=[R_PROWAZEKII])
 GLOEOMARGARITA = Genus(name="Gloeomargarita", children=[G_LITHOPHORA])
+PROCHLOROCOCCUS = Genus(name="Prochlorococcus", children=[P_MARINUS])
 STAPHYLOCOCCUS = Genus(name="Staphylococcus", children=[S_AUREUS])
 THIOMARGARITA = Genus(name="Thiomargarita", children=[T_NAMIBIENSIS])
 LACTOBACILLUS = Genus(
@@ -104,6 +109,7 @@ NEISSERIACEAE = Family(name="Neisseriaceae", children=[NEISSERIA])
 RICKETTSIACEAE = Family(name="Rickettsiaceae", children=[RICKETTSIA])
 CHLAMYDIACEAE = Family(name="Chlamydiaceae", children=[CHLAMYDIA])
 GLOEOMARGARITACEAE = Family(name="Gloeomargaritaceae", children=[GLOEOMARGARITA])
+PROCHLORACEAE = Family(name="Prochloraceae", children=[PROCHLOROCOCCUS])
 STAPHYLOCOCCACEAE = Family(name="Staphylococcaceae", children=[STAPHYLOCOCCUS])
 THIOTRICHACEAE = Family(name="Thiotrichaceae", children=[THIOMARGARITA])
 LACTOBACILLACEAE = Family(name="Lactobacillaceae", children=[LACTOBACILLUS])
@@ -120,6 +126,7 @@ NEISSERIALES = Order(name="Neisseriales", children=[NEISSERIACEAE])
 CHLAMYDIALES = Order(name="Chlamydiales", children=[CHLAMYDIACEAE])
 RICKETTSIALES = Order(name="Rickettsiales", children=[RICKETTSIACEAE])
 GLOEOMARGARITALES = Order(name="Gloeomargaritales", children=[GLOEOMARGARITACEAE])
+SYNECHOCOCCALES = Order(name="Synechococcales", children=[PROCHLORACEAE])
 THIOTRICHALES = Order(name="Thiotrichales", children=[THIOTRICHACEAE])
 LACTOBACILLALES = Order(
     name="Lactobacillales",
@@ -138,6 +145,7 @@ BACILLI = Class(name="Bacilli", children=[BACILLALES, LACTOBACILLALES])
 ACTINOMYCETIA = Class(name="Actinomycetia", children=[MYCOBACTERIALES])
 CLOSTRIDIA = Class(name="Clostridia", children=[CLOSTRIDIALES])
 ALPHAPROTEOBACTERIA = Class(name="Alphaproteobacteria", children=[RICKETTSIALES])
+CYANOPHYCEAE = Class(name="Cyanophyceae", children=[SYNECHOCOCCALES])
 
 BETA_GAMMA_PROTEOBACTERIA = Clade(children=[GAMMAPROTEOBACTERIA, BETAPROTEOBACTERIA])
 
@@ -148,7 +156,7 @@ FIRMICUTES = Phylum(name="Firmicutes", children=[BACILLI, CLOSTRIDIA])
 ACTINOBACTERIA = Phylum(name="Actinobacteria", children=[ACTINOMYCETIA])
 SPIROCHAETES = Phylum(name="Spirochaetes", children=[SPIROCHAETALES])
 CHLAMYDIAE = Phylum(name="Chlamydiae", children=[CHLAMYDIALES])
-CYANOBACTERIA = Phylum(name="Cyanobacteria", children=[GLOEOMARGARITALES])
+CYANOBACTERIA = Phylum(name="Cyanobacteria", children=[GLOEOMARGARITALES, CYANOPHYCEAE])
 
 PLANCTOBACTERIA = Superphylum(name="Planctobacteria", children=[CHLAMYDIAE])
 

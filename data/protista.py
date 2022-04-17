@@ -22,9 +22,17 @@ F_VESICULOSUS = Species(
     local_names={EN: "bladder wrack", PL: "morszczyn pęcherzykowaty"},
 )
 U_PINNATIFIDA = Species(name="Undaria pinnatifida", local_names={EN: "wakame"})
+M_PYRIFERA = Species(
+    name="Macrocystis pyrifera",
+    local_names={EN: "giant kelp, bladder kelp", PL: "wielkomorszcz gruszkonośny"},
+)
 B_PAXILLIFER = Species(
     name="Bacillaria paxillifer",
     known_for=[{EN: "one of the thousands of diatom species"}],
+)
+T_PSEUDONANA = Species(
+    name="Thalassiosira pseudonana",
+    known_for=[{EN: "the first marine phytoplankton to have its genome sequenced"}],
 )
 T_BRUCEI = Species(
     name="Trypanosoma brucei",
@@ -41,7 +49,9 @@ PHYSARUM = Genus(name="Physarum", children=[P_POLYCEPHALUM])
 PAULINELLA = Genus(name="Paulinella", children=[P_CHROMATOPHORA])
 FUCUS = Genus(name="Fucus", children=[F_VESICULOSUS])
 UNDARIA = Genus(name="Undaria", children=[U_PINNATIFIDA])
+MACROCYSTIS = Genus(name="Macrocystis", children=[M_PYRIFERA])
 BACILLARIA = Genus(name="Bacillaria", children=[B_PAXILLIFER])
+THALASSIOSIRA = Genus(name="Thalassiosira", children=[T_PSEUDONANA])
 TRYPANOSOMA = Genus(name="Trypanosoma", children=[T_BRUCEI])
 
 PLASMODIIDAE = Family(name="Plasmodiidae", children=[PLASMODIUM])
@@ -52,7 +62,9 @@ PHYSARACEAE = Family(name="Physaraceae", children=[FULIGO, PHYSARUM])
 PAULINELLIDAE = Family(name="Paulinellidae", children=[PAULINELLA])
 FUCACEAE = Family(name="Fucaceae", children=[FUCUS])
 ALARIACEAE = Family(name="Alariaceae", children=[UNDARIA])
+LAMINARIACEAE = Family(name="Laminariaceae", children=[MACROCYSTIS])
 BACILLARIACEAE = Family(name="Bacillariaceae", children=[BACILLARIA])
+THALASSIOSIRACEAE = Family(name="Thalassiosiraceae", children=[THALASSIOSIRA])
 TRYPANOSOMATIDAE = Family(name="Trypanosomatidae", children=[TRYPANOSOMA])
 
 HAEMOSPORORIDA = Order(name="Haemospororida", children=[PLASMODIIDAE])
@@ -62,8 +74,9 @@ TUBULINIDA = Order(name="Tubulinida", children=[AMOEBIDAE])
 PHYSARALES = Order(name="Physarales", children=[PHYSARACEAE])
 EUGLYPHIDA = Order(name="Euglyphida", children=[PAULINELLIDAE])
 FUCALES = Order(name="Fucales", children=[FUCACEAE])
-LAMINARIALES = Order(name="Laminariales", children=[ALARIACEAE])
+LAMINARIALES = Order(name="Laminariales", children=[ALARIACEAE, LAMINARIACEAE])
 BACILLARIALES = Order(name="Bacillariales", children=[BACILLARIACEAE])
+THALASSIOSIRALES = Order(name="Thalassiosirales", children=[THALASSIOSIRACEAE])
 TRYPANOSOMATIDA = Order(name="Trypanosomatida", children=[TRYPANOSOMATIDAE])
 
 ACONOIDASIDA = Class(name="Aconoidasida", children=[HAEMOSPORORIDA])
@@ -72,7 +85,9 @@ TUBULINEA = Class(name="Tubulinea", children=[TUBULINIDA])
 MYXOGASTRIA = Class(name="Myxogastria", children=[PHYSARALES])
 IMBRICATEA = Class(name="Imbricatea", children=[EUGLYPHIDA])
 PHAEOPHYCEAE = Class(name="Phaeophyceae", children=[FUCALES, LAMINARIALES])
-BACILLARIAPHYCEAE = Class(name="Bacillariaphyceae", children=[BACILLARIALES])
+BACILLARIAPHYCEAE = Class(
+    name="Bacillariaphyceae", children=[BACILLARIALES, THALASSIOSIRALES]
+)
 KINETOPLASTEA = Class(name="Kinetoplastea", children=[TRYPANOSOMATIDA])
 
 CILIOPHORA = Phylum(name="Ciliophora", children=[OLIGOHYMENOPHOREA])
