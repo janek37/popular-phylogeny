@@ -6,7 +6,7 @@ import pytest
 
 import clade
 from clade import Species
-from data.base import LIFE
+from data import LIFE
 
 
 @pytest.fixture
