@@ -1,7 +1,9 @@
 import abc
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import ClassVar, List, Mapping, Sequence
+from typing import ClassVar, List, Mapping, Optional, Sequence
+
+from image import Image
 
 
 class Rank(Enum):
@@ -230,6 +232,7 @@ class Superspecies(Clade):
 class Species(BaseClade):
     rank = Rank.SPECIES
     extinct: bool = False
+    image: Optional[Image] = None
 
     @property
     def is_extinct(self) -> bool:
