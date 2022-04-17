@@ -10,37 +10,139 @@ from clade import (
     Superphylum,
 )
 from constants import EN, LA, PL
+from image import Image, License
 
-E_COLI = Species(name="Escherichia coli", local_names={PL: "Pałeczka okrężnicy"})
-S_ENTERICA = Species(
-    name="Salmonella enterica", known_for=[{PL: "dur brzuszny", EN: "typhoid fever"}]
+E_COLI = Species(
+    name="Escherichia coli",
+    local_names={PL: "Pałeczka okrężnicy"},
+    image=Image(
+        image_url="https://upload.wikimedia.org/wikipedia/commons/3/32/EscherichiaColi_NIAID.jpg",
+        url="https://commons.wikimedia.org/wiki/File:EscherichiaColi_NIAID.jpg",
+        author="Rocky Mountain Laboratories, NIAID, NIH",
+        license=License.NIH,
+    ),
 )
-
+S_ENTERICA = Species(
+    name="Salmonella enterica",
+    known_for=[{PL: "dur brzuszny", EN: "typhoid fever"}],
+    image=Image(
+        image_url="https://upload.wikimedia.org/wikipedia/commons/2/27/Salmonella_enterica_serovar_typhimurium_01.jpg",
+        url="https://commons.wikimedia.org/wiki/File:Salmonella_enterica_serovar_typhimurium_01.jpg",
+        author="CDC",
+        license=License.CDC,
+    ),
+)
 Y_PESTIS = Species(
     name="Yersinia pestis",
     local_names={PL: "Pałeczka dżumy"},
     known_for=[{EN: "bubonic plague", PL: "dżuma"}],
+    image=Image(
+        image_url="https://upload.wikimedia.org/wikipedia/commons/d/d0/Yersinia_pestis.jpg",
+        url="https://commons.wikimedia.org/wiki/File:Yersinia_pestis.jpg",
+        author="Rocky Mountain Laboratories, NIAID, NIH",
+        license=License.NIH,
+    ),
 )
-V_CHOLERAE = Species(name="Vibrio cholerae")
-B_ANTHRACIS = Species(name="Bacillus anthracis", local_names={PL: "Laseczka wąglika"})
+V_CHOLERAE = Species(
+    name="Vibrio cholerae",
+    known_for=[{EN: "cholera", PL: "cholera"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Vibrio_cholerae.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/f/f6/Vibrio_cholerae.jpg",
+        author="Tom Kirn, Ron Taylor, Louisa Howard - Dartmouth Electron Microscope Facility",
+        license=License.DARTHMOUTH,
+    ),
+)
+B_ANTHRACIS = Species(
+    name="Bacillus anthracis",
+    local_names={PL: "Laseczka wąglika"},
+    known_for=[{EN: "anthrax", PL: "wąglik"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Bacillus_anthracis.png",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/1/12/Bacillus_anthracis.png",
+        author="CDC",
+        license=License.CDC,
+    ),
+)
 M_TUBERCULOSIS = Species(
-    name="Mycobacterium tuberculosis", local_names={PL: "Prątek gruźlicy"}
+    name="Mycobacterium tuberculosis",
+    local_names={PL: "Prątek gruźlicy"},
+    known_for=[{EN: "tuberculosis", PL: "gruźlica"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Mycobacterium_tuberculosis.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/c/cb/Mycobacterium_tuberculosis.jpg",
+        author="CDC/ Janice Carr",
+        license=License.CDC,
+    ),
 )
-C_TETANI = Species(name="Clostridium tetani", local_names={PL: "Laseczka tężca"})
+C_TETANI = Species(
+    name="Clostridium tetani",
+    local_names={PL: "Laseczka tężca"},
+    known_for=[{EN: "tetanus", PL: "tężec"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Clostridium_tetani_01.png",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/c/c7/Clostridium_tetani_01.png",
+        author="CDC",
+        license=License.CDC,
+    ),
+)
 C_BOTULINUM = Species(
-    name="Clostridium botulinum", local_names={PL: "Laseczka jadu kiełbasianego"}
+    name="Clostridium botulinum",
+    local_names={PL: "Laseczka jadu kiełbasianego"},
+    known_for=[
+        {
+            EN: "botulinum toxin, Botox",
+            PL: "jad kiełbasiany, toksyna botulinowa, botulina",
+        }
+    ],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Clostridium_botulinum_01.png",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/5/58/Clostridium_botulinum_01.png",
+        author="CDC",
+        license=License.CDC,
+    ),
 )
 T_PALLIDUM = Species(
     name="Treponema pallidum",
     local_names={PL: "Krętek blady"},
     known_for=[{PL: "kiła", LA: "syphilis"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:TreponemaPallidum.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/1/16/TreponemaPallidum.jpg",
+        author="CDC/ Dr. David Cox",
+        license=License.CDC,
+    ),
 )
 N_GONORRHOEAE = Species(
-    name="Neisseria gonorrhoeae", local_names={PL: "Dwoinka rzeżączki"}
+    name="Neisseria gonorrhoeae",
+    local_names={PL: "Dwoinka rzeżączki"},
+    known_for=[{EN: "gonorrhoea", PL: "rzeżączka"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Gonococcal_urethritis_PHIL_4085_lores.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/2/2e/Gonococcal_urethritis_PHIL_4085_lores.jpg",
+        author="CDC/ Joe Millar",
+        license=License.CDC,
+    ),
 )
-C_TRACHOMATIS = Species(name="Chlamydia trachomatis")
+C_TRACHOMATIS = Species(
+    name="Chlamydia trachomatis",
+    known_for=[{EN: "chlamydia", PL: "chlamydioza"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Chlamydia_trachomatis.tif",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/3/36/Chlamydia_trachomatis.tif",
+        author="Centers for Disease Control and Prevention / Dr. E. Arum; Dr. N. Jacobs",
+        license=License.CDC,
+    ),
+)
 B_BURGDORFERI = Species(
-    name="Borrelia burgdorferi", known_for=[{EN: "Lyme disease", PL: "borelioza"}]
+    name="Borrelia burgdorferi",
+    known_for=[{EN: "Lyme disease", PL: "borelioza"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Lyme_disease_parasite_Borrelia_burgdorferi.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/1/1d/Lyme_disease_parasite_Borrelia_burgdorferi.jpg",
+        author="CDC/ Claudia Molins",
+        license=License.CDC,
+    ),
 )
 R_PROWAZEKII = Species(
     name="Rickettsia prowazekii",
@@ -48,23 +150,57 @@ R_PROWAZEKII = Species(
         {EN: "epidemic fever", PL: "tyfus plamisty"},
         {EN: "possibly one of the closest relatives of proto-mitochondria"},
     ],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:19028_lores.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/d/d3/19028_lores.jpg",
+        author="CDC/ Cornelius B. Philip, National Institute of Allergy and Infectious Diseases, "
+        "Rocky Mountain Lab., Hamilton, Montana",
+        license=License.CDC,
+    ),
 )
 G_LITHOPHORA = Species(
     name="Gloeomargarita lithophora",
     known_for=[{EN: "possibly the closest relative of chloroplasts"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Minerals-06-00010-g005b.png",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/b/b8/Minerals-06-00010-g005b.png",
+        author="Jinhua Li, Isabel Margaret Oliver, Nithavong Cam, Thomas Boudier, Marine Blondeau, "
+        "Eric Leroy, Julie Cosmidis, Feriel Skouri-Panet, Jean-Michel Guigner, Céline Férard, "
+        "Melanie Poinsot, David Moreira, Purificacion Lopez-Garcia, Corinne Cassier-Chauvat, "
+        "Franck Chauvat, Karim Benzerara",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 P_MARINUS = Species(
     name="Prochlorococcus marinus",
     known_for=[{EN: "probably the most common photosyntetic organism"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Prochlorococcus_marinus_(cropped).jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/6/67/Prochlorococcus_marinus_%28cropped%29.jpg",
+        author="Luke Thompson from Chisholm Lab and Nikki Watson from Whitehead, MIT",
+        license=License.CC0,
+    ),
 )
 S_AUREUS = Species(
     name="Staphylococcus aureus",
     local_names={PL: "gronkowiec złocisty"},
     known_for=[{EN: "MRSA (methicillin-resistant Staphylococcus aureus)"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Staphylococcus_aureus_VISA_2.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/d/d3/Staphylococcus_aureus_VISA_2.jpg",
+        author="CDC/ Matthew J. Arduino, DRPH; Photo Credit: Janice Haney Carr",
+        license=License.CDC,
+    ),
 )
 T_NAMIBIENSIS = Species(
     name="Thiomargarita namibiensis",
     known_for=[{EN: "the largest known bacteria, visible to the naked eye"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Sulphide_bacteria_crop.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/4/40/Sulphide_bacteria_crop.jpg",
+        author="NASA",
+        license=License.NASA,
+    ),
 )
 L_ACIDOPHILUS = Species(
     name="Lactobacillus acidophilus",
@@ -72,6 +208,12 @@ L_ACIDOPHILUS = Species(
         {EN: "one of the most common probiotic bacteria in dairy products"},
         {EN: "part of vaginal microbiota"},
     ],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Lactobacillus_acidophilus_SEM.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/6/61/Lactobacillus_acidophilus_SEM.jpg",
+        author="Mogana Das Murtey and Patchamuthu Ramasamy",
+        license=License.CC_BY_SA_3_0,
+    ),
 )
 
 ESCHERICHIA = Genus(name="Escherichia", children=[E_COLI])
