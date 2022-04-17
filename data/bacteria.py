@@ -14,7 +14,7 @@ from image import Image, License
 
 E_COLI = Species(
     name="Escherichia coli",
-    local_names={PL: "Pałeczka okrężnicy"},
+    local_names={PL: "pałeczka okrężnicy"},
     image=Image(
         image_url="https://upload.wikimedia.org/wikipedia/commons/3/32/EscherichiaColi_NIAID.jpg",
         url="https://commons.wikimedia.org/wiki/File:EscherichiaColi_NIAID.jpg",
@@ -34,7 +34,7 @@ S_ENTERICA = Species(
 )
 Y_PESTIS = Species(
     name="Yersinia pestis",
-    local_names={PL: "Pałeczka dżumy"},
+    local_names={PL: "pałeczka dżumy"},
     known_for=[{EN: "bubonic plague", PL: "dżuma"}],
     image=Image(
         image_url="https://upload.wikimedia.org/wikipedia/commons/d/d0/Yersinia_pestis.jpg",
@@ -55,7 +55,7 @@ V_CHOLERAE = Species(
 )
 B_ANTHRACIS = Species(
     name="Bacillus anthracis",
-    local_names={PL: "Laseczka wąglika"},
+    local_names={PL: "laseczka wąglika"},
     known_for=[{EN: "anthrax", PL: "wąglik"}],
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Bacillus_anthracis.png",
@@ -66,7 +66,7 @@ B_ANTHRACIS = Species(
 )
 M_TUBERCULOSIS = Species(
     name="Mycobacterium tuberculosis",
-    local_names={PL: "Prątek gruźlicy"},
+    local_names={PL: "prątek gruźlicy"},
     known_for=[{EN: "tuberculosis", PL: "gruźlica"}],
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Mycobacterium_tuberculosis.jpg",
@@ -77,7 +77,7 @@ M_TUBERCULOSIS = Species(
 )
 C_TETANI = Species(
     name="Clostridium tetani",
-    local_names={PL: "Laseczka tężca"},
+    local_names={PL: "laseczka tężca"},
     known_for=[{EN: "tetanus", PL: "tężec"}],
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Clostridium_tetani_01.png",
@@ -88,7 +88,7 @@ C_TETANI = Species(
 )
 C_BOTULINUM = Species(
     name="Clostridium botulinum",
-    local_names={PL: "Laseczka jadu kiełbasianego"},
+    local_names={PL: "laseczka jadu kiełbasianego"},
     known_for=[
         {
             EN: "botulinum toxin, Botox",
@@ -104,7 +104,7 @@ C_BOTULINUM = Species(
 )
 T_PALLIDUM = Species(
     name="Treponema pallidum",
-    local_names={PL: "Krętek blady"},
+    local_names={PL: "krętek blady"},
     known_for=[{PL: "kiła", LA: "syphilis"}],
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:TreponemaPallidum.jpg",
@@ -115,7 +115,7 @@ T_PALLIDUM = Species(
 )
 N_GONORRHOEAE = Species(
     name="Neisseria gonorrhoeae",
-    local_names={PL: "Dwoinka rzeżączki"},
+    local_names={PL: "dwoinka rzeżączki"},
     known_for=[{EN: "gonorrhoea", PL: "rzeżączka"}],
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Gonococcal_urethritis_PHIL_4085_lores.jpg",

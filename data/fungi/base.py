@@ -20,7 +20,7 @@ A_ORYZAE = Species(
     name="Aspergillus oryzae", known_for=[{EN: "sake"}, {EN: "soy sauce"}, {EN: "miso"}]
 )
 P_CAMEMBERTI = Species(
-    name="Penicillium camemberti", known_for=[{EN: "Camembert"}, {EN: "Brie"}]
+    name="Penicillium camemberti", known_for=[{EN: "camembert"}, {EN: "brie"}]
 )
 P_CHRYSOGENUM = Species(name="Penicillium chrysogenum", known_for=[{EN: "penicilin"}])
 P_DIGITATUM = Species(

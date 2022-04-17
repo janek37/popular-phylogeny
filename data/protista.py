@@ -2,9 +2,9 @@ from clade import Clade, Class, Family, Genus, Order, Phylum, Species, Superphyl
 from constants import EN, PL
 
 P_MALARIAE = Species(name="Plasmodium malariae", known_for=[{EN: "malaria"}])
-P_CAUDATUM = Species(name="Paramecium caudatum", local_names={PL: "Pantofelek"})
+P_CAUDATUM = Species(name="Paramecium caudatum", local_names={PL: "pantofelek"})
 T_VAGINALIS = Species(
-    name="Trichomonas vaginalis", local_names={PL: "Rzęsistek pochwowy"}
+    name="Trichomonas vaginalis", local_names={PL: "rzęsistek pochwowy"}
 )
 A_PROTEUS = Species(name="Amoeba proteus")
 F_SEPTICA = Species(name="Fuligo septica", local_names={EN: "dog vomit slime mold"})

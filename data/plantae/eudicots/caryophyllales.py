@@ -13,7 +13,7 @@ B_VULGARIS = Species(
     local_names={EN: "beet", PL: "burak zwyczajny"},
     known_for=[
         {EN: "sugar beet", PL: "burak cukrowy"},
-        {EN: "Mangelwurzel", PL: "burak pastweny"},
+        {EN: "mangelwurzel", PL: "burak pastewny"},
         {EN: "chard", PL: "boćwina, burak liściowy"},
     ],
 )

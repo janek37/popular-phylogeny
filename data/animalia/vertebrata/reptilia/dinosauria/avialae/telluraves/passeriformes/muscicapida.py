@@ -14,7 +14,7 @@ L_MEGARHYNCHOS = Species(
 )
 S_SIALIS = Species(
     name="Sialia sialis",
-    local_names={EN: "Eastern bluebird", PL: "błękitnik rudogardły"},
+    local_names={EN: "eastern bluebird", PL: "błękitnik rudogardły"},
 )
 T_PHILOMELOS = Species(
     name="Turdus philomelos", local_names={EN: "song thrush", PL: "drozd śpiewak"}

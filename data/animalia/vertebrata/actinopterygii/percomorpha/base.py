@@ -16,7 +16,7 @@ T_THYNNUS = Species(
 )
 T_ALBACARES = Species(
     name="Thunnus albacares",
-    local_names={EN: "Yellowfin tuna", PL: "tuńczyk żółtopłetwy"},
+    local_names={EN: "yellowfin tuna", PL: "tuńczyk żółtopłetwy"},
 )
 K_PELAMIS = Species(
     name="Katsuwonus pelamis",

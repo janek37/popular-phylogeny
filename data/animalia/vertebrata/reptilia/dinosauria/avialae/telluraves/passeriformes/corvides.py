@@ -26,7 +26,7 @@ C_MONEDULA = Species(
     name="Coloeus monedula", local_names={EN: "western jackdaw", PL: "kawka zwyczajna"}
 )
 G_GLANDARIUS = Species(
-    name="Garrulus glandarius", local_names={EN: "Eursasian jay", PL: "sójka zwyczajna"}
+    name="Garrulus glandarius", local_names={EN: "Eurasian jay", PL: "sójka zwyczajna"}
 )
 P_PICA = Species(
     name="Pica pica",

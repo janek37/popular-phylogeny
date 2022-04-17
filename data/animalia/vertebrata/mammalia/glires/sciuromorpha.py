@@ -16,11 +16,11 @@ S_VULGARIS = Species(
 )
 S_CAROLINENSIS = Species(
     name="Sciurus carolinensis",
-    local_names={EN: "Eastern gray squirrel", PL: "wiewiórka szara"},
+    local_names={EN: "eastern gray squirrel", PL: "wiewiórka szara"},
 )
 G_VOLANS = Species(
     name="Glaucomys volans",
-    local_names={EN: "Southern flying squirrel", PL: "assapan południowy"},
+    local_names={EN: "southern flying squirrel", PL: "assapan południowy"},
 )
 P_VOLANS = Species(
     name="Pteromys volans",

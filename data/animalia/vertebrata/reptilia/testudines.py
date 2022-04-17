@@ -32,7 +32,7 @@ C_VANDENBURGHI = Species(
 )
 L_OLIVACEA = Species(
     name="Lepidochelys olivacea",
-    local_names={EN: "Olive ridley sea turtle", PL: "żółw oliwkowy"},
+    local_names={EN: "olive ridley sea turtle", PL: "żółw oliwkowy"},
     known_for=[{EN: "the most common sea turtle"}],
 )
 C_SERPENTINA = Species(
