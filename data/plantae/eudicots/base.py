@@ -68,6 +68,14 @@ P_VULGARIS = Species(
 A_CORONARIA = Species(
     name="Anemone coronaria", local_names={EN: "poppy anemone", PL: "zawilec wieńcowy"}
 )
+N_SATIVA = Species(
+    name="Nigella sativa",
+    local_names={
+        EN: "black caraway, black cumin, kalonji, fennel flower",
+        PL: "czarnuszka siewna",
+    },
+    known_for=[{EN: "black onion seeds"}],
+)
 B_SEMPERVIRENS = Species(
     name="Buxus sempervirens", local_names={EN: "common box", PL: "bukszpan zwyczajny"}
 )
@@ -87,17 +95,20 @@ VISCUM = Genus(name="Viscum", children=[V_ALBUM])
 SANTALUM = Genus(name="Santalum", children=[S_ALBUM])
 PULSATILLA = Genus(name="Pulsatilla", children=[P_VULGARIS])
 ANEMONE = Genus(name="Anemone", children=[A_CORONARIA])
+NIGELLA = Genus(name="Nigella", children=[N_SATIVA])
 BUXUS = Genus(name="Buxus", children=[B_SEMPERVIRENS])
 
 RANUNCULEAE = Tribe(name="Ranunculeae", children=[RANUNCULUS])
 DELPHINIEAE = Tribe(name="Delphinieae", children=[ACONITUM])
 ANEMONEAE = Tribe(name="Anemoneae", children=[PULSATILLA, ANEMONE])
+NIGELLEAE = Tribe(name="Nigelleae", children=[NIGELLA])
 
 # https://www.researchgate.net/publication/339299453_Ranunculaceae_Phylogeny_Poster_RanPP_2020V3a
-RANUNCULEAE_ANEMONEAE = Clade(children=[RANUNCULEAE, ANEMONEAE])
+RANUNCULACEAE_A = Clade(children=[RANUNCULEAE, ANEMONEAE])
+RANUNCULACEAE_B = Clade(children=[DELPHINIEAE, NIGELLEAE])
 
 RANUNCULACEAE = Family(
-    name="Ranunculaceae", children=[RANUNCULEAE_ANEMONEAE, DELPHINIEAE]
+    name="Ranunculaceae", children=[RANUNCULACEAE_A, RANUNCULACEAE_B]
 )
 PAPAVERACEAE = Family(name="Papaveraceae", children=[PAPAVER])
 PAEONIACEAE = Family(name="Paeoniaceae", children=[PAEONIA])
