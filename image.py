@@ -4,11 +4,12 @@ from typing import Optional
 
 
 class License(Enum):
-    PUBLIC_DOMAIN = "Public domain"
+    PUBLIC_DOMAIN = "Public Domain"
     CDC = "Public Domain by Centers for Disease Control and Prevention"
     DARTHMOUTH = "Public Domain by Dartmouth Electron Microscope Facility"
     NIH = "Public Domain by National Institutes of Health"
     NASA = "Public Domain by the National Aeronautics and Space Administration"
+    NOAA = "Public Domain by National Oceanic and Atmospheric Administration"
     CC_BY_2_0 = "Creative Commons Attribution 2.0 Generic"
     CC_BY_2_5 = "Creative Commons Attribution 2.5 Generic"
     CC_BY_3_0 = "Creative Commons Attribution 3.0 Unported"
