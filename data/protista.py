@@ -133,6 +133,16 @@ T_BRUCEI = Species(
         license=License.CC_BY_SA_4_0,
     ),
 )
+B_CANIS = Species(
+    name="Babesia canis",
+    known_for=[{EN: "babesiosis in dogs", PL: "babeszjoza psów"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Babesia-canis-dog.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/c/cd/Babesia-canis-dog.jpg",
+        author="Alan R Walker",
+        license=License.CC_BY_SA_3_0,
+    ),
+)
 
 PLASMODIUM = Genus(name="Plasmodium", children=[P_MALARIAE])
 PARAMECIUM = Genus(name="Paramecium", children=[P_CAUDATUM])
@@ -147,6 +157,7 @@ MACROCYSTIS = Genus(name="Macrocystis", children=[M_PYRIFERA])
 BACILLARIA = Genus(name="Bacillaria", children=[B_PAXILLIFER])
 THALASSIOSIRA = Genus(name="Thalassiosira", children=[T_PSEUDONANA])
 TRYPANOSOMA = Genus(name="Trypanosoma", children=[T_BRUCEI])
+BABESIA = Genus(name="Babesia", children=[B_CANIS])
 
 PLASMODIIDAE = Family(name="Plasmodiidae", children=[PLASMODIUM])
 PARAMECIIDAE = Family(name="Parameciidae", children=[PARAMECIUM])
@@ -160,6 +171,7 @@ LAMINARIACEAE = Family(name="Laminariaceae", children=[MACROCYSTIS])
 BACILLARIACEAE = Family(name="Bacillariaceae", children=[BACILLARIA])
 THALASSIOSIRACEAE = Family(name="Thalassiosiraceae", children=[THALASSIOSIRA])
 TRYPANOSOMATIDAE = Family(name="Trypanosomatidae", children=[TRYPANOSOMA])
+BABESIIDAE = Family(name="Babesiidae", children=[BABESIA])
 
 HAEMOSPORORIDA = Order(name="Haemospororida", children=[PLASMODIIDAE])
 PENICULIDA = Order(name="Peniculida", children=[PARAMECIIDAE])
@@ -172,8 +184,9 @@ LAMINARIALES = Order(name="Laminariales", children=[ALARIACEAE, LAMINARIACEAE])
 BACILLARIALES = Order(name="Bacillariales", children=[BACILLARIACEAE])
 THALASSIOSIRALES = Order(name="Thalassiosirales", children=[THALASSIOSIRACEAE])
 TRYPANOSOMATIDA = Order(name="Trypanosomatida", children=[TRYPANOSOMATIDAE])
+PIROPLASMIDA = Order(name="Piroplasmida", children=[BABESIIDAE])
 
-ACONOIDASIDA = Class(name="Aconoidasida", children=[HAEMOSPORORIDA])
+ACONOIDASIDA = Class(name="Aconoidasida", children=[HAEMOSPORORIDA, PIROPLASMIDA])
 OLIGOHYMENOPHOREA = Class(name="Oligohymenophorea", children=[PENICULIDA])
 TUBULINEA = Class(name="Tubulinea", children=[TUBULINIDA])
 MYXOGASTRIA = Class(name="Myxogastria", children=[PHYSARALES])
