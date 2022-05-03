@@ -58,6 +58,13 @@ C_EUROPAEUS = Species(
         PL: "lelek kozodój, lelek zwyczajny",
     },
 )
+F_ATRA = Species(
+    name="Fulica atra",
+    local_names={
+        EN: "Eurasian coot, common coot, Australian coot",
+        PL: "łyska zwyczajna",
+    },
+)
 
 CUCULUS = Genus(name="Cuculus", children=[C_CANORUS])
 GEOCOCCYX = Genus(name="Geococcyx", children=[G_CALIFORNIANUS])
@@ -71,6 +78,7 @@ ARCHILOCHUS = Genus(name="Archilochus", children=[A_COLUBRIS])
 MELLISUGA = Genus(name="Mellisuga", children=[M_HELENAE])
 APUS = Genus(name="Apus", children=[A_APUS])
 CAPRIMULGUS = Genus(name="Caprimulgus", children=[C_EUROPAEUS])
+FULICA = Genus(name="Fulica", children=[F_ATRA])
 
 CUCULIDAE = Family(name="Cuculidae", children=[CUCULUS, GEOCOCCYX])
 GRUIDAE = Family(name="Gruidae", children=[GRUS])
@@ -81,12 +89,13 @@ ALCIDAE = Family(name="Alcidae", children=[FRATERCULA])
 TROCHILIDAE = Family(name="Trochilidae", children=[ARCHILOCHUS, MELLISUGA])
 APODIDAE = Family(name="Apodidae", children=[APUS])
 CAPRIMULGIDAE = Family(name="Caprimulgidae", children=[CAPRIMULGUS])
+RALLIDAE = Family(name="Rallidae", children=[FULICA])
 
 CHARADRIIFORMES_B = Clade(children=[LARIDAE, ALCIDAE])
 CHARADRIIFORMES_A = Clade(children=[CHARADRIIFORMES_B, SCOLOPACIDAE])
 
 CUCULIFORMES = Order(name="Cuculiformes", children=[CUCULIDAE])
-GRUIFORMES = Order(name="Gruiformes", children=[GRUIDAE])
+GRUIFORMES = Order(name="Gruiformes", children=[GRUIDAE, RALLIDAE])
 CHARADRIIFORMES = Order(
     name="Charadriiformes", children=[CHARADRIIFORMES_A, CHARADRIIDAE]
 )
