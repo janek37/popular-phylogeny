@@ -1,5 +1,6 @@
 from clade import Clade, Cohort, Family, Genus, Order, Species, Superorder
 from constants import EN, PL
+from image import Image, License
 
 from .blattodea import BLATTODEA
 from .orthoptera import ORTHOPTERA
@@ -7,15 +8,33 @@ from .orthoptera import ORTHOPTERA
 F_AURICULARIA = Species(
     name="Forficula auricularia",
     local_names={EN: "common earwig", PL: "skorek pospolity"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Forficula_auricularia_Piazzo_04.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/3/38/Forficula_auricularia_Piazzo_04.jpg",
+        author="Syrio",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 M_RELIGIOSA = Species(
     name="Mantis religiosa",
     local_names={EN: "praying mantis, European mantis", PL: "modliszka zwyczajna"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:European_mantis_(female)_watercolour.png",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/1/1c/European_mantis_%28female%29_watercolour.png",
+        author="Lisa Nicvert",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 S_SIPYLUS = Species(
     name="Sipyloidea sipylus",
     local_names={EN: "pink winged stick insect", PL: "patyczak skrzydlaty"},
     known_for=[{EN: "the most widespread walking stick in the world"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Sipyloidea_sipylus.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/a/a9/Sipyloidea_sipylus.jpg",
+        author="Drägüs",
+        license=License.CC_BY_SA_3_0,
+    ),
 )
 
 FORFICULA = Genus(name="Forficula", children=[F_AURICULARIA])

@@ -10,6 +10,7 @@ from clade import (
     Superorder,
 )
 from constants import EN, PL
+from image import Image, License
 
 from .coleoptera import COLEOPTERA
 from .diptera import DIPTERA
@@ -21,7 +22,14 @@ from .polyneoptera import POLYNEOPTERA
 from .siphonaptera import SIPHONAPTERA
 
 L_SACCHARINUM = Species(
-    name="Lepisma saccharinum", local_names={EN: "silverfish", PL: "rybik cukrowy"}
+    name="Lepisma saccharinum",
+    local_names={EN: "silverfish", PL: "rybik cukrowy"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Lepisma_saccharina_4.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/d/d5/Lepisma_saccharina_4.jpg",
+        author="Iblis-Lakon",
+        license=License.CC_BY_SA_3_0,
+    ),
 )
 
 LEPISMA = Genus(name="Lepisma", children=[L_SACCHARINUM])
