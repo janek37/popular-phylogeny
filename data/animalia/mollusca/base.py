@@ -1,11 +1,21 @@
 from clade import Clade, Class, Family, Genus, Order, Phylum, Species
 from constants import EN
+from image import Image, License
 
 from .bivalvia import BIVALVIA
 from .cephalopoda import CEPHALOPODA
 from .gastropoda import GASTROPODA
 
-C_GLAUCUS = Species(name="Chiton glaucus", local_names={EN: "blue green chiton"})
+C_GLAUCUS = Species(
+    name="Chiton glaucus",
+    local_names={EN: "blue green chiton"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Chiton_glaucus_by_Ken-ichi_Ueda.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/0/0e/Chiton_glaucus_by_Ken-ichi_Ueda.jpg",
+        author="Ken-ichi Ueda",
+        license=License.CC_BY_4_0,
+    ),
+)
 
 CHITON = Genus(name="Chiton", children=[C_GLAUCUS])
 

@@ -14,17 +14,38 @@ from clade import (
     Tribe,
 )
 from constants import EN, PL
+from image import Image, License
 
 # region HETEROBRANCHIA
 H_POMATIA = Species(
-    name="Helix pomatia", local_names={EN: "Roman snail", PL: "ślimak winniczek"}
+    name="Helix pomatia",
+    local_names={EN: "Roman snail", PL: "ślimak winniczek"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Helix_pomatia-adult3.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/d/d9/Helix_pomatia-adult3.jpg",
+        author="Darijanus",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 C_ASPERSUM = Species(
-    name="Cornu aspersum", local_names={EN: "garden snail", PL: "ślimak szary"}
+    name="Cornu aspersum",
+    local_names={EN: "garden snail", PL: "ślimak szary"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Cornu_aspersum008.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/2/2a/Cornu_aspersum008.jpg",
+        author="Luis nunes alberto",
+        license=License.CC_BY_SA_3_0,
+    ),
 )
 L_MAXIMUS = Species(
     name="Limax maximus",
     local_names={EN: "great grey slug, leopard slug", PL: "pomrów wielki"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Limax_maximus_5.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/9/9e/Limax_maximus_5.jpg",
+        author="Michal Maňas",
+        license=License.CC_BY_2_5,
+    ),
 )
 L_FULICA = Species(
     name="Lissachatina fulica",
@@ -34,23 +55,54 @@ L_FULICA = Species(
         {EN: "most invasive snail species"},
         {EN: "giant pet snail"},
     ],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Escargot_sur_un_pneu_%C3%A0_Kamsar.jpg",
+        image_url="https://commons.wikimedia.org/wiki/File:Escargot_sur_un_pneu_%C3%A0_Kamsar.jpg",
+        author="Aboubacarkhoraa",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 E_CHLOROTICA = Species(
     name="Elysia chlorotica",
     local_names={EN: "eastern emerald elysia"},
     known_for=[{EN: "photosynthetic leaf-like sea slug"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Elysia_chlorotica_0176_(35425743063).jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/3/37/Elysia_chlorotica_0176_%2835425743063%29.jpg",
+        author="Smithsonian Environmental Research Center",
+        license=License.CC_BY_2_0,
+    ),
 )
 C_KUROSHIMAE = Species(
     name="Costasiella kuroshimae",
     local_names={EN: "leaf slug, leaf sheep", PL: "morska owieczka"},
     known_for=[{EN: "photosyntetic sheep-like sea slug"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Costasiella_Kuroshimae_(19080120525)_(2).jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/4/47/Costasiella_Kuroshimae_%2819080120525%29_%282%29.jpg",
+        author="alif_abdulrahman",
+        license=License.CC_BY_SA_2_0,
+    ),
 )
 G_ATLANTICUS = Species(
-    name="Glaucus atlanticus", local_names={EN: "blue sea dragon", PL: "niebieski smok"}
+    name="Glaucus atlanticus",
+    local_names={EN: "blue sea dragon", PL: "niebieski smok"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Blue_dragon-glaucus_atlanticus_(8599051974).jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/5/57/Blue_dragon-glaucus_atlanticus_%288599051974%29.jpg",
+        author="Sylke Rohrlach from Sydney",
+        license=License.CC_BY_SA_2_0,
+    ),
 )
 C_ELISABETHINA = Species(
     name="Chromodoris elisabethina",
     known_for=[{EN: "one of more recognisable nudibranchs"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Chromodoris_elisabethina_1.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/6/63/Chromodoris_elisabethina_1.jpg",
+        author="David Burdick",
+        license=License.NOAA,
+    ),
 )
 
 HELIX = Genus(name="Helix", children=[H_POMATIA])
