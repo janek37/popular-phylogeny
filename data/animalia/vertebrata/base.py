@@ -11,6 +11,7 @@ from clade import (
     Superclass,
 )
 from constants import EN, PL
+from image import Image, License
 
 from .actinopterygii import ACTINOPTERYGII
 from .amphibia import AMPHIBIA
@@ -22,9 +23,22 @@ from .reptilia import REPTILIA
 M_GLUTINOSA = Species(
     name="Myxine glutinosa",
     local_names={EN: "Atlantic hagfish", PL: "śluzica pospolita"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Myxine_glutinosa_Gervais.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/d/dc/Myxine_glutinosa_Gervais.jpg",
+        author="Gervais et Boulart",
+        license=License.PUBLIC_DOMAIN,
+    ),
 )
 P_MARINUS = Species(
-    name="Petromyzon marinus", local_names={EN: "sea lamprey", PL: "minóg morski"}
+    name="Petromyzon marinus",
+    local_names={EN: "sea lamprey", PL: "minóg morski"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Petromyzon_marinus.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/2/28/Petromyzon_marinus.jpg",
+        author="Ellen Edmonson",
+        license=License.PUBLIC_DOMAIN,
+    ),
 )
 
 MYXINE = Genus(name="Myxine", children=[M_GLUTINOSA])
@@ -46,6 +60,12 @@ AGNATHA = Infraphylum(name="Agnatha", children=[MYXINI, HYPEROARTIA])
 L_CHALUMNAE = Species(
     name="Latimeria chalumnae",
     local_names={EN: "West Indian Ocean coelacanth, gombessa", PL: "latimeria"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Coelacanth_model,_Devonian_-_Houston_Museum_of_Natural_Science_-_DSC01709_(white_background).png",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/f/fc/Coelacanth_model%2C_Devonian_-_Houston_Museum_of_Natural_Science_-_DSC01709_%28white_background%29.png",
+        author="Daderot",
+        license=License.CC0,
+    ),
 )
 N_FORSTERI = Species(
     name="Neoceratodus forsteri",
@@ -53,8 +73,23 @@ N_FORSTERI = Species(
         EN: "Australian lungfish, Queensland lungfish, Burnett salmon, barramunda",
         PL: "barramunda, rogoząb australijski",
     },
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Neoceratodus_forsteri,_2014-09-19.JPG",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/1/1f/Neoceratodus_forsteri%2C_2014-09-19.JPG",
+        author="https://upload.wikimedia.org/wikipedia/commons/1/1f/Neoceratodus_forsteri%2C_2014-09-19.JPG",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
-D_LIMBATUS = Species(name="Dimetrodon limbatus", extinct=True)
+D_LIMBATUS = Species(
+    name="Dimetrodon limbatus",
+    extinct=True,
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Dimetrodon_grandis_3D_Model_Reconstruction.png",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/5/51/Dimetrodon_grandis_3D_Model_Reconstruction.png",
+        author="Max Bellomio",
+        license=License.CC_BY_SA_4_0,
+    ),
+)
 
 LATIMERIA = Genus(name="Latimeria", children=[L_CHALUMNAE])
 NEOCERATODUS = Genus(name="Neoceratodus", children=[N_FORSTERI])
