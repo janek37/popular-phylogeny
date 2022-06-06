@@ -10,6 +10,7 @@ from clade import (
     Superorder,
 )
 from constants import EN, PL
+from image import Image, License
 
 from .cypriniformes import CYPRINIFORMES
 
@@ -20,20 +21,44 @@ C_HARENGUS = Species(
         EN: "Atlantic herring",
         PL: "śledź pospolity, śledź atlantycki, śledź oceaniczny",
     },
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Clupea_harengus_Gervais.flipped.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/c/c5/Clupea_harengus_Gervais.flipped.jpg",
+        author="Gervais et Boulart, 1877",
+        license=License.PUBLIC_DOMAIN,
+    ),
 )
 S_PILCHARDUS = Species(
     name="Sardina pilchardus",
     local_names={EN: "European pilchard", PL: "sardynka europejska"},
     known_for=[{EN: "sardines"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Sardina_pilchardus_Gervais.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/7/78/Sardina_pilchardus_Gervais.jpg",
+        author="Gervais et Boulart, 1877",
+        license=License.PUBLIC_DOMAIN,
+    ),
 )
 S_SPRATTUS = Species(
     name="Sprattus sprattus",
     local_names={EN: "European sprat", PL: "szprot, sardynka norweska"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Sprattus_sprattus_Gervais.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/1/1a/Sprattus_sprattus_Gervais.jpg",
+        author="Gervais et Boulart, 1877",
+        license=License.PUBLIC_DOMAIN,
+    ),
 )
 E_ENCRASICOLUS = Species(
     name="Engraulis encrasicolus",
     local_names={EN: "European anchovy", PL: "sardela europejska"},
     known_for=[{EN: "traditional pizza topping"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Engraulis_encrasicolus_Gervais_flipped.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/f/f0/Engraulis_encrasicolus_Gervais_flipped.jpg",
+        author="Gervais et Boulart, 1877",
+        license=License.PUBLIC_DOMAIN,
+    ),
 )
 
 CLUPEA = Genus(name="Clupea", children=[C_HARENGUS])

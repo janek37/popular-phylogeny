@@ -12,6 +12,8 @@ class License(Enum):
     NOAA = "Public Domain by National Oceanic and Atmospheric Administration"
     USDA = "Public Domain by United States Department of Agriculture"
     FMIB = "Public Domain by Freshwater and Marine Image Bank, University of Washington"
+    FWS = "Public Domain by United States Fish and Wildlife Service"
+    USPOSTAL = "Public Domain by United Stated Postal Service"
     ATTRIBUTION = "Attribution Only"
     CC_BY_2_0 = "Creative Commons Attribution 2.0 Generic"
     CC_BY_2_5 = "Creative Commons Attribution 2.5 Generic"

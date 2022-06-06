@@ -10,6 +10,7 @@ from clade import (
     Superorder,
 )
 from constants import EN, PL
+from image import Image, License
 
 from .acanthomorpha import ACANTHOMORPHA
 from .otocephala import OTOCEPHALA
@@ -17,30 +18,70 @@ from .protacanthopterygii import PROTACANTHOPTERYGII
 from .stomiati import STOMIATI
 
 A_ANGUILLA = Species(
-    name="Anguilla anguilla", local_names={EN: "European eel", PL: "węgorz europejski"}
+    name="Anguilla anguilla",
+    local_names={EN: "European eel", PL: "węgorz europejski"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:FMIB_35739_Anguilla_vulgaris_--_Anguilla.jpeg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/e/ed/FMIB_35739_Anguilla_vulgaris_--_Anguilla.jpeg",
+        author="Felice Supino",
+        license=License.PUBLIC_DOMAIN,
+    ),
 )
 M_HELENA = Species(
     name="Muraena helena",
     local_names={EN: "Mediterranean moray, Roman eel", PL: "murena śródziemnomorska"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Murenahelena.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/b/bb/Murenahelena.jpg",
+        author="steven van tendeloo",
+        license=License.CC_BY_SA_3_0,
+    ),
 )
-H_ALOSOIDES = Species(name="Hiodon alosoides", local_names={EN: "goldeye"})
+H_TERGISUS = Species(
+    name="Hiodon tergisus",
+    local_names={EN: "mooneye"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Hiodon_tergisus_NOAA.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/1/1d/Hiodon_tergisus_NOAA.jpg",
+        author="United States Great Lakes Environmental Research Laboratory",
+        license=License.NOAA,
+    ),
+)
 A_GIGAS = Species(
     name="Arapaima gigas",
     local_names={EN: "arapaima, pirarucu", PL: "arapaima"},
     known_for=[{EN: "one of the largest freshwater fish"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Arapaimidae_Arapaima_gigas_2.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/e/e8/Arapaimidae_Arapaima_gigas_2.jpg",
+        author="NasserHalaweh",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 G_PETERSII = Species(
     name="Gnathonemus petersii",
     local_names={EN: "Peters's elephantnose fish", PL: "trąbonos, mruk Petersa"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Gnathonemus_petersii.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/4/42/Gnathonemus_petersii.jpg",
+        author="Billycorgan84 at Italian Wikipedia",
+        license=License.PUBLIC_DOMAIN,
+    ),
 )
 M_PUNCTATUM = Species(
     name="Myctophum punctatum",
     local_names={EN: "spotted lanternfish", PL: "świetlik tępogłowy"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Myctophum_punctatum1.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/b/b7/Myctophum_punctatum1.jpg",
+        author="Emma Kissling",
+        license=License.PUBLIC_DOMAIN,
+    ),
 )
 
 ANGUILLA = Genus(name="Anguilla", children=[A_ANGUILLA])
 MURAENA = Genus(name="Muraena", children=[M_HELENA])
-HIODON = Genus(name="Hiodon", children=[H_ALOSOIDES])
+HIODON = Genus(name="Hiodon", children=[H_TERGISUS])
 ARAPAIMA = Genus(name="Arapaima", children=[A_GIGAS])
 GNATHONEMUS = Genus(name="Gnathonemus", children=[G_PETERSII])
 MYCTOPHUM = Genus(name="Myctophum", children=[M_PUNCTATUM])
