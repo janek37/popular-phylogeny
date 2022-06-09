@@ -1,4 +1,4 @@
-from clade import Clade, Family, Genus, Order, Species
+from clade import Clade, Family, Genus, Order, Species, Superfamily
 from constants import EN, PL
 
 L_DIMIDIATUS = Species(
@@ -77,6 +77,10 @@ D_HYSTRIX = Species(
         PL: "rybojeż, jeżoryb, najeżka, jeżówka, diodon jeżyk",
     },
 )
+M_SALMOIDES = Species(
+    name="Micropterus salmoides",
+    local_names={EN: "largemouth bass", PL: "bass wielkogębowy"},
+)
 
 LABROIDES = Genus(name="Labroides", children=[L_DIMIDIATUS])
 SANDER = Genus(name="Sander", children=[S_VITREUS, S_LUCIOPERCA])
@@ -92,6 +96,7 @@ CERATIAS = Genus(name="Ceratias", children=[C_HOLBOELLI])
 MOLA = Genus(name="Mola", children=[M_MOLA])
 TAKIFUGU = Genus(name="Takifugu", children=[T_RUBRIPES])
 DIODON = Genus(name="Diodon", children=[D_HYSTRIX])
+MICROPTERUS = Genus(name="Micropterus", children=[M_SALMOIDES])
 
 LABRIDAE = Family(name="Labridae", children=[LABROIDES])
 PERCIDAE = Family(name="Percidae", children=[SANDER, PERCA])
@@ -106,6 +111,9 @@ CERATIIDAE = Family(name="Ceratiidae", children=[CERATIAS])
 MOLIDAE = Family(name="Molidae", children=[MOLA])
 TETRAODONTIDAE = Family(name="Tetraodontidae", children=[TAKIFUGU])
 DIODONTIDAE = Family(name="Diodontidae", children=[DIODON])
+CENTRARCHIDAE = Family(name="Centrarchidae", children=[MICROPTERUS])
+
+PERCOIDEA = Superfamily(name="Percoidea", children=[PERCIDAE, CENTRARCHIDAE])
 
 # https://bmcecolevol.biomedcentral.com/articles/10.1186/s12862-017-0958-3
 PERCIFORMES_A = Clade(children=[SCORPAENIDAE, PSYCHROLUTIDAE])
@@ -113,7 +121,7 @@ PERCIFORMES_A = Clade(children=[SCORPAENIDAE, PSYCHROLUTIDAE])
 TETRAODONTIFORMES_A = Clade(children=[TETRAODONTIDAE, DIODONTIDAE])
 
 LABRIFORMES = Order(name="Labriformes", children=[LABRIDAE])
-PERCIFORMES = Order(name="Perciformes", children=[PERCIDAE, PERCIFORMES_A])
+PERCIFORMES = Order(name="Perciformes", children=[PERCOIDEA, PERCIFORMES_A])
 SPARIFORMES = Order(name="Spariformes", children=[SPARIDAE])
 ACANTHURIFORMES = Order(name="Acanthuriformes", children=[ACANTHURIDAE, SCIAENIDAE])
 LOPHIIFORMES = Order(name="Lophiiformes", children=[LOPHIIDAE, CERATIIDAE])
