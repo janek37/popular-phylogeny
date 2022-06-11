@@ -17,6 +17,7 @@ class License(Enum):
     ATTRIBUTION = "Attribution Only"
     CC_BY_2_0 = "Creative Commons Attribution 2.0 Generic"
     CC_BY_2_5 = "Creative Commons Attribution 2.5 Generic"
+    CC_BY_2_5_ES = "Creative Commons Attribution 2.5 Spain"
     CC_BY_3_0 = "Creative Commons Attribution 3.0 Unported"
     CC_BY_3_0_US = "Creative Commons Attribution 3.0 United States"
     CC_BY_4_0 = "Creative Commons Attribution 4.0 International"

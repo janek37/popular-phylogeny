@@ -1,28 +1,67 @@
 from clade import Clade, Family, Genus, Order, Species
 from constants import EN, PL
+from image import Image, License
 
 S_BARRACUDA = Species(
     name="Sphyraena barracuda",
     local_names={EN: "great barracuda", PL: "barrakuda wielka"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Sphyraenidae_-_Sphyraena_barracuda_(Great_barracuda).JPG",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/c/c5/Sphyraenidae_-_Sphyraena_barracuda_%28Great_barracuda%29.JPG",
+        author="Hectonichus",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 X_GLADIUS = Species(
-    name="Xiphias gladius", local_names={EN: "swordfish", PL: "miecznik, włócznik"}
+    name="Xiphias gladius",
+    local_names={EN: "swordfish", PL: "miecznik, włócznik"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Swordfish-Xiphias_gladius.png",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/5/56/Swordfish-Xiphias_gladius.png",
+        author="NOAA Photo Library",
+        license=License.NOAA,
+    ),
 )
 I_PLATYPTERUS = Species(
     name="Istiophorus platypterus",
     local_names={EN: "Indo-Pacific sailfish", PL: "żaglica"},
     known_for=[{EN: "one of the fastest fish in the ocean"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Naturalis_Biodiversity_Center_-_RMNH.ART.194_-_Istiophorus_platypterus_(Shaw_and_Nodder)_-_Kawahara_Keiga_-_1823_-_1829_-_Siebold_Collection_-_new_version.jpeg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/6/65/Naturalis_Biodiversity_Center_-_RMNH.ART.194_-_Istiophorus_platypterus_%28Shaw_and_Nodder%29_-_Kawahara_Keiga_-_1823_-_1829_-_Siebold_Collection_-_new_version.jpeg",
+        author="Kawahara Keiga",
+        license=License.PUBLIC_DOMAIN,
+    ),
 )
 P_FLESUS = Species(
     name="Platichthys flesus",
     local_names={EN: "European flounder", PL: "flądra, stornia"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Platichthys_flesus2.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/a/a1/Platichthys_flesus2.jpg",
+        author="Krüger",
+        license=License.PUBLIC_DOMAIN,
+    ),
 )
 H_HIPPOGLOSSUS = Species(
     name="Hippoglossus hippoglossus",
     local_names={EN: "Atlantic halibut", PL: "halibut atlantycki"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Hippoglossus_hippoglossus1.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/a/a0/Hippoglossus_hippoglossus1.jpg",
+        author="Krüger",
+        license=License.PUBLIC_DOMAIN,
+    ),
 )
 S_SOLEA = Species(
-    name="Solea solea", local_names={EN: "common sole", PL: "sola zwyczajna"}
+    name="Solea solea",
+    local_names={EN: "common sole", PL: "sola zwyczajna"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:FMIB_51246_Common_Sole_(Solea_vulgaris).jpeg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/1/11/FMIB_51246_Common_Sole_%28Solea_vulgaris%29.jpeg",
+        author="Reinhold Thiele",
+        license=License.FMIB,
+    ),
 )
 C_HIPPURUS = Species(
     name="Coryphaena hippurus",
@@ -30,6 +69,12 @@ C_HIPPURUS = Species(
         EN: "mahi-mahi, common dolphinfish",
         PL: "złota makrela, smagla, koryfena",
     },
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Coryphaena_hippurus.png",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/d/d2/Coryphaena_hippurus.png",
+        author="Unknown author",
+        license=License.NOAA,
+    ),
 )
 
 SPHYRAENA = Genus(name="Sphyraena", children=[S_BARRACUDA])
