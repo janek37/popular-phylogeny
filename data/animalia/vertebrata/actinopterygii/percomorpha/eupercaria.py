@@ -1,5 +1,5 @@
 from clade import Clade, Family, Genus, Order, Species, Superfamily
-from constants import EN, PL
+from constants import EN, PL, URL
 from image import Image, License
 
 L_DIMIDIATUS = Species(
@@ -59,7 +59,12 @@ P_VOLITANS = Species(
 P_MARCIDUS = Species(
     name="Psychrolutes marcidus",
     local_names={EN: "smooth-head blobfish"},
-    known_for=[{EN: "internet meme"}],
+    known_for=[
+        {
+            EN: "internet meme",
+            URL: "https://knowyourmeme.com/search?context=images&q=Blobfish",
+        }
+    ],
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Psychrolutes_marcidus.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/1/15/Psychrolutes_marcidus.jpg",

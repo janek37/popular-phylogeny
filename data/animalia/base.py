@@ -10,7 +10,7 @@ from clade import (
     Subphylum,
     Superphylum,
 )
-from constants import EN, PL
+from constants import EN, PL, URL
 from image import Image, License
 
 from .cnidaria import CNIDARIA
@@ -22,7 +22,12 @@ from .vertebrata import VERTEBRATA
 A_FISTULARIS = Species(
     name="Aplysina fistularis",
     local_names={EN: "yellow sponge"},
-    known_for=[{EN: "SpongeBob SquarePants"}],
+    known_for=[
+        {
+            EN: "SpongeBob SquarePants",
+            URL: "https://spongebob.fandom.com/wiki/SpongeBob_SquarePants_(character)",
+        }
+    ],
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Reef3859_-_Flickr_-_NOAA_Photo_Library.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/b/b6/Reef3859_-_Flickr_-_NOAA_Photo_Library.jpg",
