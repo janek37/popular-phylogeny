@@ -12,6 +12,7 @@ from clade import (
     Superorder,
 )
 from constants import EN, PL
+from image import Image, License
 
 from .afrotheria import AFROTHERIA
 from .chiroptera import CHIROPTERA
@@ -26,11 +27,23 @@ from .xenarthra import XENARTHRA
 O_ANATINUS = Species(
     name="Ornithorhynchus anatinus",
     local_names={EN: "platypus", PL: "dziobak australijski"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Genera_mammalium_Ornithorhynchus_anatinus.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/2/2e/Genera_mammalium_Ornithorhynchus_anatinus.jpg",
+        author="Cabrera, Angel",
+        license=License.PUBLIC_DOMAIN,
+    ),
 )
 T_ACULEATUS = Species(
     name="Tachyglossus aculeatus",
     local_names={EN: "short-beaked echidna", PL: "kolczatka australijska"},
     known_for=[{EN: "Knuckles from Sonic franchise"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Tachyglossus_aculeatus_ssp._aculeatus.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/8/8f/Tachyglossus_aculeatus_ssp._aculeatus.jpg",
+        author="Elspeth Swan",
+        license=License.CC_BY_4_0,
+    ),
 )
 
 ORNITHORHYNCHUS = Genus(name="Ornithorhynchus", children=[O_ANATINUS])
