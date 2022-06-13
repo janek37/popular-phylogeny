@@ -215,6 +215,16 @@ L_ACIDOPHILUS = Species(
         license=License.CC_BY_SA_3_0,
     ),
 )
+H_PYLORI = Species(
+    name="Helicobacter pylori",
+    known_for=[{EN: "peptic ulcer disease", PL: "choroba wrzodowa"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Helicobacter_pylori_diagram.png",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/7/76/Helicobacter_pylori_diagram.png",
+        author="Y tambe",
+        license=License.CC_BY_SA_3_0,
+    ),
+)
 
 ESCHERICHIA = Genus(name="Escherichia", children=[E_COLI])
 SALMONELLA = Genus(name="Salmonella", children=[S_ENTERICA])
@@ -237,6 +247,7 @@ LACTOBACILLUS = Genus(
     children=[L_ACIDOPHILUS],
     local_names={PL: "pałeczki kwasu mlekowego"},
 )
+HELICOBACTER = Genus(name="Helicobacter", children=[H_PYLORI])
 
 ENTEROBACTERIACEAE = Family(
     name="Enterobacteriaceae", children=[ESCHERICHIA, SALMONELLA]
@@ -255,6 +266,7 @@ PROCHLORACEAE = Family(name="Prochloraceae", children=[PROCHLOROCOCCUS])
 STAPHYLOCOCCACEAE = Family(name="Staphylococcaceae", children=[STAPHYLOCOCCUS])
 THIOTRICHACEAE = Family(name="Thiotrichaceae", children=[THIOMARGARITA])
 LACTOBACILLACEAE = Family(name="Lactobacillaceae", children=[LACTOBACILLUS])
+HELICOBACTERACEAE = Family(name="Helicobacteraceae", children=[HELICOBACTER])
 
 ENTEROBACTERALES = Order(
     name="Enterobacterales", children=[ENTEROBACTERIACEAE, YERSINIACEAE]
@@ -275,6 +287,7 @@ LACTOBACILLALES = Order(
     children=[LACTOBACILLACEAE],
     local_names={EN: "lactic acid bacteria", PL: "bakterie kwasu mlekowego"},
 )
+CAMPYLOBACTERALES = Order(name="Campylobacterales", children=[HELICOBACTERACEAE])
 
 # https://www.researchgate.net/publication/23983123_Phylogenomics_and_protein_signatures_elucidating_the_evolutionary_relationships_among_the_Gammaproteobacteria
 GAMMAPROTEOBACTERIA_A = Clade(children=[ENTEROBACTERALES, VIBRIONALES])
@@ -288,6 +301,7 @@ ACTINOMYCETIA = Class(name="Actinomycetia", children=[MYCOBACTERIALES])
 CLOSTRIDIA = Class(name="Clostridia", children=[CLOSTRIDIALES])
 ALPHAPROTEOBACTERIA = Class(name="Alphaproteobacteria", children=[RICKETTSIALES])
 CYANOPHYCEAE = Class(name="Cyanophyceae", children=[SYNECHOCOCCALES])
+CAMPYLOBACTERIA = Class(name="Campylobacteria", children=[CAMPYLOBACTERALES])
 
 BETA_GAMMA_PROTEOBACTERIA = Clade(children=[GAMMAPROTEOBACTERIA, BETAPROTEOBACTERIA])
 
@@ -297,19 +311,19 @@ PROTEOBACTERIA = Phylum(
 FIRMICUTES = Phylum(name="Firmicutes", children=[BACILLI, CLOSTRIDIA])
 ACTINOBACTERIA = Phylum(name="Actinobacteria", children=[ACTINOMYCETIA])
 SPIROCHAETES = Phylum(name="Spirochaetes", children=[SPIROCHAETALES])
-CHLAMYDIAE = Phylum(name="Chlamydiae", children=[CHLAMYDIALES])
+CHLAMYDIOTA = Phylum(name="Chlamydiota", children=[CHLAMYDIALES])
 CYANOBACTERIA = Phylum(name="Cyanobacteria", children=[GLOEOMARGARITALES, CYANOPHYCEAE])
+CAMPYLOBACTEROTA = Phylum(name="Campylobacterota", children=[CAMPYLOBACTERIA])
 
-PLANCTOBACTERIA = Superphylum(name="Planctobacteria", children=[CHLAMYDIAE])
+PVC_SUPERPHYLUM = Superphylum(name="PVC superphylum", children=[CHLAMYDIOTA])
 
-PLANCTO_PROTEO_BACTERIA = Clade(children=[PROTEOBACTERIA, PLANCTOBACTERIA])
+HYDROBACTERIA_B = Clade(children=[PROTEOBACTERIA, CAMPYLOBACTEROTA])
+HYDROBACTERIA_A = Clade(children=[HYDROBACTERIA_B, PVC_SUPERPHYLUM])
 
 FIRMICUTES_ACTINOBACTERIA = Clade(children=[FIRMICUTES, ACTINOBACTERIA])
 TERRABACTERIA = Clade(
     name="Terrabacteria", children=[FIRMICUTES_ACTINOBACTERIA, CYANOBACTERIA]
 )
-GRACILLICUTES = Clade(
-    name="Gracillicutes", children=[PLANCTO_PROTEO_BACTERIA, SPIROCHAETES]
-)
+HYDROBACTERIA = Clade(name="Hydrobacteria", children=[HYDROBACTERIA_A, SPIROCHAETES])
 
-BACTERIA = Domain(name="Bacteria", children=[GRACILLICUTES, TERRABACTERIA])
+BACTERIA = Domain(name="Bacteria", children=[HYDROBACTERIA, TERRABACTERIA])
