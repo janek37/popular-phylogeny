@@ -10,6 +10,7 @@ from clade import (
     Suborder,
 )
 from constants import EN, PL
+from image import Image, License
 
 from .cercopithecoidea import CERCOPITHECOIDEA
 from .hominoidea import HOMINOIDEA
@@ -22,6 +23,12 @@ T_GLIS = Species(
         EN: "common treeshrew",
         PL: "wiewiórecznik pospolity, tupaja pospolita",
     },
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Die_S%C3%A4ugthiere_in_Abbildungen_nach_der_Natur,_mit_Beschreibungen_(Plate_34)_(white_background).jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/b/b8/Die_S%C3%A4ugthiere_in_Abbildungen_nach_der_Natur%2C_mit_Beschreibungen_%28Plate_34%29_%28white_background%29.jpg",
+        author="Goldfuss, Georg August; Schreber, Johann Christian Daniel; Wagner, Andreas Johann",
+        license=License.CC_BY_2_0,
+    ),
 )
 C_VOLANS = Species(
     name="Cynocephalus volans",
@@ -29,6 +36,12 @@ C_VOLANS = Species(
         EN: "Philippine flying lemur, Philippine colugo",
         PL: "lotokot filipiński",
     },
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Cynocephalus_volans_Brehm1883.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/b/bc/Cynocephalus_volans_Brehm1883.jpg",
+        author="Unknown",
+        license=License.PUBLIC_DOMAIN,
+    ),
 )
 
 TUPAIA = Genus(name="Tupaia", children=[T_GLIS])
