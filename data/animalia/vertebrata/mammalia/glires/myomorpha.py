@@ -1,5 +1,6 @@
 from clade import Clade, Family, Genus, Species, Subfamily, Suborder, Superfamily, Tribe
-from constants import EN, PL
+from constants import EN, PL, URL
+from image import Image, License
 
 M_AURATUS = Species(
     name="Mesocricetus auratus",
@@ -7,34 +8,90 @@ M_AURATUS = Species(
         EN: "golden hamster, Syrian hamster",
         PL: "chomik syryjski, chomiczek syryjski",
     },
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Peach_the_pet_hamster.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/c/cd/Peach_the_pet_hamster.jpg",
+        author="TetraHydroCannabinol",
+        license=License.CC_BY_SA_3_0,
+    ),
 )
 C_GLAREOLUS = Species(
-    name="Clethrionomys glareolus", local_names={EN: "bank vole", PL: "nornica ruda"}
+    name="Clethrionomys glareolus",
+    local_names={EN: "bank vole", PL: "nornica ruda"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Bank_Vole_Myodes_glareolus_Grand_Union_Canal_1.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/6/60/Bank_Vole_Myodes_glareolus_Grand_Union_Canal_1.jpg",
+        author="AnemoneProjectors",
+        license=License.CC_BY_SA_2_0,
+    ),
 )
 M_ARVALIS = Species(
-    name="Microtus arvalis", local_names={EN: "common vole", PL: "nornik zwyczajny"}
+    name="Microtus arvalis",
+    local_names={EN: "common vole", PL: "nornik zwyczajny"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Topillo1.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/1/16/Topillo1.jpg",
+        author="José-Manuel Benito",
+        license=License.CC_BY_SA_2_5,
+    ),
 )
 L_LEMMUS = Species(
-    name="Lemmus lemmus", local_names={EN: "Norway lemming", PL: "leming norweski"}
+    name="Lemmus lemmus",
+    local_names={EN: "Norway lemming", PL: "leming norweski"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Tunturisopuli_Lemmus_Lemmus.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/e/ef/Tunturisopuli_Lemmus_Lemmus.jpg",
+        author="Argus fin",
+        license=License.PUBLIC_DOMAIN,
+    ),
 )
 O_ZIBETHICUS = Species(
-    name="Ondatra zibethicus", local_names={EN: "muskrat", PL: "piżmak amerykański"}
+    name="Ondatra zibethicus",
+    local_names={EN: "muskrat", PL: "piżmak amerykański"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Ondatra_zibethicus_FWS.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/2/27/Ondatra_zibethicus_FWS.jpg",
+        author="David Menke",
+        license=License.FWS,
+    ),
 )
 A_AMPHIBIUS = Species(
     name="Arvicola amphibius",
     local_names={EN: "water rat, European water vole", PL: "karczownik ziemnowodny"},
     known_for=[
-        {EN: "Rat from The Wind in the Willows", PL: 'Szczur z "O czym szumią wierzby"'}
+        {
+            EN: "Rat from The Wind in the Willows",
+            PL: 'Szczur z "O czym szumią wierzby"',
+            URL: "https://en.wikipedia.org/wiki/The_Wind_in_the_Willows",
+        }
     ],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Arvicola_amphibius.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/4/4c/Arvicola_amphibius.jpg",
+        author="Peter Trimming from Croydon, England",
+        license=License.CC_BY_2_0,
+    ),
 )
 M_UNGUICULATUS = Species(
     name="Meriones unguiculatus",
     local_names={EN: "Mongolian gerbil", PL: "myszoskoczek mongolski, suwak mongolski"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Light_Red_Fox_Female_10-22-05.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/5/5b/Light_Red_Fox_Female_10-22-05.jpg",
+        author="Benmckune at en.wikipedia",
+        license=License.PUBLIC_DOMAIN,
+    ),
 )
 R_RATTUS = Species(
     name="Rattus rattus",
     local_names={EN: "black rat, roof rat, ship rat, house rat", PL: "szczur śniady"},
     known_for=[{EN: "Black Death"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_10564_The_black_rat_Rattus_rattus.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/b/b1/CSIRO_ScienceImage_10564_The_black_rat_Rattus_rattus.jpg",
+        author="division, CSIRO",
+        license=License.CC_BY_3_0,
+    ),
 )
 R_NORVEGICUS = Species(
     name="Rattus norvegicus",
@@ -43,14 +100,33 @@ R_NORVEGICUS = Species(
         PL: "szczur wędrowny",
     },
     known_for=[{EN: "lab rat"}, {EN: "pet rat"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Rattus_norvegicus_(white_background).png",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/3/34/Rattus_norvegicus_%28white_background%29.png",
+        author="Петроченко Віктор Іванович",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 A_SYLVATICUS = Species(
-    name="Apodemus sylvaticus", local_names={EN: "wood mouse", PL: "mysz zaroślowa"}
+    name="Apodemus sylvaticus",
+    local_names={EN: "wood mouse", PL: "mysz zaroślowa"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Apodemus.sylvaticus.-.lindsey.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/e/e3/Apodemus.sylvaticus.-.lindsey.jpg",
+        author="James K. Lindsey",
+        license=License.CC_BY_SA_2_5,
+    ),
 )
 M_MUSCULUS = Species(
     name="Mus musculus",
     local_names={EN: "house mouse", PL: "mysz domowa"},
     known_for=[{EN: "lab mouse"}, {EN: "pet mouse"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Mus_musculus_2254.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/4/49/Mus_musculus_2254.jpg",
+        author="Amirekul",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 
 MESOCRICETUS = Genus(name="Mesocricetus", children=[M_AURATUS])
