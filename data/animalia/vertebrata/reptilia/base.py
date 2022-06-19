@@ -1,5 +1,6 @@
 from clade import Clade, Class, Family, Genus, Order, Species, Superorder
 from constants import EN, PL
+from image import Image, License
 
 from .crocodilia import CROCODILIA
 from .dinosauria import DINOSAURIA
@@ -10,9 +11,33 @@ from .testudines import TESTUDINES
 S_PUNCTATUS = Species(
     name="Sphenodon punctatus",
     local_names={EN: "tuatara", PL: "hatteria, tuatara, łupkoząb"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Sphenodon_punctatus_white_background.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/c/cd/Sphenodon_punctatus_white_background.jpg",
+        author="TimVickers",
+        license=License.PUBLIC_DOMAIN_USER,
+    ),
 )
-I_COMMUNIS = Species(name="Ichthyosaurus communis", extinct=True)
-P_DOLICHODEIRUS = Species(name="Plesiosaurus dolichodeirus", extinct=True)
+I_COMMUNIS = Species(
+    name="Ichthyosaurus communis",
+    extinct=True,
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:202006_Ichthyosaurus_communis.png",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/5/58/202006_Ichthyosaurus_communis.png",
+        author="DataBase Center for Life Science (DBCLS)",
+        license=License.CC_BY_4_0,
+    ),
+)
+P_DOLICHODEIRUS = Species(
+    name="Plesiosaurus dolichodeirus",
+    extinct=True,
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:202006_Plesiosaurus_dolichodeirus.png",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/e/ee/202006_Plesiosaurus_dolichodeirus.png",
+        author="DataBase Center for Life Science (DBCLS)",
+        license=License.CC_BY_4_0,
+    ),
+)
 
 SPHENODON = Genus(name="Sphenodon", children=[S_PUNCTATUS])
 ICHTHYOSAURUS = Genus(name="Ichthyosaurus", children=[I_COMMUNIS])
