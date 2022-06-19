@@ -30,7 +30,7 @@ R_HARUDIENSIS = Species(
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Remingtonocetus_BW.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/6/69/Remingtonocetus_BW.jpg",
-        author="Nobu Tamura (http://spinops.blogspot.com)",
+        author="Nobu Tamura",
         license=License.CC_BY_3_0,
     ),
 )

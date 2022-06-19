@@ -19,7 +19,7 @@ M_LYONSI = Species(
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Moeritherium_NT_small.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/4/40/Moeritherium_NT_small.jpg",
-        author="Nobu Tamura email:nobu.tamura@yahoo.com https://spinops.blogspot.com/",
+        author="Nobu Tamura",
         license=License.CC_BY_SA_4_0,
     ),
 )
@@ -29,7 +29,7 @@ B_GRAVE = Species(
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Barytherium_NT.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/8/82/Barytherium_NT.jpg",
-        author="Nobu Tamura Email:nobu.tamura@yahoo.com http://spinops.blogspot.com/ http://paleoexhibit.blogspot.com/",
+        author="Nobu Tamura",
         license=License.CC_BY_SA_4_0,
     ),
 )
@@ -39,7 +39,7 @@ P_GRANGERI = Species(
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Platybelodon_NT_small.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/b/b9/Platybelodon_NT_small.jpg",
-        author="Nobu Tamura email:nobu.tamura@yahoo.com  http://spinops.blogspot.com/ http://paleoexhibit.blogspot.com/",
+        author="Nobu Tamura",
         license=License.CC_BY_SA_4_0,
     ),
 )
@@ -59,7 +59,7 @@ P_BEADNELLI = Species(
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Palaeomastodon_NT_small.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/4/44/Palaeomastodon_NT_small.jpg",
-        author="Nobu Tamura email:nobu.tamura@yahoo.com  http://spinops.blogspot.com/",
+        author="Nobu Tamura",
         license=License.CC_BY_SA_4_0,
     ),
 )
