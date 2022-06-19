@@ -9,7 +9,7 @@ C_CANIS = Species(
         url="https://commons.wikimedia.org/wiki/File:CtenecephalusCanis.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/1/1b/CtenecephalusCanis.jpg",
         author="Herms, William Brodbeck (1876-1949)",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 C_FELIS = Species(
@@ -29,7 +29,7 @@ P_IRRITANS = Species(
         url="https://commons.wikimedia.org/wiki/File:PulexIrritans.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/c/cd/PulexIrritans.jpg",
         author="Herms, William Brodbeck (1876-1949)",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 X_CHEOPIS = Species(
@@ -40,7 +40,7 @@ X_CHEOPIS = Species(
         url="https://commons.wikimedia.org/wiki/File:XenopsyllaCheopisHerms.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/7/71/XenopsyllaCheopisHerms.jpg",
         author="Herms, William Brodbeck (1876-1949)",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 

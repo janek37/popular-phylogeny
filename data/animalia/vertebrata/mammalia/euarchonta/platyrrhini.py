@@ -49,7 +49,7 @@ A_GEOFFROYI = Species(
         url="https://commons.wikimedia.org/wiki/File:AtelesVellerosusKeulemans.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/b/bd/AtelesVellerosusKeulemans.jpg",
         author="J G Keulemans",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 S_APELLA = Species(

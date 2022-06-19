@@ -27,7 +27,7 @@ M_GLUTINOSA = Species(
         url="https://commons.wikimedia.org/wiki/File:Myxine_glutinosa_Gervais.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/d/dc/Myxine_glutinosa_Gervais.jpg",
         author="Gervais et Boulart",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 P_MARINUS = Species(
@@ -37,7 +37,7 @@ P_MARINUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Petromyzon_marinus.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/2/28/Petromyzon_marinus.jpg",
         author="Ellen Edmonson",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 

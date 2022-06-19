@@ -55,7 +55,7 @@ G_VOLANS = Species(
         url="https://commons.wikimedia.org/wiki/File:Southern_Flying_Squirrel-27527-1.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/6/63/Southern_Flying_Squirrel-27527-1.jpg",
         author="Ken Thomas",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_SELF,
     ),
 )
 P_VOLANS = Species(

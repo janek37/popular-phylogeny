@@ -57,7 +57,7 @@ L_FULICA = Species(
     ],
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Escargot_sur_un_pneu_%C3%A0_Kamsar.jpg",
-        image_url="https://commons.wikimedia.org/wiki/File:Escargot_sur_un_pneu_%C3%A0_Kamsar.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/0/00/Escargot_sur_un_pneu_%C3%A0_Kamsar.jpg",
         author="Aboubacarkhoraa",
         license=License.CC_BY_SA_4_0,
     ),

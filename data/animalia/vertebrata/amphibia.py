@@ -119,7 +119,7 @@ A_CALLIDRYAS = Species(
         url="https://commons.wikimedia.org/wiki/File:Red_eyed_tree_frog_edit2.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/b/be/Red_eyed_tree_frog_edit2.jpg",
         author="Careyjamesbalboa at English Wikipedia (Eric De Vries)",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_USER,
     ),
 )
 P_TERRIBILIS = Species(

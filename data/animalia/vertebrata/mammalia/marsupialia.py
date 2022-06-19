@@ -22,7 +22,7 @@ O_RUFUS = Species(
         url="https://commons.wikimedia.org/wiki/File:RedRoo.JPG",
         image_url="https://upload.wikimedia.org/wikipedia/commons/5/5d/RedRoo.JPG",
         author="Rileypie",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_USER,
     ),
 )
 P_CINEREUS = Species(
@@ -52,7 +52,7 @@ S_HARRISII = Species(
         url="https://commons.wikimedia.org/wiki/File:Sarcophilus_harrisii_Gould.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/8/86/Sarcophilus_harrisii_Gould.jpg",
         author="John Gould",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 T_CYNOCEPHALUS = Species(
@@ -77,7 +77,7 @@ P_GUNNII = Species(
         url="https://commons.wikimedia.org/wiki/File:Perameles_gunnii_-_Gould.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/1/10/Perameles_gunnii_-_Gould.jpg",
         author="John Gould",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 

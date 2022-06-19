@@ -19,7 +19,7 @@ A_CERVICORNIS = Species(
         url="https://commons.wikimedia.org/wiki/File:Hertshoon.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/c/cb/Hertshoon.jpg",
         author="Albert Kok at Dutch Wikipedia",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_USER,
     ),
 )
 H_VULGARIS = Species(

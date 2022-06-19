@@ -14,7 +14,7 @@ S_SCOMBRUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Scomber_scombrus_(Pieni).jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/e/e5/Scomber_scombrus_%28Pieni%29.jpg",
         author='encyclopedia, "Pieni Tietosanakirja"',
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 T_THYNNUS = Species(
@@ -46,7 +46,7 @@ K_PELAMIS = Species(
         image_url="https://upload.wikimedia.org/wikipedia/commons/1/18/Naturalis_Biodiversity_Center_-_RMNH.ART.563_-_Katsuwonus_pelamis_%28Linnaeus%29"
         "_-_Kawahara_Keiga_-_1823_-_1829_-_Siebold_Collection_-_pencil_drawing_-_water_colour.jpeg",
         author="(Linnaeus)",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 H_HIPPOCAMPUS = Species(
@@ -59,7 +59,7 @@ H_HIPPOCAMPUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Hippocampus_hippocampus_Gervais.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/a/a1/Hippocampus_hippocampus_Gervais.jpg",
         author="Gervais et Boulart",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 P_BARBARUS = Species(
@@ -79,7 +79,7 @@ N_MELANOSTOMUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Round_goby_01.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/c/ce/Round_goby_01.jpg",
         author="United States Fish and Wildlife Service",
-        license=License.PUBLIC_DOMAIN,
+        license=License.FWS,
     ),
 )
 

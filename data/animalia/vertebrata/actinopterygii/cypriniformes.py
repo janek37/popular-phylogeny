@@ -61,7 +61,7 @@ C_AURATUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Carassius_auratus6.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/2/2f/Carassius_auratus6.jpg",
         author="Krüger",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 R_RUTILUS = Species(
@@ -72,7 +72,7 @@ R_RUTILUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Rutilus_rutilus_Prague_Vltava_3.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/a/ad/Rutilus_rutilus_Prague_Vltava_3.jpg",
         author="Karelj",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_SELF,
     ),
 )
 A_ALBURNUS = Species(
@@ -92,7 +92,7 @@ S_CEPHALUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Squalius_cephalus_Prague_Vltava_1_(cropped).jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/9/9e/Squalius_cephalus_Prague_Vltava_1_%28cropped%29.jpg",
         author="Karelj",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_SELF,
     ),
 )
 A_BRAMA = Species(
@@ -102,7 +102,7 @@ A_BRAMA = Species(
         url="https://commons.wikimedia.org/wiki/File:Braxen,_Iduns_kokbok.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/a/a5/Braxen%2C_Iduns_kokbok.jpg",
         author="Elisabeth Östman",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 P_PHOXINUS = Species(
@@ -122,7 +122,7 @@ B_BARBUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Barbus_barbus1.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/7/71/Barbus_barbus1.jpg",
         author="Krüger",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 P_TITTEYA = Species(
@@ -141,8 +141,8 @@ T_TINCA = Species(
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:FMIB_35781_Tinca_vulgaris_--_Tinca.jpeg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/7/70/FMIB_35781_Tinca_vulgaris_--_Tinca.jpeg",
-        author="Italiano: Supino, Felice (1916) Pesci d'Acqua Dolce d'Italia, Milan: Ulrico Hoepli, Editore Libraio della Real Casa",
-        license=License.PUBLIC_DOMAIN,
+        author="Felice Supino",
+        license=License.FMIB,
     ),
 )
 G_GOBIO = Species(
@@ -169,10 +169,10 @@ M_FOSSILIS = Species(
     name="Misgurnus fossilis",
     local_names={EN: "weatherfish", PL: "piskorz"},
     image=Image(
-        url="https://upload.wikimedia.org/wikipedia/commons/7/70/Misgurnus_fossilis_2009_G1.jpg",
+        url="https://commons.wikimedia.org/wiki/File:Misgurnus_fossilis_2009_G1.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/7/70/Misgurnus_fossilis_2009_G1.jpg",
         author="George Chernilevsky",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_SELF,
     ),
 )
 

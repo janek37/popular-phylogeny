@@ -34,7 +34,7 @@ C_ASIATICA = Species(
         url="https://commons.wikimedia.org/wiki/File:Chrysochloris_asiatica_-_1731-1795_-_Print_-_Iconographia_Zoologica_-_Special_Collections_University_of_Amsterdam.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/a/ad/Chrysochloris_asiatica_-_1731-1795_-_Print_-_Iconographia_Zoologica_-_Special_Collections_University_of_Amsterdam.jpg",
         author="Cornelis van Noorde",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 T_ECAUDATUS = Species(
@@ -57,7 +57,7 @@ S_SETOSUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Ericulus_nigrescens_St.-Hilaire_1839.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/d/d7/Ericulus_nigrescens_St.-Hilaire_1839.jpg",
         author="Unknown author",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 P_CAPENSIS = Species(

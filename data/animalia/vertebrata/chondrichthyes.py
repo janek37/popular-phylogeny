@@ -11,7 +11,7 @@ C_MONSTROSA = Species(
         url="https://commons.wikimedia.org/wiki/File:Chimaera_monstrosa1.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/1/1a/Chimaera_monstrosa1.jpg",
         author="Krüger",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 D_BATIS = Species(
@@ -21,7 +21,7 @@ D_BATIS = Species(
         url="https://commons.wikimedia.org/wiki/File:Dipturus_batis.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/6/6d/Dipturus_batis.jpg",
         author="Unknown",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 B_BREVICAUDATA = Species(

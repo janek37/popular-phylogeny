@@ -48,7 +48,7 @@ F_SEPTICA = Species(
         url="https://commons.wikimedia.org/wiki/File:Fuligo_septica_bl1.JPG",
         image_url="https://upload.wikimedia.org/wikipedia/commons/1/16/Fuligo_septica_bl1.JPG",
         author="Siga",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_SELF,
     ),
 )
 P_POLYCEPHALUM = Species(

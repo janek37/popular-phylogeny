@@ -13,7 +13,7 @@ P_HUMANUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Nuttall_1917_f11.gif",
         image_url="https://upload.wikimedia.org/wikipedia/commons/a/a5/Nuttall_1917_f11.gif",
         author="Nuttall, George H. F. (1862-1937)",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 P_PUBIS = Species(
@@ -46,7 +46,7 @@ P_POLONICA = Species(
         url="https://commons.wikimedia.org/wiki/File:Adult_Polish_cochineal.JPG",
         image_url="https://upload.wikimedia.org/wikipedia/commons/e/e1/Adult_Polish_cochineal.JPG",
         author="Unknown author",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 G_LACUSTRIS = Species(

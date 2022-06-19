@@ -30,7 +30,7 @@ T_GIGAS = Species(
         url="https://commons.wikimedia.org/wiki/File:Giant_clam_or_Tridacna_gigas.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/1/11/Giant_clam_or_Tridacna_gigas.jpg",
         author="Janderk",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_USER,
     ),
 )
 C_EDULE = Species(
@@ -81,7 +81,7 @@ P_MAXIMUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Natural_History_-_Mollusca_-_The_Great_Scallop.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/d/d0/Natural_History_-_Mollusca_-_The_Great_Scallop.jpg",
         author="Philip Henry Gosse  (1810–1888)",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 P_MARGARITIFERA = Species(

@@ -9,7 +9,7 @@ O_VULGARIS = Species(
         url="https://commons.wikimedia.org/wiki/File:Octopus_vulgaris_Merculiano.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/3/32/Octopus_vulgaris_Merculiano.jpg",
         author="Comingio Merculiano (1845-1915)",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 G_UMBELLATA = Species(
@@ -30,7 +30,7 @@ V_INFERNALIS = Species(
         url="https://commons.wikimedia.org/wiki/File:Vampyroteuthis_infernalis.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/6/64/Vampyroteuthis_infernalis.jpg",
         author="Carl Chun  (1852–1914)",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 L_VULGARIS = Species(
@@ -68,9 +68,9 @@ D_GIGAS = Species(
     local_names={EN: "Humboldt squid", PL: "kałamarnica Humboldta"},
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Dosidicus_gigas.jpg",
-        image_url="https://commons.wikimedia.org/wiki/File:Dosidicus_gigas2.jpg",
-        author="Anonymous",
-        license=License.PUBLIC_DOMAIN,
+        image_url="https://upload.wikimedia.org/wikipedia/commons/9/92/Dosidicus_gigas.jpg",
+        author="Image courtesy of NOAA/MBARI 2006",
+        license=License.NOAA,
     ),
 )
 S_OFFICINALIS = Species(

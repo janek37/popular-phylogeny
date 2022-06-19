@@ -23,7 +23,7 @@ S_VITREUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Denton_Walleye_1896.png",
         image_url="https://upload.wikimedia.org/wikipedia/commons/a/ac/Denton_Walleye_1896.png",
         author="Sherman Foote Denton",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 S_LUCIOPERCA = Species(
@@ -33,7 +33,7 @@ S_LUCIOPERCA = Species(
         url="https://commons.wikimedia.org/wiki/File:Sander_lucioperca_2.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/d/d6/Sander_lucioperca_2.jpg",
         author="Krüger",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 P_FLUVIATILIS = Species(
@@ -69,7 +69,7 @@ P_MARCIDUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Psychrolutes_marcidus.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/1/15/Psychrolutes_marcidus.jpg",
         author="Alan Riverstone McCulloch (1885-1925)",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 S_AURATA = Species(
@@ -79,7 +79,7 @@ S_AURATA = Species(
         url="https://commons.wikimedia.org/wiki/File:Sparus_aurata.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/a/aa/Sparus_aurata.jpg",
         author="Werner",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 P_HEPATUS = Species(
@@ -129,7 +129,7 @@ L_PISCATORIUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Lophius_piscatorius_Fr.png",
         image_url="https://upload.wikimedia.org/wikipedia/commons/3/3e/Lophius_piscatorius_Fr.png",
         author="H. Gervais et R. Boulart",
-        license=License.CC_BY_SA_4_0,  # should be PUBLIC_DOMAIN
+        license=License.CC_BY_SA_4_0,  # should be PUBLIC_DOMAIN_OLD
     ),
 )
 C_HOLBOELLI = Species(
@@ -139,7 +139,7 @@ C_HOLBOELLI = Species(
         url="https://commons.wikimedia.org/wiki/File:Ceratias_holboelli.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/a/a3/Ceratias_holboelli.jpg",
         author="G. Brown Goode and Tarleton H. Bean",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 M_MOLA = Species(
@@ -149,7 +149,7 @@ M_MOLA = Species(
         url="https://commons.wikimedia.org/wiki/File:Mola_mola_1898.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/8/86/Mola_mola_1898.jpg",
         author="Unknown author",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 T_RUBRIPES = Species(

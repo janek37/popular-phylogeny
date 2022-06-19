@@ -82,7 +82,7 @@ C_ALBULA = Species(
         url="https://commons.wikimedia.org/wiki/File:Coregonus_albula_(Pieni).jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/6/6f/Coregonus_albula_%28Pieni%29.jpg",
         author='encyclopedia, "Pieni Tietosanakirja"',
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 C_ARTEDI = Species(
@@ -92,7 +92,7 @@ C_ARTEDI = Species(
         url="https://commons.wikimedia.org/wiki/File:Cisco.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/8/84/Cisco.jpg",
         author="Ellen Edmonson",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 

@@ -31,7 +31,7 @@ D_MADAGASCARIENSIS = Species(
         url="https://commons.wikimedia.org/wiki/File:Handbook_to_the_Primates_Plate_01.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/6/66/Handbook_to_the_Primates_Plate_01.jpg",
         author="Henry Ogg Forbes (1851-1932). Species Plates by John Gerrard Keulemans (1842–1912).",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 M_LEHILAHYTSARA = Species(

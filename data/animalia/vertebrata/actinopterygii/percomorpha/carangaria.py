@@ -30,7 +30,7 @@ I_PLATYPTERUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Naturalis_Biodiversity_Center_-_RMNH.ART.194_-_Istiophorus_platypterus_(Shaw_and_Nodder)_-_Kawahara_Keiga_-_1823_-_1829_-_Siebold_Collection_-_new_version.jpeg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/6/65/Naturalis_Biodiversity_Center_-_RMNH.ART.194_-_Istiophorus_platypterus_%28Shaw_and_Nodder%29_-_Kawahara_Keiga_-_1823_-_1829_-_Siebold_Collection_-_new_version.jpeg",
         author="Kawahara Keiga",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 P_FLESUS = Species(
@@ -40,7 +40,7 @@ P_FLESUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Platichthys_flesus2.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/a/a1/Platichthys_flesus2.jpg",
         author="Krüger",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 H_HIPPOGLOSSUS = Species(
@@ -50,7 +50,7 @@ H_HIPPOGLOSSUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Hippoglossus_hippoglossus1.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/a/a0/Hippoglossus_hippoglossus1.jpg",
         author="Krüger",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 S_SOLEA = Species(

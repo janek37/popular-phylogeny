@@ -15,7 +15,7 @@ B_SMITHI = Species(
         url="https://commons.wikimedia.org/wiki/File:Brachypelma_smithi_2009_G02.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/9/9b/Brachypelma_smithi_2009_G02.jpg",
         author="George Chernilevsky",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_SELF,
     ),
 )
 A_DIADEMATUS = Species(

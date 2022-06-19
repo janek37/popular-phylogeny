@@ -162,7 +162,7 @@ D_PONDEROSAE = Species(
         url="https://commons.wikimedia.org/wiki/File:The_mountain_pine_beetle.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/5/57/The_mountain_pine_beetle.jpg",
         author="Steve Clarkson",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_AUTHOR,
     ),
 )
 I_TYPOGRAPHUS = Species(

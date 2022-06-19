@@ -42,7 +42,7 @@ L_LEMMUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Tunturisopuli_Lemmus_Lemmus.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/e/ef/Tunturisopuli_Lemmus_Lemmus.jpg",
         author="Argus fin",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_SELF,
     ),
 )
 O_ZIBETHICUS = Species(
@@ -79,7 +79,7 @@ M_UNGUICULATUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Light_Red_Fox_Female_10-22-05.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/5/5b/Light_Red_Fox_Female_10-22-05.jpg",
         author="Benmckune at en.wikipedia",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_USER,
     ),
 )
 R_RATTUS = Species(

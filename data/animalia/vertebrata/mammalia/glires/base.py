@@ -63,7 +63,7 @@ G_BURSARIUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Geomys_bursarius.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/1/19/Geomys_bursarius.jpg",
         author="Unknown author",
-        license=License.PUBLIC_DOMAIN,
+        license=License.NPS,
     ),
 )
 

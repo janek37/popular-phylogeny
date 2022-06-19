@@ -22,7 +22,7 @@ D_ROTUNDUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Desmodus_rotundus_1847.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/2/27/Desmodus_rotundus_1847.jpg",
         author="in Alcide Dessalines d'Orbigny",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 P_PIPISTRELLUS = Species(
@@ -32,7 +32,7 @@ P_PIPISTRELLUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Vespertilio_pipistrellus_-_1700-1880_-_Print_-_Iconographia_Zoologica_-_Special_Collections_University_of_Amsterdam_-_UBA01_IZ20800115.tif",
         image_url="https://upload.wikimedia.org/wikipedia/commons/c/c7/Vespertilio_pipistrellus_-_1700-1880_-_Print_-_Iconographia_Zoologica_-_Special_Collections_University_of_Amsterdam_-_UBA01_IZ20800115.tif",
         author="Special Collections of the University of Amsterdam",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 M_LUCIFUGUS = Species(
@@ -42,7 +42,7 @@ M_LUCIFUGUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Myotis_lucifugus_illustration.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/e/ef/Myotis_lucifugus_illustration.jpg",
         author="Chapman, Frank M.; Seton, Ernest Thompson; Wright, Mabel Osgood",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 P_AURITUS = Species(

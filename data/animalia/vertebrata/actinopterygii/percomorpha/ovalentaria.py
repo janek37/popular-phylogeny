@@ -33,7 +33,7 @@ E_VOLITANS = Species(
         url="https://commons.wikimedia.org/wiki/File:Exocoetus_volitans.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/3/30/Exocoetus_volitans.jpg",
         author="Gervais et Boulart",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 C_PINNATIBARBATUS = Species(
@@ -44,7 +44,7 @@ C_PINNATIBARBATUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Cheilopogon_pinnatibarbatus.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/e/e9/Cheilopogon_pinnatibarbatus.jpg",
         author="Jobin",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 A_OCELLARIS = Species(

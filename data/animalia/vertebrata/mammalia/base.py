@@ -31,7 +31,7 @@ O_ANATINUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Genera_mammalium_Ornithorhynchus_anatinus.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/2/2e/Genera_mammalium_Ornithorhynchus_anatinus.jpg",
         author="Cabrera, Angel",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 T_ACULEATUS = Species(

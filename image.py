@@ -4,9 +4,9 @@ from typing import Optional
 
 
 class License(Enum):
-    PUBLIC_DOMAIN = "Public Domain"
     PUBLIC_DOMAIN_SELF = "Public Domain"
     PUBLIC_DOMAIN_USER = "Public Domain"
+    PUBLIC_DOMAIN_AUTHOR = "Public Domain"
     PUBLIC_DOMAIN_OLD = "Public Domain"
     CDC = "Public Domain by Centers for Disease Control and Prevention"
     DARTHMOUTH = "Public Domain by Dartmouth Electron Microscope Facility"
@@ -19,6 +19,7 @@ class License(Enum):
     USPOSTAL = "Public Domain by United Stated Postal Service"
     USDA_ARS = "Public Domain by Agricultural Research Service, United States Department of Agriculture"
     EPA = "Public Domain by nvironmental Protection Agency"
+    NPS = "Public Domain by National Park Service"
     ATTRIBUTION = "Attribution Only"
     CC_BY_2_0 = "Creative Commons Attribution 2.0 Generic"
     CC_BY_2_5 = "Creative Commons Attribution 2.5 Generic"

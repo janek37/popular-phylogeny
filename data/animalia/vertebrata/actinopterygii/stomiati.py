@@ -9,7 +9,7 @@ S_BOA = Species(
         url="https://commons.wikimedia.org/wiki/File:Stomias_boa_boa_Gervais.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/c/c8/Stomias_boa_boa_Gervais.jpg",
         author="Gervais et Boulart",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 P_ALTIVELIS = Species(
@@ -36,10 +36,10 @@ T_PACIFICUS = Species(
     name="Thaleichthys pacificus",
     local_names={EN: "eulachon, candlefish", PL: "olakon"},
     image=Image(
-        url="https://commons.wikimedia.org/wiki/File:Eulachon.jpg",
-        image_url="https://upload.wikimedia.org/wikipedia/commons/9/9c/Eulachon.jpg",
-        author="en:User:James Crippen",
-        license=License.PUBLIC_DOMAIN,
+        url="https://commons.wikimedia.org/wiki/File:FMIB_51092_Eulachon.jpeg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/a/a9/FMIB_51092_Eulachon.jpeg",
+        author="H. L. Todd",
+        license=License.FMIB,
     ),
 )
 

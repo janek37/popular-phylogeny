@@ -24,7 +24,7 @@ A_ANGUILLA = Species(
         url="https://commons.wikimedia.org/wiki/File:FMIB_35739_Anguilla_vulgaris_--_Anguilla.jpeg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/e/ed/FMIB_35739_Anguilla_vulgaris_--_Anguilla.jpeg",
         author="Felice Supino",
-        license=License.PUBLIC_DOMAIN,
+        license=License.FMIB,
     ),
 )
 M_HELENA = Species(
@@ -62,10 +62,10 @@ G_PETERSII = Species(
     name="Gnathonemus petersii",
     local_names={EN: "Peters's elephantnose fish", PL: "trąbonos, mruk Petersa"},
     image=Image(
-        url="https://commons.wikimedia.org/wiki/File:Gnathonemus_petersii.jpg",
-        image_url="https://upload.wikimedia.org/wikipedia/commons/4/42/Gnathonemus_petersii.jpg",
-        author="Billycorgan84 at Italian Wikipedia",
-        license=License.PUBLIC_DOMAIN,
+        url="https://commons.wikimedia.org/wiki/File:MormyrusJury.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/1/15/MormyrusJury.jpg",
+        author="J. Jury",
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 M_PUNCTATUM = Species(
@@ -75,7 +75,7 @@ M_PUNCTATUM = Species(
         url="https://commons.wikimedia.org/wiki/File:Myctophum_punctatum1.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/b/b7/Myctophum_punctatum1.jpg",
         author="Emma Kissling",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 

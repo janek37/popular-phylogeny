@@ -19,7 +19,7 @@ O_GORAMY = Species(
         url="https://commons.wikimedia.org/wiki/File:Osphronemus_goramy_2008_G1.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/0/06/Osphronemus_goramy_2008_G1.jpg",
         author="George Chernilevsky",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_SELF,
     ),
 )
 H_TEMMINCKII = Species(

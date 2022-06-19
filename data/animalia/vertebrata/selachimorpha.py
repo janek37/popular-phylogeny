@@ -20,7 +20,7 @@ S_ZYGAENA = Species(
         url="https://commons.wikimedia.org/wiki/File:Smooth_hammerhead_(Duane_Raver).png",
         image_url="https://upload.wikimedia.org/wikipedia/commons/4/4a/Smooth_hammerhead_%28Duane_Raver%29.png",
         author="Raver Duane, U.S. Fish and Wildlife Service",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_AUTHOR,
     ),
 )
 R_TYPUS = Species(
@@ -83,7 +83,7 @@ S_SQUATINA = Species(
         url="https://commons.wikimedia.org/wiki/File:Squatina_squatina.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/4/42/Squatina_squatina.jpg",
         author="Anonymous",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 

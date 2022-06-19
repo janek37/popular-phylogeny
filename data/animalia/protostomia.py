@@ -43,7 +43,7 @@ T_SOLIUM = Species(
         url="https://commons.wikimedia.org/wiki/File:Taenia_solium.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/4/4b/Taenia_solium.jpg",
         author="Unknown author",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 

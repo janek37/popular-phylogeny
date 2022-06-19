@@ -115,7 +115,7 @@ M_MERCENARIA = Species(
         url="https://commons.wikimedia.org/wiki/File:FMIB_51200_Stone_Crab_(Male).jpeg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/e/ef/FMIB_51200_Stone_Crab_%28Male%29.jpeg",
         author="H. L. Todd",
-        license=License.PUBLIC_DOMAIN,
+        license=License.FMIB,
     ),
 )
 C_SAPIDUS = Species(

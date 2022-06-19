@@ -11,7 +11,7 @@ A_STURIO = Species(
         url="https://commons.wikimedia.org/wiki/File:Acipenser_sturio_(cropped).jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/b/b4/Acipenser_sturio_%28cropped%29.jpg",
         author="Krüger",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 

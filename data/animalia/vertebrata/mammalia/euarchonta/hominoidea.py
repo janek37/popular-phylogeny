@@ -101,7 +101,7 @@ H_NEANDERTHALENSIS = Species(
         url="https://commons.wikimedia.org/wiki/File:Le_Moustier_(white_background).jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/8/87/Le_Moustier_%28white_background%29.jpg",
         author="Charles R. Knight",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 H_SAPIENS = Species(

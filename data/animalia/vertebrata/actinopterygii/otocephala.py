@@ -25,7 +25,7 @@ C_HARENGUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Clupea_harengus_Gervais.flipped.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/c/c5/Clupea_harengus_Gervais.flipped.jpg",
         author="Gervais et Boulart, 1877",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 S_PILCHARDUS = Species(
@@ -36,7 +36,7 @@ S_PILCHARDUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Sardina_pilchardus_Gervais.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/7/78/Sardina_pilchardus_Gervais.jpg",
         author="Gervais et Boulart, 1877",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 S_SPRATTUS = Species(
@@ -46,7 +46,7 @@ S_SPRATTUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Sprattus_sprattus_Gervais.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/1/1a/Sprattus_sprattus_Gervais.jpg",
         author="Gervais et Boulart, 1877",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 E_ENCRASICOLUS = Species(
@@ -57,7 +57,7 @@ E_ENCRASICOLUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Engraulis_encrasicolus_Gervais_flipped.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/f/f0/Engraulis_encrasicolus_Gervais_flipped.jpg",
         author="Gervais et Boulart, 1877",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 

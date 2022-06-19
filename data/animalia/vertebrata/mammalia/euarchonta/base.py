@@ -40,7 +40,7 @@ C_VOLANS = Species(
         url="https://commons.wikimedia.org/wiki/File:Cynocephalus_volans_Brehm1883.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/b/bc/Cynocephalus_volans_Brehm1883.jpg",
         author="Unknown",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 

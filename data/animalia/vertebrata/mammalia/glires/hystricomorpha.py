@@ -94,7 +94,7 @@ O_DEGUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Octodon_degus_2.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/b/b2/Octodon_degus_2.jpg",
         author="Algirdas",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_USER,
     ),
 )
 

@@ -110,7 +110,7 @@ L_RUFUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Bobcat2.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/d/dc/Bobcat2.jpg",
         author="Calibas",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_SELF,
     ),
 )
 A_JUBATUS = Species(

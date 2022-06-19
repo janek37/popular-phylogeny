@@ -12,7 +12,7 @@ L_GUTTATUS = Species(
     },
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Lampridae_-_Lampris_guttatus.JPG",
-        image_url="https://commons.wikimedia.org/wiki/File:Lampridae_-_Lampris_guttatus.JPG",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/d/dc/Lampridae_-_Lampris_guttatus.JPG",
         author="Hectonichus",
         license=License.CC_BY_SA_3_0,
     ),
@@ -48,7 +48,7 @@ G_MORHUA = Species(
         url="https://commons.wikimedia.org/wiki/File:Gadus_morhua_Gervais.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/4/4b/Gadus_morhua_Gervais.jpg",
         author="Gervais et Boulart",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 G_CHALCOGRAMMUS = Species(
@@ -68,7 +68,7 @@ M_AEGLEFINUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Melanogrammus_aeglefinus1.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/6/69/Melanogrammus_aeglefinus1.jpg",
         author="Krüger",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 M_MERLUCCIUS = Species(
@@ -78,7 +78,7 @@ M_MERLUCCIUS = Species(
         url="https://commons.wikimedia.org/wiki/File:Merluccius_merluccius.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/4/49/Merluccius_merluccius.jpg",
         author="Gervais et Boulart",
-        license=License.PUBLIC_DOMAIN,
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 
