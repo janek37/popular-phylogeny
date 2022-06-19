@@ -33,7 +33,7 @@ P_LATICAUDA = Species(
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Phelsuma_l._laticauda.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/c/c3/Phelsuma_l._laticauda.jpg",
-        author="undefined",
+        author="Jurriaan Schulman",
         license=License.CC_BY_SA_3_0,
     ),
 )

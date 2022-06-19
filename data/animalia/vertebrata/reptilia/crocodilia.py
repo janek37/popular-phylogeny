@@ -52,7 +52,7 @@ G_GANGETICUS = Species(
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Gavialis_gangeticus_(Gharial).png",
         image_url="https://upload.wikimedia.org/wikipedia/commons/b/bd/Gavialis_gangeticus_%28Gharial%29.png",
-        author="undefined",
+        author="Unknown",
         license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
