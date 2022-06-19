@@ -27,7 +27,7 @@ O_JOHNSTONI = Species(
         license=License.CC_BY_2_0,
     ),
 )
-G_GIRAFFA = Species(
+G_CAMELOPARDALIS = Species(
     name="Giraffa camelopardalis",
     local_names={EN: "giraffe", PL: "żyrafa"},
     image=Image(
@@ -54,7 +54,7 @@ TRAGULUS = Genus(
     local_names={EN: "mouse-deer", PL: "myszojeleń, kanczyl"},
 )
 OKAPIA = Genus(name="Okapia", children=[O_JOHNSTONI])
-GIRAFFA = Genus(name="Giraffa", children=[G_GIRAFFA])
+GIRAFFA = Genus(name="Giraffa", children=[G_CAMELOPARDALIS])
 ANTILOCAPRA = Genus(name="Antilocapra", children=[A_AMERICANA])
 
 TRAGULIDAE = Family(name="Tragulidae", children=[TRAGULUS])

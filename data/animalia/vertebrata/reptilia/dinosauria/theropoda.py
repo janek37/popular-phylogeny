@@ -70,16 +70,6 @@ B_WALKERI = Species(
         license=License.CC_BY_SA_3_0,
     ),
 )
-M_BUCKLANDII = Species(
-    name="Megalosaurus bucklandii",
-    extinct=True,
-    image=Image(
-        url="https://commons.wikimedia.org/wiki/File:Megalosaurus_0289.JPG",
-        image_url="https://upload.wikimedia.org/wikipedia/commons/9/9e/Megalosaurus_0289.JPG",
-        author="Conty",
-        license=License.CC_BY_SA_3_0,
-    ),
-)
 A_FRAGILIS = Species(
     name="Allosaurus fragilis",
     extinct=True,
