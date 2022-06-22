@@ -33,6 +33,7 @@ class License(Enum):
     CC_BY_SA_2_0_DE = "Creative Commons Attribution-Share Alike 2.0 Germany"
     CC_BY_SA_2_5 = "Creative Commons Attribution-Share Alike 2.5 Generic"
     CC_BY_SA_3_0 = "Creative Commons Attribution-Share Alike 3.0 Unported"
+    CC_BY_SA_3_0_US = "Creative Commons Attribution-Share Alike 3.0 United States"
     CC_BY_SA_4_0 = "Creative Commons Attribution-Share Alike 4.0 International"
     CC0 = "Creative Commons CC0 1.0 Universal Public Domain Dedication"
 
