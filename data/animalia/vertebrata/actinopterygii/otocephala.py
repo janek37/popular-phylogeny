@@ -79,6 +79,12 @@ CLUPEIFORMES = Order(name="Clupeiformes", children=[CLUPEIDAE, ENGRAULIDAE])
 P_INNESI = Species(
     name="Paracheirodon innesi",
     local_names={EN: "neon tetra", PL: "bystrzyk neonowy, neon Innesa"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Paracheirodon_innesi_(aka).jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/7/7a/Paracheirodon_innesi_%28aka%29.jpg",
+        author="André Karwath aka Aka",
+        license=License.CC_BY_SA_2_5,
+    ),
 )
 P_NATTERERI = Species(
     name="Pygocentrus nattereri",
@@ -86,6 +92,12 @@ P_NATTERERI = Species(
         EN: "red-bellied piranha, red piranha",
         PL: "pirania czarnoogonowa, pirania czerwona, pirania Natterera",
     },
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Pygocentrus_nattereri_-_Karlsruhe_Zoo_01.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/c/c7/Pygocentrus_nattereri_-_Karlsruhe_Zoo_01.jpg",
+        author="H. Zell",
+        license=License.CC_BY_SA_3_0,
+    ),
 )
 
 PARACHEIRODON = Genus(name="Paracheirodon", children=[P_INNESI])
@@ -101,32 +113,66 @@ CHARACIFORMES = Order(name="Characiformes", children=[CHARACIDAE, SERRASALMIDAE]
 A_ALBIFRONS = Species(
     name="Apteronotus albifrons",
     local_names={EN: "black ghost knifefish", PL: "duch brazylijski"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Apteronotus_albifrons_Aquarium_tropical_du_Palais_de_la_Porte_Dor%C3%A9e_10_04_2016_2.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/8/8b/Apteronotus_albifrons_Aquarium_tropical_du_Palais_de_la_Porte_Dor%C3%A9e_10_04_2016_2.jpg",
+        author="Vassil",
+        license=License.CC0,
+    ),
 )
 E_ELECTRICUS = Species(
     name="Electrophorus electricus",
     local_names={EN: "electric eel", PL: "węgorz elektryczny, strętwa"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:FMIB_38638_Gymnotus_electricus.jpeg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/a/ab/FMIB_38638_Gymnotus_electricus.jpeg",
+        author="Robert Hermann Schomburgk",
+        license=License.FMIB,
+    ),
 )
-P_BOCOURTI = Species(
-    name="Pangasius bocourti", local_names={EN: "basa, river cobbler", PL: "panga"}
+P_HYPOPHTHALMUS = Species(
+    name="Pangasianodon hypophthalmus",
+    local_names={
+        EN: "iridescent shark, iridescent shark catfish",
+        PL: "panga, sum rekini",
+    },
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Iridescent_Shark_Catfish.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/f/fe/Iridescent_Shark_Catfish.jpg",
+        author="User:Lerdsuwa",
+        license=License.CC_BY_SA_3_0,
+    ),
 )
 S_GLANIS = Species(
     name="Silurus glanis",
     local_names={EN: "wels catfish, sheatfish", PL: "sum pospolity"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Silurus_glanis1.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/8/81/Silurus_glanis1.jpg",
+        author="Krüger",
+        license=License.PUBLIC_DOMAIN_OLD,
+    ),
 )
 A_NEBULOSUS = Species(
     name="Ameiurus nebulosus",
     local_names={EN: "brown bullhead", PL: "byczek, amerykański sumik karłowaty"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Ameiurus_nebulosus.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/b/b4/Ameiurus_nebulosus.jpg",
+        author="undefined",
+        license=License.CC_BY_SA_2_5,
+    ),
 )
 
 APTERONOTUS = Genus(name="Apteronotus", children=[A_ALBIFRONS])
 ELECTROPHORUS = Genus(name="Electrophorus", children=[E_ELECTRICUS])
-PANGASIUS = Genus(name="Pangasius", children=[P_BOCOURTI])
+PANGASIANODON = Genus(name="Pangasius", children=[P_HYPOPHTHALMUS])
 SILURUS = Genus(name="Silurus", children=[S_GLANIS])
 AMEIURUS = Genus(name="Ameiurus", children=[A_NEBULOSUS])
 
 APTERONOTIDAE = Family(name="Apteronotidae", children=[APTERONOTUS])
 GYMNOTIDAE = Family(name="Gymnotidae", children=[ELECTROPHORUS])
-PANGASIIDAE = Family(name="Pangasiidae", children=[PANGASIUS])
+PANGASIIDAE = Family(name="Pangasiidae", children=[PANGASIANODON])
 SILURIDAE = Family(name="Siluridae", children=[SILURUS])
 ICTALURIDAE = Family(name="Ictaluridae", children=[AMEIURUS])
 

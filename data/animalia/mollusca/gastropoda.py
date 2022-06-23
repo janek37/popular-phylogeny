@@ -154,23 +154,66 @@ HETEROBRANCHIA = Subclass(name="Heterobranchia", children=[PANPULMONATA, NUDIPLE
 
 # region CAENOGASTROPODA
 C_TIGRIS = Species(
-    name="Cypraea tigris", local_names={EN: "tiger cowrie", PL: "porcelanka tygrysia"}
+    name="Cypraea tigris",
+    local_names={EN: "tiger cowrie", PL: "porcelanka tygrysia"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Cypraea-tigris-004.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/6/64/Cypraea-tigris-004.jpg",
+        author="Magy357",
+        license=License.CC_BY_SA_3_0,
+    ),
 )
 A_GIGAS = Species(
-    name="Aliger gigas", local_names={EN: "queen conch", PL: "skrzydelnik wielki"}
+    name="Aliger gigas",
+    local_names={EN: "queen conch", PL: "skrzydelnik wielki"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:A_Queen_Conch_(Aliger_gigas)._The_Glencairn_Aisle,_Kilmaurs,_East_Ayrshire.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/a/ae/A_Queen_Conch_%28Aliger_gigas%29._The_Glencairn_Aisle%2C_Kilmaurs%2C_East_Ayrshire.jpg",
+        author="Rosser1954",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 A_HELENA = Species(
     name="Anentome helena",
     local_names={EN: "assassin snail, bumblebee snail", PL: "ślimak Helenka"},
     known_for=[{EN: "used to control populations of unwanted small snail species"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Anentome_Helena_2010.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/0/0c/Anentome_Helena_2010.jpg",
+        author="RSX",
+        license=License.CC_BY_SA_3_0,
+    ),
 )
 C_PALMAROSAE = Species(
-    name="Chicoreus palmarosae", local_names={EN: "rose-branch murex"}
+    name="Chicoreus palmarosae",
+    local_names={EN: "rose-branch murex"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Chicoreus_palmarosae.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/1/13/Chicoreus_palmarosae.jpg",
+        author="No machine-readable author provided. Bricktop assumed (based on copyright claims).",
+        license=License.CC_BY_SA_3_0,
+    ),
 )
 M_PECTEN = Species(
-    name="Murex pecten", local_names={EN: "Venus comb murex", PL: "grzebień Wenery"}
+    name="Murex pecten",
+    local_names={EN: "Venus comb murex", PL: "grzebień Wenery"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:MurexPecten.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/7/73/MurexPecten.jpg",
+        author="Didier Descouens",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
-M_MITRA = Species(name="Mitra mitra", local_names={EN: "episcopal miter"})
+M_MITRA = Species(
+    name="Mitra mitra",
+    local_names={EN: "episcopal miter"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Mitra_mitra_shell_2.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/b/b7/Mitra_mitra_shell_2.jpg",
+        author="undefined",
+        license=License.PUBLIC_DOMAIN_USER,
+    ),
+)
 
 CYPRAEA = Genus(name="Cypraea", children=[C_TIGRIS])
 ALIGER = Genus(name="Aliger", children=[A_GIGAS])
@@ -200,7 +243,14 @@ CAENOGASTROPODA = Subclass(
 # endregion
 
 P_VULGATA = Species(
-    name="Patella vulgata", local_names={EN: "common limpet", PL: "czaszołka pospolita"}
+    name="Patella vulgata",
+    local_names={EN: "common limpet", PL: "czaszołka pospolita"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Patella_vulgata_Napfschnecke.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/5/53/Patella_vulgata_Napfschnecke.jpg",
+        author="Manfred Heyde",
+        license=License.CC_BY_SA_3_0,
+    ),
 )
 
 PATELLA = Genus(name="Patella", children=[P_VULGATA])
