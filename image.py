@@ -2,26 +2,29 @@ from dataclasses import dataclass
 from enum import Enum
 from typing import Optional
 
+PD = "Public Domain"
+
 
 class License(Enum):
-    PUBLIC_DOMAIN_SELF = "Public Domain"
-    PUBLIC_DOMAIN_USER = "Public Domain"
-    PUBLIC_DOMAIN_AUTHOR = "Public Domain"
-    PUBLIC_DOMAIN_LINK = "Public Domain"
-    PUBLIC_DOMAIN_OLD = "Public Domain"
-    CDC = "Public Domain by Centers for Disease Control and Prevention"
-    DARTHMOUTH = "Public Domain by Dartmouth Electron Microscope Facility"
-    NIH = "Public Domain by National Institutes of Health"
-    NASA = "Public Domain by the National Aeronautics and Space Administration"
-    NOAA = "Public Domain by National Oceanic and Atmospheric Administration"
-    USDA = "Public Domain by United States Department of Agriculture"
-    FMIB = "Public Domain by Freshwater and Marine Image Bank, University of Washington"
-    FWS = "Public Domain by United States Fish and Wildlife Service"
-    USPOSTAL = "Public Domain by United Stated Postal Service"
-    USDA_ARS = "Public Domain by Agricultural Research Service, United States Department of Agriculture"
-    EPA = "Public Domain by nvironmental Protection Agency"
-    NPS = "Public Domain by National Park Service"
-    USGS = "Public Domain by United States Geological Survey"
+    PUBLIC_DOMAIN_SELF = PD
+    PUBLIC_DOMAIN_USER = PD
+    PUBLIC_DOMAIN_AUTHOR = PD
+    PUBLIC_DOMAIN_LINK = PD
+    PUBLIC_DOMAIN_OLD = PD
+    PUBLIC_DOMAIN_CHEM = PD
+    CDC = f"{PD} by Centers for Disease Control and Prevention"
+    DARTHMOUTH = f"{PD} by Dartmouth Electron Microscope Facility"
+    NIH = f"{PD} by National Institutes of Health"
+    NASA = f"{PD} by the National Aeronautics and Space Administration"
+    NOAA = f"{PD} by National Oceanic and Atmospheric Administration"
+    USDA = f"{PD} by United States Department of Agriculture"
+    FMIB = f"{PD} by Freshwater and Marine Image Bank, University of Washington"
+    FWS = f"{PD} by United States Fish and Wildlife Service"
+    USPOSTAL = f"{PD} by United Stated Postal Service"
+    USDA_ARS = f"{PD} by Agricultural Research Service, United States Department of Agriculture"
+    EPA = f"{PD} by Environmental Protection Agency"
+    NPS = f"{PD} by National Park Service"
+    USGS = f"{PD} by United States Geological Survey"
     ATTRIBUTION = "Attribution Only"
     CC_BY_2_0 = "Creative Commons Attribution 2.0 Generic"
     CC_BY_2_5 = "Creative Commons Attribution 2.5 Generic"
