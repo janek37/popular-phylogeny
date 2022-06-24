@@ -28,7 +28,7 @@ L_CANNABINA = Species(
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Carduelis_cannabina_2.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/8/81/Carduelis_cannabina_2.jpg",
-        author="undefined",
+        author="Wilhelm von Wright",
         license=License.PUBLIC_DOMAIN_OLD,
     ),
 )

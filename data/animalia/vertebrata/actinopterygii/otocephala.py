@@ -159,14 +159,14 @@ A_NEBULOSUS = Species(
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Ameiurus_nebulosus.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/b/b4/Ameiurus_nebulosus.jpg",
-        author="undefined",
+        author="Noel Burkhead",
         license=License.CC_BY_SA_2_5,
     ),
 )
 
 APTERONOTUS = Genus(name="Apteronotus", children=[A_ALBIFRONS])
 ELECTROPHORUS = Genus(name="Electrophorus", children=[E_ELECTRICUS])
-PANGASIANODON = Genus(name="Pangasius", children=[P_HYPOPHTHALMUS])
+PANGASIANODON = Genus(name="Pangasianodon", children=[P_HYPOPHTHALMUS])
 SILURUS = Genus(name="Silurus", children=[S_GLANIS])
 AMEIURUS = Genus(name="Ameiurus", children=[A_NEBULOSUS])
 

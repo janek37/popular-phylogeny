@@ -210,7 +210,7 @@ M_MITRA = Species(
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Mitra_mitra_shell_2.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/b/b7/Mitra_mitra_shell_2.jpg",
-        author="undefined",
+        author="Haplochromis",
         license=License.PUBLIC_DOMAIN_USER,
     ),
 )
