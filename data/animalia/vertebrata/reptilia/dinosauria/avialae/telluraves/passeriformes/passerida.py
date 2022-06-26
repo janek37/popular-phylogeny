@@ -8,10 +8,10 @@ P_DOMESTICUS = Species(
     name="Passer domesticus",
     local_names={EN: "house sparrow", PL: "wróbel zwyczajny"},
     image=Image(
-        url="https://commons.wikimedia.org/wiki/File:Passer_domesticus_-_House_sparrow_02.jpg",
-        image_url="https://upload.wikimedia.org/wikipedia/commons/d/db/Passer_domesticus_-_House_sparrow_02.jpg",
-        author="Zeynel Cebeci",
-        license=License.CC_BY_SA_4_0,
+        url="https://commons.wikimedia.org/wiki/File:Passer_domesticus_male_(15).jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/6/6e/Passer_domesticus_male_%2815%29.jpg",
+        author="Adamo",
+        license=License.CC_BY_2_0_DE,
     ),
 )
 M_ALBA = Species(

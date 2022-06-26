@@ -3,6 +3,8 @@ from enum import Enum
 from typing import Optional
 
 PD = "Public Domain"
+CC_BY = "Creative Commons Attribution"
+CC_BY_SA = f"{CC_BY}-Share Alike"
 
 
 class License(Enum):
@@ -26,18 +28,19 @@ class License(Enum):
     NPS = f"{PD} by National Park Service"
     USGS = f"{PD} by United States Geological Survey"
     ATTRIBUTION = "Attribution Only"
-    CC_BY_2_0 = "Creative Commons Attribution 2.0 Generic"
-    CC_BY_2_5 = "Creative Commons Attribution 2.5 Generic"
-    CC_BY_2_5_ES = "Creative Commons Attribution 2.5 Spain"
-    CC_BY_3_0 = "Creative Commons Attribution 3.0 Unported"
-    CC_BY_3_0_US = "Creative Commons Attribution 3.0 United States"
-    CC_BY_4_0 = "Creative Commons Attribution 4.0 International"
-    CC_BY_SA_2_0 = "Creative Commons Attribution-Share Alike 2.0 Generic"
-    CC_BY_SA_2_0_DE = "Creative Commons Attribution-Share Alike 2.0 Germany"
-    CC_BY_SA_2_5 = "Creative Commons Attribution-Share Alike 2.5 Generic"
-    CC_BY_SA_3_0 = "Creative Commons Attribution-Share Alike 3.0 Unported"
-    CC_BY_SA_3_0_US = "Creative Commons Attribution-Share Alike 3.0 United States"
-    CC_BY_SA_4_0 = "Creative Commons Attribution-Share Alike 4.0 International"
+    CC_BY_2_0 = f"{CC_BY} 2.0 Generic"
+    CC_BY_2_0_DE = f"{CC_BY} 2.0 Germany"
+    CC_BY_2_5 = f"{CC_BY} 2.5 Generic"
+    CC_BY_2_5_ES = f"{CC_BY} 2.5 Spain"
+    CC_BY_3_0 = f"{CC_BY} 3.0 Unported"
+    CC_BY_3_0_US = f"{CC_BY} 3.0 United States"
+    CC_BY_4_0 = f"{CC_BY} 4.0 International"
+    CC_BY_SA_2_0 = f"{CC_BY_SA} 2.0 Generic"
+    CC_BY_SA_2_0_DE = f"{CC_BY_SA} 2.0 Germany"
+    CC_BY_SA_2_5 = f"{CC_BY_SA} 2.5 Generic"
+    CC_BY_SA_3_0 = f"{CC_BY_SA} 3.0 Unported"
+    CC_BY_SA_3_0_US = f"{CC_BY_SA} 3.0 United States"
+    CC_BY_SA_4_0 = f"{CC_BY_SA} 4.0 International"
     CC0 = "Creative Commons CC0 1.0 Universal Public Domain Dedication"
 
 
