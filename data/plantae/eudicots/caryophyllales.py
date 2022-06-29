@@ -1,12 +1,26 @@
 from clade import Clade, Family, Genus, Order, Species, Subfamily, Subtribe, Tribe
-from constants import EN, PL
+from constants import EN, IMAGE, PL
+from image import Image, License
 
 D_CARYOPHYLLUS = Species(
     name="Dianthus caryophyllus",
     local_names={EN: "carnation, clove pink", PL: "goździk ogrodowy"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Dianthus_caryophyllus_apollo-2-xavier_cottage-yercaud-salem-India.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/e/e8/Dianthus_caryophyllus_apollo-2-xavier_cottage-yercaud-salem-India.jpg",
+        author="Yercaud-elango",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 A_GITHAGO = Species(
-    name="Agrostemma githago", local_names={EN: "common corn-cockle", PL: "kąkol polny"}
+    name="Agrostemma githago",
+    local_names={EN: "common corn-cockle", PL: "kąkol polny"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Agrostemma_githago_sl12.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/6/68/Agrostemma_githago_sl12.jpg",
+        author="Stefan.lefnaer",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 B_VULGARIS = Species(
     name="Beta vulgaris",
@@ -16,62 +30,174 @@ B_VULGARIS = Species(
         {EN: "mangelwurzel", PL: "burak pastewny"},
         {EN: "chard", PL: "boćwina, burak liściowy"},
     ],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Beta_vulgaris_L.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/6/68/Beta_vulgaris_L.jpg",
+        author="Kagor",
+        license=License.CC_BY_SA_3_0,
+    ),
 )
 D_ROTUNDIFOLIA = Species(
     name="Drosera rotundifolia",
     local_names={EN: "round-leaved sundew", PL: "rosiczka okrągłolistna"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Drosera_rotundifolia_Common_Sundew,_Round-leaved_Sundew)_primary_1_NH_20100718_Beth_Zimmer_Round_Leafed_Sundew_02.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/6/61/Drosera_rotundifolia_Common_Sundew%2C_Round-leaved_Sundew%29_primary_1_NH_20100718_Beth_Zimmer_Round_Leafed_Sundew_02.jpg",
+        author="Sarkan47",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 D_MUSCIPULA = Species(
     name="Dionaea muscipula",
     local_names={EN: "Venus flytrap", PL: "muchołówka amerykańska"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Venus_Fly_Trap_(Dionaea_muscipula)_2.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/e/ec/Venus_Fly_Trap_%28Dionaea_muscipula%29_2.jpg",
+        author="Mokkie",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 N_MIRABILIS = Species(
     name="Nepenthes mirabilis",
     local_names={EN: "common swamp pitcher-plant", PL: "dzbanecznik przedziwny"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:N%E1%BA%AFp_%E1%BA%A5m.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/5/50/N%E1%BA%AFp_%E1%BA%A5m.jpg",
+        author="Bùi Thụy Đào Nguyên",
+        license=License.CC_BY_SA_3_0,
+    ),
 )
 S_OLERACEA = Species(
-    name="Spinacia oleracea", local_names={EN: "spinach", PL: "szpinak warzywny"}
+    name="Spinacia oleracea",
+    local_names={EN: "spinach", PL: "szpinak warzywny"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:NdP_Spinacia_oleracea.png",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/5/5e/NdP_Spinacia_oleracea.png",
+        author="Gotthilf Heinrich von Schubert; File:Naturgeschichte des Pflanzenreichs Tafel XLIX.jpg: Аимаина хикари",
+        license=License.PUBLIC_DOMAIN_OLD,
+    ),
 )
 R_HYBRIDUM = Species(
-    name="Rheum × hybridum", local_names={EN: "rhubarb", PL: "rabarbar"}
+    name="Rheum × hybridum",
+    local_names={EN: "rhubarb", PL: "rabarbar"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Rheum.rhabarbarum.2515.JPG",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/7/70/Rheum.rhabarbarum.2515.JPG",
+        author="Chris.urs-o",
+        license=License.CC_BY_SA_3_0,
+    ),
 )
 C_QUINOA = Species(
-    name="Chenopodium quinoa", local_names={EN: "quinoa", PL: "komosa ryżowa"}
+    name="Chenopodium quinoa",
+    local_names={EN: "quinoa", PL: "komosa ryżowa"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Quinoa_Chenopodium_quinoa.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/f/fb/Quinoa_Chenopodium_quinoa.jpg",
+        author="Mohammed Shahid, International Center for Biosaline Agriculture",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 K_TRAGUS = Species(
     name="Kali tragus",
     local_names={EN: "tumbleweed, prickly Russian thistle"},
-    known_for=[{EN: "most common tumbleweed plant"}],
+    known_for=[
+        {
+            EN: "most common tumbleweed plant",
+            IMAGE: Image(
+                url="https://commons.wikimedia.org/wiki/File:Tumbleweed_038.jpg",
+                image_url="https://upload.wikimedia.org/wikipedia/commons/6/62/Tumbleweed_038.jpg",
+                author="ImperfectTommy  / Edmond Meinfelder",
+                license=License.CC_BY_2_0,
+            ),
+        }
+    ],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Salsola_kali_Habitus_CampodeCalatrava.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/d/d4/Salsola_kali_Habitus_CampodeCalatrava.jpg",
+        author="Javier martin",
+        license=License.PUBLIC_DOMAIN_SELF,
+    ),
 )
 F_ESCULENTUM = Species(
-    name="Fagopyrum esculentum", local_names={EN: "buckwheat", PL: "gryka zwyczajna"}
+    name="Fagopyrum esculentum",
+    local_names={EN: "buckwheat", PL: "gryka zwyczajna"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Fagopyrum_esculentum_kz07.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/9/91/Fagopyrum_esculentum_kz07.jpg",
+        author="Krzysztof Ziarnek, Kenraiz",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 R_ACETOSA = Species(
-    name="Rumex acetosa", local_names={EN: "sorrel", PL: "szczaw zwyczajny"}
+    name="Rumex acetosa",
+    local_names={EN: "sorrel", PL: "szczaw zwyczajny"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Rumex_acetosa_(Reichenbach_1909,_vol.24_0339)_clean,_no-description,_squared.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/a/a1/Rumex_acetosa_%28Reichenbach_1909%2C_vol.24_0339%29_clean%2C_no-description%2C_squared.jpg",
+        author="Reichenbach, Heinrich Gottlieb Ludwig; Reichenbach, Heinrich Gustav;",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 S_BUCKLEYI = Species(
     name="Schlumbergera × buckleyi",
     local_names={EN: "Christmas cactus", PL: "szlumbergera, kaktus bożonarodzeniowy"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Schlumbergera_buckleyi_WPC3.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/e/ee/Schlumbergera_buckleyi_WPC3.jpg",
+        author="Wayne Ray User:WayneRay",
+        license=License.PUBLIC_DOMAIN_SELF,
+    ),
 )
 S_UNDATUS = Species(
     name="Selenicereus undatus",
     local_names={EN: "white-fleshed pitahaya", PL: "pitaja"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Hylocereus_undatus.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/b/b7/Hylocereus_undatus.jpg",
+        author="Prenn",
+        license=License.CC_BY_SA_3_0,
+    ),
 )
 M_HAHNIANA = Species(
     name="Mammillaria hahniana",
     local_names={EN: "old lady cactus", PL: "wymion, mamilaria"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Mammillaria_hahniana_3zz.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/1/11/Mammillaria_hahniana_3zz.jpg",
+        author="Photo by David J. Stang",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 O_MICRODASYS = Species(
     name="Opuntia microdasys",
     local_names={EN: "bunny ear cactus", PL: "opuncja drobnokolczasta"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Opuntia_microdasys_3.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/3/36/Opuntia_microdasys_3.jpg",
+        author="Stan Shebs",
+        license=License.CC_BY_SA_3_0,
+    ),
 )
 L_WILLIAMSII = Species(
     name="Lophophora williamsii",
     local_names={EN: "peyote", PL: "pejotl, jazgrza Williamsa"},
     known_for=[{EN: "psychoactive mescaline"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Lophophora_williamsii_Bl%C3%BCte.JPG",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/2/29/Lophophora_williamsii_Bl%C3%BCte.JPG",
+        author="Dav Hir",
+        license=License.CC_BY_SA_3_0,
+    ),
 )
 A_ASTERIAS = Species(
-    name="Astrophytum asterias", local_names={EN: "sand dollar cactus"}
+    name="Astrophytum asterias",
+    local_names={EN: "sand dollar cactus"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Astrophytum_asterias_nudum_3.JPG",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/a/aa/Astrophytum_asterias_nudum_3.JPG",
+        author="Petar43",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 E_GRUSONII = Species(
     name="Echinocactus grusonii",
@@ -79,13 +205,32 @@ E_GRUSONII = Species(
         EN: "golden barrel cactus, mother in law's cushion",
         PL: "złota beczka, poduszka/fotel teściowej",
     },
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Echinocactus_grusonii.JPG",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/b/b9/Echinocactus_grusonii.JPG",
+        author="Ripepette",
+        license=License.PUBLIC_DOMAIN_SELF,
+    ),
 )
 C_GIGANTEA = Species(
-    name="Carnegiea gigantea", local_names={EN: "saguaro", PL: "karnegia olbrzymia"}
+    name="Carnegiea gigantea",
+    local_names={EN: "saguaro", PL: "karnegia olbrzymia"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Carnegiea_gigantea_in_Saguaro_National_Park_near_Tucson,_Arizona_during_November_(63).jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/e/e7/Carnegiea_gigantea_in_Saguaro_National_Park_near_Tucson%2C_Arizona_during_November_%2863%29.jpg",
+        author="WClarke",
+        license=License.CC_BY_SA_3_0,
+    ),
 )
 P_AVICULARE = Species(
     name="Polygonum aviculare",
     local_names={EN: "common knotgrass", PL: "rdest zwyczajny"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Polygonum_aviculare_Sturm63.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/3/33/Polygonum_aviculare_Sturm63.jpg",
+        author="Johann Georg Sturm (Painter: Jacob Sturm)",
+        license=License.PUBLIC_DOMAIN_OLD,
+    ),
 )
 
 DIANTHUS = Genus(name="Dianthus", children=[D_CARYOPHYLLUS])
