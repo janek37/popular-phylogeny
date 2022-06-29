@@ -1,56 +1,185 @@
 from clade import Clade, Family, Genus, Order, Species, Subfamily, Subgenus, Tribe
-from constants import EN, PL
+from constants import EN, IMAGE, PL
+from image import Image, License
 
 B_EXCELSA = Species(
     name="Bertholletia excelsa",
     local_names={EN: "Brazil nut", PL: "orzesznica brazylijska, orzesznica wyniosła"},
-    known_for=[{PL: "orzechy brazylijskie", EN: "edible nuts"}],
+    known_for=[
+        {
+            PL: "orzechy brazylijskie",
+            EN: "edible nuts",
+            IMAGE: Image(
+                url="https://commons.wikimedia.org/wiki/File:Bertholletia_excelsa_seeds_closeup.jpg",
+                image_url="https://upload.wikimedia.org/wikipedia/commons/d/d6/Bertholletia_excelsa_seeds_closeup.jpg",
+                author="רנדום",
+                license=License.CC_BY_SA_3_0,
+            ),
+        }
+    ],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:COCO_DE_CASTA%C3%91A_(BERTHOLLETIA_EXCELSA).jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/d/d6/COCO_DE_CASTA%C3%91A_%28BERTHOLLETIA_EXCELSA%29.jpg",
+        author="Miguel Jorge Villavicencio Oliva",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 D_EBENUM = Species(
     name="Diospyros ebenum",
     local_names={EN: "Ceylon ebony", PL: "hebanowe drzewo, hurma hebanowa"},
-    known_for=[{EN: "ebony, black wood", PL: "heban"}],
+    known_for=[
+        {
+            EN: "ebony, black wood",
+            PL: "heban",
+            IMAGE: Image(
+                url="https://commons.wikimedia.org/wiki/File:Diospyros_ebenum_09082017.jpg",
+                image_url="https://upload.wikimedia.org/wikipedia/commons/3/38/Diospyros_ebenum_09082017.jpg",
+                author="Philg88",
+                license=License.CC_BY_SA_4_0,
+            ),
+        }
+    ],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Kaluwara-Diospyros_ebenum-Sri_Lanka_(2).jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/b/b3/Kaluwara-Diospyros_ebenum-Sri_Lanka_%282%29.jpg",
+        author="Ji-Elle",
+        license=License.CC_BY_SA_3_0,
+    ),
 )
 D_KAKI = Species(
     name="Diospyros kaki",
     local_names={EN: "Oriental persimmon", PL: "heban wiśniówka, hurma wschodnia"},
-    known_for=[{EN: "kaki fruit", PL: "owoc kaki"}],
+    known_for=[
+        {
+            EN: "kaki fruit",
+            PL: "owoc kaki",
+            IMAGE: Image(
+                url="https://commons.wikimedia.org/wiki/File:Fuyu_Persimmon_(Diospyros_Kaki).jpg",
+                image_url="https://upload.wikimedia.org/wikipedia/commons/a/a6/Fuyu_Persimmon_%28Diospyros_Kaki%29.jpg",
+                author="Joe Ravi",
+                license=License.CC_BY_SA_3_0,
+            ),
+        }
+    ],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Diospyros_kaki_-_persimmon_at_Paro_during_LGFC_-_Bhutan_2019_(3).jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/9/95/Diospyros_kaki_-_persimmon_at_Paro_during_LGFC_-_Bhutan_2019_%283%29.jpg",
+        author="Vinayaraj",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 P_VULGARIS = Species(
     name="Primula vulgaris",
     local_names={EN: "common primrose", PL: "pierwiosnek bezłodygowy"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Primula_acaulis_subsp._acaulis_(%C3%87uha_%C3%A7i%C3%A7e%C4%9Fi)_03.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/b/bb/Primula_acaulis_subsp._acaulis_%28%C3%87uha_%C3%A7i%C3%A7e%C4%9Fi%29_03.jpg",
+        author="Zeynel Cebeci",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 C_SINENSIS = Species(
     name="Camellia sinensis",
     local_names={EN: "tea plant", PL: "herbata chińska"},
-    known_for=[{EN: "tea", PL: "herbata"}],
+    known_for=[
+        {
+            EN: "tea",
+            PL: "herbata",
+            IMAGE: Image(
+                url="https://commons.wikimedia.org/wiki/File:Leaves_of_green_tea.jpg",
+                image_url="https://upload.wikimedia.org/wikipedia/commons/3/3e/Leaves_of_green_tea.jpg",
+                author="Editor at Large",
+                license=License.CC_BY_SA_2_5,
+            ),
+        }
+    ],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Camellia_sinensis_Bois_Cheri.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/a/a5/Camellia_sinensis_Bois_Cheri.jpg",
+        author="Pancrat",
+        license=License.CC_BY_SA_3_0,
+    ),
 )
 C_JAPONICA = Species(
     name="Camellia japonica",
     local_names={EN: "common camellia", PL: "kamelia japońska"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Camellia_Japonica_L.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/2/2a/Camellia_Japonica_L.jpg",
+        author="Bongsun",
+        license=License.CC_BY_SA_3_0,
+    ),
 )
 S_RUBRA = Species(
-    name="Sarracenia rubra", local_names={EN: "sweet pitcherplant", PL: "kapturnica"}
+    name="Sarracenia rubra",
+    local_names={EN: "sweet pitcherplant", PL: "kapturnica"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Sarraceniaceae_Sarracenia_rubra_gulfensis_1.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/d/d6/Sarraceniaceae_Sarracenia_rubra_gulfensis_1.jpg",
+        author="NasserHalaweh",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 A_DELICIOSA = Species(
     name="Actinidia deliciosa",
     local_names={EN: "fuzzy kiwifruit", PL: "aktinidia smakowita"},
-    known_for=[{PL: "owoce kiwi"}],
+    known_for=[
+        {
+            PL: "owoce kiwi",
+            IMAGE: Image(
+                url="https://commons.wikimedia.org/wiki/File:Kiwifruit-Actinidia_deliciosa_half.jpg",
+                image_url="https://upload.wikimedia.org/wikipedia/commons/a/ae/Kiwifruit-Actinidia_deliciosa_half.jpg",
+                author="Thomas N. aka Karpour",
+                license=License.CC_BY_SA_2_0_DE,
+            ),
+        }
+    ],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Actinidia_deliciosa_Kiwi_Fruit_%E1%83%99%E1%83%98%E1%83%95%E1%83%98.JPG",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/1/16/Actinidia_deliciosa_Kiwi_Fruit_%E1%83%99%E1%83%98%E1%83%95%E1%83%98.JPG",
+        author="Lazaregagnidze",
+        license=License.CC_BY_SA_3_0,
+    ),
 )
 C_VULGARIS = Species(
-    name="Calluna vulgaris", local_names={EN: "common heather", PL: "wrzos zwyczajny"}
+    name="Calluna vulgaris",
+    local_names={EN: "common heather", PL: "wrzos zwyczajny"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Calluna_vulgaris_-_Heather_01.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/2/23/Calluna_vulgaris_-_Heather_01.jpg",
+        author="Zeynel Cebeci",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 V_VITIS_IDAEA = Species(
     name="Vaccinium vitis-idaea",
     local_names={EN: "lingonberry, cowberry", PL: "borówka brusznica"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Vaccinium_vitis-idaea_20060824_003.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vaccinium_vitis-idaea_20060824_003.jpg",
+        author="Jonas Bergsten",
+        license=License.PUBLIC_DOMAIN_USER,
+    ),
 )
 V_OXYCOCCOS = Species(
     name="Vaccinium oxycoccos",
     local_names={EN: "small/common cranberry", PL: "żurawina błotna"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:VACCINIUM_OXYCOCCOS._(1).jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/0/01/VACCINIUM_OXYCOCCOS._%281%29.jpg",
+        author="Espirat",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 V_MACROCARPON = Species(
     name="Vaccinium macrocarpon",
     local_names={EN: "large/American cranberry", PL: "żurawina wielkoowocowa"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Vaccinium_macrocarpon_(15054125499).jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/2/22/Vaccinium_macrocarpon_%2815054125499%29.jpg",
+        author="Kristine Paulus",
+        license=License.CC_BY_2_0,
+    ),
 )
 V_MYRTILLUS = Species(
     name="Vaccinium myrtillus",
@@ -58,6 +187,12 @@ V_MYRTILLUS = Species(
         EN: "European blueberry, bilberry",
         PL: "czarna jagoda, czernica, borówka czarna",
     },
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Vaccinium_myrtillus_30999834.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/2/20/Vaccinium_myrtillus_30999834.jpg",
+        author="Татьяна Прозорова",
+        license=License.CC0,
+    ),
 )
 V_CORYMBOSUM = Species(
     name="Vaccinium corymbosum",
@@ -65,10 +200,22 @@ V_CORYMBOSUM = Species(
         EN: "northern highbush blueberry",
         PL: "borówka amerykańska, borówka wysoka",
     },
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Vaccinium_corymbosum_in_The_Netherlands.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/8/89/Vaccinium_corymbosum_in_The_Netherlands.jpg",
+        author="Rasbak at Dutch Wikipedia",
+        license=License.CC_BY_SA_3_0,
+    ),
 )
 R_NOVA_ZEMBLA = Species(
     name="Rhododendron Nova Zembla",
     local_names={PL: "rododendron, różanecznik wielkokwiatowy Nova Zembla"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Rhododendron_%27Nova_Zembla%27_r1.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/6/60/Rhododendron_%27Nova_Zembla%27_r1.jpg",
+        author="Jerzy Opioła",
+        license=License.CC_BY_SA_3_0,
+    ),
 )
 
 # possibly vitis-idaea should be closest to macrocarpon? conflicting data
