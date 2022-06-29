@@ -190,7 +190,7 @@ C_PALMAROSAE = Species(
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Chicoreus_palmarosae.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/1/13/Chicoreus_palmarosae.jpg",
-        author="No machine-readable author provided. Bricktop assumed (based on copyright claims).",
+        author="Bricktop",
         license=License.CC_BY_SA_3_0,
     ),
 )
