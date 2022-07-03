@@ -1,4 +1,4 @@
-from clade import Family, Genus, Infraorder, Order, Species, Superfamily
+from clade import Clade, Family, Genus, Infraorder, Order, Species, Superfamily
 from constants import EN, PL
 from image import Image, License
 
@@ -48,11 +48,33 @@ P_PHALANGIOIDES = Species(
         license=License.CC_BY_SA_2_5,
     ),
 )
+B_KIPLINGI = Species(
+    name="Bagheera kiplingi",
+    known_for=[{EN: "the only known herbivorous spider"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Bagheera_kiplingi_male_JAL14-9421.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/9/90/Bagheera_kiplingi_male_JAL14-9421.jpg",
+        author="Wayne Maddison",
+        license=License.CC_BY_3_0,
+    ),
+)
+S_SCENICUS = Species(
+    name="Salticus scenicus",
+    local_names={EN: "zebra jumping spider", PL: "skakun arlekinowy"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Kaldari_Salticus_scenicus_female_03.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/a/ad/Kaldari_Salticus_scenicus_female_03.jpg",
+        author="Kaldari",
+        license=License.CC0,
+    ),
+)
 
 BRACHYPELMA = Genus(name="Brachypelma", children=[B_SMITHI])
 ARANEUS = Genus(name="Araneus", children=[A_DIADEMATUS])
 LATRODECTUS = Genus(name="Latrodectus", children=[L_MACTANS])
 PHOLCUS = Genus(name="Pholcus", children=[P_PHALANGIOIDES])
+BAGHEERA = Genus(name="Bagheera", children=[B_KIPLINGI])
+SALTICUS = Genus(name="Salticus", children=[S_SCENICUS])
 
 THERAPHOSIDAE = Family(
     name="Theraphosidae",
@@ -62,11 +84,16 @@ THERAPHOSIDAE = Family(
 ARANEIDAE = Family(name="Araneidae", children=[ARANEUS])
 THERIDIIDAE = Family(name="Theridiidae", children=[LATRODECTUS])
 PHOLCIDAE = Family(name="Pholcidae", children=[PHOLCUS])
+SALTICIDAE = Family(name="Salticidae", children=[BAGHEERA, SALTICUS])
 
 ARANEOIDEA = Superfamily(name="Araneoidea", children=[ARANEIDAE, THERIDIIDAE])
 PHOLCOIDEA = Superfamily(name="Pholcoidea", children=[PHOLCIDAE])
+SALTICOIDEA = Superfamily(name="Salticoidea", children=[SALTICIDAE])
+
+# https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/araneomorphae
+ARANEOMORPHAE_A = Clade(children=[ARANEOIDEA, SALTICOIDEA])
 
 MYGALOMORPHAE = Infraorder(name="Mygalomorphae", children=[THERAPHOSIDAE])
-ARANEOMORPHAE = Infraorder(name="Araneomorphae", children=[ARANEOIDEA, PHOLCOIDEA])
+ARANEOMORPHAE = Infraorder(name="Araneomorphae", children=[ARANEOMORPHAE_A, PHOLCOIDEA])
 
 ARANEAE = Order(name="Araneae", children=[MYGALOMORPHAE, ARANEOMORPHAE])
