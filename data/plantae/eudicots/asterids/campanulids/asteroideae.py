@@ -1,21 +1,47 @@
 from clade import Clade, Genus, Species, Subfamily, Supertribe, Tribe
-from constants import EN, PL
+from constants import EN, IMAGE, PL
+from image import Image, License
 
 M_CHAMOMILLA = Species(
     name="Matricaria chamomilla",
     local_names={EN: "German chamomile", PL: "rumianek pospolity"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:12_Matricaria_chamomilla.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/7/70/12_Matricaria_chamomilla.jpg",
+        author="Carl Axel Magnus Lindman",
+        license=License.PUBLIC_DOMAIN_OLD,
+    ),
 )
 C_NOBILE = Species(
-    name="Chamaemelum nobile", local_names={EN: "Roman chamomile", PL: "rumian rzymski"}
+    name="Chamaemelum nobile",
+    local_names={EN: "Roman chamomile", PL: "rumian rzymski"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Chamaemelum_nobile_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-012.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/5/59/Chamaemelum_nobile_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-012.jpg",
+        author="Franz Eugen Köhler, Köhler's Medizinal-Pflanzen",
+        license=License.PUBLIC_DOMAIN_OLD,
+    ),
 )
 A_ABSINTHIUM = Species(
     name="Artemisia absinthium",
     local_names={EN: "wormwood", PL: "bylica piołun"},
     known_for=[{EN: "absinthe", PL: "absynt"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:20150821Artemisia_absinthium1.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/7/7f/20150821Artemisia_absinthium1.jpg",
+        author="AnRo0002",
+        license=License.CC0,
+    ),
 )
 A_DRACUNCULUS = Species(
     name="Artemisia dracunculus",
     local_names={EN: "tarragon, estragon", PL: "estragon, bylica draganek"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Artemisia_dracunculus_-_001x.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/4/40/Artemisia_dracunculus_-_001x.jpg",
+        author="Oceancetaceen - Alice Chodura",
+        license=License.PUBLIC_DOMAIN_OLD,
+    ),
 )
 C_MORIFOLIUM = Species(
     name="Chrysanthemum × morifolium",
@@ -23,14 +49,32 @@ C_MORIFOLIUM = Species(
         EN: "'florist's daisy, hardy garden mum'",
         PL: "chryzantema, złocień chiński",
     },
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Chrysanthemum_morifolium_(2).JPG",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/3/30/Chrysanthemum_morifolium_%282%29.JPG",
+        author="Prenn",
+        license=License.CC_BY_SA_3_0,
+    ),
 )
 D_PINNATA = Species(
     name="Dahlia pinnata",
     local_names={EN: "garden dahlia", PL: "dalia ogrodowa, dalia zmienna"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:,00_0904_Dahlia_%C3%97_pinnata.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/b/b1/%2C00_0904_Dahlia_%C3%97_pinnata.jpg",
+        author="W. Bulach",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 H_ANNUUS = Species(
     name="Helianthus annuus",
     local_names={EN: "common sunflower", PL: "słonecznik zwyczajny"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Helianthus_annuus_00001.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/6/6f/Helianthus_annuus_00001.jpg",
+        author="Vengolis",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 H_TUBEROSUS = Species(
     name="Helianthus tuberosus",
@@ -38,36 +82,114 @@ H_TUBEROSUS = Species(
         EN: "Jerusalem artichoke, sunroot",
         PL: "topinambur, słonecznik bulwiasty",
     },
+    known_for=[
+        {
+            EN: "edible tubers",
+            IMAGE: Image(
+                url="https://commons.wikimedia.org/wiki/File:Helianthus_tuberosus.jpg",
+                image_url="https://upload.wikimedia.org/wikipedia/commons/9/9d/Helianthus_tuberosus.jpg",
+                author="Hans B.~commonswiki",
+                license=License.PUBLIC_DOMAIN_SELF,
+            ),
+        }
+    ],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Helianthus_tuberosus_Paludi_03.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/7/79/Helianthus_tuberosus_Paludi_03.jpg",
+        author="Syrio",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 C_OFFICINALIS = Species(
     name="Calendula officinalis",
     local_names={EN: "pot marigold", PL: "nagietek lekarski"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Calendula_officinalis_macro_image.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/6/64/Calendula_officinalis_macro_image.jpg",
+        author="FriendlyFoes",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 A_AMELLUS = Species(
     name="Aster amellus",
     local_names={EN: "European Michaelmas daisy, Italian aster", PL: "aster gawędka"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Aster_amellus_flower_(04).jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/6/60/Aster_amellus_flower_%2804%29.jpg",
+        author="Andrea Moro",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 S_CANADENSIS = Species(
     name="Solidago canadensis",
     local_names={EN: "Canada goldenrod", PL: "nawłoć kanadyjska"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:20161013Solidago_canadensis4.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/c/c9/20161013Solidago_canadensis4.jpg",
+        author="AnRo0002",
+        license=License.CC0,
+    ),
 )
 L_NIVALE = Species(
-    name="Leontopodium nivale", local_names={EN: "edelweiss", PL: "szarotka alpejska"}
+    name="Leontopodium nivale",
+    local_names={EN: "edelweiss", PL: "szarotka alpejska"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Leontopodium_nivale_(alpinum)_(28558875687).jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/2/24/Leontopodium_nivale_%28alpinum%29_%2828558875687%29.jpg",
+        author="xulescu_g",
+        license=License.CC_BY_SA_2_0,
+    ),
 )
 T_FARFARA = Species(
-    name="Tussilago farfara", local_names={EN: "coltsfoot", PL: "podbiał pospolity"}
+    name="Tussilago farfara",
+    local_names={EN: "coltsfoot", PL: "podbiał pospolity"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Tussilago_farfara,_Coltsfoot_(33716499095).jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/0/0f/Tussilago_farfara%2C_Coltsfoot_%2833716499095%29.jpg",
+        author="gailhampshire from Cradley, Malvern, U.K",
+        license=License.CC_BY_2_0,
+    ),
 )
 S_REBAUDIANA = Species(
     name="Stevia rebaudiana",
     local_names={EN: "candyleaf", PL: "stewia"},
-    known_for=[{EN: "sweetener"}],
+    known_for=[
+        {
+            EN: "sweetener",
+            IMAGE: Image(
+                url="https://commons.wikimedia.org/wiki/File:Stevia_Tabs.jpg",
+                image_url="https://upload.wikimedia.org/wikipedia/commons/0/0f/Stevia_Tabs.jpg",
+                author="User:Thomas R. Schwarz",
+                license=License.CC_BY_SA_4_0,
+            ),
+        }
+    ],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:%E7%94%9C%E8%8F%8A_Stevia_rebaudiana_-%E6%B3%B0%E5%9C%8B%E6%B8%85%E9%82%81%E8%8A%B1%E5%B1%95_Royal_Flora_Ratchaphruek,_Thailand-_(9240149538).jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/1/10/%E7%94%9C%E8%8F%8A_Stevia_rebaudiana_-%E6%B3%B0%E5%9C%8B%E6%B8%85%E9%82%81%E8%8A%B1%E5%B1%95_Royal_Flora_Ratchaphruek%2C_Thailand-_%289240149538%29.jpg",
+        author="阿橋 HQ",
+        license=License.CC_BY_SA_2_0,
+    ),
 )
 A_MILLEFOLIUM = Species(
     name="Achillea millefolium",
     local_names={EN: "common yarrow", PL: "krwarwnik pospolity"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Flowers._Achillea_millefolium.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/1/12/Flowers._Achillea_millefolium.jpg",
+        author="llysmlv",
+        license=License.CC_BY_4_0,
+    ),
 )
 B_PERENNIS = Species(
-    name="Bellis perennis", local_names={EN: "common daisy", PL: "stokrotka pospolita"}
+    name="Bellis perennis",
+    local_names={EN: "common daisy", PL: "stokrotka pospolita"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:%E3%83%92%E3%83%8A%E3%82%AE%E3%82%AF%E3%81%AE%E8%8A%B1(Bellis_perennis_L.).jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/a/a1/%E3%83%92%E3%83%8A%E3%82%AE%E3%82%AF%E3%81%AE%E8%8A%B1%28Bellis_perennis_L.%29.jpg",
+        author="Latra Yokote",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 T_ERECTA = Species(
     name="Tagetes erecta",
@@ -75,6 +197,12 @@ T_ERECTA = Species(
         EN: "Aztec marigold, Mexican marigold, big marigold",
         PL: "aksamitka wzniesiona",
     },
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Tagetes_Erecta-Flower_02.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/7/76/Tagetes_Erecta-Flower_02.jpg",
+        author="Sabina Bajracharya",
+        license=License.CC_BY_SA_4_0,
+    ),
 )
 A_MONTANA = Species(
     name="Arnica montana",
@@ -82,6 +210,12 @@ A_MONTANA = Species(
         EN: "wolf's bane, leopard's bane, mountain tobacco, mountain arnica",
         PL: "arnika górska",
     },
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Mountain_Arnica_-_Arnica_montana_(44236282062).jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/0/01/Mountain_Arnica_-_Arnica_montana_%2844236282062%29.jpg",
+        author="Björn S...",
+        license=License.CC_BY_SA_2_0,
+    ),
 )
 
 MATRICARIA = Genus(name="Matricaria", children=[M_CHAMOMILLA])
