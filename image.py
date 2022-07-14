@@ -14,6 +14,7 @@ class License(Enum):
     PUBLIC_DOMAIN_LINK = PD
     PUBLIC_DOMAIN_OLD = PD
     PUBLIC_DOMAIN_CHEM = PD
+    PUBLIC_DOMAIN_INELIGIBLE = PD
     CDC = f"{PD} by Centers for Disease Control and Prevention"
     DARTHMOUTH = f"{PD} by Dartmouth Electron Microscope Facility"
     NIH = f"{PD} by National Institutes of Health"
