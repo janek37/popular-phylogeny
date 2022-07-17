@@ -1,5 +1,6 @@
 from clade import Clade, Family, Genus, Order, Species
 from constants import EN, PL
+from image import Image, License
 
 from .cucurbitales import CUCURBITALES
 from .fabales import FABALES
@@ -11,6 +12,12 @@ O_ACETOSELLA = Species(
     name="Oxalis acetosella",
     local_names={EN: "wood sorrel", PL: "szczawik zajęczy"},
     known_for=[{EN: "edible leaves tasting similar to unrelated common sorrel"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Oxalis_acetosella-1.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/c/c7/Oxalis_acetosella-1.jpg",
+        author="Hanna Zelenko",
+        license=License.CC_BY_SA_3_0,
+    ),
 )
 
 OXALIS = Genus(name="Oxalis", children=[O_ACETOSELLA])
