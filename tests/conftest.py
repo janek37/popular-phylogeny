@@ -2,9 +2,12 @@
 import importlib
 import pkgutil
 import sys
+from collections import deque
+from typing import List
 
 import pytest
 
+import clade
 import data
 
 
@@ -24,3 +27,17 @@ def find_modules():
     for spec in spec_list:
         del sys.modules[spec.name]
     return path_list
+
+
+@pytest.fixture
+def life_clades() -> List[clade.BaseClade]:
+    clades = []
+    queue = deque()
+    queue.append(data.LIFE)
+    while queue:
+        current_clade = queue.popleft()
+        clades.append(current_clade)
+        if not isinstance(current_clade, clade.Species):
+            for child in current_clade.children:
+                queue.append(child)
+    return clades

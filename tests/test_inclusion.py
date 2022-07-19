@@ -1,12 +1,9 @@
 import importlib
-from collections import deque
 from typing import List
 
 import pytest
 
 import clade
-from clade import Species
-from data import LIFE
 
 
 @pytest.fixture
@@ -17,20 +14,6 @@ def code_clades(find_modules) -> List[clade.BaseClade]:
         for x in vars(module).values():
             if isinstance(x, clade.BaseClade):
                 clades.append(x)
-    return clades
-
-
-@pytest.fixture
-def life_clades() -> List[clade.BaseClade]:
-    clades = []
-    queue = deque()
-    queue.append(LIFE)
-    while queue:
-        current_clade = queue.popleft()
-        clades.append(current_clade)
-        if not isinstance(current_clade, Species):
-            for child in current_clade.children:
-                queue.append(child)
     return clades
 
 
