@@ -38,7 +38,16 @@ P_AQUILINUM = Species(
         license=License.CC_BY_SA_4_0,
     ),
 )
-A_AUSTRALIS = Species(name="Alsophila australis", local_names={EN: "rough tree fern"})
+A_AUSTRALIS = Species(
+    name="Alsophila australis",
+    local_names={EN: "rough tree fern"},
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Sintra,_Parque_da_Pena_20.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/f/f1/Sintra%2C_Parque_da_Pena_20.jpg",
+        author="LBM1948",
+        license=License.CC_BY_SA_4_0,
+    ),
+)
 M_QUADRIFOLIA = Species(
     name="Marsilea quadrifolia",
     local_names={EN: "four leaf clover", PL: "marsylia czterolistna"},
