@@ -25,7 +25,7 @@ I_PARAGUARIENSIS = Species(
             IMAGE: Image(
                 url="https://commons.wikimedia.org/wiki/File:Mate_en_calabaza.jpg",
                 image_url="https://upload.wikimedia.org/wikipedia/commons/a/a6/Mate_en_calabaza.jpg",
-                author="No machine-readable author provided. Jorgealfonso assumed (based on copyright claims).",
+                author="Jorge Alfonso Hernández",
                 license=License.CC_BY_SA_2_5,
             ),
         }
