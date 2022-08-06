@@ -68,162 +68,130 @@ class Clade(BaseClade):
         return self._is_extinct
 
 
-@dataclass
 class Domain(Clade):
     rank = Rank.DOMAIN
 
 
-@dataclass
 class Kingdom(Clade):
     rank = Rank.KINGDOM
 
 
-@dataclass
 class Superphylum(Clade):
     rank = Rank.SUPERPHYLUM
 
 
-@dataclass
 class Phylum(Clade):
     rank = Rank.PHYLUM
 
 
-@dataclass
 class Subphylum(Clade):
     rank = Rank.SUBPHYLUM
 
 
-@dataclass
 class Infraphylum(Clade):
     rank = Rank.INFRAPHYLUM
 
 
-@dataclass
 class Superclass(Clade):
     rank = Rank.SUPERCLASS
 
 
-@dataclass
 class Class(Clade):
     rank = Rank.CLASS
 
 
-@dataclass
 class Subclass(Clade):
     rank = Rank.SUBCLASS
 
 
-@dataclass
 class Infraclass(Clade):
     rank = Rank.INFRACLASS
 
 
-@dataclass
 class Megacohort(Clade):
     rank = Rank.MEGACOHORT
 
 
-@dataclass
 class Supercohort(Clade):
     rank = Rank.SUPERCOHORT
 
 
-@dataclass
 class Cohort(Clade):
     rank = Rank.COHORT
 
 
-@dataclass
 class Subcohort(Clade):
     rank = Rank.SUBCOHORT
 
 
-@dataclass
 class Magnorder(Clade):
     rank = Rank.MAGNORDER
 
 
-@dataclass
 class Superorder(Clade):
     rank = Rank.SUPERORDER
 
 
-@dataclass
 class Grandorder(Clade):
     rank = Rank.GRANDORDER
 
 
-@dataclass
 class Mirorder(Clade):
     rank = Rank.MIRORDER
 
 
-@dataclass
 class Order(Clade):
     rank = Rank.ORDER
 
 
-@dataclass
 class Suborder(Clade):
     rank = Rank.SUBORDER
 
 
-@dataclass
 class Infraorder(Clade):
     rank = Rank.INFRAORDER
 
 
-@dataclass
 class Parvorder(Clade):
     rank = Rank.PARVORDER
 
 
-@dataclass
 class Superfamily(Clade):
     rank = Rank.SUPERFAMILY
 
 
-@dataclass
 class Epifamily(Clade):
     rank = Rank.EPIFAMILY
 
 
-@dataclass
 class Family(Clade):
     rank = Rank.FAMILY
 
 
-@dataclass
 class Subfamily(Clade):
     rank = Rank.SUBFAMILY
 
 
-@dataclass
 class Supertribe(Clade):
     rank = Rank.SUPERTRIBE
 
 
-@dataclass
 class Tribe(Clade):
     rank = Rank.TRIBE
 
 
-@dataclass
 class Subtribe(Clade):
     rank = Rank.SUBTRIBE
 
 
-@dataclass
 class Genus(Clade):
     rank = Rank.GENUS
 
 
-@dataclass
 class Subgenus(Clade):
     rank = Rank.SUBGENUS
 
 
-@dataclass
 class Superspecies(Clade):
     rank = Rank.SUPERSPECIES
 
