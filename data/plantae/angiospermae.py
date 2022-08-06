@@ -146,13 +146,18 @@ P_AMERICANA = Species(
     local_names={
         EN: "avocado",
         PL: "awokado",
-        IMAGE: Image(
-            url="https://commons.wikimedia.org/wiki/File:Persea_americana_from_Canadian_supermarket.jpg",
-            image_url="https://upload.wikimedia.org/wikipedia/commons/1/1d/Persea_americana_from_Canadian_supermarket.jpg",
-            author="Wilfredor",
-            license=License.CC0,
-        ),
     },
+    known_for=[
+        {
+            EN: "edible fruit",
+            IMAGE: Image(
+                url="https://commons.wikimedia.org/wiki/File:Persea_americana_from_Canadian_supermarket.jpg",
+                image_url="https://upload.wikimedia.org/wikipedia/commons/1/1d/Persea_americana_from_Canadian_supermarket.jpg",
+                author="Wilfredor",
+                license=License.CC0,
+            ),
+        }
+    ],
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Persea_americana_(Avocado)_tree_in_RDA,_Bogra_05.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/4/4c/Persea_americana_%28Avocado%29_tree_in_RDA%2C_Bogra_05.jpg",

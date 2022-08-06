@@ -64,13 +64,18 @@ M_INTEGRIFOLIA = Species(
     local_names={
         PL: "makadamia",
         EN: "macadamia",
-        IMAGE: Image(
-            url="https://commons.wikimedia.org/wiki/File:Nuts_of_Macadamia_1152861.jpg",
-            image_url="https://upload.wikimedia.org/wikipedia/commons/c/c5/Nuts_of_Macadamia_1152861.jpg",
-            author="Wow Phochiangrak",
-            license=License.CC0,
-        ),
     },
+    known_for=[
+        {
+            EN: "macadamia nuts",
+            IMAGE: Image(
+                url="https://commons.wikimedia.org/wiki/File:Nuts_of_Macadamia_1152861.jpg",
+                image_url="https://upload.wikimedia.org/wikipedia/commons/c/c5/Nuts_of_Macadamia_1152861.jpg",
+                author="Wow Phochiangrak",
+                license=License.CC0,
+            ),
+        }
+    ],
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Starr_070112-3411_Macadamia_integrifolia.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/c/c7/Starr_070112-3411_Macadamia_integrifolia.jpg",

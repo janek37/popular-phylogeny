@@ -108,7 +108,7 @@ C_ANNUUM = Species(
         },
         {
             EN: "cayenne pepper",
-            PL: "pieprz cayenne",
+            PL: "pieprz cayenne, papryka cayenne",
             IMAGE: Image(
                 url="https://commons.wikimedia.org/wiki/File:Cayenne_Pepper_(cropped).jpg",
                 image_url="https://upload.wikimedia.org/wikipedia/commons/d/d1/Cayenne_Pepper_%28cropped%29.jpg",
@@ -159,14 +159,21 @@ C_CHINENSE = Species(
     local_names={
         EN: "habanero-type pepper",
         PL: "papryka habanero",
-        IMAGE: Image(
-            url="https://commons.wikimedia.org/wiki/File:Habanero_Chillies_at_Super_Pollo,_Xpujil,_Campeche,_Mexico.jpg",
-            image_url="https://upload.wikimedia.org/wikipedia/commons/4/44/Habanero_Chillies_at_Super_Pollo%2C_Xpujil%2C_Campeche%2C_Mexico.jpg",
-            author="Bernard DUPONT",
-            license=License.CC_BY_SA_2_0,
-        ),
     },
-    known_for=[{EN: "the hottest peppers"}],
+    known_for=[
+        {
+            EN: "some cultivars are the hottest peppers",
+        },
+        {
+            EN: "habanero peppers",
+            IMAGE: Image(
+                url="https://commons.wikimedia.org/wiki/File:Habanero_Chillies_at_Super_Pollo,_Xpujil,_Campeche,_Mexico.jpg",
+                image_url="https://upload.wikimedia.org/wikipedia/commons/4/44/Habanero_Chillies_at_Super_Pollo%2C_Xpujil%2C_Campeche%2C_Mexico.jpg",
+                author="Bernard DUPONT",
+                license=License.CC_BY_SA_2_0,
+            ),
+        },
+    ],
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Solanaceae_Capsicum_chinense_2.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/a/ab/Solanaceae_Capsicum_chinense_2.jpg",
