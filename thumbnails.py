@@ -1,3 +1,4 @@
+import os.path
 import time
 from io import BytesIO
 from os import makedirs
@@ -19,13 +20,16 @@ def make_thumbnails(clade: BaseClade):
 
 def make_thumbnail(species: Species):
     url = get_thumbnail_url(species.image.image_url)
+    ext = url.rsplit(".", 1)[-1]
+    output_filename = f"thumbnails/{species.name}.{ext}"
+    if os.path.exists(output_filename):
+        return
     print(species.name, url, sep="\t")
     wait = 1
     while True:
         try:
             image = open_image(url)
-            ext = url.rsplit(".", 1)[-1]
-            image.save(f"thumbnails/{species.name}.{ext}")
+            image.save(output_filename)
             break
         except UnidentifiedImageError:
             print("retrying...")
