@@ -1,13 +1,13 @@
 from clade import Clade, Family, Genus, Infraorder, Order, Species, Suborder
-from constants import EN, LA, PL
+from constants import EN, NAME, PL
 from image import Image, License
 
 P_HUMANUS = Species(
     name="Pediculus humanus",
     local_names={PL: "wesz ludzka"},
     known_for=[
-        {LA: "pediculus humanus humanus", EN: "body louse", PL: "wesz odzieżowa"},
-        {LA: "pediculus humanus capitis", EN: "head louse", PL: "wesz głowowa"},
+        {NAME: "pediculus humanus humanus", EN: "body louse", PL: "wesz odzieżowa"},
+        {NAME: "pediculus humanus capitis", EN: "head louse", PL: "wesz głowowa"},
     ],
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Nuttall_1917_f11.gif",

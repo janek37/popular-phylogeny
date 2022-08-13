@@ -1,5 +1,5 @@
 from clade import Clade, Family, Genus, Order, Species, Subfamily, Superorder
-from constants import EN, IMAGE, LA, PL
+from constants import EN, IMAGE, NAME, PL
 from image import Image, License
 
 E_LUCIUS = Species(
@@ -30,12 +30,12 @@ S_TRUTTA = Species(
     local_names={EN: "brown trout"},
     known_for=[
         {
-            LA: "Salmo trutta trutta",
+            NAME: "Salmo trutta trutta",
             EN: "sea trout",
             PL: "troć wędrowna, troć atlantycka",
         },
-        {LA: "Salmo trutta fario", EN: "river trout", PL: "pstrąg potokowy"},
-        {LA: "Salmo trutta lacustris", EN: "lake trout", PL: "troć jeziorowa"},
+        {NAME: "Salmo trutta fario", EN: "river trout", PL: "pstrąg potokowy"},
+        {NAME: "Salmo trutta lacustris", EN: "lake trout", PL: "troć jeziorowa"},
     ],
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Bachforelle_Zeichnung.jpg",

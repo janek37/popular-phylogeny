@@ -1,5 +1,5 @@
 from clade import Clade, Class, Family, Genus, Kingdom, Order, Phylum, Species
-from constants import EN, JP, PL
+from constants import EN, PL
 from image import Image, License
 
 from .land_plants import EMBRYOPHYTA
@@ -26,7 +26,7 @@ C_CRISPUS = Species(
 )
 P_TENERA = Species(
     name="Pyropia tenera",
-    local_names={JP: "nori"},
+    local_names={EN: "nori", PL: "nori, szkarłatnica delikatna"},
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Nori.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/b/be/Nori.jpg",

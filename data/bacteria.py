@@ -9,7 +9,7 @@ from clade import (
     Species,
     Superphylum,
 )
-from constants import EN, LA, PL
+from constants import EN, NAME, PL
 from image import Image, License
 
 E_COLI = Species(
@@ -105,7 +105,7 @@ C_BOTULINUM = Species(
 T_PALLIDUM = Species(
     name="Treponema pallidum",
     local_names={PL: "krętek blady"},
-    known_for=[{PL: "kiła", LA: "syphilis"}],
+    known_for=[{PL: "kiła", NAME: "syphilis"}],
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:TreponemaPallidum.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/1/16/TreponemaPallidum.jpg",

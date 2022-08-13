@@ -1,5 +1,5 @@
 from clade import Clade, Family, Genus, Order, Species, Subfamily, Superfamily, Tribe
-from constants import EN, LA, PL
+from constants import EN, NAME, PL
 from image import Image, License
 
 N_MELEAGRIS = Species(
@@ -27,7 +27,7 @@ M_GALLOPAVO = Species(
     local_names={EN: "wild turkey", PL: "indyk zwyczajny"},
     known_for=[
         {
-            LA: "Meleagris gallopavo domesticus",
+            NAME: "Meleagris gallopavo domesticus",
             EN: "domestic turkey",
             PL: "indyk domowy",
         }
@@ -109,7 +109,7 @@ C_COTURNIX = Species(
 G_GALLUS = Species(
     name="Gallus gallus",
     local_names={EN: "red junglefowl", PL: "kur bankiwa"},
-    known_for=[{LA: "Gallus gallus domesticus", EN: "chicken", PL: "kura domowa"}],
+    known_for=[{NAME: "Gallus gallus domesticus", EN: "chicken", PL: "kura domowa"}],
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Junglefowl_on_tree.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/0/03/Junglefowl_on_tree.jpg",

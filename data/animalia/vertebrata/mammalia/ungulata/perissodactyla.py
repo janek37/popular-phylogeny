@@ -1,5 +1,5 @@
 from clade import Clade, Family, Genus, Order, Species, Suborder, Superfamily
-from constants import EN, IMAGE, LA, PL
+from constants import EN, IMAGE, NAME, PL
 from image import Image, License
 
 E_FERUS = Species(
@@ -21,7 +21,7 @@ E_AFRICANUS = Species(
     },
     known_for=[
         {
-            LA: "Equus africanus asinus",
+            NAME: "Equus africanus asinus",
             EN: "domestic donkey",
             PL: "osioł domowy",
             IMAGE: Image(

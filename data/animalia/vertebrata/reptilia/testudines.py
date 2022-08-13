@@ -1,5 +1,5 @@
 from clade import Clade, Family, Genus, Order, Species, Subfamily, Suborder, Superfamily
-from constants import EN, IMAGE, LA, PL
+from constants import EN, IMAGE, NAME, PL
 from image import Image, License
 
 T_SCRIPTA = Species(
@@ -7,7 +7,7 @@ T_SCRIPTA = Species(
     local_names={EN: "pond turtle", PL: "żółw ozdobny"},
     known_for=[
         {
-            LA: "Trachemys scripta elegans",
+            NAME: "Trachemys scripta elegans",
             EN: "red-eared slider",
             PL: "żółw czerwonolicy",
             IMAGE: Image(

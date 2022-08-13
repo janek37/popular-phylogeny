@@ -1,5 +1,5 @@
 from clade import Clade, Family, Genus, Species, Subfamily
-from constants import EN, LA, PL, URL
+from constants import EN, NAME, PL, URL
 from image import Image, License
 
 A_MELANOLEUCA = Species(
@@ -81,7 +81,7 @@ U_ARCTOS = Species(
     name="Ursus arctos",
     local_names={EN: "brown bear", PL: "niedźwiedź brunatny"},
     known_for=[
-        {LA: "Ursus arctos horribilis", EN: "grizzly bear", PL: "niedźwiedź grizli"}
+        {NAME: "Ursus arctos horribilis", EN: "grizzly bear", PL: "niedźwiedź grizli"}
     ],
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Kamchatka_Brown_Bear_near_Dvuhyurtochnoe_on_2015-07-23.jpg",

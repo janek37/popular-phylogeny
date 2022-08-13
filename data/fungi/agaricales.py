@@ -1,5 +1,5 @@
 from clade import Clade, Family, Genus, Order, Species
-from constants import EN, JP, PL
+from constants import EN, PL
 from image import Image, License
 
 A_BISPORUS = Species(
@@ -17,7 +17,7 @@ A_BISPORUS = Species(
 )
 L_EDODES = Species(
     name="Lentinula edodes",
-    local_names={JP: "shiitake"},
+    local_names={EN: "shiitake", PL: "shiitake, twardziak jadalny, twardnik japoński"},
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Shiitakegrowing.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/6/64/Shiitakegrowing.jpg",
@@ -27,7 +27,7 @@ L_EDODES = Species(
 )
 F_VELUTIPES = Species(
     name="Flammulina velutipes",
-    local_names={EN: "enoki", JP: "enokitake"},
+    local_names={EN: "enoki, velvet shank", PL: "płomiennica zimowa"},
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Flammulina_velutipes_04.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/9/9d/Flammulina_velutipes_04.jpg",

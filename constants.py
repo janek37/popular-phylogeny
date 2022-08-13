@@ -1,7 +1,7 @@
 EN = "en"
 PL = "pl"
-IT = "it"
-JP = "jp"
-LA = "la"
+NAME = "name"  # scientific name
 IMAGE = "image"
 URL = "url"
+
+LANGS = [EN, PL]

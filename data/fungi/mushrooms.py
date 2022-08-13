@@ -1,12 +1,12 @@
 from clade import Clade, Class, Family, Genus, Order, Phylum, Species, Subclass
-from constants import EN, IT, JP, PL
+from constants import EN, PL
 from image import Image, License
 
 from .agaricales import AGARICALES
 
 G_FRONDOSA = Species(
     name="Grifola frondosa",
-    local_names={EN: "hen-of-the-woods", JP: "maitake"},
+    local_names={EN: "hen-of-the-woods, maitake"},
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Grifola_frondosa_(29381622514).jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/7/7a/Grifola_frondosa_%2829381622514%29.jpg",
@@ -26,7 +26,7 @@ H_REPANDUM = Species(
 )
 B_EDULIS = Species(
     name="Boletus edulis",
-    local_names={IT: "fungo porcino", PL: "borowik szlachetny"},
+    local_names={EN: "cep, penny bun, porcino", PL: "borowik szlachetny"},
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Boletus_edulis_1.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/7/75/Boletus_edulis_1.jpg",

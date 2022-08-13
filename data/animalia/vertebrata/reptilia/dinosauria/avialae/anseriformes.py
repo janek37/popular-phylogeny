@@ -1,5 +1,5 @@
 from clade import Family, Genus, Order, Species, Subfamily
-from constants import EN, IMAGE, LA, PL, URL
+from constants import EN, IMAGE, NAME, PL, URL
 from image import Image, License
 
 A_PLATYRHYNCHOS = Species(
@@ -7,7 +7,7 @@ A_PLATYRHYNCHOS = Species(
     local_names={EN: "mallard", PL: "kaczka krzyżówka"},
     known_for=[
         {
-            LA: "Anas platyrhynchos domesticus",
+            NAME: "Anas platyrhynchos domesticus",
             EN: "domestic duck",
             PL: "kaczka domowa",
             IMAGE: Image(
