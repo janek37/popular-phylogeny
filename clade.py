@@ -88,13 +88,20 @@ class Clade(BaseClade):
         return self._is_extinct
 
     def serialize(self, id_iterator: Iterator[int]):
+        def species_count(serialized_clade):
+            return (
+                serialized_clade["species_count"]
+                if "children" in serialized_clade
+                else 1
+            )
+
         serialized = super().serialize(id_iterator)
         serialized["children"] = [
             child.serialize(id_iterator) for child in self.children
         ]
+        serialized["children"].sort(key=species_count)
         serialized["species_count"] = sum(
-            child["species_count"] if "children" in child else 1
-            for child in serialized["children"]
+            species_count(child) for child in serialized["children"]
         )
         return serialized
 
