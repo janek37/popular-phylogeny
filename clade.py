@@ -3,7 +3,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import ClassVar, Iterator, List, Mapping, Sequence
 
-from constants import IMAGE
+from constants import IMAGE, LANGS, NAME, URL
 from image import Image
 
 
@@ -69,11 +69,19 @@ class BaseClade(abc.ABC):
 
     @staticmethod
     def _serialize_known_for_item(known_for_item):
+        local_names = {
+            lang: known_for_item[lang] for lang in set(LANGS) & set(known_for_item)
+        }
+        serialized = {
+            "local_names": local_names,
+        }
         if IMAGE in known_for_item:
-            item_copy = dict(known_for_item)
-            item_copy[IMAGE] = item_copy[IMAGE].serialize()
-            return item_copy
-        return known_for_item
+            serialized[IMAGE] = known_for_item[IMAGE].serialize()
+        if URL in known_for_item:
+            serialized[URL] = known_for_item[URL]
+        if NAME in known_for_item:
+            serialized[NAME] = known_for_item[NAME]
+        return serialized
 
 
 @dataclass
