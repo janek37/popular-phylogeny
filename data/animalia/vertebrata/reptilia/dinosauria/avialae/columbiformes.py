@@ -26,6 +26,7 @@ R_CUCULLATUS = Species(
         author="Frederick William Frohawk (16 July 1861 - 10 December 1946), an English zoological artist",
         license=License.PUBLIC_DOMAIN_OLD,
     ),
+    extinct=True,
 )
 S_DECAOCTO = Species(
     name="Streptopelia decaocto",
