@@ -36,7 +36,7 @@ def make_thumbnail(species: Species):
 def get_thumbnail_url(image_url: str) -> str:
     filename = image_url.rsplit("/", 1)[-1]
     extension = filename.rsplit(".", 1)[-1]
-    if extension not in ["jpg", "JPG", "jpeg", "JPEG", "png", "PNG"]:
+    if extension not in ["jpg", "JPG", "jpeg", "JPEG", "png", "PNG", "gif", "GIF"]:
         filename += ".jpg"
     return image_url.replace("/commons/", "/commons/thumb/") + "/300px-" + filename
 
