@@ -143,6 +143,16 @@ B_CANIS = Species(
         license=License.CC_BY_SA_3_0,
     ),
 )
+T_GONDII = Species(
+    name="Toxoplasma gondii",
+    known_for=[{EN: "toxoplasmosis", PL: "toksoplazmoza"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Toxoplasma_gondii_(2).jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/0/0d/Toxoplasma_gondii_%282%29.jpg",
+        author="AJ Cann from UK",
+        license=License.CC_BY_SA_2_0,
+    ),
+)
 
 PLASMODIUM = Genus(name="Plasmodium", children=[P_MALARIAE])
 PARAMECIUM = Genus(name="Paramecium", children=[P_CAUDATUM])
@@ -158,6 +168,7 @@ BACILLARIA = Genus(name="Bacillaria", children=[B_PAXILLIFER])
 THALASSIOSIRA = Genus(name="Thalassiosira", children=[T_PSEUDONANA])
 TRYPANOSOMA = Genus(name="Trypanosoma", children=[T_BRUCEI])
 BABESIA = Genus(name="Babesia", children=[B_CANIS])
+TOXOPLASMA = Genus(name="Toxoplasma", children=[T_GONDII])
 
 PLASMODIIDAE = Family(name="Plasmodiidae", children=[PLASMODIUM])
 PARAMECIIDAE = Family(name="Parameciidae", children=[PARAMECIUM])
@@ -172,6 +183,7 @@ BACILLARIACEAE = Family(name="Bacillariaceae", children=[BACILLARIA])
 THALASSIOSIRACEAE = Family(name="Thalassiosiraceae", children=[THALASSIOSIRA])
 TRYPANOSOMATIDAE = Family(name="Trypanosomatidae", children=[TRYPANOSOMA])
 BABESIIDAE = Family(name="Babesiidae", children=[BABESIA])
+SARCOCYSTIDAE = Family(name="Sarcocystidae", children=[TOXOPLASMA])
 
 HAEMOSPORORIDA = Order(name="Haemospororida", children=[PLASMODIIDAE])
 PENICULIDA = Order(name="Peniculida", children=[PARAMECIIDAE])
@@ -185,6 +197,7 @@ BACILLARIALES = Order(name="Bacillariales", children=[BACILLARIACEAE])
 THALASSIOSIRALES = Order(name="Thalassiosirales", children=[THALASSIOSIRACEAE])
 TRYPANOSOMATIDA = Order(name="Trypanosomatida", children=[TRYPANOSOMATIDAE])
 PIROPLASMIDA = Order(name="Piroplasmida", children=[BABESIIDAE])
+EUCOCCIDIORIDA = Order(name="Eucoccidiorida", children=[SARCOCYSTIDAE])
 
 ACONOIDASIDA = Class(name="Aconoidasida", children=[HAEMOSPORORIDA, PIROPLASMIDA])
 OLIGOHYMENOPHOREA = Class(name="Oligohymenophorea", children=[PENICULIDA])
@@ -196,9 +209,10 @@ BACILLARIAPHYCEAE = Class(
     name="Bacillariaphyceae", children=[BACILLARIALES, THALASSIOSIRALES]
 )
 KINETOPLASTEA = Class(name="Kinetoplastea", children=[TRYPANOSOMATIDA])
+CONOIDASIDA = Class(name="Conoidasida", children=[EUCOCCIDIORIDA])
 
 CILIOPHORA = Phylum(name="Ciliophora", children=[OLIGOHYMENOPHOREA])
-APICOMPLEXA = Phylum(name="Apicomplexa", children=[ACONOIDASIDA])
+APICOMPLEXA = Phylum(name="Apicomplexa", children=[ACONOIDASIDA, CONOIDASIDA])
 METAMONADA = Phylum(name="Metamonada", children=[TRICHOMONADIDA])
 AMOEBOZOA = Phylum(name="Amoebozoa", children=[TUBULINEA, MYXOGASTRIA])
 CERCOZOA = Phylum(name="Cercozoa", children=[IMBRICATEA])
