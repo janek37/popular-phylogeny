@@ -24,7 +24,8 @@ def make_thumbnail(species: Species):
     while True:
         try:
             image = open_image(url)
-            image.save(f"thumbnails/{species.name}.jpg")
+            ext = url.rsplit(".", 1)[-1]
+            image.save(f"thumbnails/{species.name}.{ext}")
             break
         except UnidentifiedImageError:
             print("retrying...")
