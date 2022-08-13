@@ -45,6 +45,27 @@ class License(Enum):
     CC0 = "Creative Commons CC0 1.0 Universal Public Domain Dedication"
 
 
+CC_BY_URL_TEMPLATE = "https://creativecommons.org/licenses/by/{version}/deed.en"
+CC_BY_SA_URL_TEMPLATE = "https://creativecommons.org/licenses/by-sa/{version}/deed.en"
+
+LICENSE_URLS = {
+    License.CC_BY_2_0: CC_BY_URL_TEMPLATE.format(version="2.0"),
+    License.CC_BY_2_0_DE: CC_BY_URL_TEMPLATE.format(version="2.0/de"),
+    License.CC_BY_2_5: CC_BY_URL_TEMPLATE.format(version="2.5"),
+    License.CC_BY_2_5_ES: CC_BY_URL_TEMPLATE.format(version="2.5/es"),
+    License.CC_BY_3_0: CC_BY_URL_TEMPLATE.format(version="3.0"),
+    License.CC_BY_3_0_US: CC_BY_URL_TEMPLATE.format(version="3.0/us"),
+    License.CC_BY_4_0: CC_BY_URL_TEMPLATE.format(version="4.0"),
+    License.CC_BY_SA_2_0: CC_BY_SA_URL_TEMPLATE.format(version="2.0"),
+    License.CC_BY_SA_2_0_DE: CC_BY_SA_URL_TEMPLATE.format(version="2.0/de"),
+    License.CC_BY_SA_2_5: CC_BY_SA_URL_TEMPLATE.format(version="2.5"),
+    License.CC_BY_SA_3_0: CC_BY_SA_URL_TEMPLATE.format(version="3.0"),
+    License.CC_BY_SA_3_0_US: CC_BY_SA_URL_TEMPLATE.format(version="3.0/us"),
+    License.CC_BY_SA_4_0: CC_BY_SA_URL_TEMPLATE.format(version="4.0"),
+    License.CC0: "https://creativecommons.org/share-your-work/public-domain/cc0/",
+}
+
+
 @dataclass
 class Image:
     image_url: str
@@ -52,3 +73,14 @@ class Image:
     author: str
     license: License
     name: Optional[str] = None
+
+    def serialize(self):
+        return {
+            "image_url": self.image_url,
+            "url": self.url,
+            "author": self.author,
+            "license_code": self.license.name,
+            "license_string": self.license.value,
+            "license_url": LICENSE_URLS.get(self.license),
+            "name": self.name,
+        }

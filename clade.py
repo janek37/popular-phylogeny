@@ -1,8 +1,9 @@
 import abc
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import ClassVar, List, Mapping, Optional, Sequence
+from typing import ClassVar, Iterator, List, Mapping, Sequence
 
+from constants import IMAGE
 from image import Image
 
 
@@ -55,6 +56,25 @@ class BaseClade(abc.ABC):
     def is_extinct(self) -> bool:
         pass
 
+    def serialize(self, id_iterator: Iterator[int]):
+        known_for = [self._serialize_known_for_item(item) for item in self.known_for]
+        return {
+            "id": next(id_iterator),
+            "name": self.name or None,
+            "rank": self.rank.value,
+            "extinct": self.is_extinct,
+            "local_names": self.local_names,
+            "known_for": known_for,
+        }
+
+    @staticmethod
+    def _serialize_known_for_item(known_for_item):
+        if IMAGE in known_for_item:
+            item_copy = dict(known_for_item)
+            item_copy[IMAGE] = item_copy[IMAGE].serialize()
+            return item_copy
+        return known_for_item
+
 
 @dataclass
 class Clade(BaseClade):
@@ -66,6 +86,17 @@ class Clade(BaseClade):
         if self._is_extinct is None:
             self._is_extinct = all(child.is_extinct for child in self.children)
         return self._is_extinct
+
+    def serialize(self, id_iterator: Iterator[int]):
+        serialized = super().serialize(id_iterator)
+        serialized["children"] = [
+            child.serialize(id_iterator) for child in self.children
+        ]
+        serialized["species_count"] = sum(
+            child["species_count"] if "children" in child else 1
+            for child in serialized["children"]
+        )
+        return serialized
 
 
 class Domain(Clade):
@@ -196,12 +227,21 @@ class Superspecies(Clade):
     rank = Rank.SUPERSPECIES
 
 
-@dataclass
 class Species(BaseClade):
     rank = Rank.SPECIES
-    extinct: bool = False
-    image: Optional[Image] = None
+
+    def __init__(self, image: Image, extinct: bool = False, **kwargs):
+        super().__init__(**kwargs)
+        self.extinct = extinct
+        self.image = image
 
     @property
     def is_extinct(self) -> bool:
         return self.extinct
+
+    def serialize(self, id_iterator: Iterator[int]):
+        serialized = super().serialize(id_iterator)
+        return {
+            "image": self.image.serialize(),
+            **serialized,
+        }
