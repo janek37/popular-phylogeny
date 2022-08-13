@@ -12,16 +12,16 @@ from clade import (
 from constants import EN, PL
 from image import Image, License
 
-S_LATIPES = Species(
-    name="Simulium latipes",
+S_TRIFASCIATUM = Species(
+    name="Simulium trifasciatum",
     known_for=[
         {EN: "one of many species of black flies", PL: "jeden z wielu gatunków meszek"}
     ],
     image=Image(
-        url="https://commons.wikimedia.org/wiki/File:Simulium.latipes.-.lindsey.jpg",
-        image_url="https://upload.wikimedia.org/wikipedia/commons/e/e5/Simulium.latipes.-.lindsey.jpg",
-        author="James K. Lindsey",
-        license=License.CC_BY_SA_2_5,
+        url="https://commons.wikimedia.org/wiki/File:Simulium_trifasciatum_adult_(British_Entomology_by_John_Curtis-_765).png",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/7/76/Simulium_trifasciatum_adult_%28British_Entomology_by_John_Curtis-_765%29.png",
+        author="John Curtis’s British Entomology 1824–1840",
+        license=License.PUBLIC_DOMAIN_OLD,
     ),
 )
 A_VEXANS = Species(
@@ -186,7 +186,7 @@ H_BOVIS = Species(
     ),
 )
 
-SIMULIUM = Genus(name="Simulium", children=[S_LATIPES])
+SIMULIUM = Genus(name="Simulium", children=[S_TRIFASCIATUM])
 AEDES = Genus(name="Aedes", children=[A_VEXANS])
 ANOPHELES = Genus(name="Anopheles", children=[A_GAMBIAE])
 TOXORHYNCHITES = Genus(name="Toxorhynchites", children=[T_RUTILUS])
