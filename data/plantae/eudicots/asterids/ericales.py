@@ -207,13 +207,29 @@ V_CORYMBOSUM = Species(
         license=License.CC_BY_SA_3_0,
     ),
 )
-R_NOVA_ZEMBLA = Species(
-    name="Rhododendron Nova Zembla",
-    local_names={PL: "rododendron, różanecznik wielkokwiatowy Nova Zembla"},
+R_CATAWBIENSE = Species(
+    name="Rhododendron catawbiense",
+    local_names={
+        PL: "rododendron, różanecznik katawbijski",
+        EN: "Catawba rosebay, Catawba rhododendron",
+    },
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Rhododendron_%27Nova_Zembla%27_r1.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/6/60/Rhododendron_%27Nova_Zembla%27_r1.jpg",
         author="Jerzy Opioła",
+        license=License.CC_BY_SA_3_0,
+    ),
+)
+R_LUTEUM = Species(
+    name="Rhododendron luteum",
+    local_names={
+        PL: "azalia pontyjska, różanecznik żółty",
+        EN: "yellow azalea, honeysuckle azalea",
+    },
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Rhododendron_luteum_100.JPG",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/3/3f/Rhododendron_luteum_100.JPG",
+        author="Kor!An (Андрей Корзун)",
         license=License.CC_BY_SA_3_0,
     ),
 )
@@ -238,7 +254,7 @@ VACCINIUM = Genus(
     name="Vaccinium",
     children=[VACCINIUM_SUBGENUS_VACCINIUM, VACCINIUM_SUBGENUS_OXYCOCCUS],
 )
-RHODODENDRON = Genus(name="Rhododendron", children=[R_NOVA_ZEMBLA])
+RHODODENDRON = Genus(name="Rhododendron", children=[R_CATAWBIENSE, R_LUTEUM])
 
 ERICEAE = Tribe(name="Ericeae", children=[CALLUNA])
 VACCINIEAE = Tribe(name="Vaccinieae", children=[VACCINIUM])
