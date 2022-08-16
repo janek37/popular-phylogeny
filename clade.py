@@ -1,7 +1,7 @@
 import abc
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import ClassVar, Iterator, List, Mapping, Sequence
+from typing import ClassVar, Iterator, List, Mapping, Optional, Sequence
 
 from constants import IMAGE, LANGS, NAME, URL
 from image import Image
@@ -56,10 +56,11 @@ class BaseClade(abc.ABC):
     def is_extinct(self) -> bool:
         pass
 
-    def serialize(self, id_iterator: Iterator[int]):
+    def serialize(self, id_iterator: Iterator[int], parent_id: Optional[int] = None):
         known_for = [self._serialize_known_for_item(item) for item in self.known_for]
         return {
             "id": next(id_iterator),
+            "parent_id": parent_id,
             "name": self.name or None,
             "rank": self.rank.value,
             "extinct": self.is_extinct,
@@ -95,7 +96,7 @@ class Clade(BaseClade):
             self._is_extinct = all(child.is_extinct for child in self.children)
         return self._is_extinct
 
-    def serialize(self, id_iterator: Iterator[int]):
+    def serialize(self, id_iterator: Iterator[int], parent_id: Optional[int] = None):
         def species_count(serialized_clade):
             return (
                 serialized_clade["species_count"]
@@ -103,9 +104,9 @@ class Clade(BaseClade):
                 else 1
             )
 
-        serialized = super().serialize(id_iterator)
+        serialized = super().serialize(id_iterator, parent_id)
         serialized["children"] = [
-            child.serialize(id_iterator) for child in self.children
+            child.serialize(id_iterator, serialized["id"]) for child in self.children
         ]
         serialized["children"].sort(key=species_count)
         serialized["species_count"] = sum(
@@ -254,7 +255,7 @@ class Species(BaseClade):
     def is_extinct(self) -> bool:
         return self.extinct
 
-    def serialize(self, id_iterator: Iterator[int]):
+    def serialize(self, id_iterator: Iterator[int], parent_id: Optional[int] = None):
         serialized = super().serialize(id_iterator)
         return {
             "image": self.image.serialize(),
