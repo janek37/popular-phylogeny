@@ -57,11 +57,14 @@ O_ZIBETHICUS = Species(
 )
 A_AMPHIBIUS = Species(
     name="Arvicola amphibius",
-    local_names={EN: "water rat, European water vole", PL: "karczownik ziemnowodny"},
+    local_names={
+        EN: "water rat, European water vole",
+        PL: "szczur wodny, karczownik ziemnowodny",
+    },
     known_for=[
         {
             EN: "Rat from The Wind in the Willows",
-            PL: 'Szczur z "O czym szumią wierzby"',
+            PL: "Szczur z „O czym szumią wierzby”",
             URL: "https://en.wikipedia.org/wiki/The_Wind_in_the_Willows",
         }
     ],
