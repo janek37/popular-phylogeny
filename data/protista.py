@@ -113,14 +113,14 @@ B_PAXILLIFER = Species(
         license=License.CC_BY_3_0,
     ),
 )
-T_PSEUDONANA = Species(
-    name="Thalassiosira pseudonana",
-    known_for=[{EN: "the first marine phytoplankton to have its genome sequenced"}],
+T_FAVUS = Species(
+    name="Triceratium favus",
+    known_for=[{EN: "one of the thousands of diatom species"}],
     image=Image(
-        url="https://commons.wikimedia.org/wiki/File:Oogonium_--_3_(34809275943).jpg",
-        image_url="https://upload.wikimedia.org/wikipedia/commons/2/22/Oogonium_--_3_%2834809275943%29.jpg",
-        author="Oregon State University",
-        license=License.CC_BY_SA_2_0,
+        url="https://commons.wikimedia.org/wiki/File:Diatom_-_Triceratium_favus.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/b/b2/Diatom_-_Triceratium_favus.jpg",
+        author="J. T. Redmayne",
+        license=License.CC0,
     ),
 )
 T_BRUCEI = Species(
@@ -166,7 +166,7 @@ FUCUS = Genus(name="Fucus", children=[F_VESICULOSUS])
 UNDARIA = Genus(name="Undaria", children=[U_PINNATIFIDA])
 MACROCYSTIS = Genus(name="Macrocystis", children=[M_PYRIFERA])
 BACILLARIA = Genus(name="Bacillaria", children=[B_PAXILLIFER])
-THALASSIOSIRA = Genus(name="Thalassiosira", children=[T_PSEUDONANA])
+TRICERATIUM = Genus(name="Triceratium", children=[T_FAVUS])
 TRYPANOSOMA = Genus(name="Trypanosoma", children=[T_BRUCEI])
 BABESIA = Genus(name="Babesia", children=[B_CANIS])
 TOXOPLASMA = Genus(name="Toxoplasma", children=[T_GONDII])
@@ -181,7 +181,7 @@ FUCACEAE = Family(name="Fucaceae", children=[FUCUS])
 ALARIACEAE = Family(name="Alariaceae", children=[UNDARIA])
 LAMINARIACEAE = Family(name="Laminariaceae", children=[MACROCYSTIS])
 BACILLARIACEAE = Family(name="Bacillariaceae", children=[BACILLARIA])
-THALASSIOSIRACEAE = Family(name="Thalassiosiraceae", children=[THALASSIOSIRA])
+TRICERATIACEAE = Family(name="Triceratiaceae", children=[TRICERATIUM])
 TRYPANOSOMATIDAE = Family(name="Trypanosomatidae", children=[TRYPANOSOMA])
 BABESIIDAE = Family(name="Babesiidae", children=[BABESIA])
 SARCOCYSTIDAE = Family(name="Sarcocystidae", children=[TOXOPLASMA])
@@ -195,7 +195,7 @@ EUGLYPHIDA = Order(name="Euglyphida", children=[PAULINELLIDAE])
 FUCALES = Order(name="Fucales", children=[FUCACEAE])
 LAMINARIALES = Order(name="Laminariales", children=[ALARIACEAE, LAMINARIACEAE])
 BACILLARIALES = Order(name="Bacillariales", children=[BACILLARIACEAE])
-THALASSIOSIRALES = Order(name="Thalassiosirales", children=[THALASSIOSIRACEAE])
+TRICERATIALES = Order(name="Triceratiales", children=[TRICERATIACEAE])
 TRYPANOSOMATIDA = Order(name="Trypanosomatida", children=[TRYPANOSOMATIDAE])
 PIROPLASMIDA = Order(name="Piroplasmida", children=[BABESIIDAE])
 EUCOCCIDIORIDA = Order(name="Eucoccidiorida", children=[SARCOCYSTIDAE])
@@ -206,8 +206,8 @@ TUBULINEA = Class(name="Tubulinea", children=[TUBULINIDA])
 MYXOGASTRIA = Class(name="Myxogastria", children=[PHYSARALES])
 IMBRICATEA = Class(name="Imbricatea", children=[EUGLYPHIDA])
 PHAEOPHYCEAE = Class(name="Phaeophyceae", children=[FUCALES, LAMINARIALES])
-BACILLARIAPHYCEAE = Class(
-    name="Bacillariaphyceae", children=[BACILLARIALES, THALASSIOSIRALES]
+BACILLARIOPHYCEAE = Class(
+    name="Bacillariophyceae", children=[BACILLARIALES, TRICERATIALES]
 )
 KINETOPLASTEA = Class(name="Kinetoplastea", children=[TRYPANOSOMATIDA])
 CONOIDASIDA = Class(name="Conoidasida", children=[EUCOCCIDIORIDA])
@@ -217,7 +217,7 @@ APICOMPLEXA = Phylum(name="Apicomplexa", children=[ACONOIDASIDA, CONOIDASIDA])
 METAMONADA = Phylum(name="Metamonada", children=[TRICHOMONADIDA])
 AMOEBOZOA = Phylum(name="Amoebozoa", children=[TUBULINEA, MYXOGASTRIA])
 CERCOZOA = Phylum(name="Cercozoa", children=[IMBRICATEA])
-OCHROPHYTA = Phylum(name="Ochrophyta", children=[PHAEOPHYCEAE, BACILLARIAPHYCEAE])
+OCHROPHYTA = Phylum(name="Ochrophyta", children=[PHAEOPHYCEAE, BACILLARIOPHYCEAE])
 EUGLENOZOA = Phylum(name="Euglenozoa", children=[KINETOPLASTEA])
 
 ALVEOLATA = Superphylum(name="Alveolata", children=[CILIOPHORA, APICOMPLEXA])
