@@ -73,10 +73,28 @@ class Image:
     author: str
     license: License
     name: Optional[str] = None
+    thumbnail_url: Optional[str] = None
+
+    def get_thumbnail_url(self) -> str:
+        if self.thumbnail_url:
+            return self.thumbnail_url
+        filename = self.image_url.rsplit("/", 1)[-1]
+        extension = filename.rsplit(".", 1)[-1]
+        if extension not in ["jpg", "JPG", "jpeg", "JPEG", "png", "PNG", "gif", "GIF"]:
+            filename += ".jpg"
+        return (
+            self.image_url.replace("/commons/", "/commons/thumb/")
+            + "/300px-"
+            + filename
+        )
 
     def serialize(self):
+        thumbnail_url = self.get_thumbnail_url()
+        filename = thumbnail_url.rsplit("/", 1)[-1]
         return {
             "image_url": self.image_url,
+            "thumbnail_url": thumbnail_url,
+            "local_thumbnail_url": f"/thumbnails/{filename}",
             "url": self.url,
             "author": self.author,
             "license_code": self.license.name,

@@ -30,7 +30,8 @@ P_PIPISTRELLUS = Species(
     local_names={EN: "common pipistrelle", PL: "karlik malutki"},
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Vespertilio_pipistrellus_-_1700-1880_-_Print_-_Iconographia_Zoologica_-_Special_Collections_University_of_Amsterdam_-_UBA01_IZ20800115.tif",
-        image_url="https://upload.wikimedia.org/wikipedia/commons/c/c7/Vespertilio_pipistrellus_-_1700-1880_-_Print_-_Iconographia_Zoologica_-_Special_Collections_University_of_Amsterdam_-_UBA01_IZ20800115.tif",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Vespertilio_pipistrellus_-_1700-1880_-_Print_-_Iconographia_Zoologica_-_Special_Collections_University_of_Amsterdam_-_UBA01_IZ20800115.tif/lossy-page1-1760px-Vespertilio_pipistrellus_-_1700-1880_-_Print_-_Iconographia_Zoologica_-_Special_Collections_University_of_Amsterdam_-_UBA01_IZ20800115.tif.jpg",
+        thumbnail_url="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Vespertilio_pipistrellus_-_1700-1880_-_Print_-_Iconographia_Zoologica_-_Special_Collections_University_of_Amsterdam_-_UBA01_IZ20800115.tif/lossy-page1-300px-Vespertilio_pipistrellus_-_1700-1880_-_Print_-_Iconographia_Zoologica_-_Special_Collections_University_of_Amsterdam_-_UBA01_IZ20800115.tif.jpg",
         author="Special Collections of the University of Amsterdam",
         license=License.PUBLIC_DOMAIN_OLD,
     ),

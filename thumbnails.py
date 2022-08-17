@@ -1,5 +1,6 @@
 import os.path
 import time
+import urllib.parse
 from io import BytesIO
 from os import makedirs
 
@@ -19,9 +20,9 @@ def make_thumbnails(clade: BaseClade):
 
 
 def make_thumbnail(species: Species):
-    url = get_thumbnail_url(species.image.image_url)
-    ext = url.rsplit(".", 1)[-1]
-    output_filename = f"thumbnails/{species.name}.{ext}"
+    url = species.image.get_thumbnail_url()
+    filename = urllib.parse.unquote(url.rsplit("/", 1)[-1])
+    output_filename = f"thumbnails/{filename}"
     if os.path.exists(output_filename):
         return
     print(species.name, url, sep="\t")
@@ -37,14 +38,6 @@ def make_thumbnail(species: Species):
             wait *= 2
 
 
-def get_thumbnail_url(image_url: str) -> str:
-    filename = image_url.rsplit("/", 1)[-1]
-    extension = filename.rsplit(".", 1)[-1]
-    if extension not in ["jpg", "JPG", "jpeg", "JPEG", "png", "PNG", "gif", "GIF"]:
-        filename += ".jpg"
-    return image_url.replace("/commons/", "/commons/thumb/") + "/300px-" + filename
-
-
 def open_image(url: str):
     response = requests.get(
         url,
@@ -56,5 +49,9 @@ def open_image(url: str):
 
 
 if __name__ == "__main__":
+    import sys
+
+    if len(sys.argv) > 1:
+        os.chdir(sys.argv[1])
     makedirs("thumbnails", exist_ok=True)
     make_thumbnails(LIFE)

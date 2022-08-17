@@ -17,7 +17,8 @@ P_CAUDATUM = Species(
     local_names={PL: "pantofelek"},
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Инфузория_туфелька_2.tif",
-        image_url="https://upload.wikimedia.org/wikipedia/commons/0/07/Инфузория_туфелька_2.tif",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Инфузория_туфелька_2.tif/lossy-page1-2231px-Инфузория_туфелька_2.tif.jpg",
+        thumbnail_url="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Инфузория_туфелька_2.tif/lossy-page1-300px-Инфузория_туфелька_2.tif.jpg",
         author="Alexander Klepnev",
         license=License.CC_BY_SA_4_0,
     ),

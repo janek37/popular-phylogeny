@@ -129,7 +129,8 @@ C_TRACHOMATIS = Species(
     known_for=[{EN: "chlamydia", PL: "chlamydioza"}],
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Chlamydia_trachomatis.tif",
-        image_url="https://upload.wikimedia.org/wikipedia/commons/3/36/Chlamydia_trachomatis.tif",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Chlamydia_trachomatis.tif/lossy-page1-1810px-Chlamydia_trachomatis.tif.jpg",
+        thumbnail_url="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Chlamydia_trachomatis.tif/lossy-page1-300px-Chlamydia_trachomatis.tif.jpg",
         author="Centers for Disease Control and Prevention / Dr. E. Arum; Dr. N. Jacobs",
         license=License.CDC,
     ),
