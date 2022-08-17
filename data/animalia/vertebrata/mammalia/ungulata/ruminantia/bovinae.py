@@ -114,7 +114,7 @@ BUBALUS = Genus(name="Bubalus", children=[B_ARNEE, B_BUBALIS])
 BOS = Genus(name="Bos", children=[BISON, BOS_SUBGENUS_POEPHAGUS, BOS_SUBGENUS_BOS])
 
 BUBALINA = Subtribe(name="Bubalina", children=[SYNCERUS, BUBALUS])
-BOVINA = Subtribe(name="Bovina", children=[BISON, BOS])
+BOVINA = Subtribe(name="Bovina", children=[BOS])
 
 BOVINI = Tribe(name="Bovini", children=[BUBALINA, BOVINA])
 
