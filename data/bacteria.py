@@ -45,6 +45,7 @@ Y_PESTIS = Species(
 )
 V_CHOLERAE = Species(
     name="Vibrio cholerae",
+    local_names={PL: "przecinkowiec cholery"},
     known_for=[{EN: "cholera", PL: "cholera"}],
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Vibrio_cholerae.jpg",
@@ -163,12 +164,9 @@ G_LITHOPHORA = Species(
     name="Gloeomargarita lithophora",
     known_for=[{EN: "possibly the closest relative of chloroplasts"}],
     image=Image(
-        url="https://commons.wikimedia.org/wiki/File:Minerals-06-00010-g005b.png",
-        image_url="https://upload.wikimedia.org/wikipedia/commons/b/b8/Minerals-06-00010-g005b.png",
-        author="Jinhua Li, Isabel Margaret Oliver, Nithavong Cam, Thomas Boudier, Marine Blondeau, "
-        "Eric Leroy, Julie Cosmidis, Feriel Skouri-Panet, Jean-Michel Guigner, Céline Férard, "
-        "Melanie Poinsot, David Moreira, Purificacion Lopez-Garcia, Corinne Cassier-Chauvat, "
-        "Franck Chauvat, Karim Benzerara",
+        url="https://commons.wikimedia.org/wiki/File:Minerals-06-00010-g008ef.png",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/6/65/Minerals-06-00010-g008ef.png",
+        author="Jinhua Li, Isabel Margaret Oliver, Nithavong Cam, Thomas Boudier, Marine Blondeau, Eric Leroy, Julie Cosmidis, Feriel Skouri-Panet, Jean-Michel Guigner, Céline Férard, Melanie Poinsot, David Moreira, Purificacion Lopez-Garcia, Corinne Cassier-Chauvat, Franck Chauvat, Karim Benzerara",
         license=License.CC_BY_SA_4_0,
     ),
 )
