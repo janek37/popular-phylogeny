@@ -198,6 +198,25 @@ C_LONGA = Species(
         license=License.CC_BY_SA_3_0,
     ),
 )
+D_ALATA = Species(
+    name="Dioscorea alata",
+    local_names={EN: "purple yam, ube", PL: "ignam skrzydlaty, pochrzyn skrzydlaty"},
+    known_for={
+        EN: "edible tubers",
+        IMAGE: Image(
+            url="https://commons.wikimedia.org/wiki/File:Kambar_wh.jpg",
+            image_url="https://upload.wikimedia.org/wikipedia/commons/4/4a/Kambar_wh.jpg",
+            author="Remi Tournebize",
+            license=License.CC_BY_SA_3_0,
+        ),
+    },
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Starr_061106-1435_Dioscorea_alata.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/9/91/Starr_061106-1435_Dioscorea_alata.jpg",
+        author="Forest & Kim Starr",
+        license=License.CC_BY_3_0,
+    ),
+)
 
 ACORUS = Genus(name="Acorus", children=[A_CALAMUS])
 ZOSTERA = Genus(name="Zostera", children=[Z_MARINA])
@@ -213,6 +232,7 @@ MUSA = Genus(name="Musa", children=[M_PARADISIACA])
 ZINGIBER = Genus(name="Zingiber", children=[Z_OFFICINALE])
 ELETTARIA = Genus(name="Elettaria", children=[E_CARDAMOMUM])
 CURCUMA = Genus(name="Curcuma", children=[C_LONGA])
+DIOSCOREA = Genus(name="Dioscorea", children=[D_ALATA])
 
 COCOSEAE = Tribe(name="Cocoseae", children=[COCOS, ELAEIS])
 EUTERPEAE = Tribe(name="Euterpeae", children=[EUTERPE])
@@ -234,19 +254,22 @@ LILIACEAE = Family(name="Liliaceae", children=[LILIUM, TULIPA])
 ARECACEAE = Family(name="Arecaceae", children=[ARECOIDEAE, CORYPHOIDEAE])
 MUSACEAE = Family(name="Musaceae", children=[MUSA])
 ZINGIBERACEAE = Family(name="Zingiberaceae", children=[ZINGIBEREAE, ALPINIEAE])
+DIOSCOREACEAE = Family(name="Dioscoreaceae", children=[DIOSCOREA])
 
 ACORALES = Order(name="Acorales", children=[ACORACEAE])
 ALISMATALES = Order(name="Alismatales", children=[ZOSTERACEAE, ARACEAE])
 LILIALES = Order(name="Liliales", children=[LILIACEAE])
 ARECALES = Order(name="Arecales", children=[ARECACEAE])
 ZINGIBERALES = Order(name="Zingiberales", children=[MUSACEAE, ZINGIBERACEAE])
+DIOSCOREALES = Order(name="Dioscoreales", children=[DIOSCOREACEAE])
 
 ZINGIBERALES_POALES = Clade(children=[ZINGIBERALES, POALES])
 COMMELINIDAE = Clade(name="commelinidae", children=[ARECALES, ZINGIBERALES_POALES])
 
 ASPARAGALES_COMMELINIDS = Clade(children=[ASPARAGALES, COMMELINIDAE])
 MONOCOTYLEDONES_B = Clade(children=[LILIALES, ASPARAGALES_COMMELINIDS])
-MONOCOTYLEDONES_A = Clade(children=[ALISMATALES, MONOCOTYLEDONES_B])
+MONOCOTYLEDONES_C = Clade(children=[MONOCOTYLEDONES_B, DIOSCOREALES])
+MONOCOTYLEDONES_A = Clade(children=[ALISMATALES, MONOCOTYLEDONES_C])
 
 MONOCOTYLEDONES = Clade(
     name="monocotyledones",
