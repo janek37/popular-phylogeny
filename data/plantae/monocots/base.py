@@ -201,20 +201,36 @@ C_LONGA = Species(
 D_ALATA = Species(
     name="Dioscorea alata",
     local_names={EN: "purple yam, ube", PL: "ignam skrzydlaty, pochrzyn skrzydlaty"},
-    known_for={
-        EN: "edible tubers",
-        IMAGE: Image(
-            url="https://commons.wikimedia.org/wiki/File:Kambar_wh.jpg",
-            image_url="https://upload.wikimedia.org/wikipedia/commons/4/4a/Kambar_wh.jpg",
-            author="Remi Tournebize",
-            license=License.CC_BY_SA_3_0,
-        ),
-    },
+    known_for=[
+        {
+            EN: "edible tubers",
+            IMAGE: Image(
+                url="https://commons.wikimedia.org/wiki/File:Kambar_wh.jpg",
+                image_url="https://upload.wikimedia.org/wikipedia/commons/4/4a/Kambar_wh.jpg",
+                author="Remi Tournebize",
+                license=License.CC_BY_SA_3_0,
+            ),
+        }
+    ],
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Starr_061106-1435_Dioscorea_alata.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/9/91/Starr_061106-1435_Dioscorea_alata.jpg",
         author="Forest & Kim Starr",
         license=License.CC_BY_3_0,
+    ),
+)
+S_ORNATA = Species(
+    name="Smilax ornata",
+    local_names={EN: "sarsaparilla"},
+    known_for=[
+        {EN: "sarsaparilla soft drink"},
+        {EN: "root beer"},
+    ],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Sarsaparilla-1271142_1920.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/b/ba/Sarsaparilla-1271142_1920.jpg",
+        author="makamuki0",
+        license=License.CC0,
     ),
 )
 
@@ -233,6 +249,7 @@ ZINGIBER = Genus(name="Zingiber", children=[Z_OFFICINALE])
 ELETTARIA = Genus(name="Elettaria", children=[E_CARDAMOMUM])
 CURCUMA = Genus(name="Curcuma", children=[C_LONGA])
 DIOSCOREA = Genus(name="Dioscorea", children=[D_ALATA])
+SMILAX = Genus(name="Smilax", children=[S_ORNATA], local_names={PL: "kolcorośl"})
 
 COCOSEAE = Tribe(name="Cocoseae", children=[COCOS, ELAEIS])
 EUTERPEAE = Tribe(name="Euterpeae", children=[EUTERPE])
@@ -255,10 +272,11 @@ ARECACEAE = Family(name="Arecaceae", children=[ARECOIDEAE, CORYPHOIDEAE])
 MUSACEAE = Family(name="Musaceae", children=[MUSA])
 ZINGIBERACEAE = Family(name="Zingiberaceae", children=[ZINGIBEREAE, ALPINIEAE])
 DIOSCOREACEAE = Family(name="Dioscoreaceae", children=[DIOSCOREA])
+SMILACACEAE = Family(name="Smilacaceae", children=[SMILAX])
 
 ACORALES = Order(name="Acorales", children=[ACORACEAE])
 ALISMATALES = Order(name="Alismatales", children=[ZOSTERACEAE, ARACEAE])
-LILIALES = Order(name="Liliales", children=[LILIACEAE])
+LILIALES = Order(name="Liliales", children=[LILIACEAE, SMILACACEAE])
 ARECALES = Order(name="Arecales", children=[ARECACEAE])
 ZINGIBERALES = Order(name="Zingiberales", children=[MUSACEAE, ZINGIBERACEAE])
 DIOSCOREALES = Order(name="Dioscoreales", children=[DIOSCOREACEAE])

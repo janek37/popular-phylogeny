@@ -186,7 +186,20 @@ P_METHYSTICUM = Species(
         license=License.CC_BY_3_0_US,
     ),
 )
-# Schinus molle (rosids)
+S_ALBIDUM = Species(
+    name="Sassafras albidum",
+    local_names={
+        EN: "white sassafras, red sassafras, or silky sassafras",
+        PL: "sasafras lekarski",
+    },
+    known_for=[{EN: "root beer"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Sassafras7.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/a/a8/Sassafras7.jpg",
+        author="Wowbobwow12 at English Wikipedia",
+        license=License.CC_BY_SA_3_0,
+    ),
+)
 
 NYMPHAEA = Genus(name="Nymphaea", children=[N_ALBA])
 ILLICIUM = Genus(name="Illicium", children=[I_VERUM])
@@ -197,16 +210,17 @@ LAURUS = Genus(name="Laurus", children=[L_NOBILIS])
 CINNAMOMUM = Genus(name="Cinnamomum", children=[C_VERUM, C_CAMPHORA])
 PERSEA = Genus(name="Persea", children=[P_AMERICANA])
 PIPER = Genus(name="Piper", children=[P_NIGRUM, P_METHYSTICUM])
+SASSAFRAS = Genus(name="Sassafras", children=[S_ALBIDUM])
 
-# multiple sources, e.g.
 # https://www.researchgate.net/publication/340412028_The_Litsea_genome_and_the_evolution_of_the_laurel_family
-LAURUS_CINNAMOMUM = Clade(children=[LAURUS, CINNAMOMUM])
+LAURACEAE_A = Clade(children=[CINNAMOMUM, SASSAFRAS])
+LAURACEAE_B = Clade(children=[LAURACEAE_A, LAURUS])
 
 NYMPHAEACEAE = Family(name="Nymphaeaceae", children=[NYMPHAEA])
 SCHISANDRACEAE = Family(name="Schisandraceae", children=[ILLICIUM])
 MAGNOLIACEAE = Family(name="Magnoliaceae", children=[MAGNOLIA, LIRIODENDRON])
 MYRISTICACEAE = Family(name="Myristicaceae", children=[MYRISTICA])
-LAURACEAE = Family(name="Lauraceae", children=[LAURUS_CINNAMOMUM, PERSEA])
+LAURACEAE = Family(name="Lauraceae", children=[LAURACEAE_B, PERSEA])
 PIPERACEAE = Family(name="Piperaceae", children=[PIPER])
 
 NYMPHAEALES = Order(name="Nymphaeales", children=[NYMPHAEACEAE])
