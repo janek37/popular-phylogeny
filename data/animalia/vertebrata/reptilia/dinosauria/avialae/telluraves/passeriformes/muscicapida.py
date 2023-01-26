@@ -42,6 +42,17 @@ S_SIALIS = Species(
         license=License.CC_BY_SA_2_5,
     ),
 )
+S_CURRUCOIDES = Species(
+    name="Sialia currucoides",
+    local_names={EN: "mountain bluebird", PL: "błękitnik górski"},
+    known_for=[{EN: "the Twitter bird"}],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Mountain_Bluebird.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/0/03/Mountain_Bluebird.jpg",
+        author="Elaine R. Wilson",
+        license=License.CC_BY_SA_2_5,
+    ),
+)
 T_PHILOMELOS = Species(
     name="Turdus philomelos",
     local_names={EN: "song thrush", PL: "drozd śpiewak"},
@@ -135,7 +146,7 @@ TURDUS_A = Clade(children=[T_MIGRATORIUS, T_MERULA])
 BOMBYCILLA = Genus(name="Bombycilla", children=[B_GARRULUS])
 ERITHACUS = Genus(name="Erithacus", children=[E_RUBECULA])
 LUSCINIA = Genus(name="Luscinia", children=[L_MEGARHYNCHOS])
-SIALIA = Genus(name="Sialia", children=[S_SIALIS])
+SIALIA = Genus(name="Sialia", children=[S_SIALIS, S_CURRUCOIDES])
 TURDUS = Genus(name="Turdus", children=[T_PHILOMELOS, TURDUS_A])
 STURNUS = Genus(name="Sturnus", children=[S_VULGARIS])
 MIMUS = Genus(name="Mimus", children=[M_POLYGLOTTOS])

@@ -233,6 +233,23 @@ S_ORNATA = Species(
         license=License.CC0,
     ),
 )
+A_TITANUM = Species(
+    name="Amorphophallus titanum",
+    local_names={EN: "titan arum, corpse flower", PL: "dziwidło olbrzymie"},
+    known_for=[
+        {EN: "flower with a smell of a rotting corpse"},
+        {
+            EN: "the largest unbranched inflorescence",
+            PL: "największy nierozgałęziony kwiatostan",
+        },
+    ],
+    image=Image(
+        url="https://commons.wikimedia.org/wiki/File:Amorphophallus_titanum_(corpse_flower)_-_2.jpg",
+        image_url="https://upload.wikimedia.org/wikipedia/commons/5/5c/Amorphophallus_titanum_%28corpse_flower%29_-_2.jpg",
+        author="Sailing moose",
+        license=License.CC_BY_SA_4_0,
+    ),
+)
 
 ACORUS = Genus(name="Acorus", children=[A_CALAMUS])
 ZOSTERA = Genus(name="Zostera", children=[Z_MARINA])
@@ -250,6 +267,7 @@ ELETTARIA = Genus(name="Elettaria", children=[E_CARDAMOMUM])
 CURCUMA = Genus(name="Curcuma", children=[C_LONGA])
 DIOSCOREA = Genus(name="Dioscorea", children=[D_ALATA])
 SMILAX = Genus(name="Smilax", children=[S_ORNATA], local_names={PL: "kolcorośl"})
+AMORPHOPHALLUS = Genus(name="Amorphophallus", children=[A_TITANUM])
 
 COCOSEAE = Tribe(name="Cocoseae", children=[COCOS, ELAEIS])
 EUTERPEAE = Tribe(name="Euterpeae", children=[EUTERPE])
@@ -257,16 +275,19 @@ PHOENICEAE = Tribe(name="Phoeniceae", children=[PHOENIX])
 ARECAE = Tribe(name="Arecae", children=[ADONIDIA])
 ZINGIBEREAE = Tribe(name="Zingibereae", children=[ZINGIBER, CURCUMA])
 ALPINIEAE = Tribe(name="Alpinieae", children=[ELETTARIA])
+THOMSONIEAE = Tribe(name="Thomsonieae", children=[AMORPHOPHALLUS])
 
 # https://www.researchgate.net/publication/44651559_Complete_Generic-Level_Phylogenetic_Analyses_of_Palms_Arecaceae_with_Comparisons_of_Supertree_and_Supermatrix_Approaches/figures
 ARECOIDEAE_A = Clade(children=[EUTERPEAE, ARECAE])
 
 ARECOIDEAE = Subfamily(name="Arecoideae", children=[COCOSEAE, ARECOIDEAE_A])
 CORYPHOIDEAE = Subfamily(name="Coryphoideae", children=[PHOENICEAE])
+LEMNOIDEAE = Subfamily(name="Lemnoideae", children=[LEMNA])
+AROIDEAE = Subfamily(name="Aroideae", children=[THOMSONIEAE])
 
 ACORACEAE = Family(name="Acoraceae", children=[ACORUS])
 ZOSTERACEAE = Family(name="Zosteraceae", children=[ZOSTERA])
-ARACEAE = Family(name="Araceae", children=[LEMNA])
+ARACEAE = Family(name="Araceae", children=[LEMNOIDEAE, AROIDEAE])
 LILIACEAE = Family(name="Liliaceae", children=[LILIUM, TULIPA])
 ARECACEAE = Family(name="Arecaceae", children=[ARECOIDEAE, CORYPHOIDEAE])
 MUSACEAE = Family(name="Musaceae", children=[MUSA])
