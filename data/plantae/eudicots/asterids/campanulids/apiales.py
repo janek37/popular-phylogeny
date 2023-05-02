@@ -35,7 +35,7 @@ C_MACULATUM = Species(
 )
 C_SATIVUM = Species(
     name="Coriandrum sativum",
-    local_names={EN: "coriander", PL: "kolendra siewna"},
+    local_names={EN: "coriander, cilantro", PL: "kolendra siewna"},
     image=Image(
         url="https://commons.wikimedia.org/wiki/File:Kolendra_siewna._(Coriandrum_sativum_L.)_02.jpg",
         image_url="https://upload.wikimedia.org/wikipedia/commons/c/c4/Kolendra_siewna._%28Coriandrum_sativum_L.%29_02.jpg",
